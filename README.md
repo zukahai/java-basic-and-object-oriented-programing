@@ -92,7 +92,82 @@ Nếu kết quả như bên dưới thì bạn đã cài đặt thành công JDK
 
 </div>
 
+### 1. Cài đặt Eclipse
 
+Tiếp theo bạn cần cài đặt Eclipse:
 
+Bạn có thể tải eclipse ở [Tại đây](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2023-06/R/eclipse-inst-jre-win64.exe&mirror_id=1311)
 
+Mở file vừa tải và làm các bước sau:
+
+Chọn **Eclipse IDE for Developers**
+
+<div align="center">
+<img src="./setup/setup9.png">
+
+</div>
+
+Chọn **Install** chờ cài đặt xong vào chọn **Launch**
+
+Tiếp theo chọn folder lưu trữ code của bạn, sau đó chọn **Launch**
+<div align="center">
+<img src="./setup/setup10.png">
+
+</div>
+
+Tiếp tục chọn **Continue**, lúc này giao diện eclipse sẽ như thế này.
+
+<div align="center">
+<img src="./setup/setup11.png">
+
+</div>
+
+Chúc mừng bạn đã cài đặt xong eclipse
+
+### 3. Chạy chương trình java
+
+Bạn hãy thử tạo chương trình java đầu tiên nhé.
+
+Chọn **File** -> **New** -> **Java Project**
+
+Nhập tên sau đó chọn **Finish**
+
+<div align="center">
+<img src="./setup/setup12.png">
+
+</div>
+
+Tại folder **src** chọn **File** -> **New** -> **Package**
+
+<div align="center">
+<img src="./setup/setup13.png">
+
+</div>
+
+Đặt tên package và chọn **Finish**
+
+Tại package vừa tạo, chuột phải chọn **new** -> **Class**
+
+Đặt tên class và chọn **Finish**
+
+Trong hàm main hãy viết dòng code như sau:
+```Java
+public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    System.out.println("Hello world!");
+}
+```
+
+Chọn **Run** để chạy chương trình:
+
+<div align="center">
+<img src="./setup/setup14.png">
+
+</div>
+
+Nếu phần **Terminal** hiện thị *Hello world!* thì bạn đã thành công.
+
+Mọi thắc mắc hoặc lỗi xin liên hệ [Phan Đức Hải](fb.com/chiatayde)
+
+**Chúc các bạn thành công!**
 
