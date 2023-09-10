@@ -167,7 +167,7 @@ Chọn **Run** để chạy chương trình:
 
 Nếu phần **Terminal** hiện thị *Hello world!* thì bạn đã thành công.
 
-Mọi thắc mắc hoặc lỗi xin liên hệ [Phan Đức Hải](fb.com/chiatayde)
+Mọi thắc mắc hoặc lỗi xin liên hệ [Phan Đức Hải](https://www.facebook.com/chiatayde/)
 
 **Chúc các bạn thành công!**
 
