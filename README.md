@@ -183,6 +183,8 @@ Các bạn có thể thử tính năng này bằng cách gõ thử **scan** sao 
 <div align="center">
 <img src="./setup/setup16.png">
 
+</div>
+
 Nếu không hiện ra bạn có thể bật tính năng này bằng cách sau:
 
 Bấm **Window>Preferences>Java>Editor>Content Assist>Advanced**
@@ -193,6 +195,8 @@ Bấm **Window>Preferences>Java>Editor>Content Assist>Advanced**
 <img src="./setup/setup17.png">
 
 </div>
+
+Sau bước này bạn hãy khởi động lại IDE và thử lại tính năng đó nhé.
 
 
 
