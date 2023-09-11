@@ -172,6 +172,30 @@ Chọn **Run** để chạy chương trình:
 
 Nếu phần **Terminal** hiện thị *Hello world!* thì bạn đã thành công.
 
+### 4. Một số cài đặt trên eclipse
+
+#### 4.1 Gợi ý code
+
+Gợi ý code sẽ giúp tốc đó code của các bạn nhanh hơn, sẽ tự động import các thư viện mà bạn cần.
+
+Các bạn có thể thử tính năng này bằng cách gõ thử **scan** sao đó bấm tổ hợp phím **Ctrl + Space** nếu dòng code đó thành như bên dưới thì IDE của bạn đã mở tính năng này.
+
+<div align="center">
+<img src="./setup/setup16.png">
+
+Nếu không hiện ra bạn có thể bật tính năng này bằng cách sau:
+
+Bấm **Window>Preferences>Java>Editor>Content Assist>Advanced**
+
+Đánh dấu vào tất cả sau đó chọn **Apply and close**:
+
+<div align="center">
+<img src="./setup/setup17.png">
+
+</div>
+
+
+
 Mọi thắc mắc hoặc lỗi xin liên hệ [Phan Đức Hải](https://www.facebook.com/chiatayde/)
 
 **Chúc các bạn thành công!**
