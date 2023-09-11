@@ -80,6 +80,11 @@ Sau đó chọn **OK**
 
 Để kiểm tra bạn đã cài đặt thành công JDK chưa hãy gõ: window + R gõ cmd
 
+<div align="center">
+<img src="./setup/setup15.png">
+
+</div>
+
 Tiếp theo gõ:
 ```
 java -version
