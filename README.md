@@ -11,7 +11,7 @@ Xin chào các bạn, nếu bạnd đang muốn cài đặt java để học t�
 ### 1. Cài đặt JDK
 JDK là môi trường để chạy ngôn ngữ java.
 Hiện có rất nhiều bản JDK nhưng theo kinh nghiệm của mình thì bản JDK8 là ổn định nhất.
-Các bạn cóp thể tải JDK8 [Tại đây](https://app.downloadvn.com/8cwmfb7upg/xabRV5WHEzK6Q-wRDa3ZpQ/1694354582/jdk-8u45-windows-x64.exe)
+Các bạn cóp thể tải JDK8 [Tại đây](https://app.downloadvn.com/8cwmfb7upg/F-_-F1ml0ZEiPGnDvAifTw/1694495852/jdk-8u45-windows-x64.exe)
 
 Sau khi tải về các bạn tiến hành cài đặt bẳng cách mở file exe vừa tải.
 
