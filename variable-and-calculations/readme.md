@@ -1,6 +1,6 @@
-### Khai báo biến, nhập xuất dữ liệu và tính toán cơ bản
+# Khai báo biến, nhập xuất dữ liệu và tính toán cơ bản
 
-#### Ví dụ 1:
+### Ví dụ 1:
 Nhập vào hai số nguyên a và b, tính và in ra tổng, hiệu, tích và thương của 2 số đó.
 
 **Code mẫu:**
@@ -52,7 +52,7 @@ System.out.println((float)a / b);
 System.out.println(a / (float)b);
 ```
 
-#### Ví dụ 2:
+### Ví dụ 2:
 Nhập vào bán kính của một hình tròn, tính và in ra chu vi và diện tích của hình tròn đó.
 
 **Code mẫu:**
@@ -80,7 +80,7 @@ Nhập và chiều dài và chiều rộng của một hình chữ nhật, tính
 **Code mẫu:**
 Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
 
-#### Ví dụ 4:
+### Ví dụ 4:
 Nhập và 3 cạnh của 1 tam giác, tính và in ra chu vi và diện tích của tam giác đó.
 
 Gợi ý tính diện tích: Hãy áp dụng công thức [Heron](https://vi.wikipedia.org/wiki/Công_thức_Heron) để tính diện tích khi biết ba cạnh của tam giác.
@@ -89,13 +89,13 @@ Gợi ý tính diện tích: Hãy áp dụng công thức [Heron](https://vi.wik
 **Code mẫu:**
 Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
 
-#### Ví dụ 5:
+### Ví dụ 5:
 Nhập tuổi của một sinh viên tính đến năm 2023, hãy tính và in ra năm sinh viên đó.
 
 **Code mẫu:**
 Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
 
-#### Ví dụ 6:
+### Ví dụ 6:
 Nhập vào một số nguyên N, hãy in ra chữ số cuối cùng của số đó.
 
 Gợi ý: Chữ số cuối cùng của só n chính là kết quả của phép chia lấy phần dư của n cho 10.
@@ -120,7 +120,7 @@ public class Hello {
 
 ```
 
-#### Ví dụ 7
+### Ví dụ 7
 Nhập vào một số nguyên N có ít nhất 2 chữ số (lớn hơn 9 hoặc nhỏ hơn -9). In ra chữ số gần cuối của N.
 Ví dụ N = 123, chữ số gần cuối là 2. 
 Ví dụ N = 1234, chữ số gần cuối là 3.
