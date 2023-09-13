@@ -108,6 +108,7 @@ Sau khi cài đặt vscode các bạn mở lên, lúc này giao diện sẽ như
 </div>
 
 Khi mới tải về các bạn cần làm thêm 2 bước sau:
+
 Bước 1: Cài đặt extension **code Runner**
 
 Gõ **Ctrl + Shift + X** hoặc click vào icon Extension để mở cửa số extension.
@@ -129,6 +130,7 @@ Tiếp theo gõ **Code Runner**, chọn extension Code Runner và tiến hành c
 </div>
 
 Bước 2: Setting chạy code bằng terminal
+
 Gõ **Ctrl + ,** để mở cửa số setting
 
 Gõ **Run in terminal** chọn **Run Code Configuration**, cuối cùng tick vào **Whether to run code in intergrated Terminal**
