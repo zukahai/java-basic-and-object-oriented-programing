@@ -1,8 +1,17 @@
 <div align="center">
 
 # Hướng dẫn cài đặt JDK và eclipse để chạy Java
-
 </div>
+
+<hr>
+
+## Mục lục
+[1. Cài đặt JDK](#1.-Cài-đặt-JDK)
+[2. Cài đặt Eclipse](#2.-Cài-đặt-Eclipse)
+[3. Cài đặt visual studio](#3.-Cài-đặt-visual-studio)
+
+<hr>
+
 
 Xin chào các bạn, nếu bạnd đang muốn cài đặt java để học tập thì xem hướng dẫn bên dưới nhé.
 
@@ -198,7 +207,85 @@ Bấm **Window>Preferences>Java>Editor>Content Assist>Advanced**
 
 Sau bước này bạn hãy khởi động lại IDE và thử lại tính năng đó nhé.
 
+### 5. Cài đặt Visual Studio Code
+*Lưu ý: Bạn chỉ cần sử dụng 1 tỏng 2 IDE là eclipse hoặc Visual Studio Code*
 
+Phần cài đặt vsocde khá là dễ nên mình sẽ qua nhanh phần này.
+
+Sau khi cài đặt vscode các bạn mở lên, lúc này giao diện sẽ như sau:
+
+<div align="center">
+<img src="./setup/vsc1.png">
+
+</div>
+
+Khi mới tải về các bạn cần làm thêm 2 bước sau:
+
+Bước 1: Cài đặt extension **code Runner**
+
+Gõ **Ctrl + Shift + X** hoặc click vào icon Extension để mở cửa số extension.
+
+<div align="center">
+<img src="./setup/vsc2.png">
+
+</div>
+
+Tiếp theo gõ **Code Runner**, chọn extension Code Runner và tiến hành cài đặt.
+
+<div align="center">
+<img src="./setup/vsc3.png">
+</div>
+
+
+<div align="center">
+<img src="./setup/vsc12.png">
+</div>
+
+Bước 2: Setting chạy code bằng terminal
+
+Gõ **Ctrl + ,** để mở cửa số setting
+
+Gõ **Run in terminal** chọn **Run Code Configuration**, cuối cùng tick vào **Whether to run code in intergrated Terminal**
+<div align="center">
+<img src="./setup/vsc11.png">
+</div>
+
+#### Tạo project Java trên Visual Studio Code
+Gõ **Ctrl + Shift + P** và gõ **Java: Create**, sau đó chọn **Java: Create New Project**
+
+<div align="center">
+<img src="./setup/vsc4.png">
+</div>
+
+Chọn **No Build Tools**
+<div align="center">
+<img src="./setup/vsc5.png">
+</div>
+
+Chọn folder để lưu trữ project của bạn
+<div align="center">
+<img src="./setup/vsc6.png">
+</div>
+
+Đặt tên cho project
+<div align="center">
+<img src="./setup/vsc7.png">
+</div>
+
+Sau khi hoàn thành các bước trên bây giờ vscode sẽ tạo cho bạn 1 project như sau:
+<div align="center">
+<img src="./setup/vsc8.png">
+</div>
+
+Để chọn thử chương trình hãy mở file App.java ở trong src, bấm vào mũi tên bên phải icon code runner, chọn **Run Java**
+<div align="center">
+<img src="./setup/vsc9.png">
+</div>
+
+Nếu kết quả hiện thị như hình thì bạn đã chạy thành công, lưu ý lần đầu chạy code Java khi mở vscode hơi lâu, bạn cần chờ một xíu.
+<div align="center">
+<img src="./setup/vsc10.png">
+</div>
 
 Mọi thắc mắc hoặc lỗi xin liên hệ [Phan Đức Hải](https://www.facebook.com/chiatayde/)
 
