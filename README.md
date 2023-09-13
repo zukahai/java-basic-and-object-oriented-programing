@@ -6,9 +6,17 @@
 <hr>
 
 ## Mục lục
-[1. Cài đặt JDK](#1.-Cài-đặt-JDK)
-[2. Cài đặt Eclipse](#2.-Cài-đặt-Eclipse)
-[3. Cài đặt visual studio](#3.-Cài-đặt-visual-studio)
+
+[1. Cài đặt JDK](#1-cài-đặt-jdk)
+
+[2. Cài đặt Eclipse](#2-cài-đặt-eclipse)
+
+[3. Chạy chương trình java](#3-chạy-chương-trình-java)
+
+[4. Một số cài đặt trên eclipse](#4-một-số-cài-đặt-trên-eclipse)
+
+[5. Cài đặt Visual Studio Code](#5-cài-đặt-visual-studio-code)
+
 
 <hr>
 
