@@ -97,7 +97,7 @@ Nếu kết quả như bên dưới thì bạn đã cài đặt thành công JDK
 
 </div>
 
-### 1. Cài đặt Eclipse
+### 2. Cài đặt Eclipse
 
 Tiếp theo bạn cần cài đặt Eclipse:
 
