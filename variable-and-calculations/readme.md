@@ -105,7 +105,7 @@ Ví dụ, để lấy chữ số cuối cùng của 123, ta lấy 123 chia cho 1
 Trong Java, phép chia lấy dư được biểu diễn bằng ký tự **%**.
 Ví dụ 5 % 2 = 1, 123 % 10 = 3,...
 
-Lưu ý cần lấy trị tuyệt đối để tránh trường hợp n < 0
+Lưu ý cần lấy trị tuyệt đối **Math.abs()** để tránh trường hợp n < 0
 
 
 **Code mẫu:**
@@ -129,6 +129,42 @@ Ví dụ N = 123, chữ số gần cuối là 2.
 Ví dụ N = 1234, chữ số gần cuối là 3.
 Ví dụ N = 928743, chữ số gần cuối là 4.
 Ví dụ N = -24381, chữ số gần cuối là 8.
+
+**Code mẫu:**
+Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
+
+### Ví dụ 8
+Nhập vào tên của bạn, hãy in ra độ dài tên của bạn.
+*Gợi ý*
+Trong java để khai báo một chuỗi biến bạn có thể sử dụng **String**.
+
+Để nhập một chuỗi các bạn sử hàm nextLine() trong class Scanner.
+
+Để lấy độ dài của một chuỗi bạn sử dụng **.length()**
+
+Ví dụ để lấy độ dài của chuỗi **s** các bạn dùng **s.length()**
+
+**Code mẫu:**
+Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
+
+### Ví dụ 9
+Nhập vào 2 số nguyên a và b, (b khác 0) hãy in ra kết quả của a / b như bên dưới với điều khiện chỉ sử dụng hàm in một lần.
+
+Ví dụ: a = 5, b = 2, kết quả là 5 / 2 = 2.5
+
+Ví dụ: a = 10, b = 3, kết quả là 10 / 3 = 3.3333333
+
+**Code mẫu:**
+Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
+
+### Ví dụ 10
+Nhập vào 1 ký tự thường (từ 'a' đến 'y'), hãy in ra ký tư liền sau ký tự vừa nhập.
+
+Ví dụ nhập ch = 'a' thì kết quả là b
+
+Ví dụ nhập ch = 'm' thì kết quả là n
+
+Ví dụ nhập ch = 'y' thì kết quả là z
 
 **Code mẫu:**
 Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
