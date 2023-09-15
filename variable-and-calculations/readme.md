@@ -105,6 +105,9 @@ Ví dụ, để lấy chữ số cuối cùng của 123, ta lấy 123 chia cho 1
 Trong Java, phép chia lấy dư được biểu diễn bằng ký tự **%**.
 Ví dụ 5 % 2 = 1, 123 % 10 = 3,...
 
+Lưu ý cần lấy trị tuyệt đối để tránh trường hợp n < 0
+
+
 **Code mẫu:**
 ```java
 import java.util.Scanner;
@@ -114,7 +117,7 @@ public class Hello {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("N = ");
 		int n = sc.nextInt();
-		System.out.println("Chữ số cuối cùng của " + n + " là " + (n % 10));
+		System.out.println("Chữ số cuối cùng của " + n + " là " + Math.abs(n % 10));
 	}
 }
 
