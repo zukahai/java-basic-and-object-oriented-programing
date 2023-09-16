@@ -13,4 +13,4 @@ Xem bài tập [Tại đây](./basic-variable-and-calculations/readme.md)
 
 Gồm các bài tập về câi lệnh điều kliện trong Java.
 
-Xem bài tập [Tại đây](./basic-conditional-statement/readme.md)
+Xem bài tập [Tại đây](./basic-conditional-statement/Readme.md)
