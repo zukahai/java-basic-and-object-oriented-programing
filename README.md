@@ -17,7 +17,6 @@
 
 [5. Cài đặt Visual Studio Code](#5-cài-đặt-visual-studio-code)
 
-
 <hr>
 
 
