@@ -78,7 +78,24 @@ Trong ngôn ngữ để lấy giá trị Pi các bạn sử dụng **Math.PI**
 Nhập và chiều dài và chiều rộng của một hình chữ nhật, tính và in ra chu vi và diện tích của hình chữ nhật đó.
 
 **Code mẫu:**
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
+```Java
+package test;
+
+import java.util.Scanner;
+
+public class Hello {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập chiều dài của HCN: ");
+		int length = sc.nextInt();
+		System.out.print("Nhập chiều rộng của HCN: ");
+		int width = sc.nextInt();
+		
+		System.out.println("Chu vi của HCN là " + (2 *(length + width)));
+		System.out.println("Diện tích của HCN " + (length * width));
+	}
+}
+```
 
 ### Ví dụ 4:
 Nhập và 3 cạnh của 1 tam giác, tính và in ra chu vi và diện tích của tam giác đó.
@@ -167,4 +184,116 @@ Ví dụ nhập ch = 'm' thì kết quả là n
 Ví dụ nhập ch = 'y' thì kết quả là z
 
 **Code mẫu:**
+Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
+
+### Ví dụ 11
+Nhập vào 2 số nguyên a và b, hãy hoán đổi giá trị của a và b.
+Ví dụ nhập a = 7, b = 5. Sau khi thực hiện chương trình thì a = 5, b = 7.
+
+Thoạt nhìn, nhiều người sẽ có suy nghĩ làm như sau:
+```Java
+a = b;
+b = a;
+```
+
+Nhưng khoan đã, chương trình trên là sai. Sau câu lệnh **a = b** thì giá trị ban đầu của **a** sẽ bị mất đi,  lúc thực hình dòng lệnh **b = a** thì lúc này b sẽ gán bằng giá trị mới của **a** chứ không phải giá trị ban đầu nữa.
+
+Ví dụ a = 7, b = 5, sau dòng lệnh a = b thì giá trị của a sẽ bằng giá trị của b là 5, lúc này giá trị của cả a và b đều bằng 5, sau khi thực hiện câu lệnh b = a, thì lúc này b vẫn sẽ bằng 5, bằng giá trị mà a đã gán trước đó.
+
+Như vậy nếu ta làm như trên thì kết quả sẽ bị sai.
+
+#### Cách hoán đổi 2 giá trị của 2 biến
+
+Để dễ hình dung về bài toán này, mình sẽ lấy một ví dụ thực tế.
+
+Ví dụ bạn đang có 2 cốc nước, cốc nước A chứa nước màu đỏ, cốc nước B chưa nước màu xanh. Bạn muốn hoán đổi nước trong 2 cốc đó thì phải làm như thế nào?
+
+<div align="center">
+<img src="../setup/swap/1.png">
+</div>
+
+Chúng ta đều hiểu là phải đổ nước từ cốc A sang cốc B và từ cốc B sang cốc A, nhưng ban đầu, trong cốc A và cốc B đều đang có nước, nên việc thực hiện công việc trên sẽ khó khăn.
+
+Đúng như suy nghĩ của bạn, chúng ta cần thêm 1 cốc nước C (không có nước) làm cốc trung gian nữa.
+
+<div align="center">
+<img src="../setup/swap/2.png">
+</div>
+
+Ta sẽ thực hiện hoán đổi bằng 3 bước sau:
+
+**Bước 1: đổi nước cốc A sang cốc C**
+
+<div align="center">
+<img src="../setup/swap/3.png">
+</div>
+
+**Bước 2: đổi nước cốc B sang cốc A**
+
+<div align="center">
+<img src="../setup/swap/4.png">
+</div>
+
+**Bước 3: đổi nước cốc C sang cốc B**
+
+<div align="center">
+<img src="../setup/swap/5.png">
+</div>
+
+Như vậy ta đã hoán đổi được nước trong cốc A và cốc B.
+
+<div align="center">
+<img src="../setup/swap/6.png">
+</div>
+
+Qua ví dụ trên chúng ta thấy để hoán đổi giá trị của 2 biến, cần có thêm 1 biến phụ sẽ dễ hơn rất nhiều (Vẫn có cách không cần dùng biến phụ). Code hoán đổi giá trị của biến a và biến b như sau:
+
+```Java
+c = a;
+a = b;
+b = c;
+```
+
+**Code mẫu**
+```Java
+package test;
+
+import java.util.Scanner;
+
+public class Hello {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		// Nhập a, b
+		System.out.print("Nhập A: ");
+		int a = sc.nextInt();
+		System.out.print("Nhập A: ");
+		int b = sc.nextInt();
+
+		// In ra giá trị trước khi hoán đổi
+		System.out.println("Giá trị ban đầu");
+		System.out.println("A = " + a);
+		System.out.println("B = " + b);
+		
+		// Hoán đổi giá trị của biến a và biến b
+		int c = a;
+		a = b;
+		b = c;
+		
+		// In ra giá trị sau khi hoán đổi
+		System.out.println("Giá trị sau khi hoán đổi");
+		System.out.println("A = " + a);
+		System.out.println("B = " + b);
+		
+	}
+}
+
+```
+
+### Ví dụ 12
+Nhập vào 2 số nguyên a và b, hãy hoán đổi giá trị của a và b **mà không dùng biến phụ**
+Ví dụ nhập a = 7, b = 5. Sau khi thực hiện chương trình thì a = 5, b = 7.
+
+**Code mẫu:**
+
 Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.

@@ -44,10 +44,9 @@ Tiếp đến mở file explorer bằng cách gõ window + E:
 
 <div align="center">
 <img src="./setup/setup1.png">
-
+</div>
 
 Chuột phải vào **This PC** và chọn **properties**:
-</div>
 
 <div align="center">
 <img src="./setup/setup2.png">
