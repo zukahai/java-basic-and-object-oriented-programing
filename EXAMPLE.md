@@ -7,7 +7,7 @@
 
 Gồm những bài tập về nhập xuất, tính toán cơ bản trong Java.
 
-️🎯 Số lượng ví dụ: **12**
+️**🎯 Số lượng ví dụ: 12**
 
 Xem bài tập [Tại đây](./basic-variable-and-calculations/readme.md)
 
@@ -15,6 +15,6 @@ Xem bài tập [Tại đây](./basic-variable-and-calculations/readme.md)
 
 Gồm các bài tập về câi lệnh điều kliện trong Java.
 
-🎯 Số lượng ví dụ: **12**
+**🎯 Số lượng ví dụ: 12**
 
 Xem bài tập [Tại đây](./basic-conditional-statement/Readme.md)
