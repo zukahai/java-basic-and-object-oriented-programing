@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>Ví dụ luyện tập</title>
+      <title>Vòng lặp</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -20,37 +20,119 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       <div align="center">
-<h1>Ví dụ luyện tập</h1>
+<h1>Vòng lặp</h1>
 </div>
-<h1 class="crossnote-header" id="java-c%C6%A1-b%E1%BA%A3n">Java cơ bản</h1>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-1">Ví dụ 1</h3>
 
-<h2 class="crossnote-header" id="1-bi%E1%BA%BFn-v%C3%A0-t%C3%ADnh-to%C3%A1n-c%C6%A1-b%E1%BA%A3n">1. Biến và tính toán cơ bản</h2>
+<p>In ra màn hình 20 chữ VKU, mỗi chữ trên một dòng</p>
+<p><strong>Code mẫu</strong></p>
+<pre data-role="codeBlock" data-info="Java" class="language-java Java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
 
-<p>Gồm những bài tập về nhập xuất, tính toán cơ bản trong Java.</p>
-<p>️<strong>🎯 Số lượng ví dụ: 12</strong></p>
-<p>Xem bài tập <a href="./basic-variable-and-calculations/">Tại đây</a></p>
-<h2 class="crossnote-header" id="2-c%C3%A2u-l%E1%BB%87nh-%C4%91i%E1%BB%81u-ki%E1%BB%87n">2. Câu lệnh điều kiện</h2>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VKU</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"VKU"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2">Ví dụ 2</h3>
 
-<p>Gồm các bài tập về câu lệnh điều kiện trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 12</strong></p>
-<p>Xem bài tập <a href="./basic-conditional-statement/">Tại đây</a></p>
-<h2 class="crossnote-header" id="3-l%E1%BB%87nh-switch-case">3. Lệnh Switch Case</h2>
+<p>Nhập vào một số nguyên dương <strong>N</strong>, in ra các số từ <strong>1</strong> đến <strong>N</strong>, mỗi số trên một dòng.</p>
+<p><strong>Code mẫu</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
 
-<p>Gồm các bài tập về câu lệnh switch case trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 5</strong></p>
-<p>Xem bài tập <a href="./basic-switchcase/">Tại đây</a></p>
-<h2 class="crossnote-header" id="4-v%C3%B2ng-l%E1%BA%B7p">4. Vòng lặp</h2>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
 
-<p>Gồm các bài tập về for, while, do while trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 15</strong></p>
-<p>Xem bài tập <a href="./basic-loop/">Tại đây</a></p>
-<h1 class="crossnote-header" id="l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng">Lập trình hướng đối tượng</h1>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VKU</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập N: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-3">Ví dụ 3</h3>
 
-<h2 class="crossnote-header" id="1-h%C3%A0m-kh%E1%BB%9Fi-t%E1%BA%A1o-trong-oop">1. Hàm khởi tạo trong OOP</h2>
+<p>Nhập vào một số nguyên dương <strong>N</strong>, in ra các số từ <strong>N</strong> giảm <strong>1</strong>, mỗi số trên một dòng.</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-4">Ví dụ 4</h3>
 
-<p>Gồm những bài tập về hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính, các hàm getter, setter và hàm toString.</p>
-<p><strong>🎯 Số lượng ví dụ: 6</strong></p>
-<p>Xem bài tập <a href="./oop-constructor/">Tại đây</a></p>
+<p>Nhập vào một số nguyên dương <strong>N</strong>, tính và in ra tổng các số từ 1 đến N.</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-5">Ví dụ 5</h3>
+
+<p>Nhập vào một số nguyên dương tư nhiên <strong>N</strong>, in ra các số tự nhiên chẵn nhỏ hơn hoặc bằng <strong>N</strong>.</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-6">Ví dụ 6</h3>
+
+<p>Nhập vào số nguyên dương <strong>S</strong>, tìm số nguyên dương <strong>N</strong> nhỏ nhất sau cho:</p>
+<p>1 + 2 + 3 + ... + N &lt;= S</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-7">Ví dụ 7</h3>
+
+<p>Nhập vào bàn phím số nguyên <strong>N</strong>, nếu <strong>N &lt;= 0</strong> thì yêu cầu nhập lại, quá trình trên lặp lại đến nếu <strong>N &gt; 0</strong>.</p>
+<p><strong>Code mẫu</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VKU</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n<span class="token punctuation">;</span>
+		<span class="token keyword keyword-do">do</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập N: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>n <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Vui lòng nhập lại"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>n <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Kết thúc vòng lặp"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-8">Ví dụ 8</h3>
+
+<p>Nhập vào một số nguyên dương <strong>N</strong>, hãy kiểm tra N có phải là một luỹ thừa của 2 không.</p>
+<p>N là luỹ thường của 2 khi N có thể biểu diễn được dưới dạng <strong>N = 2^k</strong> (k là số tự nhiên)</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-9">Ví dụ 9</h3>
+
+<p>Nhập vào một số nguyên dương <strong>N</strong>, hãy tính và in ra <strong>N!</strong>.</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-10">Ví dụ 10</h3>
+
+<p>Nhập vào số nguyên dương N (1 &lt;= N &lt;= 9), hãy in ra bảng cửu chương N.<br>
+Ví dụ n = 5 thì in ra</p>
+<pre data-role="codeBlock" data-info="text" class="language-text text">5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-11">Ví dụ 11</h3>
+
+<p>Nhập vào một số nguyên dương <strong>N</strong>. hãy in ra các ước số tự nhiện của N.</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-12">Ví dụ 12</h3>
+
+<p>Nhập vào một số nguyên <strong>N</strong>. hãy kiểm tra xem N có phải là số nguyên tố hay không.</p>
+<p><em>Gợi ý</em></p>
+<p><em>Cách 1:</em> đếm ố ước tự nhiên của N, nếu N là số tự nhiên và có đúng 2 ước số tự nhiên thì N là số nguyên tố.</p>
+<p><em>Cách 2:</em> Nếu N &gt; 1 và không chia hết cho số nào từ 2 đến căn của N thì N là số nguyên tố.</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-13">Ví dụ 13</h3>
+
+<p>Nhập vào một số tự nhiên N, tính tổng các chữ số của N.</p>
+<p>Ví dụ</p>
+<p>N = 123 thì kết quả là 6 (1 + 2 + 3)<br>
+N = 5555 thì kết quả là 20 (5 + 5 + 5 + 5)</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-14">Ví dụ 14</h3>
+
+<p>Nhập vào tên của bạn, hãy in ra từng ký tự trong tên của bạn, mỗi ký tự trên 1 dòng</p>
+<p>Ví dụ bạn nhập "Long" thì kết quả là</p>
+<pre data-role="codeBlock" data-info="text" class="language-text text">L
+o
+n
+g
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-15">Ví dụ 15</h3>
+
+<p>Nhập số nguyên dương N, tính tổng sau:</p>
+<p>1 * 2 + 2 * 3 + 3 * 4 + ... + N * (N + 1)</p>
 
       </div>
       

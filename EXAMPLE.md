@@ -15,7 +15,7 @@ Xem bài tập [Tại đây](./basic-variable-and-calculations/)
 
 ## 2. Câu lệnh điều kiện
 
-Gồm các bài tập về câi lệnh điều kiện trong Java.
+Gồm các bài tập về câu lệnh điều kiện trong Java.
 
 **🎯 Số lượng ví dụ: 12**
 
@@ -23,11 +23,19 @@ Xem bài tập [Tại đây](./basic-conditional-statement/)
 
 ## 3. Lệnh Switch Case
 
-Gồm các bài tập về câi lệnh switch case trong Java.
+Gồm các bài tập về câu lệnh switch case trong Java.
 
 **🎯 Số lượng ví dụ: 5**
 
 Xem bài tập [Tại đây](./basic-switchcase/)
+
+## 4. Vòng lặp
+
+Gồm các bài tập về for, while, do while trong Java.
+
+**🎯 Số lượng ví dụ: 15**
+
+Xem bài tập [Tại đây](./basic-loop/)
 
 # Lập trình hướng đối tượng
 
