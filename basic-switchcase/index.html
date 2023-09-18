@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>Ví dụ luyện tập</title>
+      <title>Lệnh Switch Case</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -20,23 +20,75 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       <div align="center">
-<h1>Ví dụ luyện tập</h1>
+<h1>Lệnh Switch Case</h1>
 </div>
-<h2 class="crossnote-header" id="1-bi%E1%BA%BFn-v%C3%A0-t%C3%ADnh-to%C3%A1n-c%C6%A1-b%E1%BA%A3n">1. Biến và tính toán cơ bản</h2>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-1">Ví dụ 1</h3>
 
-<p>Gồm những bài tập về nhập xuất, tính toán cơ bản trong Java.</p>
-<p>️<strong>🎯 Số lượng ví dụ: 12</strong></p>
-<p>Xem bài tập <a href="./basic-variable-and-calculations/">Tại đây</a></p>
-<h2 class="crossnote-header" id="2-c%C3%A2u-l%E1%BB%87nh-%C4%91i%E1%BB%81u-ki%E1%BB%87n">2. Câu lệnh điều kiện</h2>
+<p>Nhập vào một số tự nhiên có 1 chữ số, hãy in ra cách đọc tiếng Việt tương ứng.</p>
+<p><em>Ví dụ:</em></p>
+<p>Nhập N = 3 thì kết quả là "Ba"<br>
+Nhập N = 9 thì kết quả là "Chín"</p>
+<p><strong>Code mẫu:</strong></p>
+<p>Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2">Ví dụ 2</h3>
 
-<p>Gồm các bài tập về câi lệnh điều kiện trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 12</strong></p>
-<p>Xem bài tập <a href="./basic-conditional-statement/">Tại đây</a></p>
-<h2 class="crossnote-header" id="3-l%E1%BB%87nh-switch-case">3. Lệnh Switch Case</h2>
+<p>Quy định 0 là nam, 1 là nữ, 2 là khác. Nhập và một số nguyên chỉ giới tính của một người, hãy chi biết người đó giới tính gì.</p>
+<p><strong>Code mẫu:</strong></p>
+<p>Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-3">Ví dụ 3</h3>
 
-<p>Gồm các bài tập về câi lệnh switch case trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 5</strong></p>
-<p>Xem bài tập <a href="./basic-switchcase/">Tại đây</a></p>
+<p>Quy định ký tự 'N' là hướng Bắc, 'S' là hướng Nam, 'W' là hướng Đông, 'E' là hướng Tây. Nhập và một ký tự trong NEWS, hãy cho biêý hướng tương ứng của ký tự đó.</p>
+<p><strong>Code mẫu:</strong></p>
+<p>Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.</p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-4">Ví dụ 4</h3>
+
+<p>Nhập và số nguyên <strong>a</strong> và <strong>b</strong>, nhập tiếp một phép tính +,-,*,/,%. Tính và đưa ra kết quả.</p>
+<p>Ví dụ nhập a = 14, b = 5, phép tính bằng '%' thì kết quả là 14 % 5 = 2</p>
+<p><strong>Code mẫu:</strong></p>
+<pre data-role="codeBlock" data-info="Java" class="language-java Java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VKU</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">;</span>
+		<span class="token keyword keyword-char">char</span> ch<span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập A: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		a <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập B: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		b <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập phép tính: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		ch <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span>ch<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-case">case</span> <span class="token char">'+'</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">+</span> <span class="token string">" + "</span> <span class="token operator">+</span> b <span class="token operator">+</span> <span class="token string">" = "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>a <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token char">'-'</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">+</span> <span class="token string">" - "</span> <span class="token operator">+</span> b <span class="token operator">+</span> <span class="token string">" = "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>a <span class="token operator">-</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token char">'*'</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">+</span> <span class="token string">" * "</span> <span class="token operator">+</span> b <span class="token operator">+</span> <span class="token string">" = "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>a <span class="token operator">*</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token char">'/'</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">+</span> <span class="token string">" / "</span> <span class="token operator">+</span> b <span class="token operator">+</span> <span class="token string">" = "</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-float">float</span><span class="token punctuation">)</span>a <span class="token operator">-</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token char">'%'</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">+</span> <span class="token string">" % "</span> <span class="token operator">+</span> b <span class="token operator">+</span> <span class="token string">" = "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>a <span class="token operator">%</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-default">default</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Vui lòng nhập phép tính +, -, *, /, %"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-5">Ví dụ 5</h3>
+
+<p>Nhập vào năm và tháng, hãy ra in số ngày trong tháng của năm đó.</p>
+<p><em>Gợi ý:</em> những tháng 1, 3, 5, 7, 8, 10, 12 có 31 ngày, những tháng 4, 6, 9, 11 có 30 ngày, những tháng 2 là năm nhuận thì có 28 ngày, tháng 2 của năm bình thường có 29 ngày.</p>
+<p>Năm nhuận là năm chia hết cho 4 và không chia hết cho 100, hoặc những năm chia hết cho 400.</p>
+<p><strong>Code mẫu:</strong></p>
+<p>Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.</p>
 
       </div>
       
