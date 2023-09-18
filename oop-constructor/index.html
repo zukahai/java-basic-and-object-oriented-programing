@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>Ví dụ luyện tập</title>
+      <title>Hàm khởi tạo trong OOP</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -20,32 +20,81 @@
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
       <div align="center">
-<h1>Ví dụ luyện tập</h1>
+<h1>Hàm khởi tạo trong OOP</h1>
 </div>
-<h1 class="crossnote-header" id="java-c%C6%A1-b%E1%BA%A3n">Java cơ bản</h1>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-1">Ví dụ 1</h3>
 
-<h2 class="crossnote-header" id="1-bi%E1%BA%BFn-v%C3%A0-t%C3%ADnh-to%C3%A1n-c%C6%A1-b%E1%BA%A3n">1. Biến và tính toán cơ bản</h2>
+<p>Tạo một <strong>Class</strong> để biểu diễn các đối tượng <strong>Student(String masv, String name, int age)</strong></p>
+<p>Bao gồm hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính và các hàm <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></p>
+<p><strong>Code mẫu</strong></p>
+<pre data-role="codeBlock" data-info="Java" class="language-java Java"><span class="token keyword keyword-package">package</span> <span class="token namespace">model</span><span class="token punctuation">;</span>
 
-<p>Gồm những bài tập về nhập xuất, tính toán cơ bản trong Java.</p>
-<p>️<strong>🎯 Số lượng ví dụ: 12</strong></p>
-<p>Xem bài tập <a href="./basic-variable-and-calculations/">Tại đây</a></p>
-<h2 class="crossnote-header" id="2-c%C3%A2u-l%E1%BB%87nh-%C4%91i%E1%BB%81u-ki%E1%BB%87n">2. Câu lệnh điều kiện</h2>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> masv<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> age<span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>masv <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
 
-<p>Gồm các bài tập về câi lệnh điều kiện trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 12</strong></p>
-<p>Xem bài tập <a href="./basic-conditional-statement/">Tại đây</a></p>
-<h2 class="crossnote-header" id="3-l%E1%BB%87nh-switch-case">3. Lệnh Switch Case</h2>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token class-name">String</span> masv<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>masv <span class="token operator">=</span> masv<span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
 
-<p>Gồm các bài tập về câi lệnh switch case trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 5</strong></p>
-<p>Xem bài tập <a href="./basic-switchcase/">Tại đây</a></p>
-<h1 class="crossnote-header" id="l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng">Lập trình hướng đối tượng</h1>
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> <span class="token string">"Student [masv="</span> <span class="token operator">+</span> masv <span class="token operator">+</span> <span class="token string">", name="</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">", age="</span> <span class="token operator">+</span> age <span class="token operator">+</span> <span class="token string">"]"</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
 
-<h2 class="crossnote-header" id="1-h%C3%A0m-kh%E1%BB%9Fi-t%E1%BA%A1o-trong-oop">1. Hàm khởi tạo trong OOP</h2>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getMasv</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> masv<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
 
-<p>Gồm những bài tập về hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính, các hàm getter, setter và hàm toString.</p>
-<p><strong>🎯 Số lượng ví dụ: 6</strong></p>
-<p>Xem bài tập <a href="./oop-constructor/">Tại đây</a></p>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setMasv</span><span class="token punctuation">(</span><span class="token class-name">String</span> masv<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>masv <span class="token operator">=</span> masv<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> name<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> age<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2">Ví dụ 2</h3>
+
+<p>Tạo một <strong>Class</strong> để biểu diễn các đối tượng Rectangle(double width, double height)</p>
+<p>Bao gồm hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính và các hàm <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-3">Ví dụ 3</h3>
+
+<p>Tạo một <strong>Class</strong> để biểu diễn các đối tượng Circle(double radius)</p>
+<p>Bao gồm hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính và các hàm <strong>getter</strong>, <strong>setter</strong>  và <strong>toString()</strong></p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-4">Ví dụ 4</h3>
+
+<p>Tạo một <strong>Class</strong> để biểu diễn các đối tượng Triangle(double sideA, double sideB, double sideC)</p>
+<p>Bao gồm hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính và các hàm <strong>getter</strong>, <strong>setter</strong>  và <strong>toString()</strong></p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-5">Ví dụ 5</h3>
+
+<p>Tạo một <strong>Class</strong> để biểu diễn các đối tượng Square(double side)</p>
+<p>Bao gồm hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính và các hàm <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-6">Ví dụ 6</h3>
+
+<p>Tạo một <strong>Class</strong> để biểu diễn các đối tượng Animal(String name, String color, int age)</p>
+<p>Bao gồm hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính và các hàm <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></p>
 
       </div>
       

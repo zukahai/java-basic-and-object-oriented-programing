@@ -3,6 +3,8 @@
 # Ví dụ luyện tập
 </div>
 
+# Java cơ bản
+
 ## 1. Biến và tính toán cơ bản
 
 Gồm những bài tập về nhập xuất, tính toán cơ bản trong Java.
@@ -26,3 +28,13 @@ Gồm các bài tập về câi lệnh switch case trong Java.
 **🎯 Số lượng ví dụ: 5**
 
 Xem bài tập [Tại đây](./basic-switchcase/)
+
+# Lập trình hướng đối tượng
+
+## 1. Hàm khởi tạo trong OOP
+
+Gồm những bài tập về hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính, các hàm getter, setter và hàm toString.
+
+**🎯 Số lượng ví dụ: 6**
+
+Xem bài tập [Tại đây](./oop-constructor/)
