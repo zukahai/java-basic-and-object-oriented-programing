@@ -1,6 +1,6 @@
 <div align="center">
 
-# Ví dụ luyện tập
+# VKU | Lập trình hướng đối tượng - Ví dụ luyện tập
 </div>
 
 # Java cơ bản
@@ -11,13 +11,15 @@ Gồm những bài tập về nhập xuất, tính toán cơ bản trong Java.
 
 ️**🎯 Số lượng ví dụ: 12**
 
+☑️ Tất cả ví dụ đều đã có code mẫu
+
 Xem bài tập [Tại đây](./basic-variable-and-calculations/)
 
 ## 2. Câu lệnh điều kiện
 
 Gồm các bài tập về câu lệnh điều kiện trong Java.
 
-**🎯 Số lượng ví dụ: 12**
+**🎯 Số lượng ví dụ: 15**
 
 Xem bài tập [Tại đây](./basic-conditional-statement/)
 
