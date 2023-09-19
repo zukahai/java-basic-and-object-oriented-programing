@@ -323,9 +323,50 @@ b <span class="token operator">=</span> c<span class="token punctuation">;</span
 
 <p>Nhập vào 2 số nguyên a và b, hãy hoán đổi giá trị của a và b <strong>mà không dùng biến phụ</strong><br>
 Ví dụ nhập a = 7, b = 5. Sau khi thực hiện chương trình thì a = 5, b = 7.</p>
+<p>Để hoán đổi không cần biến phụ chúng ta có thể làm như sau:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java">a <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span> 
+b <span class="token operator">=</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span> 
+a <span class="token operator">=</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
+</pre><p>a = a + 1: Lúc này a = tổng của a và b, b vẫn mang giá trị b ban đầu</p>
+<p>b = a - b: do a bây giờ là tổng của a và b, nếu khi a  - b sẽ trả về a ban đầu, lúc này a mang giá trị tổng của a và b, còn b mang giá trị của a ban đầu</p>
+<p>a = a - b: tổng của a và b trừ đi a ban đầu sẽ ra b ban đầu</p>
+<p>Như thế sau khi thực hiện 2 câu lệnh trên thì a mang giá trị b ban đầu và b mang giá trị a ban đầu</p>
 <p><strong>Code mẫu:</strong></p>
-<p>Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
 
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VKU</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Nhập a, b</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập A: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> a <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập A: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> b <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// In ra giá trị trước khi hoán đổi</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Giá trị ban đầu"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"A = "</span> <span class="token operator">+</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"B = "</span> <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token comment">// Hoán đổi giá trị của biến a và biến b</span>
+		a <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+		b <span class="token operator">=</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
+		a <span class="token operator">=</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
+		
+		<span class="token comment">// In ra giá trị sau khi hoán đổi</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Giá trị sau khi hoán đổi"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"A = "</span> <span class="token operator">+</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"B = "</span> <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+</pre>
       </div>
       
       

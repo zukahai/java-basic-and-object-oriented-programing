@@ -99,3 +99,63 @@ Nhập vào 3 số nguyên dương **a**, **b**, **c**, hãy kiểm tra xem b c�
 **Code mẫu:**
 
 Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+
+### Ví dụ 11
+Nhập vào một ký tự **ch** Kiểm tra xem ch có phải là chữ cái in thường hay không.
+
+**Code mẫu:**
+
+Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+
+### Ví dụ 12
+Nhập vào một ký tự **ch** Kiểm tra xem ch có phải là chữ cái in hoa hay không.
+
+**Code mẫu:**
+
+Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+
+### Ví dụ 13
+Nhập vào 2 chuỗi ký tự **a** và **b**, hãy kiểm tra xem 2 chuỗi đó có giống nhau hay không?
+
+**Gợi ý:** Sử dụng hàm **equals** trong java để kiểm tra 2 chuỗi có bằng nhau hay không.
+
+Tại sao không sử dụng **a == b** mà phải sử dụng **equals**, vì hàm **equals** sẽ so sánh nội dung trong khi sử dụng **==** sẽ so sánh luôn địa chỉ của 2 object. (Học đến phần OOP mình sẽ giải thích kỹ hơn).
+
+**Code mẫu:**
+```java
+package DHDN;
+
+import java.util.Scanner;
+
+public class VKU {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập chuỗi A: ");
+		String a = sc.nextLine();
+		System.out.print("Nhập chuỗi B: ");
+		String b = sc.nextLine();
+		
+		if (a.equals(b))
+			System.out.println("Hai chuỗi có nội dung giống nhau");
+		else
+			System.out.println("Hai chuỗi có nội dung khác nhau");
+	}
+
+}
+```
+
+### Ví dụ 14
+Nhập và chuỗi **a** và chuỗi **b**, in ra chuỗi có độ dài dài hơn, nếu 2 chuỗi dài bằng nhau thì in ra chuỗi **a**.
+
+**Code mẫu:**
+
+Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+
+### Ví dụ 15
+Nhập và h (0 <= h < 24) và m (0 <= h < 60) để biểu diễn số giờ và số phút hiện tại. Hãy in ra thời gian sau 1 phút nữa.
+
+Ví dụ h = 10, m = 35. thời gian hiện tại là 10:35 và thời gian sau 1 phút nữa là 10:36
+
+Ví dụ h = 20, m = 59. thời gian hiện tại là 20:59 và thời gian sau 1 phút nữa là 21:00
