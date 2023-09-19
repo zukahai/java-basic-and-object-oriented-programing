@@ -102,15 +102,52 @@ Nhập và 3 cạnh của 1 tam giác, tính và in ra chu vi và diện tích c
 
 Gợi ý tính diện tích: Hãy áp dụng công thức [Heron](https://vi.wikipedia.org/wiki/Công_thức_Heron) để tính diện tích khi biết ba cạnh của tam giác.
 
-
 **Code mẫu:**
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
+
+```java
+package DHDN;
+
+import java.util.Scanner;
+
+public class VKU {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập vào độ dài canh thứ nhất: ");
+		float side1 = sc.nextFloat();
+		System.out.print("Nhập vào độ dài canh thứ hai: ");
+		float side2 = sc.nextFloat();
+		System.out.print("Nhập vào độ dài canh thứ ba: ");
+		float side3 = sc.nextFloat();
+		
+		System.out.println("Chu vi của HCN là: " + (side1 + side2 + side3));
+		
+		float p = (side1 + side2 + side3) / 2;
+		float area = (float) Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
+		
+		System.out.println("Diện tích của HCN là: " + area);
+	}
+}
+
+```
 
 ### Ví dụ 5:
 Nhập tuổi của một sinh viên tính đến năm 2023, hãy tính và in ra năm sinh viên đó.
 
 **Code mẫu:**
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
+```java
+package DHDN;
+
+import java.util.Scanner;
+
+public class VKU {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập vào tuổi của sinh viên: ");
+		int age = sc.nextInt();
+		System.out.println("Năm sinh của sinh viên đó là " + (2023 - age));
+	}
+}
+```
 
 ### Ví dụ 6:
 Nhập vào một số nguyên N, hãy in ra chữ số cuối cùng của số đó.
@@ -148,7 +185,20 @@ Ví dụ N = 928743, chữ số gần cuối là 4.
 Ví dụ N = -24381, chữ số gần cuối là 8.
 
 **Code mẫu:**
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
+```java
+package DHDN;
+
+import java.util.Scanner;
+
+public class VKU {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập N: ");
+		int n = sc.nextInt();
+		System.out.println("Số gần của của N là " + Math.abs(n % 100) / 10);
+	}
+}
+```
 
 ### Ví dụ 8
 Nhập vào tên của bạn, hãy in ra độ dài tên của bạn.
@@ -162,7 +212,20 @@ Trong java để khai báo một chuỗi biến bạn có thể sử dụng **St
 Ví dụ để lấy độ dài của chuỗi **s** các bạn dùng **s.length()**
 
 **Code mẫu:**
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
+```java
+package DHDN;
+
+import java.util.Scanner;
+
+public class VKU {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập tên của bạn: ");
+		String name  = sc.nextLine();
+		System.out.println("Độ dài tên của bạn là: " + name.length());
+	}
+}
+```
 
 ### Ví dụ 9
 Nhập vào 2 số nguyên a và b, (b khác 0) hãy in ra kết quả của a / b như bên dưới với điều khiện chỉ sử dụng hàm in một lần.
@@ -172,7 +235,23 @@ Ví dụ: a = 5, b = 2, kết quả là 5 / 2 = 2.5
 Ví dụ: a = 10, b = 3, kết quả là 10 / 3 = 3.3333333
 
 **Code mẫu:**
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
+
+```java
+package DHDN;
+
+import java.util.Scanner;
+
+public class VKU {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập A: ");
+		int a = sc.nextInt();
+		System.out.print("Nhập B: ");
+		int b = sc.nextInt();
+		System.out.println(a + " / " + b + " = " + ((float)a / b));
+	}
+}
+```
 
 ### Ví dụ 10
 Nhập vào 1 ký tự thường (từ 'a' đến 'y'), hãy in ra ký tư liền sau ký tự vừa nhập.
@@ -184,7 +263,21 @@ Ví dụ nhập ch = 'm' thì kết quả là n
 Ví dụ nhập ch = 'y' thì kết quả là z
 
 **Code mẫu:**
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.
+```
+package DHDN;
+
+import java.util.Scanner;
+
+public class VKU {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập ký tự: ");
+		char ch = sc.next().charAt(0);
+		char ch2 = (char) (ch + 1);
+		System.out.println("Ký tự sau ký tự " + ch + " là " + ch2);
+	}
+}
+```
 
 ### Ví dụ 11
 Nhập vào 2 số nguyên a và b, hãy hoán đổi giá trị của a và b.

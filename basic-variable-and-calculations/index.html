@@ -1,10 +1,9 @@
 <!DOCTYPE html><html><head>
-      <title>Khai báo biến, nhập xuất dữ liệu và tính toán cơ bản
-	</title>
+      <title>Khai báo biến, nhập xuất dữ liệu và tính toán cơ bản</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///c:\Users\HAIZUKA\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.7.8\crossnote\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:///c:\Users\HAIZUKA\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.7.9\crossnote\dependencies\katex\katex.min.css">
       
       
       
@@ -16,6 +15,7 @@
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 
       </style>
+      
     </head>
     <body for="html-export">
       <div class="crossnote markdown-preview  ">
@@ -102,14 +102,47 @@ Ví dụ:</p>
 
 <p>Nhập và 3 cạnh của 1 tam giác, tính và in ra chu vi và diện tích của tam giác đó.</p>
 <p>Gợi ý tính diện tích: Hãy áp dụng công thức <a href="https://vi.wikipedia.org/wiki/C%C3%B4ng_th%E1%BB%A9c_Heron">Heron</a> để tính diện tích khi biết ba cạnh của tam giác.</p>
-<p><strong>Code mẫu:</strong><br>
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.</p>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-5">Ví dụ 5:</h3>
+<p><strong>Code mẫu:</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VKU</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập vào độ dài canh thứ nhất: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-float">float</span> side1 <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextFloat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập vào độ dài canh thứ hai: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-float">float</span> side2 <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextFloat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập vào độ dài canh thứ ba: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-float">float</span> side3 <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextFloat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Chu vi của HCN là: "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>side1 <span class="token operator">+</span> side2 <span class="token operator">+</span> side3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword keyword-float">float</span> p <span class="token operator">=</span> <span class="token punctuation">(</span>side1 <span class="token operator">+</span> side2 <span class="token operator">+</span> side3<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-float">float</span> area <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-float">float</span><span class="token punctuation">)</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>p <span class="token operator">*</span> <span class="token punctuation">(</span>p <span class="token operator">-</span> side1<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>p <span class="token operator">-</span> side2<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>p <span class="token operator">-</span> side3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Diện tích của HCN là: "</span> <span class="token operator">+</span> area<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-5">Ví dụ 5:</h3>
 
 <p>Nhập tuổi của một sinh viên tính đến năm 2023, hãy tính và in ra năm sinh viên đó.</p>
-<p><strong>Code mẫu:</strong><br>
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.</p>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-6">Ví dụ 6:</h3>
+<p><strong>Code mẫu:</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VKU</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập vào tuổi của sinh viên: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> age <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Năm sinh của sinh viên đó là "</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token number">2023</span> <span class="token operator">-</span> age<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-6">Ví dụ 6:</h3>
 
 <p>Nhập vào một số nguyên N, hãy in ra chữ số cuối cùng của số đó.</p>
 <p>Gợi ý: Chữ số cuối cùng của só n chính là kết quả của phép chia lấy phần dư của n cho 10.</p>
@@ -136,9 +169,20 @@ Ví dụ N = 123, chữ số gần cuối là 2.<br>
 Ví dụ N = 1234, chữ số gần cuối là 3.<br>
 Ví dụ N = 928743, chữ số gần cuối là 4.<br>
 Ví dụ N = -24381, chữ số gần cuối là 8.</p>
-<p><strong>Code mẫu:</strong><br>
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.</p>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-8">Ví dụ 8</h3>
+<p><strong>Code mẫu:</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VKU</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập N: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Số gần của của N là "</span> <span class="token operator">+</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-8">Ví dụ 8</h3>
 
 <p>Nhập vào tên của bạn, hãy in ra độ dài tên của bạn.<br>
 <em>Gợi ý</em><br>
@@ -146,24 +190,60 @@ Trong java để khai báo một chuỗi biến bạn có thể sử dụng <str
 <p>Để nhập một chuỗi các bạn sử hàm nextLine() trong class Scanner.</p>
 <p>Để lấy độ dài của một chuỗi bạn sử dụng <strong>.length()</strong></p>
 <p>Ví dụ để lấy độ dài của chuỗi <strong>s</strong> các bạn dùng <strong>s.length()</strong></p>
-<p><strong>Code mẫu:</strong><br>
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.</p>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-9">Ví dụ 9</h3>
+<p><strong>Code mẫu:</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VKU</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập tên của bạn: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">String</span> name  <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Độ dài tên của bạn là: "</span> <span class="token operator">+</span> name<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-9">Ví dụ 9</h3>
 
 <p>Nhập vào 2 số nguyên a và b, (b khác 0) hãy in ra kết quả của a / b như bên dưới với điều khiện chỉ sử dụng hàm in một lần.</p>
 <p>Ví dụ: a = 5, b = 2, kết quả là 5 / 2 = 2.5</p>
 <p>Ví dụ: a = 10, b = 3, kết quả là 10 / 3 = 3.3333333</p>
-<p><strong>Code mẫu:</strong><br>
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.</p>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-10">Ví dụ 10</h3>
+<p><strong>Code mẫu:</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VKU</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập A: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> a <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập B: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> b <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">+</span> <span class="token string">" / "</span> <span class="token operator">+</span> b <span class="token operator">+</span> <span class="token string">" = "</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-float">float</span><span class="token punctuation">)</span>a <span class="token operator">/</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-10">Ví dụ 10</h3>
 
 <p>Nhập vào 1 ký tự thường (từ 'a' đến 'y'), hãy in ra ký tư liền sau ký tự vừa nhập.</p>
 <p>Ví dụ nhập ch = 'a' thì kết quả là b</p>
 <p>Ví dụ nhập ch = 'm' thì kết quả là n</p>
 <p>Ví dụ nhập ch = 'y' thì kết quả là z</p>
-<p><strong>Code mẫu:</strong><br>
-Hãy thử tim hiểu trước, sẽ cập nhật code mẫu sau.</p>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-11">Ví dụ 11</h3>
+<p><strong>Code mẫu:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text text">package DHDN;
+
+import java.util.Scanner;
+
+public class VKU {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập ký tự: ");
+		char ch = sc.next().charAt(0);
+		char ch2 = (char) (ch + 1);
+		System.out.println("Ký tự sau ký tự " + ch + " là " + ch2);
+	}
+}
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-11">Ví dụ 11</h3>
 
 <p>Nhập vào 2 số nguyên a và b, hãy hoán đổi giá trị của a và b.<br>
 Ví dụ nhập a = 7, b = 5. Sau khi thực hiện chương trình thì a = 5, b = 7.</p>

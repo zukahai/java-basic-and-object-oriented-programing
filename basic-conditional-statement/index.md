@@ -8,8 +8,26 @@
 Nhập vào một số nguyên **N**, kiểm tra và in ra N có phải là số tự nhiên hay không.
 
 **Code mẫu:**
+```java
+package DHDN;
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+import java.util.Scanner;
+
+public class VKU {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập N: ");
+		int n = sc.nextInt();
+		
+		if (n >= 0)
+			System.out.println(n + " là số tự nhiên");
+		else
+			System.out.println(n + " không phải là số tự nhiên");
+	}
+}
+
+```
+
 
 ### Ví dụ 2
 Nhập vào 2 cạnh của một hình chữ nhật, hãy kiểm tra xem hình chữ nhật đó có phải là hình vuông hay không.
