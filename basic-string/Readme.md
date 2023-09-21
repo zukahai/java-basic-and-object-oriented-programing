@@ -73,3 +73,23 @@ Ví dụ N = 5, thì kết quả là:
 ****
 *****
 
+**Code mẫu:**
+
+Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+
+### Ví dụ 9
+
+Viết chương trình đưa ra tất cả ký tự và số lần xuất xuất hiệ của nó trong chuỗi
+
+Ví dụ: Chuỗi là "Hello"
+
+Thì in ra:<br>
+H xuất hiện 1 lần <br>
+e xuất hiện 1 lần <br>
+l xuất hiện 2 lần <br>
+o xuất hiện 1 lần <br>
+
+**Code mẫu:**
+
+Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+
