@@ -39,6 +39,30 @@ Gồm các bài tập về for, while, do while trong Java.
 
 Xem bài tập [Tại đây](./basic-loop/)
 
+## 5. Mảng trong java
+
+Gồm các bài tập về mảng trong Java.
+
+**🎯 Số lượng ví dụ: 13**
+
+Xem bài tập [Tại đây](./basic-array/)
+
+## 6. Chuỗi trong java
+
+Gồm các bài tập về chuỗi (String) trong Java.
+
+**🎯 Số lượng ví dụ: 9**
+
+Xem bài tập [Tại đây](./basic-string/)
+
+## 7. Lập trình hàm
+
+Gồm các bài tập về hàm trong Java.
+
+**🎯 Số lượng ví dụ: 20**
+
+Xem bài tập [Tại đây](./basic-method/)
+
 # Lập trình hướng đối tượng
 
 ## 1. Hàm khởi tạo trong OOP
