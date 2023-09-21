@@ -67,11 +67,13 @@ Nhập vào số nguyên dương N. Hãy thử in ra tháp '*' bằng 1 vòng l�
 
 Ví dụ N = 5, thì kết quả là:
 
+```text
 *
 **
 ***
 ****
 *****
+```
 
 **Code mẫu:**
 
