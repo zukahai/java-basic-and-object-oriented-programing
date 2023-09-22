@@ -21,6 +21,8 @@ Gồm các bài tập về câu lệnh điều kiện trong Java.
 
 **🎯 Số lượng ví dụ: 15**
 
+☑️ Tất cả ví dụ đều đã có code mẫu
+
 Xem bài tập [Tại đây](./basic-conditional-statement/)
 
 ## 3. Lệnh Switch Case
