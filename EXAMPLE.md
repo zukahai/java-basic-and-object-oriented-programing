@@ -31,6 +31,8 @@ Gồm các bài tập về câu lệnh switch case trong Java.
 
 **🎯 Số lượng ví dụ: 5**
 
+☑️ Tất cả ví dụ đều đã có code mẫu
+
 Xem bài tập [Tại đây](./basic-switchcase/)
 
 ## 4. Vòng lặp

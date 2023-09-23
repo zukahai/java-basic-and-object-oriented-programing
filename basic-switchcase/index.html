@@ -29,18 +29,114 @@
 <p>Nhập N = 3 thì kết quả là "Ba"<br>
 Nhập N = 9 thì kết quả là "Chín"</p>
 <p><strong>Code mẫu:</strong></p>
-<p>Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.</p>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2">Ví dụ 2</h3>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập vào số tự nhiên có 1 chữ số: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">0</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Không"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">1</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Một"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">2</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hai"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">3</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Ba"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">4</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Bốn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">5</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Năm"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">6</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Sáu"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">7</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Bảy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">8</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Tám"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">9</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Chín"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-default">default</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Dữ liệu chưa đúng"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2">Ví dụ 2</h3>
 
 <p>Quy định 0 là nam, 1 là nữ, 2 là khác. Nhập và một số nguyên chỉ giới tính của một người, hãy chi biết người đó giới tính gì.</p>
 <p><strong>Code mẫu:</strong></p>
-<p>Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.</p>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-3">Ví dụ 3</h3>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập N: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">0</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Nam"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">1</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Nữ"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-default">default</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Khác"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-3">Ví dụ 3</h3>
 
 <p>Quy định ký tự 'N' là hướng Bắc, 'S' là hướng Nam, 'W' là hướng Đông, 'E' là hướng Tây. Nhập và một ký tự trong NEWS, hãy cho biêý hướng tương ứng của ký tự đó.</p>
 <p><strong>Code mẫu:</strong></p>
-<p>Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.</p>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-4">Ví dụ 4</h3>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập vào ký tự: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-char">char</span> ch <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span>ch<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-case">case</span> <span class="token char">'N'</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Bắc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token char">'S'</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Nam"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token char">'E'</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Tây"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token char">'W'</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Đông"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-default">default</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Chưa nhập đúng"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-4">Ví dụ 4</h3>
 
 <p>Nhập và số nguyên <strong>a</strong> và <strong>b</strong>, nhập tiếp một phép tính +,-,*,/,%. Tính và đưa ra kết quả.</p>
 <p>Ví dụ nhập a = 14, b = 5, phép tính bằng '%' thì kết quả là 14 % 5 = 2</p>
@@ -85,11 +181,47 @@ Nhập N = 9 thì kết quả là "Chín"</p>
 </pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-5">Ví dụ 5</h3>
 
 <p>Nhập vào năm và tháng, hãy ra in số ngày trong tháng của năm đó.</p>
-<p><em>Gợi ý:</em> những tháng 1, 3, 5, 7, 8, 10, 12 có 31 ngày, những tháng 4, 6, 9, 11 có 30 ngày, những tháng 2 là năm nhuận thì có 28 ngày, tháng 2 của năm bình thường có 29 ngày.</p>
+<p><em>Gợi ý:</em> những tháng 1, 3, 5, 7, 8, 10, 12 có 31 ngày, những tháng 4, 6, 9, 11 có 30 ngày, những tháng 2 là năm nhuận thì có 29 ngày, tháng 2 của năm bình thường có 28 ngày.</p>
 <p>Năm nhuận là năm chia hết cho 4 và không chia hết cho 100, hoặc những năm chia hết cho 400.</p>
 <p><strong>Code mẫu:</strong></p>
-<p>Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.</p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
 
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập năm: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> year <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập tháng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> month <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span>month<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">1</span><span class="token operator">:</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">3</span><span class="token operator">:</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">7</span><span class="token operator">:</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">8</span><span class="token operator">:</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">10</span><span class="token operator">:</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">12</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Tháng "</span> <span class="token operator">+</span> month <span class="token operator">+</span> <span class="token string">" năm "</span> <span class="token operator">+</span> year <span class="token operator">+</span> <span class="token string">" có 31 ngày"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">4</span><span class="token operator">:</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">6</span><span class="token operator">:</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">9</span><span class="token operator">:</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">11</span><span class="token operator">:</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Tháng "</span> <span class="token operator">+</span> month <span class="token operator">+</span> <span class="token string">" năm "</span> <span class="token operator">+</span> year <span class="token operator">+</span> <span class="token string">" có 30 ngày"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-case">case</span> <span class="token number">2</span><span class="token operator">:</span>
+				<span class="token keyword keyword-int">int</span> day <span class="token operator">=</span> <span class="token number">28</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>year <span class="token operator">%</span> <span class="token number">4</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> year <span class="token operator">%</span> <span class="token number">100</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">||</span> year <span class="token operator">%</span> <span class="token number">400</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+					day <span class="token operator">=</span> <span class="token number">29</span><span class="token punctuation">;</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Tháng "</span> <span class="token operator">+</span> month <span class="token operator">+</span> <span class="token string">" năm "</span> <span class="token operator">+</span> year <span class="token operator">+</span> <span class="token string">" có "</span> <span class="token operator">+</span> day <span class="token operator">+</span> <span class="token string">" ngày"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre>
       </div>
       
       
