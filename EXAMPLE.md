@@ -41,6 +41,8 @@ Gồm các bài tập về for, while, do while trong Java.
 
 **🎯 Số lượng ví dụ: 15**
 
+☑️ Tất cả ví dụ đều đã có code mẫu
+
 Xem bài tập [Tại đây](./basic-loop/)
 
 ## 5. Mảng trong java
