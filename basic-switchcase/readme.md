@@ -11,7 +11,8 @@ Nhập vào một số tự nhiên có 1 chữ số, hãy in ra cách đọc ti�
 Nhập N = 3 thì kết quả là "Ba"
 Nhập N = 9 thì kết quả là "Chín"
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```java
 package VKU;
@@ -62,12 +63,15 @@ public class Example {
 	}
 }
 ```
+</details>
+<br>
 
 ### Ví dụ 2
 
 Quy định 0 là nam, 1 là nữ, 2 là khác. Nhập và một số nguyên chỉ giới tính của một người, hãy chi biết người đó giới tính gì.
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```java
 package VKU;
@@ -94,11 +98,14 @@ public class Example {
 	}
 }
 ```
+</details>
+<br>
 
 ### Ví dụ 3
 Quy định ký tự 'N' là hướng Bắc, 'S' là hướng Nam, 'W' là hướng Đông, 'E' là hướng Tây. Nhập và một ký tự trong NEWS, hãy cho biêý hướng tương ứng của ký tự đó.
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```java
 package VKU;
@@ -131,6 +138,8 @@ public class Example {
 	}
 }
 ```
+</details>
+<br>
 
 ### Ví dụ 4
 
@@ -138,7 +147,8 @@ Nhập và số nguyên **a** và **b**, nhập tiếp một phép tính +,-,*,/
 
 Ví dụ nhập a = 14, b = 5, phép tính bằng '%' thì kết quả là 14 % 5 = 2
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```Java
 package DHDN;
@@ -179,6 +189,8 @@ public class VKU {
 	}
 }
 ```
+</details>
+<br>
 
 ### Ví dụ 5
 
@@ -188,7 +200,8 @@ Nhập vào năm và tháng, hãy ra in số ngày trong tháng của năm đó.
 
 Năm nhuận là năm chia hết cho 4 và không chia hết cho 100, hoặc những năm chia hết cho 400.
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```java
 package VKU;
@@ -229,3 +242,5 @@ public class Example {
 	}
 }
 ```
+</details>
+<br>
