@@ -3,7 +3,8 @@
 ### Ví dụ 1:
 Nhập vào hai số nguyên a và b, tính và in ra tổng, hiệu, tích và thương của 2 số đó.
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```java
 import java.util.Scanner;
@@ -27,6 +28,9 @@ public class VKU {
 	}
 }
 ```
+
+</details>
+<br>
 
 Để nhập dữ liệu từ bàn phím thì các bạn sử dụng class Scanner từ package java.util. (Nhớ import thư viện này vào nhé, nên áp dụng **ctrl + space** để tự import thư viện luôn)
 
@@ -55,7 +59,9 @@ System.out.println(a / (float)b);
 ### Ví dụ 2:
 Nhập vào bán kính của một hình tròn, tính và in ra chu vi và diện tích của hình tròn đó.
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
 ```java
 import java.util.Scanner;
 
@@ -72,12 +78,17 @@ public class Hello {
 }
 ```
 
-Trong ngôn ngữ để lấy giá trị Pi các bạn sử dụng **Math.PI**
+</details>
+<br>
+
+Trong ngôn ngữ Java để lấy giá trị Pi các bạn sử dụng **Math.PI**
 
 ### Ví dụ 3
 Nhập và chiều dài và chiều rộng của một hình chữ nhật, tính và in ra chu vi và diện tích của hình chữ nhật đó.
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
 ```Java
 package test;
 
@@ -97,12 +108,16 @@ public class Hello {
 }
 ```
 
+</details>
+<br>
+
 ### Ví dụ 4:
 Nhập và 3 cạnh của 1 tam giác, tính và in ra chu vi và diện tích của tam giác đó.
 
 Gợi ý tính diện tích: Hãy áp dụng công thức [Heron](https://vi.wikipedia.org/wiki/Công_thức_Heron) để tính diện tích khi biết ba cạnh của tam giác.
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```java
 package DHDN;
@@ -130,10 +145,15 @@ public class VKU {
 
 ```
 
+</details>
+<br>
+
 ### Ví dụ 5:
 Nhập tuổi của một sinh viên tính đến năm 2023, hãy tính và in ra năm sinh viên đó.
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
 ```java
 package DHDN;
 
@@ -149,6 +169,9 @@ public class VKU {
 }
 ```
 
+</details>
+<br>
+
 ### Ví dụ 6:
 Nhập vào một số nguyên N, hãy in ra chữ số cuối cùng của số đó.
 
@@ -162,7 +185,9 @@ Ví dụ 5 % 2 = 1, 123 % 10 = 3,...
 Lưu ý cần lấy trị tuyệt đối **Math.abs()** để tránh trường hợp n < 0
 
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
 ```java
 import java.util.Scanner;
 
@@ -176,6 +201,8 @@ public class Hello {
 }
 
 ```
+</details>
+<br>
 
 ### Ví dụ 7
 Nhập vào một số nguyên N có ít nhất 2 chữ số (lớn hơn 9 hoặc nhỏ hơn -9). In ra chữ số gần cuối của N.
@@ -184,7 +211,9 @@ Ví dụ N = 1234, chữ số gần cuối là 3.
 Ví dụ N = 928743, chữ số gần cuối là 4.
 Ví dụ N = -24381, chữ số gần cuối là 8.
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
 ```java
 package DHDN;
 
@@ -200,6 +229,9 @@ public class VKU {
 }
 ```
 
+</details>
+<br>
+
 ### Ví dụ 8
 Nhập vào tên của bạn, hãy in ra độ dài tên của bạn.
 *Gợi ý*
@@ -211,7 +243,9 @@ Trong java để khai báo một chuỗi biến bạn có thể sử dụng **St
 
 Ví dụ để lấy độ dài của chuỗi **s** các bạn dùng **s.length()**
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
 ```java
 package DHDN;
 
@@ -227,6 +261,9 @@ public class VKU {
 }
 ```
 
+</details>
+<br>
+
 ### Ví dụ 9
 Nhập vào 2 số nguyên a và b, (b khác 0) hãy in ra kết quả của a / b như bên dưới với điều khiện chỉ sử dụng hàm in một lần.
 
@@ -234,7 +271,8 @@ Ví dụ: a = 5, b = 2, kết quả là 5 / 2 = 2.5
 
 Ví dụ: a = 10, b = 3, kết quả là 10 / 3 = 3.3333333
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```java
 package DHDN;
@@ -253,6 +291,9 @@ public class VKU {
 }
 ```
 
+</details>
+<br>
+
 ### Ví dụ 10
 Nhập vào 1 ký tự thường (từ 'a' đến 'y'), hãy in ra ký tư liền sau ký tự vừa nhập.
 
@@ -262,7 +303,9 @@ Ví dụ nhập ch = 'm' thì kết quả là n
 
 Ví dụ nhập ch = 'y' thì kết quả là z
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
 ```
 package DHDN;
 
@@ -278,6 +321,9 @@ public class VKU {
 	}
 }
 ```
+
+</details>
+<br>
 
 ### Ví dụ 11
 Nhập vào 2 số nguyên a và b, hãy hoán đổi giá trị của a và b.
@@ -347,7 +393,9 @@ a = b;
 b = c;
 ```
 
-**Code mẫu**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
 ```Java
 package test;
 
@@ -382,6 +430,8 @@ public class Hello {
 }
 
 ```
+</details>
+<br>
 
 ### Ví dụ 12
 Nhập vào 2 số nguyên a và b, hãy hoán đổi giá trị của a và b **mà không dùng biến phụ**
@@ -403,7 +453,8 @@ a = a - b: tổng của a và b trừ đi a ban đầu sẽ ra b ban đầu
 Như thế sau khi thực hiện 2 câu lệnh trên thì a mang giá trị b ban đầu và b mang giá trị a ban đầu
 
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```java
 package DHDN;
@@ -441,3 +492,5 @@ public class VKU {
 }
 
 ```
+</details>
+<br>

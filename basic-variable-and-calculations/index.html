@@ -24,7 +24,8 @@
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-1">Ví dụ 1:</h3>
 
 <p>Nhập vào hai số nguyên a và b, tính và in ra tổng, hiệu, tích và thương của 2 số đó.</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
 <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">VKU</span> <span class="token punctuation">{</span>
 	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -45,7 +46,9 @@
 		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"A / B = "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>a <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token keyword keyword-float">float</span><span class="token punctuation">)</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><p>Để nhập dữ liệu từ bàn phím thì các bạn sử dụng class Scanner từ package java.util. (Nhớ import thư viện này vào nhé, nên áp dụng <strong>ctrl + space</strong> để tự import thư viện luôn)</p>
+</pre></details>
+<br>
+<p>Để nhập dữ liệu từ bàn phím thì các bạn sử dụng class Scanner từ package java.util. (Nhớ import thư viện này vào nhé, nên áp dụng <strong>ctrl + space</strong> để tự import thư viện luôn)</p>
 <p>Lưu ý là trong ngôn ngữ Java, việc chia 2 số có kiểu đều là số nguyên thì chỉ trả lại phần nguyên của kết quả thôi.</p>
 <p>Ví dụ:</p>
 <pre data-role="codeBlock" data-info="Java" class="language-java Java"><span class="token keyword keyword-int">int</span> a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
@@ -63,7 +66,8 @@ Ví dụ:</p>
 </pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2">Ví dụ 2:</h3>
 
 <p>Nhập vào bán kính của một hình tròn, tính và in ra chu vi và diện tích của hình tròn đó.</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Hello</span> <span class="token punctuation">{</span>
@@ -77,11 +81,14 @@ Ví dụ:</p>
 		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Diện tích của hình tròn là: "</span> <span class="token operator">+</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><p>Trong ngôn ngữ để lấy giá trị Pi các bạn sử dụng <strong>Math.PI</strong></p>
+</pre></details>
+<br>
+<p>Trong ngôn ngữ Java để lấy giá trị Pi các bạn sử dụng <strong>Math.PI</strong></p>
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-3">Ví dụ 3</h3>
 
 <p>Nhập và chiều dài và chiều rộng của một hình chữ nhật, tính và in ra chu vi và diện tích của hình chữ nhật đó.</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="Java" class="language-java Java"><span class="token keyword keyword-package">package</span> <span class="token namespace">test</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
@@ -98,11 +105,14 @@ Ví dụ:</p>
 		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Diện tích của HCN "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>length <span class="token operator">*</span> width<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-4">Ví dụ 4:</h3>
+</pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-4">Ví dụ 4:</h3>
 
 <p>Nhập và 3 cạnh của 1 tam giác, tính và in ra chu vi và diện tích của tam giác đó.</p>
 <p>Gợi ý tính diện tích: Hãy áp dụng công thức <a href="https://vi.wikipedia.org/wiki/C%C3%B4ng_th%E1%BB%A9c_Heron">Heron</a> để tính diện tích khi biết ba cạnh của tam giác.</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
@@ -126,10 +136,13 @@ Ví dụ:</p>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-5">Ví dụ 5:</h3>
+</pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-5">Ví dụ 5:</h3>
 
 <p>Nhập tuổi của một sinh viên tính đến năm 2023, hãy tính và in ra năm sinh viên đó.</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
@@ -142,7 +155,9 @@ Ví dụ:</p>
 		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Năm sinh của sinh viên đó là "</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token number">2023</span> <span class="token operator">-</span> age<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-6">Ví dụ 6:</h3>
+</pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-6">Ví dụ 6:</h3>
 
 <p>Nhập vào một số nguyên N, hãy in ra chữ số cuối cùng của số đó.</p>
 <p>Gợi ý: Chữ số cuối cùng của só n chính là kết quả của phép chia lấy phần dư của n cho 10.</p>
@@ -150,7 +165,8 @@ Ví dụ:</p>
 <p>Trong Java, phép chia lấy dư được biểu diễn bằng ký tự <strong>%</strong>.<br>
 Ví dụ 5 % 2 = 1, 123 % 10 = 3,...</p>
 <p>Lưu ý cần lấy trị tuyệt đối <strong>Math.abs()</strong> để tránh trường hợp n &lt; 0</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Hello</span> <span class="token punctuation">{</span>
@@ -162,14 +178,17 @@ Ví dụ 5 % 2 = 1, 123 % 10 = 3,...</p>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-7">Ví dụ 7</h3>
+</pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-7">Ví dụ 7</h3>
 
 <p>Nhập vào một số nguyên N có ít nhất 2 chữ số (lớn hơn 9 hoặc nhỏ hơn -9). In ra chữ số gần cuối của N.<br>
 Ví dụ N = 123, chữ số gần cuối là 2.<br>
 Ví dụ N = 1234, chữ số gần cuối là 3.<br>
 Ví dụ N = 928743, chữ số gần cuối là 4.<br>
 Ví dụ N = -24381, chữ số gần cuối là 8.</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
@@ -182,7 +201,9 @@ Ví dụ N = -24381, chữ số gần cuối là 8.</p>
 		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Số gần của của N là "</span> <span class="token operator">+</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-8">Ví dụ 8</h3>
+</pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-8">Ví dụ 8</h3>
 
 <p>Nhập vào tên của bạn, hãy in ra độ dài tên của bạn.<br>
 <em>Gợi ý</em><br>
@@ -190,7 +211,8 @@ Trong java để khai báo một chuỗi biến bạn có thể sử dụng <str
 <p>Để nhập một chuỗi các bạn sử hàm nextLine() trong class Scanner.</p>
 <p>Để lấy độ dài của một chuỗi bạn sử dụng <strong>.length()</strong></p>
 <p>Ví dụ để lấy độ dài của chuỗi <strong>s</strong> các bạn dùng <strong>s.length()</strong></p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
@@ -203,12 +225,15 @@ Trong java để khai báo một chuỗi biến bạn có thể sử dụng <str
 		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Độ dài tên của bạn là: "</span> <span class="token operator">+</span> name<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-9">Ví dụ 9</h3>
+</pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-9">Ví dụ 9</h3>
 
 <p>Nhập vào 2 số nguyên a và b, (b khác 0) hãy in ra kết quả của a / b như bên dưới với điều khiện chỉ sử dụng hàm in một lần.</p>
 <p>Ví dụ: a = 5, b = 2, kết quả là 5 / 2 = 2.5</p>
 <p>Ví dụ: a = 10, b = 3, kết quả là 10 / 3 = 3.3333333</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
@@ -223,13 +248,16 @@ Trong java để khai báo một chuỗi biến bạn có thể sử dụng <str
 		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">+</span> <span class="token string">" / "</span> <span class="token operator">+</span> b <span class="token operator">+</span> <span class="token string">" = "</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword keyword-float">float</span><span class="token punctuation">)</span>a <span class="token operator">/</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-10">Ví dụ 10</h3>
+</pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-10">Ví dụ 10</h3>
 
 <p>Nhập vào 1 ký tự thường (từ 'a' đến 'y'), hãy in ra ký tư liền sau ký tự vừa nhập.</p>
 <p>Ví dụ nhập ch = 'a' thì kết quả là b</p>
 <p>Ví dụ nhập ch = 'm' thì kết quả là n</p>
 <p>Ví dụ nhập ch = 'y' thì kết quả là z</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="" class="language-text text">package DHDN;
 
 import java.util.Scanner;
@@ -243,7 +271,9 @@ public class VKU {
 		System.out.println("Ký tự sau ký tự " + ch + " là " + ch2);
 	}
 }
-</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-11">Ví dụ 11</h3>
+</pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-11">Ví dụ 11</h3>
 
 <p>Nhập vào 2 số nguyên a và b, hãy hoán đổi giá trị của a và b.<br>
 Ví dụ nhập a = 7, b = 5. Sau khi thực hiện chương trình thì a = 5, b = 7.</p>
@@ -286,7 +316,8 @@ b <span class="token operator">=</span> a<span class="token punctuation">;</span
 <pre data-role="codeBlock" data-info="Java" class="language-java Java">c <span class="token operator">=</span> a<span class="token punctuation">;</span>
 a <span class="token operator">=</span> b<span class="token punctuation">;</span>
 b <span class="token operator">=</span> c<span class="token punctuation">;</span>
-</pre><p><strong>Code mẫu</strong></p>
+</pre><details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="Java" class="language-java Java"><span class="token keyword keyword-package">package</span> <span class="token namespace">test</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
@@ -319,7 +350,9 @@ b <span class="token operator">=</span> c<span class="token punctuation">;</span
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-</pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-12">Ví dụ 12</h3>
+</pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-12">Ví dụ 12</h3>
 
 <p>Nhập vào 2 số nguyên a và b, hãy hoán đổi giá trị của a và b <strong>mà không dùng biến phụ</strong><br>
 Ví dụ nhập a = 7, b = 5. Sau khi thực hiện chương trình thì a = 5, b = 7.</p>
@@ -331,7 +364,8 @@ a <span class="token operator">=</span> a <span class="token operator">-</span> 
 <p>b = a - b: do a bây giờ là tổng của a và b, nếu khi a  - b sẽ trả về a ban đầu, lúc này a mang giá trị tổng của a và b, còn b mang giá trị của a ban đầu</p>
 <p>a = a - b: tổng của a và b trừ đi a ban đầu sẽ ra b ban đầu</p>
 <p>Như thế sau khi thực hiện 2 câu lệnh trên thì a mang giá trị b ban đầu và b mang giá trị a ban đầu</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
@@ -366,7 +400,9 @@ a <span class="token operator">=</span> a <span class="token operator">-</span> 
 
 <span class="token punctuation">}</span>
 
-</pre>
+</pre></details>
+<br>
+
       </div>
       
       
