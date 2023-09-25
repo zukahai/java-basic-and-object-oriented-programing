@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>VKU | Lập trình hướng đối tượng - Ví dụ luyện tập</title>
+      <title>Bài tập nâng cao</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -24,65 +24,298 @@
     
       <div class="crossnote markdown-preview  ">
       <div align="center">
-<h1>VKU | Lập trình hướng đối tượng - Ví dụ luyện tập</h1>
+<h1>Bài tập nâng cao</h1>
 </div>
-<h1 class="crossnote-header" id="java-c%C6%A1-b%E1%BA%A3n">Java cơ bản</h1>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-1-d%E1%BB%8Bch-s%E1%BB%91">Ví dụ 1: dịch số</h3>
 
-<h2 class="crossnote-header" id="1-bi%E1%BA%BFn-v%C3%A0-t%C3%ADnh-to%C3%A1n-c%C6%A1-b%E1%BA%A3n">1. Biến và tính toán cơ bản</h2>
+<p>Cho một số nguyên <strong>N</strong> <em>(1 &lt;= n &lt;= 10^1000)</em>. Hãy in ra cách đọc tiếng Việt của số tự nhiên đó.</p>
+<details>
+<summary> <strong>📝Test case 🧪</strong></summary>
+<h4>Testcase 1:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td style="text-align:center">Năm</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 2:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12</td>
+<td style="text-align:center">Mười hai</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 3:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>27</td>
+<td style="text-align:center">Hai mươi bảy</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 4:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>123</td>
+<td style="text-align:center">Một trăm hai mươi ba</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 5:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9302</td>
+<td style="text-align:center">Chín ngàn ba trăm lẻ hai</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 6:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2938473</td>
+<td style="text-align:center">Hai triệu chín trăm ba mươi tám ngàn bốn trăm bảy mươi ba</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 7:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>938473648</td>
+<td style="text-align:center">Chín trăm ba mươi tám triệu bốn trăm bảy mươi ba ngàn sáu trăm bốn mươi tám</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 8:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>736283948372635</td>
+<td style="text-align:center">Bảy trăm ba mươi sáu ngàn tỷ hai trăm tám mươi ba tỷ chín trăm bốn mươi tám triệu ba trăm bảy mươi hai ngàn sáu trăm ba mươi năm</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 9:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>346873683658343645747</td>
+<td style="text-align:center">Ba trăm bốn mươi sáu tỷ tỷ tám trăm bảy mươi ba triệu tỷ sáu trăm tám mươi ba ngàn tỷ sáu trăm năm mươi tám tỷ ba trăm bốn mươi ba triệu sáu trăm bốn mươi năm ngàn bảy trăm bốn mươi bảy</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 10:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222</td>
+<td style="text-align:center">Hai trăm hai mươi hai triệu tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ tỷ hai trăm hai mươi hai tỷ tỷ tỷ hai trăm hai mươi hai triệu tỷ tỷ hai trăm hai mươi hai ngàn tỷ tỷ hai trăm hai mươi hai tỷ tỷ hai trăm hai mươi hai triệu tỷ hai trăm hai mươi hai ngàn tỷ hai trăm hai mươi hai tỷ hai trăm hai mươi hai triệu hai trăm hai mươi hai ngàn hai trăm hai mươi hai</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 11:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align:center">Không</td>
+</tr>
+</tbody>
+</table>
+</details>
+<br>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
+<!-- ```java
+package VKU;
 
-<p>Gồm những bài tập về nhập xuất, tính toán cơ bản trong Java.</p>
-<p>️<strong>🎯 Số lượng ví dụ: 12</strong></p>
-<p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
-<p>Xem bài tập <a href="./basic-variable-and-calculations/">Tại đây</a></p>
-<h2 class="crossnote-header" id="2-c%C3%A2u-l%E1%BB%87nh-%C4%91i%E1%BB%81u-ki%E1%BB%87n">2. Câu lệnh điều kiện</h2>
+import java.util.ArrayList;
 
-<p>Gồm các bài tập về câu lệnh điều kiện trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 15</strong></p>
-<p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
-<p>Xem bài tập <a href="./basic-conditional-statement/">Tại đây</a></p>
-<h2 class="crossnote-header" id="3-l%E1%BB%87nh-switch-case">3. Lệnh Switch Case</h2>
+public class TraslateNumber {
+	String number;
+	ArrayList<String> threes = new ArrayList<>();
+	
+	public TraslateNumber() {
+		this.number = "0";
+		solve();
+	}
+	
+	public TraslateNumber(String number) {
+		this.number = number;
+		solve();
+	}
+	
+	public TraslateNumber(int number) {
+		this.number = number + "";
+		solve();
+	}
+	
+	private void solve() {
+		format();
+	}
+	
+	String translate() {
+		String result = "";
+		for (int i = 0; i < threes.size(); i++) {
+			String rs = traslateThree(threes.get(i), (i != 0));
+			if (!rs.equals("không")) {
+				result  = result + rs + getLevel(threes.size() - i - 1);
+			} else {
+				if (threes.size() == 1)
+					return rs;
+			}
+		}
+		while(result.contains("  "))
+			result = result.replaceAll("  ", " ");
+		while(result.length() > 0 && result.charAt(0) == ' ')
+			result = result.substring(1);
+		result = result.substring(0, 1).toUpperCase() + result.substring(1);
+		return result;
+	}
+	
+	private String getLevel(int level) {
+		String result = " ";
+		while (level >= 3) {
+			result = result + "tỷ ";
+			level -= 3;
+		}
+		if (level == 1) {
+			result = "ngàn " + result;
+		}
+		if (level == 2)
+			result = "triệu " + result;
+		
+		return " " + result + " ";
+	}
+	
+	String traslateThree(String number, boolean pre) {
+		if (number.equals("000"))
+			return "không";
+		String vietnamese[] = {"không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"};
+		String result = "";
+		if (number.charAt(0) == '0') {
+			if (pre == true)
+				result = result + " " + vietnamese[0] + " trăm";
+		} else {
+			result = result + " " + vietnamese[number.charAt(0) - '0'] + " trăm";
+		}
+		
+		if (number.charAt(1) == '0') {
+			if (number.charAt(0) != '0' && number.charAt(2) != '0') {
+				result = result + " lẻ";
+			}
+		} else if (number.charAt(1) == '1'){
+			result = result + " mười";
+		} else {
+			result = result + " " + vietnamese[number.charAt(1) - '0'] + " mươi";
+		}
+		if (number.charAt(2) != '0')
+			result = result + " " + vietnamese[number.charAt(2) -'0'];
+		return result;
+	}
+	
+	private void format() {
+		while(number.length() > 1 && number.charAt(0) == '0') {
+			number = number.substring(1);
+		}
+		while (number.length() % 3 != 0)
+			number = "0" + number;
+		for (int i = 0; i < number.length(); i += 3)
+			threes.add(number.substring(i, i + 3));
+	}
+	
+	@Override
+	public String toString() {
+		return translate();
+	}
+	
+	public String getTraslate() {
+		return translate();
+	}
+	public static void main(String[] args) {
+		TraslateNumber tn = new TraslateNumber("123");
+		System.out.println(tn);
+	}
+}
 
-<p>Gồm các bài tập về câu lệnh switch case trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 5</strong></p>
-<p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
-<p>Xem bài tập <a href="./basic-switchcase/">Tại đây</a></p>
-<h2 class="crossnote-header" id="4-v%C3%B2ng-l%E1%BA%B7p">4. Vòng lặp</h2>
-
-<p>Gồm các bài tập về for, while, do while trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 15</strong></p>
-<p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
-<p>Xem bài tập <a href="./basic-loop/">Tại đây</a></p>
-<h2 class="crossnote-header" id="5-m%E1%BA%A3ng-trong-java">5. Mảng trong java</h2>
-
-<p>Gồm các bài tập về mảng trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 13</strong></p>
-<p>Xem bài tập <a href="./basic-array/">Tại đây</a></p>
-<h2 class="crossnote-header" id="6-chu%E1%BB%97i-trong-java">6. Chuỗi trong java</h2>
-
-<p>Gồm các bài tập về chuỗi (String) trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 9</strong></p>
-<p>Xem bài tập <a href="./basic-string/">Tại đây</a></p>
-<h2 class="crossnote-header" id="7-l%E1%BA%ADp-tr%C3%ACnh-h%C3%A0m">7. Lập trình hàm</h2>
-
-<p>Gồm các bài tập về hàm trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 20</strong></p>
-<p>Xem bài tập <a href="./basic-method/">Tại đây</a></p>
-<h1 class="crossnote-header" id="l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng">Lập trình hướng đối tượng</h1>
-
-<h2 class="crossnote-header" id="1-h%C3%A0m-kh%E1%BB%9Fi-t%E1%BA%A1o-trong-oop">1. Hàm khởi tạo trong OOP</h2>
-
-<p>Gồm những bài tập về hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính, các hàm getter, setter và hàm toString.</p>
-<p><strong>🎯 Số lượng ví dụ: 6</strong></p>
-<p>Xem bài tập <a href="./oop-constructor/">Tại đây</a></p>
-<hr>
-<h1 class="crossnote-header" id="b%C3%A0i-t%E1%BA%ADp-n%C3%A2ng-cao-">Bài tập nâng cao 🚀</h1>
-
-<p>Gồm nhưng bài tập có độ khó nâng cao 🚀, dành cho những bạn muốn thử sức với nhưng bài nâng cao.</p>
-<blockquote>
-<p><strong>Lưu ý:</strong> Chương trình học tập gồm những bài tập có độ khó nâng cao hơn, vì vậy hãy hoàn thành tất cả các bài tập ở mức độ cơ bản trước khi bắt đầu làm các bài tập nâng cao. 🚀</p>
-</blockquote>
-<p><strong>🎯 Số lượng ví dụ: 1</strong></p>
-<p>Xem bài tập <a href="./advanced-exercises/">Tại đây</a></p>
+``` -->
+</details>
+<br>
 
       </div>
       

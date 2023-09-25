@@ -78,3 +78,16 @@ Gồm những bài tập về hàm khởi tạo mặc định, hàm khởi tạo
 **🎯 Số lượng ví dụ: 6**
 
 Xem bài tập [Tại đây](./oop-constructor/)
+
+<hr>
+
+# Bài tập nâng cao 🚀
+
+Gồm nhưng bài tập có độ khó nâng cao 🚀, dành cho những bạn muốn thử sức với nhưng bài nâng cao.
+
+> **Lưu ý:** Chương trình học tập gồm những bài tập có độ khó nâng cao hơn, vì vậy hãy hoàn thành tất cả các bài tập ở mức độ cơ bản trước khi bắt đầu làm các bài tập nâng cao. 🚀
+
+
+**🎯 Số lượng ví dụ: 1**
+
+Xem bài tập [Tại đây](./advanced-exercises/)
