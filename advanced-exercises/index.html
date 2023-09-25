@@ -26,9 +26,246 @@
       <div align="center">
 <h1>Bài tập nâng cao</h1>
 </div>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-1-d%E1%BB%8Bch-s%E1%BB%91">Ví dụ 1: dịch số</h3>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-1-s%E1%BB%91-l%C6%B0%C6%A1ng-s%E1%BB%91-kh%C3%B4ng-cu%E1%BB%91i-c%C3%B9ng">Ví dụ 1: Số lương số không cuối cùng</h3>
 
-<p>Cho một số nguyên <strong>N</strong> <em>(1 &lt;= n &lt;= 10^1000)</em>. Hãy in ra cách đọc tiếng Việt của số tự nhiên đó.</p>
+<p>Viết phương thức in số lượng chữ số <strong>0</strong> cuối cùng của <strong>n!</strong> <br><em>(1 ≤ n ≤ 10^18)</em>.</p>
+<details>
+<summary> <strong>📝Test case 🧪</strong></summary>
+<h4>Testcase 1:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 2:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12</td>
+<td style="text-align:center">2</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 3:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17</td>
+<td style="text-align:center">3</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 4:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>26</td>
+<td style="text-align:center">6</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 5:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>48</td>
+<td style="text-align:center">10</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 6:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>236</td>
+<td style="text-align:center">57</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 7:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>74823</td>
+<td style="text-align:center">18700</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 8:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>736283948372635</td>
+<td style="text-align:center">184070987093150</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 9:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>19283746253648293</td>
+<td style="text-align:center">4820936563412061</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 10:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11111111111111111</td>
+<td style="text-align:center">2777777777777765</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 11:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>999999999999999999</td>
+<td style="text-align:center">249999999999999977</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 12:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>82739402938472634</td>
+<td style="text-align:center">20684850734618145</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 13:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>27122712271227129</td>
+<td style="text-align:center">6780678067806772</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 14:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>42763948273847263</td>
+<td style="text-align:center">10690987068461806</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 15:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+</details>
+<br>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
+</details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2-d%E1%BB%8Bch-s%E1%BB%91">Ví dụ 2: dịch số</h3>
+
+<p>Cho một số nguyên <strong>N</strong> <em>(1 ≤ n ≤ 10^1000)</em>.<br> Hãy in ra cách đọc tiếng Việt của số tự nhiên đó.</p>
 <details>
 <summary> <strong>📝Test case 🧪</strong></summary>
 <h4>Testcase 1:</h4>

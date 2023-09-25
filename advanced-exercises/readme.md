@@ -3,9 +3,117 @@
 # Bài tập nâng cao
 </div>
 
-### Ví dụ 1: dịch số
+### Ví dụ 1: Số lương số không cuối cùng
 
-Cho một số nguyên **N** *(1 <= n <= 10^1000)*. Hãy in ra cách đọc tiếng Việt của số tự nhiên đó.
+Viết phương thức in số lượng chữ số **0** cuối cùng của **n!** <br>*(1 ≤ n ≤ 10^18)*.
+
+<details>
+<summary> <strong>📝Test case 🧪</strong></summary>
+
+#### Testcase 1:
+
+|Input| Output|
+|-----|:-----:|
+|5| 1|
+
+#### Testcase 2:
+
+|Input| Output|
+|-----|:-----:|
+|12| 2|
+
+#### Testcase 3:
+
+|Input| Output|
+|-----|:-----:|
+|17| 3|
+
+#### Testcase 4:
+
+|Input| Output|
+|-----|:-----:|
+|26| 6|
+
+#### Testcase 5:
+
+|Input| Output|
+|-----|:-----:|
+|48| 10|
+
+#### Testcase 6:
+
+|Input| Output|
+|-----|:-----:|
+|236| 57|
+
+#### Testcase 7:
+
+|Input| Output|
+|-----|:-----:|
+|74823| 18700|
+
+#### Testcase 8:
+
+|Input| Output|
+|-----|:-----:|
+|736283948372635| 184070987093150|
+
+#### Testcase 9:
+
+|Input| Output|
+|-----|:-----:|
+|19283746253648293| 4820936563412061|
+
+#### Testcase 10:
+
+|Input| Output|
+|-----|:-----:|
+|11111111111111111| 2777777777777765|
+
+#### Testcase 11:
+
+|Input| Output|
+|-----|:-----:|
+|999999999999999999| 249999999999999977|
+
+#### Testcase 12:
+
+|Input| Output|
+|-----|:-----:|
+|82739402938472634| 20684850734618145|
+
+#### Testcase 13:
+
+|Input| Output|
+|-----|:-----:|
+|27122712271227129| 6780678067806772|
+
+#### Testcase 14:
+
+|Input| Output|
+|-----|:-----:|
+|42763948273847263| 10690987068461806|
+
+#### Testcase 15:
+
+|Input| Output|
+|-----|:-----:|
+|1| 0|
+
+</details>
+<br>
+
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
+
+### Ví dụ 2: dịch số
+
+Cho một số nguyên **N** *(1 ≤ n ≤ 10^1000)*.<br> Hãy in ra cách đọc tiếng Việt của số tự nhiên đó.
 
 <details>
 <summary> <strong>📝Test case 🧪</strong></summary>
