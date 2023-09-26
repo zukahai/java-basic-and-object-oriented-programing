@@ -28,33 +28,61 @@ public class VKU {
 
 Viết phương thức tính tích của 3 số nguyên cho trước.
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 3
 
 Viết phương thức kiểm tra xem số nguyên có phải là số tự nhiên hay không
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 4
 
 Viết phương thức kiểm tra xem số nguyên có phải là số chẵn hay không
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 5
 
 Viết phương thức tính N!
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 6
 
@@ -89,25 +117,46 @@ Nếu i là ước của N thì N/i của là ước của N nên ta chỉ cần
 
 Viết một phương thức nhập vào tên của bạn, phương thức in ra chữ "Hello" + tên của bạn.
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 8
 
 Viết phương thức kiểm tra chuỗi đối xứng
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 9
 
 Viết phương thức tim ước chung lớn nhất của 2 số nguyên dương
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 10
 
@@ -115,81 +164,151 @@ Viết phương thức kiểm tra xem một chuỗi có phải là chuỗi pangr
 
 Chuỗi pangram là chuỗi chứa tất cả các chữ cái trong bảng chữ cái tiếng Anh ít nhất một lần.
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 11
 
 Viết phương thức kiểm tra xe một số nguyên có phải là số nguyên tố hay không
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 12
 
 Viết phương thức in ra **n** chuỗi **s**, mỗi chuỗi trên một dòng
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 13
 
 Viết phương thức tính diện tích của một tam giác khi biết 3 cạnh
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 14
 
 Viết phương thức chuyển số n thành chuỗi nhị phân
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 15
 
 Viết phương thức tính tổng của một mảng
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 16
 
 Viết phương thức tính tổng: 1^2 + 2^2 + 3^2 + ... + n^2
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 17
 
 Viết phương thức đưa ra chữ số cuối cùng của một số nguyên
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 18
 
 Viết phương thức in ra chữ số đầu tiên của một số tự nhiên
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 19
 
 Viết phương thức kiểm tra xem một số nguyên dương có phải là số chính phương hay không
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
 
 ### Ví dụ 20
 
@@ -291,6 +410,30 @@ Viết phương thức in số lượng chữ số 0 cuối cùng của n!
 </details>
 <br>
 
-**Code mẫu:**
+</details>
+<br>
 
-Hãy thử tìm hiểu trước, sẽ cập nhật code mẫu sau.
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
+
+### Ví dụ 21
+
+Viết 2 phương thức sau:
+- 1 hàm cho phép in ra một mảng một chiều a
+- 1 hàm trả về mảng đảo ngược của một mảng
+
+</details>
+<br>
+
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
