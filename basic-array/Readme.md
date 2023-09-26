@@ -70,7 +70,7 @@ public class VKU {
 
 Nhập vào một số nguyên dương **N**, tiếp theo nhập lần lượt **N** phần tử của mảng **a**. In ra các phần tử của mảng **a** trên một dòng theo thứ tự ngược lại, giữa 2 phần tử có một dấu cách.
 
-Ví dụ nhập N = 3, các phần tử được nhập lần lượt là 4, 1, 2, 7 thì in ra 7 2 1 4
+Ví dụ nhập N = 4, các phần tử được nhập lần lượt là 4, 1, 2, 7 thì in ra 7 2 1 4
 
 **Code mẫu:**
 
