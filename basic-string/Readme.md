@@ -9,9 +9,6 @@ Viết một chương trình để đảo ngược một chuỗi đã cho.
 
 Ví dụ: Nếu chuỗi là "Hello", thì kết quả sẽ là "olleH".
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -23,9 +20,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 2
 
 Viết chương trình để đếm số ký tự 'a' trong một chuỗi đã cho.
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -39,9 +33,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Viết chương trình để kiểm tra xem một chuỗi có phải là chuỗi đối xứng hay không. Chuỗi đối xứng là chuỗi mà khi đảo ngược nó vẫn giữ nguyên giá trị, ví dụ: "racecar".
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -53,9 +44,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 4
 
 Viết chương trình đếm số từ trong một chuỗi, biết giữa 2 từ chỉ cách nhau bởi một khoảng trắng
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -70,9 +58,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Viết chương trình để kiểm tra xem một chuỗi có chứa ít nhất một ký tự số hay không.
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -85,9 +70,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Viết chương trình để kiểm tra xem một chuỗi có phải là chuỗi pangram hay không. Chuỗi pangram là chuỗi chứa tất cả các chữ cái trong bảng chữ cái tiếng Anh ít nhất một lần.
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -99,9 +81,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 7
 
 Viết chương trình in hoa tất cả ký tự trong một chuỗi.
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -124,9 +103,6 @@ Ví dụ N = 5, thì kết quả là:
 *****
 ```
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -146,9 +122,6 @@ H xuất hiện 1 lần <br>
 e xuất hiện 1 lần <br>
 l xuất hiện 2 lần <br>
 o xuất hiện 1 lần <br>
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>

@@ -28,9 +28,6 @@ public class VKU {
 
 Viết phương thức tính tích của 3 số nguyên cho trước.
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -42,9 +39,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 3
 
 Viết phương thức kiểm tra xem số nguyên có phải là số tự nhiên hay không
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -58,9 +52,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Viết phương thức kiểm tra xem số nguyên có phải là số chẵn hay không
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -72,9 +63,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 5
 
 Viết phương thức tính N!
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -117,9 +105,6 @@ Nếu i là ước của N thì N/i của là ước của N nên ta chỉ cần
 
 Viết một phương thức nhập vào tên của bạn, phương thức in ra chữ "Hello" + tên của bạn.
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -132,9 +117,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Viết phương thức kiểm tra chuỗi đối xứng
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -146,9 +128,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 9
 
 Viết phương thức tim ước chung lớn nhất của 2 số nguyên dương
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -164,9 +143,6 @@ Viết phương thức kiểm tra xem một chuỗi có phải là chuỗi pangr
 
 Chuỗi pangram là chuỗi chứa tất cả các chữ cái trong bảng chữ cái tiếng Anh ít nhất một lần.
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -178,9 +154,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 11
 
 Viết phương thức kiểm tra xe một số nguyên có phải là số nguyên tố hay không
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -194,9 +167,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Viết phương thức in ra **n** chuỗi **s**, mỗi chuỗi trên một dòng
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -208,9 +178,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 13
 
 Viết phương thức tính diện tích của một tam giác khi biết 3 cạnh
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -224,9 +191,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Viết phương thức chuyển số n thành chuỗi nhị phân
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -238,9 +202,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 15
 
 Viết phương thức tính tổng của một mảng
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -254,9 +215,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Viết phương thức tính tổng: 1^2 + 2^2 + 3^2 + ... + n^2
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -268,9 +226,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 17
 
 Viết phương thức đưa ra chữ số cuối cùng của một số nguyên
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -284,9 +239,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Viết phương thức in ra chữ số đầu tiên của một số tự nhiên
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -298,9 +250,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 19
 
 Viết phương thức kiểm tra xem một số nguyên dương có phải là số chính phương hay không
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -410,9 +359,6 @@ Viết phương thức in số lượng chữ số 0 cuối cùng của n!
 </details>
 <br>
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -426,9 +372,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 Viết 2 phương thức sau:
 - 1 hàm cho phép in ra một mảng một chiều a
 - 1 hàm trả về mảng đảo ngược của một mảng
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>

@@ -72,9 +72,6 @@ Nhập vào một số nguyên dương **N**, tiếp theo nhập lần lượt *
 
 Ví dụ nhập N = 4, các phần tử được nhập lần lượt là 4, 1, 2, 7 thì in ra 7 2 1 4
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -86,9 +83,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 4
 
 Nhập vào một mảng gồm **N** số nguyên, hãy tính và in ra tổng của mảng đó.
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -102,9 +96,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Nhập vào một mảng gồm **N** số nguyên, hãy tính và in ra tổng của các phần tử chẵn và mang chỉ số lẻ trong mảng.
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -116,9 +107,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 6
 
 Nhập vào mảng gồm **N** số nguyên, in ra phần tử đầu tiên và phần tử cuối cùng trong mảng.
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -131,9 +119,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 7
 
 Nhập vào mảng gồm **N** số nguyên, tìm và in ra giá trị lớn nhất và nhỏ nhất trong mảng.
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -149,9 +134,6 @@ Nhập vào mảng gồm **N** số nguyên, tìm và in ra giá trị lớn nh�
 
 Ví dụ mảng có 5 phần tử là 4, 1, 2, 4, 4 thì in ra max = 4 và số lượng phần tử mang giá trị 4 là 3.
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -163,9 +145,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 9
 
 Nhập vào mảng gồm **N** số nguyên, đếm và in ra số lượng số chẵn trong mảng.
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -179,9 +158,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Nhập vào mảng gồm **N** số nguyên, hãy in ra các số chia hết cho 5 trong mảng, nếu không có số nào chia hết cho 5 thì in ra "Không tồn tại phần tử nào chia hết cho 5"
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -194,9 +170,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Nhập vào mảng gồm **N** số nguyên, hãy in ra chỉ số của giá trị lớn nhất trong mảng, nếu có nhiều phần tử mang giá trị lớn nhất thì in ra chỉ số của phần tử lớn nhất cuối cùng.
 
-</details>
-<br>
-
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
@@ -207,9 +180,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 ### Ví dụ 12
 Nhập vào mảng gồm **N** số nguyên, nhập vào một số nguyên **k** (0 <= k < N). Hãy xoá phần tử ở chỉ số **k** trong mảng, sau đó in ra mảng.
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
@@ -223,9 +193,6 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 Nhập vào mảng gồm **N** số nguyên, kiểm tra xem mảng có phải là mảng không giảm hay không?
 
 (Mảng không giảm là mảng mà phần tử sau không nhỏ hơn các phần tử trước)
-
-</details>
-<br>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
