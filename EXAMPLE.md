@@ -79,6 +79,46 @@ Gồm những bài tập về hàm khởi tạo mặc định, hàm khởi tạo
 
 Xem bài tập [Tại đây](./oop-constructor/)
 
+## 2. Viết các phương thức trong lập trình hướng đối tượng
+
+Gồm các bài tập về luyện tập viết các phương thức trong lập trình hướng đối tượng.
+
+**🎯 Số lượng ví dụ: 0**
+
+Xem bài tập [Tại đây](./oop-method/)
+
+## 3. Tính đóng gói trong lập trình hướng đối tượng
+
+Gồm các bài tập về tính đóng gói trong lập trình hướng đối tượng.
+
+**🎯 Số lượng ví dụ: 0**
+
+Xem bài tập [Tại đây](./oop-encapsulation/)
+
+## 4. Tính kế thừa trong lập trình hướng đối tượng
+
+Gồm các bài tập về tính kế thừa trong lập trình hướng đối tượng.
+
+**🎯 Số lượng ví dụ: 0**
+
+Xem bài tập [Tại đây](./oop-inheritance/)
+
+## 5. Tính đa hình trong lập trình hướng đối tượng
+
+Gồm các bài tập về tính đa hình trong lập trình hướng đối tượng.
+
+**🎯 Số lượng ví dụ: 0**
+
+Xem bài tập [Tại đây](./oop-polymorphism/)
+
+## 6. Tính trừu tượng trong lập trình hướng đối tượng
+
+Gồm các bài tập về tính trừu tượng trong lập trình hướng đối tượng.
+
+**🎯 Số lượng ví dụ: 0**
+
+Xem bài tập [Tại đây](./oop-abstraction/)
+
 <hr>
 
 # Bài tập nâng cao 🚀
