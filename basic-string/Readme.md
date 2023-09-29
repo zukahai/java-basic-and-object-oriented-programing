@@ -12,7 +12,23 @@ Ví dụ: Nếu chuỗi là "Hello", thì kết quả sẽ là "olleH".
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
-Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+```java
+package VKU;
+
+import java.util.Scanner;
+
+public class Example  {	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập chuỗi: ");
+		String s = sc.nextLine();
+		String p = "";
+		for (int i = s.length() - 1; i >= 0; i--)
+			p = p + s.charAt(i);
+		System.out.println("Chuỗi đảo ngược của " + s + " là " + p);
+	}
+}
+```
 
 </details>
 <br>
@@ -24,7 +40,26 @@ Viết chương trình để đếm số ký tự 'a' trong một chuỗi đã c
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
-Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+```java
+package VKU;
+
+import java.util.Scanner;
+
+public class Example  {	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Nhập chuỗi
+		System.out.print("Nhập chuỗi: ");
+		String s = sc.nextLine();
+		// đếm ký tự 'a' trong chuỗi
+		int count = 0;
+		for (int i = 0; i < s.length(); i++)
+			if (s.charAt(i) == 'a')
+				count++;
+		System.out.println("Số lượng ký tự 'a' là " + count);
+	}
+}
+```
 
 </details>
 <br>
@@ -36,7 +71,26 @@ Viết chương trình để kiểm tra xem một chuỗi có phải là chuỗi
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
-Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+```java
+package VKU;
+
+import java.util.Scanner;
+
+public class Example  {	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập chuỗi: ");
+		String s = sc.nextLine();
+		String p = "";
+		for (int i = s.length() - 1; i >= 0; i--)
+			p = p + s.charAt(i);
+		if (s.equals(p))
+			System.out.println(s + " là chuỗi đối xứng");
+		else
+			System.out.println(s + " không là chuỗi đối xứng");
+	}
+}
+```
 
 </details>
 <br>
@@ -48,7 +102,26 @@ Viết chương trình đếm số từ trong một chuỗi, biết giữa 2 t�
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
-Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+```java
+package VKU;
+
+import java.util.Scanner;
+
+public class Example  {	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Nhập chuỗi
+		System.out.print("Nhập chuỗi: ");
+		String s = sc.nextLine();
+		// đếm ký tự ' ' trong chuỗi
+		int count = 0;
+		for (int i = 0; i < s.length(); i++)
+			if (s.charAt(i) == ' ')
+				count++;
+		System.out.println("Số lượng từ trong chuỗi là " + (count + 1));
+	}
+}
+```
 
 </details>
 <br>
@@ -61,7 +134,29 @@ Viết chương trình để kiểm tra xem một chuỗi có chứa ít nhất 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
-Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+```java
+package VKU;
+
+import java.util.Scanner;
+
+public class Example  {	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Nhập chuỗi
+		System.out.print("Nhập chuỗi: ");
+		String s = sc.nextLine();
+		
+		boolean flag = false;
+		for (int i = 0; i < s.length(); i++)
+			if (s.charAt(i) >= '0' && s.charAt(i) <= '9')
+				flag = true;
+		if (flag)
+			System.out.println("Có ký tự số");
+		else
+			System.out.println("Không có ký tự số");
+	}
+}
+```
 
 </details>
 <br>
@@ -70,10 +165,44 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 Viết chương trình để kiểm tra xem một chuỗi có phải là chuỗi pangram hay không. Chuỗi pangram là chuỗi chứa tất cả các chữ cái trong bảng chữ cái tiếng Anh ít nhất một lần.
 
+Ví dụ "The quick brown fox jumps over the lazy dog" là chuỗi pangram
+
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
-Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+```java
+package VKU;
+
+import java.util.Scanner;
+
+public class Example  {	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Nhập chuỗi
+		System.out.print("Nhập chuỗi: ");
+		String s = sc.nextLine();
+		// in thường chuỗi
+		s = s.toLowerCase();
+		
+		boolean d[] = new boolean[123];
+		for (char ch = 'a'; ch <= 'z'; ch++)
+			d[ch] = false;
+		
+		for (int i = 0; i < s.length(); i++)
+			d[s.charAt(i)] = true;
+		
+		boolean flag = true;
+		for (char ch = 'a'; ch <= 'z'; ch++)
+			if (d[ch] == false)
+				flag = false;
+		
+		if (flag)
+			System.out.println("Là chuỗi pangram ");
+		else
+			System.out.println("Không là chuỗi pangram ");
+	}
+}
+```
 
 </details>
 <br>
@@ -85,7 +214,23 @@ Viết chương trình in hoa tất cả ký tự trong một chuỗi.
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
-Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+```java
+package VKU;
+
+import java.util.Scanner;
+
+public class Example  {	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Nhập chuỗi
+		System.out.print("Nhập chuỗi: ");
+		String s = sc.nextLine();
+		// dùng hàm để in thường chuỗi
+		s = s.toLowerCase();
+		System.out.println("Chuỗi sau khi in thường là " + s);
+	}
+}
+```
 
 </details>
 <br>
@@ -106,7 +251,25 @@ Ví dụ N = 5, thì kết quả là:
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
-Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+```java
+package VKU;
+
+import java.util.Scanner;
+
+public class Example  {	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập N: ");
+		int n = sc.nextInt();
+		
+		String s = "";
+		for (int i = 1; i <= n; i++) {
+			s = s + "*";
+			System.out.println(s);
+		}
+	}
+}
+```
 
 </details>
 <br>
@@ -126,7 +289,34 @@ o xuất hiện 1 lần <br>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
-Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+```java
+package VKU;
+
+import java.util.Scanner;
+
+public class Example  {	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Nhập chuỗi
+		System.out.print("Nhập chuỗi: ");
+		String s = sc.nextLine();
+		
+		int d[] = new int[256];
+		for (char ch = 0; ch <= 255; ch++)
+			d[ch] = 0;
+		
+		for (int i = 0; i < s.length(); i++)
+			d[s.charAt(i)] ++;
+		
+		boolean flag = true;
+		for (int i = 0; i < s.length(); i++)
+			if (d[s.charAt(i)] > 0) {
+				System.out.println(s.charAt(i) + " xuất hiện " + d[s.charAt(i)] + " lần");
+				d[s.charAt(i)] = 0;
+			}
+	}
+}
+```
 
 </details>
 <br>

@@ -59,6 +59,8 @@ Gồm các bài tập về chuỗi (String) trong Java.
 
 **🎯 Số lượng ví dụ: 9**
 
+☑️ Tất cả ví dụ đều đã có code mẫu
+
 Xem bài tập [Tại đây](./basic-string/)
 
 ## 7. Lập trình hàm
