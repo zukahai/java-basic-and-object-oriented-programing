@@ -77,7 +77,7 @@ Xem bài tập [Tại đây](./basic-method/)
 
 Gồm những bài tập về hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính, các hàm getter, setter và hàm toString.
 
-**🎯 Số lượng ví dụ: 6**
+**🎯 Số lượng ví dụ: 10**
 
 Xem bài tập [Tại đây](./oop-constructor/)
 
