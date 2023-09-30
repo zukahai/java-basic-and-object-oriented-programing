@@ -308,3 +308,82 @@ public class TraslateNumber {
 ``` -->
 </details>
 <br>
+
+### Ví dụ 3: Chuyển đổi chuuỗi nhị phân sang chuỗi hexa
+
+Viết chương trình chuỗi đổi từ chuỗi như phần sang chuỗi hexa.<br>
+Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự
+
+<details>
+<summary> <strong>📝Test case 🧪</strong></summary>
+
+#### Testcase 1:
+
+|Input| Output|
+|-----|:-----:|
+|10| 2|
+
+#### Testcase 2:
+
+|Input| Output|
+|-----|:-----:|
+|1110| E|
+
+#### Testcase 3:
+
+|Input| Output|
+|-----|:-----:|
+|0101011| 2B|
+
+#### Testcase 4:
+
+|Input| Output|
+|-----|:-----:|
+|10101010101111111| 1557F|
+
+#### Testcase 5:
+
+|Input| Output|
+|-----|:-----:|
+|0001010101011111111000000000| 155FE00|
+
+#### Testcase 6:
+
+|Input| Output|
+|-----|:-----:|
+|011001100101010101010101010101010101010101011111111111111| CCAAAAAAAABFFF|
+
+#### Testcase 7:
+
+|Input| Output|
+|-----|:-----:|
+|1010101010101010101001101010101010101000000000001010100000111101001010101000| AAAAA6AAA800A83D2A8|
+
+#### Testcase 8:
+
+|Input| Output|
+|-----|:-----:|
+|001010101010101010101011111111110101010000000110100111100101010100101000000111110010101010101010101010111111111101010100000001101001111001010101001010000001111100101010101010101010101111111111010101000000011010011110010101010010100000011111| 2AAAABFF54069E55281F2AAAABFF54069E55281F2AAAABFF54069E55281F|
+
+#### Testcase 9:
+
+|Input| Output|
+|-----|:-----:|
+|0| 0|
+
+#### Testcase 10:
+
+|Input| Output|
+|-----|:-----:|
+|1| 1|
+
+</details>
+<br>
+
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
