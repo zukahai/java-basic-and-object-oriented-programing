@@ -84,7 +84,7 @@ Xem bài tập [Tại đây](./oop-constructor/)
 ## 2. Viết các phương thức trong OOP
 Gồm các bài tập về luyện tập viết các phương thức trong lập trình hướng đối tượng.
 
-**🎯 Số lượng ví dụ: 0**
+**🎯 Số lượng ví dụ: 10**
 
 Xem bài tập [Tại đây](./oop-method/)
 
