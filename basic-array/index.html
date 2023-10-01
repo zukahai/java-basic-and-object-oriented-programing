@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>Mảng trong Java</title>
+      <title>Cấu trúc mảng trong Java</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -29,7 +29,8 @@
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-1">Ví dụ 1</h3>
 
 <p>Nhập vào một mảng có 5 số nguyên, in ra mảng vừa nhập trên một dòng, giữa 2 phần tử có một dấu cách.</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
@@ -51,10 +52,13 @@
 		
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2">Ví dụ 2</h3>
+</code></pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2">Ví dụ 2</h3>
 
 <p>Nhập vào một số nguyên dương <strong>N</strong>, tiếp theo nhập lần lượt <strong>N</strong> phần tử của mảng <strong>a</strong>. In ra các phần tử của mảng <strong>a</strong> trên một dòng, giữa 2 phần tử có một dấu cách.</p>
-<p><strong>Code mẫu:</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 <pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">DHDN</span><span class="token punctuation">;</span>
 
 <span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
@@ -79,46 +83,201 @@
 		
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-3">Ví dụ 3</h3>
+</code></pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-3">Ví dụ 3</h3>
 
 <p>Nhập vào một số nguyên dương <strong>N</strong>, tiếp theo nhập lần lượt <strong>N</strong> phần tử của mảng <strong>a</strong>. In ra các phần tử của mảng <strong>a</strong> trên một dòng theo thứ tự ngược lại, giữa 2 phần tử có một dấu cách.</p>
 <p>Ví dụ nhập N = 4, các phần tử được nhập lần lượt là 4, 1, 2, 7 thì in ra 7 2 1 4</p>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
-<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
-</details>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Cho phép nhập dữ liệu từ bàn phím</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo và nhập số phần tử trong mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập số phần tử trong mảng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo mảng</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Nhập mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"A["</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"] = "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// In ngược mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Mảng in ngược lại là:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
 <br>
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-4">Ví dụ 4</h3>
 
 <p>Nhập vào một mảng gồm <strong>N</strong> số nguyên, hãy tính và in ra tổng của mảng đó.</p>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
-<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
-</details>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Cho phép nhập dữ liệu từ bàn phím</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo và nhập số phần tử trong mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập số phần tử trong mảng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo mảng</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+		
+		<span class="token comment">// Nhập mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"A["</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"] = "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token comment">// Tính tổng của mảng</span>
+		<span class="token keyword keyword-int">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			sum <span class="token operator">+=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Tổng của mảng vừa nhập là: "</span> <span class="token operator">+</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
 <br>
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-5">Ví dụ 5</h3>
 
 <p>Nhập vào một mảng gồm <strong>N</strong> số nguyên, hãy tính và in ra tổng của các phần tử chẵn và mang chỉ số lẻ trong mảng.</p>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
-<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
-</details>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Cho phép nhập dữ liệu từ bàn phím</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo và nhập số phần tử trong mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập số phần tử trong mảng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo mảng</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Nhập mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"A["</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"] = "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// Tính tổng các phần tử chẵn và mang chỉ số lẻ</span>
+		<span class="token comment">// Cách làm tốt nhất là mình sẽ chỉ duyệt các phần tử chỉ số lẻ</span>
+		<span class="token keyword keyword-int">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">)</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+				sum <span class="token operator">+=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Tổng của mảng vừa nhập là: "</span> <span class="token operator">+</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
 <br>
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-6">Ví dụ 6</h3>
 
 <p>Nhập vào mảng gồm <strong>N</strong> số nguyên, in ra phần tử đầu tiên và phần tử cuối cùng trong mảng.</p>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
-<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
-</details>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Cho phép nhập dữ liệu từ bàn phím</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo và nhập số phần tử trong mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập số phần tử trong mảng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo mảng</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Nhập mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"A["</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"] = "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// Phần tử đầu tiên mang chỉ số 0</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Phần tử đầu tiên là: "</span> <span class="token operator">+</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token comment">// Phần tử đầu tiên mang chỉ số n - 1</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Phần tử cuối cùng là: "</span> <span class="token operator">+</span> a<span class="token punctuation">[</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
 <br>
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-7">Ví dụ 7</h3>
 
 <p>Nhập vào mảng gồm <strong>N</strong> số nguyên, tìm và in ra giá trị lớn nhất và nhỏ nhất trong mảng.</p>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
-<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
-</details>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Cho phép nhập dữ liệu từ bàn phím</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo và nhập số phần tử trong mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập số phần tử trong mảng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo mảng</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Nhập mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"A["</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"] = "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// Dùng một biến min để lưu giá trị nhỏ nhất trong mảng, mặc định cho số đầu tiên là min</span>
+		<span class="token keyword keyword-int">int</span> min <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+		<span class="token comment">// Duyệt từ phần tử thứ 2 đến hết mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			<span class="token comment">// Nếu có phần tử còn nhỏ hơn cả min thì cập nhật lại min</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> min<span class="token punctuation">)</span>
+				min <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+		
+		<span class="token comment">// Tương tự với tìm max</span>
+		<span class="token keyword keyword-int">int</span> max <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&gt;</span> max<span class="token punctuation">)</span>
+				max <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Giá trị nhỏ nhất min = "</span> <span class="token operator">+</span> min<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Giá trị lớn nhất max = "</span> <span class="token operator">+</span> max<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
 <br>
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-8">Ví dụ 8</h3>
 
@@ -126,40 +285,210 @@
 <p>Ví dụ mảng có 5 phần tử là 4, 1, 2, 4, 4 thì in ra max = 4 và số lượng phần tử mang giá trị 4 là 3.</p>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
-<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
-</details>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Cho phép nhập dữ liệu từ bàn phím</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo và nhập số phần tử trong mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập số phần tử trong mảng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo mảng</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Nhập mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"A["</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"] = "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token comment">// Tìm max</span>
+		<span class="token keyword keyword-int">int</span> max <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&gt;</span> max<span class="token punctuation">)</span>
+				max <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+		
+		<span class="token comment">// Đếm xem có bao nhiêu phần tử max</span>
+		<span class="token keyword keyword-int">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> max<span class="token punctuation">)</span>
+				count<span class="token operator">++</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Giá trị lớn nhất là "</span> <span class="token operator">+</span> max <span class="token operator">+</span> <span class="token string">", số lượng là "</span> <span class="token operator">+</span> count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
 <br>
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-9">Ví dụ 9</h3>
 
 <p>Nhập vào mảng gồm <strong>N</strong> số nguyên, đếm và in ra số lượng số chẵn trong mảng.</p>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
-<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
-</details>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Cho phép nhập dữ liệu từ bàn phím</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo và nhập số phần tử trong mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập số phần tử trong mảng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo mảng</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Nhập mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"A["</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"] = "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token comment">// Đếm xem có bao nhiêu phần tử chẵn trong mảng</span>
+		<span class="token keyword keyword-int">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+				count<span class="token operator">++</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Số lượng phần tử chẵn trong mảng là "</span> <span class="token operator">+</span> count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
 <br>
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-10">Ví dụ 10</h3>
 
 <p>Nhập vào mảng gồm <strong>N</strong> số nguyên, hãy in ra các số chia hết cho 5 trong mảng, nếu không có số nào chia hết cho 5 thì in ra "Không tồn tại phần tử nào chia hết cho 5"</p>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
-<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
-</details>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Cho phép nhập dữ liệu từ bàn phím</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo và nhập số phần tử trong mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập số phần tử trong mảng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo mảng</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Nhập mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"A["</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"] = "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token comment">// Gán 1 biến flag  = true, nếu trong mảng có phần tử chia hết cho 5 thì đổi lại bằng false</span>
+		<span class="token keyword keyword-boolean">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+		
+		<span class="token comment">// In ra các số chia hết cho 5</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">5</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>flag <span class="token operator">==</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Không tồn tại phần tử nào chia hết cho 5"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
 <br>
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-11">Ví dụ 11</h3>
 
 <p>Nhập vào mảng gồm <strong>N</strong> số nguyên, hãy in ra chỉ số của giá trị lớn nhất trong mảng, nếu có nhiều phần tử mang giá trị lớn nhất thì in ra chỉ số của phần tử lớn nhất cuối cùng.</p>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
-<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
-</details>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Cho phép nhập dữ liệu từ bàn phím</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo và nhập số phần tử trong mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập số phần tử trong mảng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo mảng</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Nhập mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"A["</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"] = "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token keyword keyword-int">int</span> max <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> csmax <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			<span class="token comment">// Nếu a[i] &gt; max thì cập nhật lại max và csmax</span>
+			<span class="token comment">// Như thế sẽ lưu được chỉ số  của max cuối cùng</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> max<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				max <span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+				csmax <span class="token operator">=</span> i<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Max = "</span> <span class="token operator">+</span> max <span class="token operator">+</span> <span class="token string">", chỉ số cuối cùng của max = "</span> <span class="token operator">+</span> csmax<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
 <br>
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-12">Ví dụ 12</h3>
 
 <p>Nhập vào mảng gồm <strong>N</strong> số nguyên, nhập vào một số nguyên <strong>k</strong> (0 &lt;= k &lt; N). Hãy xoá phần tử ở chỉ số <strong>k</strong> trong mảng, sau đó in ra mảng.</p>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
-<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
-</details>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Cho phép nhập dữ liệu từ bàn phím</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo và nhập số phần tử trong mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập số phần tử trong mảng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo mảng</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Nhập mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"A["</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"] = "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// Khai báo và nhập chỉ số của phần tử cần xoá</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập chỉ số của phần tử cần xoá: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> k <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Dồn các phần tử bên phải chỉ số 'k' qua trái 1 bước</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> k<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> a<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+		n<span class="token operator">--</span><span class="token punctuation">;</span>
+
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Mảng sau khi xoá phần tử ở chỉ số "</span> <span class="token operator">+</span> k <span class="token operator">+</span> <span class="token string">" là:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
 <br>
 <h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-13">Ví dụ 13</h3>
 
@@ -167,8 +496,43 @@
 <p>(Mảng không giảm là mảng mà phần tử sau không nhỏ hơn các phần tử trước)</p>
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
-<p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
-</details>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token constant">VKU</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Example</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// Cho phép nhập dữ liệu từ bàn phím</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo và nhập số phần tử trong mảng</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập số phần tử trong mảng: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Khai báo mảng</span>
+		<span class="token keyword keyword-int">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// Nhập mảng</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"A["</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"] = "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+		<span class="token comment">// Đánh dấu mảng đang là dãy không giảm</span>
+		<span class="token keyword keyword-boolean">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+		
+		<span class="token comment">// Kiểm tra xem có phải dãy không giảm không</span>
+		<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&gt;</span> a<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+				flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Là dãy không giảm"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-else">else</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Không phải dãy không giảm"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
 <br>
 
       </div>

@@ -45,11 +45,13 @@ Gồm các bài tập về for, while, do while trong Java.
 
 Xem bài tập **[Tại đây](./basic-loop/)**
 
-## 5. Mảng trong java
+## 5. Cấu trúc mảng trong Java
 
-Gồm các bài tập về mảng trong Java.
+Gồm các bài tập về cấu trúc mảng trong Java. Về các phần nhập xuất, cách duyệt mảng và phân biệt giữa chỉ số và phần tử trong mảng
 
 **🎯 Số lượng ví dụ: 13**
+
+☑️ Tất cả ví dụ đều đã có code mẫu
 
 Xem bài tập **[Tại đây](./basic-array/)**
 
