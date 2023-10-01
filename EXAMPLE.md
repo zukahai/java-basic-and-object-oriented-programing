@@ -65,11 +65,13 @@ Gồm các bài tập về chuỗi (String) trong Java.
 
 Xem bài tập **[Tại đây](./basic-string/)**
 
-## 7. Lập trình hàm
+## 7. Lập trình phương thức
 
-Gồm các bài tập về hàm trong Java.
+Gồm các bài tập về phức thức (method) trong Java.
 
 **🎯 Số lượng ví dụ: 20**
+
+☑️ Tất cả ví dụ đều đã có code mẫu
 
 Xem bài tập **[Tại đây](./basic-method/)**
 
