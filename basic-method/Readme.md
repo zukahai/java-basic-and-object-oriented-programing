@@ -1,6 +1,6 @@
 <div align="center">
 
-# Lập trình hàm trong Java
+# Lập trình phương thức trong Java
 </div>
 
 ### Ví dụ 1
@@ -131,7 +131,8 @@ public class Example {
 
 Viết phương thức tính số ước của số nguyên dương N
 
-**Code mẫu:**
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```java
 package DHDN;
@@ -152,9 +153,13 @@ public class VKU {
 		System.out.println(countFactors(100));
 	}
 }
+
 ```
 
 Nếu i là ước của N thì N/i của là ước của N nên ta chỉ cần chạy i đến căn bậc 2 của N. Nếu N là số chính phương thì ước căn N bị đếm 2 lần nên cần trù đi 1
+</details>
+<br>
+
 
 ### Ví dụ 7
 
