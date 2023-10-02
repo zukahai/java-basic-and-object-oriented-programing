@@ -3,7 +3,7 @@
 # VKU | Lập trình hướng đối tượng - Ví dụ luyện tập
 </div>
 
-# Java cơ bản
+# Lập trình java cơ bản
 
 ## 1. Biến và tính toán cơ bản
 
@@ -131,6 +131,32 @@ Gồm các bài tập ôn luyện cho bài kiểm tra giữa kì
 
 Xem bài tập **[Tại đây](./midterm-exam/)**
 
+# Lập trình java swing
+
+## 1. Thiết kế giao diện bằng java swing
+
+Gồm các bài tập liên quan về cách sử dụng: JFrame, Jpanel, JButton, JTextField, JTextArea, JList, JTable,... trong java swing.
+
+**🎯 Số lượng ví dụ: 0**
+
+Xem bài tập **[Tại đây](./swing-ui/)**
+
+## 2. Thao tác với cơ sở dữ liệu
+
+Gồm các bài về kết java với cơ sở dữ liệu (My SQL)
+Thao tác thêm, sửa, xoá, và xem dữ liệu trong SQL bằng java.
+
+**🎯 Số lượng ví dụ: 0**
+
+Xem bài tập **[Tại đây](./swing-sql/)**
+
+## 3. Kết hợp Java Swing và thao tác với cơ sở dữ liệu
+
+Gồm các  bài tập sử dụng giao diện được làm bằng java swing và có thể thao tác với cơ sở dữ liệu.
+
+**🎯 Số lượng ví dụ: 0**
+
+Xem bài tập **[Tại đây](./swing-project/)**
 <hr>
 
 # Bài tập nâng cao 🚀
