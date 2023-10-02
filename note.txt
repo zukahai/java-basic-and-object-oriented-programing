@@ -15,7 +15,6 @@
       <div class="snowflake">❅</div>
       <div class="snowflake">❆</div>
       <div class="snowflake">❅</div>
-      <div class="snowflake">❆</div>
       <div class="snowflake">
         <img class="snow" src="./assets/image.png" alt srcset>
       </div>
