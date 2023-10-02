@@ -2,30 +2,40 @@
 
 
 <div class="snowflakes" aria-hidden="true">
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">
-              <img class="snow" src="./assets/image.png" alt="" srcset="">
-            </div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">
-              <img class="snow" src="./assets/image.png" alt="" srcset="">
-            </div>
-          </div>
-          
-          <style>
+      <div class="snowflake">
+        <img class="snow2" src="./assets/java.png" alt srcset>
+      </div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">
+        <img class="snow2" src="./assets/java.png" alt srcset>
+      </div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">
+        <img class="snow" src="./assets/image.png" alt srcset>
+      </div>
+      <div class="snowflake">❅</div>
+
+      <div class="snowflake">
+        <img class="snow" src="./assets/image.png" alt srcset>
+      </div>
+
+    </div>
+
+    <style>
             .snow{
               width: 30px;
               height: 15px;
+              object-fit: cover;
+            }
+            .snow2{
+              width: 60px;
+              height: 30px;
               object-fit: cover;
             }
             @-webkit-keyframes snowflakes-fall {

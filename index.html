@@ -1,169 +1,220 @@
 <!DOCTYPE html><html><head>
-      <title>VKU | Lập trình hướng đối tượng - Ví dụ luyện tập</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="file:///c:\Users\HAIZUKA\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.7.10\crossnote\dependencies\katex\katex.min.css">
-      
-      <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
-      
-      
-      
-      <style>
+    <title>VKU | Lập trình hướng đối tượng - Ví dụ luyện tập</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+      href="file:///c:\Users\HAIZUKA\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.7.10\crossnote\dependencies\katex\katex.min.css">
+
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+
+    <style>
       code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
 
       </style>
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+    <!-- The content below will be included at the end of the <head> element. --><script
+      type="text/javascript">
   document.addEventListener("DOMContentLoaded", function () {
     // your code here
   });
 </script></head><body for="html-export">
-    
-    
-      <div class="crossnote markdown-preview  ">
+
+    <div class="crossnote markdown-preview  ">
       <div align="center">
-<h1>VKU | Lập trình hướng đối tượng - Ví dụ luyện tập</h1>
-</div>
-<h1 class="crossnote-header" id="l%E1%BA%ADp-tr%C3%ACnh-java-c%C6%A1-b%E1%BA%A3n">Lập trình java cơ bản</h1>
-
-<h2 class="crossnote-header" id="1-bi%E1%BA%BFn-v%C3%A0-t%C3%ADnh-to%C3%A1n-c%C6%A1-b%E1%BA%A3n">1. Biến và tính toán cơ bản</h2>
-
-<p>Gồm những bài tập về nhập xuất, tính toán cơ bản trong Java.</p>
-<p>️<strong>🎯 Số lượng ví dụ: 12</strong></p>
-<p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
-<p>Xem bài tập <strong><a href="./basic-variable-and-calculations/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="2-c%C3%A2u-l%E1%BB%87nh-%C4%91i%E1%BB%81u-ki%E1%BB%87n">2. Câu lệnh điều kiện</h2>
-
-<p>Gồm các bài tập về câu lệnh điều kiện trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 15</strong></p>
-<p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
-<p>Xem bài tập <strong><a href="./basic-conditional-statement/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="3-l%E1%BB%87nh-switch-case">3. Lệnh Switch Case</h2>
-
-<p>Gồm các bài tập về câu lệnh switch case trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 5</strong></p>
-<p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
-<p>Xem bài tập <strong><a href="./basic-switchcase/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="4-v%C3%B2ng-l%E1%BA%B7p">4. Vòng lặp</h2>
-
-<p>Gồm các bài tập về for, while, do while trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 15</strong></p>
-<p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
-<p>Xem bài tập <strong><a href="./basic-loop/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="5-c%E1%BA%A5u-tr%C3%BAc-m%E1%BA%A3ng-trong-java">5. Cấu trúc mảng trong Java</h2>
-
-<p>Gồm các bài tập về cấu trúc mảng trong Java. Về các phần nhập xuất, cách duyệt mảng và phân biệt giữa chỉ số và phần tử trong mảng</p>
-<p><strong>🎯 Số lượng ví dụ: 13</strong></p>
-<p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
-<p>Xem bài tập <strong><a href="./basic-array/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="6-chu%E1%BB%97i-trong-java">6. Chuỗi trong java</h2>
-
-<p>Gồm các bài tập về chuỗi (String) trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 9</strong></p>
-<p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
-<p>Xem bài tập <strong><a href="./basic-string/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="7-l%E1%BA%ADp-tr%C3%ACnh-ph%C6%B0%C6%A1ng-th%E1%BB%A9c">7. Lập trình phương thức</h2>
-
-<p>Gồm các bài tập về phức thức (method) trong Java.</p>
-<p><strong>🎯 Số lượng ví dụ: 20</strong></p>
-<p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
-<p>Xem bài tập <strong><a href="./basic-method/">Tại đây</a></strong></p>
-<h1 class="crossnote-header" id="l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng">Lập trình hướng đối tượng</h1>
-
-<h2 class="crossnote-header" id="1-h%C3%A0m-kh%E1%BB%9Fi-t%E1%BA%A1o-trong-oop">1. Hàm khởi tạo trong OOP</h2>
-
-<p>Gồm những bài tập về hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính, các hàm getter, setter và hàm toString.</p>
-<p><strong>🎯 Số lượng ví dụ: 10</strong></p>
-<p>Xem bài tập <strong><a href="./oop-constructor/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="2-vi%E1%BA%BFt-c%C3%A1c-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-trong-oop">2. Viết các phương thức trong OOP</h2>
-
-<p>Gồm các bài tập về luyện tập viết các phương thức trong lập trình hướng đối tượng.</p>
-<p><strong>🎯 Số lượng ví dụ: 10</strong></p>
-<p>Xem bài tập <strong><a href="./oop-method/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="3-t%C3%ADnh-%C4%91%C3%B3ng-g%C3%B3i-trong-oop">3. Tính đóng gói trong OOP</h2>
-
-<p>Gồm các bài tập về tính đóng gói trong lập trình hướng đối tượng.</p>
-<p><strong>🎯 Số lượng ví dụ: 0</strong></p>
-<p>Xem bài tập <strong><a href="./oop-encapsulation/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="4-t%C3%ADnh-k%E1%BA%BF-th%E1%BB%ABa-trong-oop">4. Tính kế thừa trong OOP</h2>
-
-<p>Gồm các bài tập về tính kế thừa trong lập trình hướng đối tượng.</p>
-<p><strong>🎯 Số lượng ví dụ: 0</strong></p>
-<p>Xem bài tập <strong><a href="./oop-inheritance/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="5-t%C3%ADnh-%C4%91a-h%C3%ACnh-trong-oop">5. Tính đa hình trong OOP</h2>
-
-<p>Gồm các bài tập về tính đa hình trong lập trình hướng đối tượng.</p>
-<p><strong>🎯 Số lượng ví dụ: 0</strong></p>
-<p>Xem bài tập <strong><a href="./oop-polymorphism/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="6-t%C3%ADnh-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng-trong-oop">6. Tính trừu tượng trong OOP</h2>
-
-<p>Gồm các bài tập về tính trừu tượng trong lập trình hướng đối tượng.</p>
-<p><strong>🎯 Số lượng ví dụ: 0</strong></p>
-<p>Xem bài tập <strong><a href="./oop-abstraction/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="7-ki%E1%BB%83m-tra-gi%E1%BB%AFa-k%E1%BB%B3---b%C3%A0i-t%E1%BA%ADp-m%E1%BA%ABu">7. Kiểm tra giữa kỳ - bài tập mẫu</h2>
-
-<p>Gồm các bài tập ôn luyện cho bài kiểm tra giữa kì</p>
-<p><strong>🎯 Số lượng ví dụ: 0</strong></p>
-<p>Xem bài tập <strong><a href="./midterm-exam/">Tại đây</a></strong></p>
-<h1 class="crossnote-header" id="l%E1%BA%ADp-tr%C3%ACnh-java-swing">Lập trình java swing</h1>
-
-<h2 class="crossnote-header" id="1-thi%E1%BA%BFt-k%E1%BA%BF-giao-di%E1%BB%87n-b%E1%BA%B1ng-java-swing">1. Thiết kế giao diện bằng java swing</h2>
-
-<p>Gồm các bài tập liên quan về cách sử dụng: JFrame, Jpanel, JButton, JTextField, JTextArea, JList, JTable,... trong java swing.</p>
-<p><strong>🎯 Số lượng ví dụ: 0</strong></p>
-<p>Xem bài tập <strong><a href="./swing-ui/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="2-thao-t%C3%A1c-v%E1%BB%9Bi-c%C6%A1-s%E1%BB%9F-d%E1%BB%AF-li%E1%BB%87u">2. Thao tác với cơ sở dữ liệu</h2>
-
-<p>Gồm các bài về kết java với cơ sở dữ liệu (My SQL)<br>
-Thao tác thêm, sửa, xoá, và xem dữ liệu trong SQL bằng java.</p>
-<p><strong>🎯 Số lượng ví dụ: 0</strong></p>
-<p>Xem bài tập <strong><a href="./swing-sql/">Tại đây</a></strong></p>
-<h2 class="crossnote-header" id="3-k%E1%BA%BFt-h%E1%BB%A3p-java-swing-v%C3%A0-thao-t%C3%A1c-v%E1%BB%9Bi-c%C6%A1-s%E1%BB%9F-d%E1%BB%AF-li%E1%BB%87u">3. Kết hợp Java Swing và thao tác với cơ sở dữ liệu</h2>
-
-<p>Gồm các  bài tập sử dụng giao diện được làm bằng java swing và có thể thao tác với cơ sở dữ liệu.</p>
-<p><strong>🎯 Số lượng ví dụ: 0</strong></p>
-<p>Xem bài tập <strong><a href="./swing-project/">Tại đây</a></strong></p>
-<hr>
-<h1 class="crossnote-header" id="b%C3%A0i-t%E1%BA%ADp-n%C3%A2ng-cao-">Bài tập nâng cao 🚀</h1>
-
-<p>Gồm nhưng bài tập có độ khó nâng cao 🚀, dành cho những bạn muốn thử sức với nhưng bài nâng cao.</p>
-<blockquote>
-<p><strong>Lưu ý:</strong> Chương trình học tập gồm những bài tập có độ khó nâng cao hơn, vì vậy hãy hoàn thành tất cả các bài tập ở mức độ cơ bản trước khi bắt đầu làm các bài tập nâng cao. 🚀</p>
-</blockquote>
-<p><strong>🎯 Số lượng ví dụ: 3</strong></p>
-<p>Xem bài tập <strong><a href="./advanced-exercises/">Tại đây</a></strong></p>
-
+        <h1>VKU | Lập trình hướng đối tượng - Ví dụ luyện tập</h1>
       </div>
-      
-      
-    
-      <div class="snowflakes" aria-hidden="true">
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">
-              <img class="snow" src="./assets/image.png" alt="" srcset="">
-            </div>
-            <div class="snowflake">❅</div>
-            <div class="snowflake">❆</div>
-            <div class="snowflake">
-              <img class="snow" src="./assets/image.png" alt="" srcset="">
-            </div>
-          </div>
-          
-          <style>
+      <h1 class="crossnote-header"
+        id="l%E1%BA%ADp-tr%C3%ACnh-java-c%C6%A1-b%E1%BA%A3n">Lập trình java cơ
+        bản</h1>
+
+      <h2 class="crossnote-header"
+        id="1-bi%E1%BA%BFn-v%C3%A0-t%C3%ADnh-to%C3%A1n-c%C6%A1-b%E1%BA%A3n">1.
+        Biến và tính toán cơ bản</h2>
+
+      <p>Gồm những bài tập về nhập xuất, tính toán cơ bản trong Java.</p>
+      <p>️<strong>🎯 Số lượng ví dụ: 12</strong></p>
+      <p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
+      <p>Xem bài tập <strong><a href="./basic-variable-and-calculations/">Tại
+            đây</a></strong></p>
+      <h2 class="crossnote-header"
+        id="2-c%C3%A2u-l%E1%BB%87nh-%C4%91i%E1%BB%81u-ki%E1%BB%87n">2. Câu lệnh
+        điều kiện</h2>
+
+      <p>Gồm các bài tập về câu lệnh điều kiện trong Java.</p>
+      <p><strong>🎯 Số lượng ví dụ: 15</strong></p>
+      <p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
+      <p>Xem bài tập <strong><a href="./basic-conditional-statement/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header" id="3-l%E1%BB%87nh-switch-case">3. Lệnh
+        Switch Case</h2>
+
+      <p>Gồm các bài tập về câu lệnh switch case trong Java.</p>
+      <p><strong>🎯 Số lượng ví dụ: 5</strong></p>
+      <p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
+      <p>Xem bài tập <strong><a href="./basic-switchcase/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header" id="4-v%C3%B2ng-l%E1%BA%B7p">4. Vòng lặp</h2>
+
+      <p>Gồm các bài tập về for, while, do while trong Java.</p>
+      <p><strong>🎯 Số lượng ví dụ: 15</strong></p>
+      <p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
+      <p>Xem bài tập <strong><a href="./basic-loop/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header"
+        id="5-c%E1%BA%A5u-tr%C3%BAc-m%E1%BA%A3ng-trong-java">5. Cấu trúc mảng
+        trong Java</h2>
+
+      <p>Gồm các bài tập về cấu trúc mảng trong Java. Về các phần nhập xuất,
+        cách duyệt mảng và phân biệt giữa chỉ số và phần tử trong mảng</p>
+      <p><strong>🎯 Số lượng ví dụ: 13</strong></p>
+      <p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
+      <p>Xem bài tập <strong><a href="./basic-array/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header" id="6-chu%E1%BB%97i-trong-java">6. Chuỗi
+        trong java</h2>
+
+      <p>Gồm các bài tập về chuỗi (String) trong Java.</p>
+      <p><strong>🎯 Số lượng ví dụ: 9</strong></p>
+      <p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
+      <p>Xem bài tập <strong><a href="./basic-string/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header"
+        id="7-l%E1%BA%ADp-tr%C3%ACnh-ph%C6%B0%C6%A1ng-th%E1%BB%A9c">7. Lập trình
+        phương thức</h2>
+
+      <p>Gồm các bài tập về phức thức (method) trong Java.</p>
+      <p><strong>🎯 Số lượng ví dụ: 20</strong></p>
+      <p>☑️ Tất cả ví dụ đều đã có code mẫu</p>
+      <p>Xem bài tập <strong><a href="./basic-method/">Tại đây</a></strong></p>
+      <h1 class="crossnote-header"
+        id="l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng">Lập
+        trình hướng đối tượng</h1>
+
+      <h2 class="crossnote-header"
+        id="1-h%C3%A0m-kh%E1%BB%9Fi-t%E1%BA%A1o-trong-oop">1. Hàm khởi tạo trong
+        OOP</h2>
+
+      <p>Gồm những bài tập về hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính,
+        các hàm getter, setter và hàm toString.</p>
+      <p><strong>🎯 Số lượng ví dụ: 10</strong></p>
+      <p>Xem bài tập <strong><a href="./oop-constructor/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header"
+        id="2-vi%E1%BA%BFt-c%C3%A1c-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-trong-oop">2.
+        Viết các phương thức trong OOP</h2>
+
+      <p>Gồm các bài tập về luyện tập viết các phương thức trong lập trình hướng
+        đối tượng.</p>
+      <p><strong>🎯 Số lượng ví dụ: 10</strong></p>
+      <p>Xem bài tập <strong><a href="./oop-method/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header"
+        id="3-t%C3%ADnh-%C4%91%C3%B3ng-g%C3%B3i-trong-oop">3. Tính đóng gói
+        trong OOP</h2>
+
+      <p>Gồm các bài tập về tính đóng gói trong lập trình hướng đối tượng.</p>
+      <p><strong>🎯 Số lượng ví dụ: 0</strong></p>
+      <p>Xem bài tập <strong><a href="./oop-encapsulation/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header"
+        id="4-t%C3%ADnh-k%E1%BA%BF-th%E1%BB%ABa-trong-oop">4. Tính kế thừa trong
+        OOP</h2>
+
+      <p>Gồm các bài tập về tính kế thừa trong lập trình hướng đối tượng.</p>
+      <p><strong>🎯 Số lượng ví dụ: 0</strong></p>
+      <p>Xem bài tập <strong><a href="./oop-inheritance/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header" id="5-t%C3%ADnh-%C4%91a-h%C3%ACnh-trong-oop">5.
+        Tính đa hình trong OOP</h2>
+
+      <p>Gồm các bài tập về tính đa hình trong lập trình hướng đối tượng.</p>
+      <p><strong>🎯 Số lượng ví dụ: 0</strong></p>
+      <p>Xem bài tập <strong><a href="./oop-polymorphism/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header"
+        id="6-t%C3%ADnh-tr%E1%BB%ABu-t%C6%B0%E1%BB%A3ng-trong-oop">6. Tính trừu
+        tượng trong OOP</h2>
+
+      <p>Gồm các bài tập về tính trừu tượng trong lập trình hướng đối tượng.</p>
+      <p><strong>🎯 Số lượng ví dụ: 0</strong></p>
+      <p>Xem bài tập <strong><a href="./oop-abstraction/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header"
+        id="7-ki%E1%BB%83m-tra-gi%E1%BB%AFa-k%E1%BB%B3---b%C3%A0i-t%E1%BA%ADp-m%E1%BA%ABu">7.
+        Kiểm tra giữa kỳ - bài tập mẫu</h2>
+
+      <p>Gồm các bài tập ôn luyện cho bài kiểm tra giữa kì</p>
+      <p><strong>🎯 Số lượng ví dụ: 0</strong></p>
+      <p>Xem bài tập <strong><a href="./midterm-exam/">Tại đây</a></strong></p>
+      <h1 class="crossnote-header" id="l%E1%BA%ADp-tr%C3%ACnh-java-swing">Lập
+        trình java swing</h1>
+
+      <h2 class="crossnote-header"
+        id="1-thi%E1%BA%BFt-k%E1%BA%BF-giao-di%E1%BB%87n-b%E1%BA%B1ng-java-swing">1.
+        Thiết kế giao diện bằng java swing</h2>
+
+      <p>Gồm các bài tập liên quan về cách sử dụng: JFrame, Jpanel, JButton,
+        JTextField, JTextArea, JList, JTable,... trong java swing.</p>
+      <p><strong>🎯 Số lượng ví dụ: 0</strong></p>
+      <p>Xem bài tập <strong><a href="./swing-ui/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header"
+        id="2-thao-t%C3%A1c-v%E1%BB%9Bi-c%C6%A1-s%E1%BB%9F-d%E1%BB%AF-li%E1%BB%87u">2.
+        Thao tác với cơ sở dữ liệu</h2>
+
+      <p>Gồm các bài về kết java với cơ sở dữ liệu (My SQL)<br>
+        Thao tác thêm, sửa, xoá, và xem dữ liệu trong SQL bằng java.</p>
+      <p><strong>🎯 Số lượng ví dụ: 0</strong></p>
+      <p>Xem bài tập <strong><a href="./swing-sql/">Tại đây</a></strong></p>
+      <h2 class="crossnote-header"
+        id="3-k%E1%BA%BFt-h%E1%BB%A3p-java-swing-v%C3%A0-thao-t%C3%A1c-v%E1%BB%9Bi-c%C6%A1-s%E1%BB%9F-d%E1%BB%AF-li%E1%BB%87u">3.
+        Kết hợp Java Swing và thao tác với cơ sở dữ liệu</h2>
+
+      <p>Gồm các bài tập sử dụng giao diện được làm bằng java swing và có thể
+        thao tác với cơ sở dữ liệu.</p>
+      <p><strong>🎯 Số lượng ví dụ: 0</strong></p>
+      <p>Xem bài tập <strong><a href="./swing-project/">Tại đây</a></strong></p>
+      <hr>
+      <h1 class="crossnote-header" id="b%C3%A0i-t%E1%BA%ADp-n%C3%A2ng-cao-">Bài
+        tập nâng cao 🚀</h1>
+
+      <p>Gồm nhưng bài tập có độ khó nâng cao 🚀, dành cho những bạn muốn thử
+        sức với nhưng bài nâng cao.</p>
+      <blockquote>
+        <p><strong>Lưu ý:</strong> Chương trình học tập gồm những bài tập có độ
+          khó nâng cao hơn, vì vậy hãy hoàn thành tất cả các bài tập ở mức độ cơ
+          bản trước khi bắt đầu làm các bài tập nâng cao. 🚀</p>
+      </blockquote>
+      <p><strong>🎯 Số lượng ví dụ: 3</strong></p>
+      <p>Xem bài tập <strong><a href="./advanced-exercises/">Tại đây</a></strong></p>
+
+    </div>
+
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">
+        <img class="snow2" src="./assets/java.png" alt srcset>
+      </div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">
+        <img class="snow2" src="./assets/java.png" alt srcset>
+      </div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">❅</div>
+      <div class="snowflake">❆</div>
+      <div class="snowflake">
+        <img class="snow" src="./assets/image.png" alt srcset>
+      </div>
+      <div class="snowflake">❅</div>
+
+      <div class="snowflake">
+        <img class="snow" src="./assets/image.png" alt srcset>
+      </div>
+
+    </div>
+
+    <style>
             .snow{
               width: 30px;
               height: 15px;
+              object-fit: cover;
+            }
+            .snow2{
+              width: 60px;
+              height: 30px;
               object-fit: cover;
             }
             @-webkit-keyframes snowflakes-fall {
@@ -243,9 +294,5 @@ Thao tác thêm, sửa, xoá, và xem dữ liệu trong SQL bằng java.</p>
               left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s
             }
           </style>
-    
-    
-    
-    
-  
-    </body></html>
+
+  </body></html>
