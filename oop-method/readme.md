@@ -245,8 +245,8 @@ Viết thêm các phương thức cho Player:
 - getScore() để lấy điểm số của người chơi
 - increaseScore() để tăng điểm số của người chơi lên 1
 - decreaseScore() để giảm điểm số của người chơi lên 1
-- increaseScore(int score) để tăng điểm số của người chơi lên score
-- decreaseScore(int score) để giảm điểm số của người chơi lên score
+- increaseScore(int n) để tăng điểm số của người chơi lên n điểm
+- decreaseScore(int n) để giảm điểm số của người chơi lên n điểm
 - isWinner() để kiểm tra người chơi có thể thắng hay không, người chơi thắng khi điểm lớn hơn hoặc bằng 100
 
 
