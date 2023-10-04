@@ -11,7 +11,8 @@
 
 Phần "Biến và tính toán cơ bản" trong bài tập Java này nhằm giúp sinh viên hiểu và làm quen với các khái niệm cơ bản liên quan đến biến, nhập xuất dữ liệu và tính toán trong ngôn ngữ lập trình Java. Các kỹ thuật này là nền tảng quan trọng cho việc phát triển các ứng dụng Java
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Biến và Kiểu dữ liệu:
 - Giới thiệu về biến và kiểu dữ liệu trong Java.
@@ -27,6 +28,9 @@ Phần "Biến và tính toán cơ bản" trong bài tập Java này nhằm giú
 - Sử dụng phép toán trong biểu thức tính toán.
 - Ưu tiên phép toán và sử dụng dấu ngoặc.
 
+</details>
+<br>
+
 ️**🎯 Số lượng ví dụ: 12**
 
 ☑️ Tất cả ví dụ đều đã có code mẫu
@@ -39,7 +43,8 @@ Phần "Biến và tính toán cơ bản" trong bài tập Java này nhằm giú
 
 Phần "Câu lệnh điều kiện" trong bài tập Java này nhằm giúp sinh viên nắm vững kiến thức và kỹ năng liên quan đến sử dụng các câu lệnh điều kiện trong Java để kiểm tra và thực hiện các hành động khác nhau dựa trên điều kiện logic. Các câu lệnh điều kiện là một phần quan trọng của việc kiểm soát luồng của chương trình.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Câu Lệnh IF:
 
@@ -53,6 +58,9 @@ Phần "Câu lệnh điều kiện" trong bài tập Java này nhằm giúp sinh
 - Giới thiệu câu lệnh IF-ELSE IF-ELSE và cú pháp.
 - Sử dụng câu lệnh IF-ELSE IF-ELSE để kiểm tra nhiều điều kiện liên tiếp và thực hiện các hành động tương ứng với điều kiện đúng.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 15**
 
 ☑️ Tất cả ví dụ đều đã có code mẫu
@@ -65,7 +73,8 @@ Phần "Câu lệnh điều kiện" trong bài tập Java này nhằm giúp sinh
 
 Phần "Lệnh Switch Case" trong bài tập Java này nhằm giúp sinh viên nắm vững cách sử dụng lệnh switch case để thực hiện các hành động khác nhau dựa trên giá trị của biến hoặc biểu thức trong ngôn ngữ lập trình Java. Lệnh switch case thường được sử dụng để kiểm tra các giá trị cụ thể và thực hiện các tác vụ tương ứng.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Lệnh Switch Case:
 
@@ -80,6 +89,9 @@ Phần "Lệnh Switch Case" trong bài tập Java này nhằm giúp sinh viên n
 - Sử dụng lệnh switch case với các kiểu dữ liệu như int, char, enum.
 - Xử lý các tình huống khác nhau dựa trên giá trị của biến kiểu dữ liệu đó.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 5**
 
 ☑️ Tất cả ví dụ đều đã có code mẫu
@@ -92,7 +104,8 @@ Phần "Lệnh Switch Case" trong bài tập Java này nhằm giúp sinh viên n
 
 Phần "Vòng lặp" trong bài tập Java này nhằm giúp sinh viên nắm vững cách sử dụng các loại vòng lặp (for, while, do-while) trong ngôn ngữ lập trình Java để lặp lại một khối mã nhiều lần. Vòng lặp là một phần quan trọng trong việc xử lý lặp lại và lặp qua danh sách các phần tử.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Vòng Lặp For:
 - Giới thiệu vòng lặp for và cú pháp cơ bản.
@@ -106,6 +119,9 @@ Phần "Vòng lặp" trong bài tập Java này nhằm giúp sinh viên nắm v�
 - Giới thiệu vòng lặp do-while và cú pháp cơ bản.
 - Sử dụng vòng lặp do-while để đảm bảo rằng một khối mã được thực thi ít nhất một lần, sau đó lặp lại cho đến khi một điều kiện được thỏa mãn.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 15**
 
 ☑️ Tất cả ví dụ đều đã có code mẫu
@@ -118,7 +134,8 @@ Phần "Vòng lặp" trong bài tập Java này nhằm giúp sinh viên nắm v�
 
 Phần "Cấu trúc mảng trong Java" trong bài tập này nhằm giúp sinh viên nắm vững cách khai báo, khởi tạo, nhập xuất, duyệt mảng và hiểu sự khác biệt giữa chỉ số và phần tử trong mảng trong ngôn ngữ lập trình Java. Mảng là một cấu trúc dữ liệu quan trọng cho việc lưu trữ và xử lý một tập hợp các giá trị.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Khai Báo và Khởi Tạo Mảng:
 - Giới thiệu cách khai báo và khởi tạo mảng trong Java.
@@ -135,6 +152,9 @@ Phần "Cấu trúc mảng trong Java" trong bài tập này nhằm giúp sinh v
 - Giải thích sự khác biệt giữa chỉ số và phần tử trong mảng.
 - Làm rõ cách truy cập các phần tử trong mảng bằng cách sử dụng chỉ số.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 13**
 
 ☑️ Tất cả ví dụ đều đã có code mẫu
@@ -147,7 +167,8 @@ Phần "Cấu trúc mảng trong Java" trong bài tập này nhằm giúp sinh v
 
 Phần "Chuỗi trong Java" trong bài tập này nhằm giúp sinh viên nắm vững cách sử dụng và xử lý chuỗi (String) trong ngôn ngữ lập trình Java. Chuỗi là một kiểu dữ liệu quan trọng trong lập trình và thường được sử dụng để làm việc với văn bản và dữ liệu có định dạng.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Khai Báo và Khởi Tạo Chuỗi:
 - Giới thiệu cách khai báo và khởi tạo chuỗi trong Java.
@@ -159,6 +180,9 @@ Phần "Chuỗi trong Java" trong bài tập này nhằm giúp sinh viên nắm 
 
 3. Các Phương Thức Xử Lý Chuỗi:
 - Giới thiệu một số phương thức xử lý chuỗi quan trọng như length(), charAt(), substring(), toUpperCase(), toLowerCase(), v.v.
+
+</details>
+<br>
 
 **🎯 Số lượng ví dụ: 9**
 
@@ -172,7 +196,8 @@ Phần "Chuỗi trong Java" trong bài tập này nhằm giúp sinh viên nắm 
 
 Phần "Lập trình phương thức" trong bài tập này nhằm giúp sinh viên nắm vững cách tạo, sử dụng và gọi phương thức (method) trong ngôn ngữ lập trình Java. Phương thức là một cấu trúc quan trọng trong lập trình, cho phép tái sử dụng mã nguồn và tạo code dễ đọc hơn.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Khai Báo Phương Thức:
 - Giới thiệu cách khai báo phương thức trong Java.
@@ -185,6 +210,9 @@ Phần "Lập trình phương thức" trong bài tập này nhằm giúp sinh vi
 3. Phương Thức Trả Về Kết Quả:
 - Giới thiệu phương thức trả về kết quả.
 - Sử dụng phương thức để tính toán và trả về một giá trị kết quả.
+
+</details>
+<br>
 
 **🎯 Số lượng ví dụ: 20**
 
@@ -200,7 +228,8 @@ Phần "Lập trình phương thức" trong bài tập này nhằm giúp sinh vi
 
 Phần "Hàm khởi tạo trong OOP" trong bài tập này nhằm giúp sinh viên nắm vững cách sử dụng hàm khởi tạo mặc định, hàm khởi tạo có thuộc tính, cũng như các hàm getter, setter và hàm toString trong lập trình hướng đối tượng (OOP) bằng ngôn ngữ Java. Hàm khởi tạo là phương thức đặc biệt được sử dụng để khởi tạo đối tượng và thiết lập các giá trị ban đầu.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Hàm Khởi Tạo Mặc Định:
 - Giới thiệu cách tạo và sử dụng hàm khởi tạo mặc định (constructor) trong Java.
@@ -216,6 +245,9 @@ Phần "Hàm khởi tạo trong OOP" trong bài tập này nhằm giúp sinh vi�
 4. Hàm toString:
 - Hướng dẫn cách sử dụng hàm toString để biểu diễn một đối tượng dưới dạng chuỗi.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 10**
 
 👀 Xem bài tập **[Tại đây](./oop-constructor/)**
@@ -226,7 +258,8 @@ Phần "Hàm khởi tạo trong OOP" trong bài tập này nhằm giúp sinh vi�
 
 Phần "Viết các phương thức trong OOP" trong bài tập này nhằm giúp sinh viên nắm vững cách viết và sử dụng các phương thức (methods) trong lập trình hướng đối tượng (OOP) bằng ngôn ngữ Java. Phương thức là các hành động hoặc chức năng mà đối tượng có thể thực hiện.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Định nghĩa Phương Thức:
 - Giới thiệu cách định nghĩa và khai báo phương thức trong Java.
@@ -239,6 +272,9 @@ Phần "Viết các phương thức trong OOP" trong bài tập này nhằm giú
 3. Phương Thức Trả Về Kết Quả:
 - Giới thiệu cách sử dụng phương thức để tính toán và trả về một giá trị kết quả.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 10**
 
 👀 Xem bài tập **[Tại đây](./oop-method/)**
@@ -249,7 +285,8 @@ Phần "Viết các phương thức trong OOP" trong bài tập này nhằm giú
 
 Phần "Tính đóng gói trong OOP" trong bài tập này nhằm giúp sinh viên nắm vững khái niệm và cách thực hiện tính đóng gói (encapsulation) trong lập trình hướng đối tượng (OOP) bằng ngôn ngữ Java. Tính đóng gói là một trong các nguyên tắc quan trọng của OOP, giúp che giấu thông tin và bảo vệ tính toàn vẹn của đối tượng.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Tính Đóng Gói:
 - Giới thiệu khái niệm tính đóng gói và tại sao nó quan trọng trong OOP.
@@ -261,6 +298,8 @@ Phần "Tính đóng gói trong OOP" trong bài tập này nhằm giúp sinh vi�
 3. Getter và Setter:
 - Giới thiệu cách sử dụng getter và setter để truy xuất và cập nhật giá trị của thuộc tính một cách an toàn.
 
+</details>
+<br>
 
 **🎯 Số lượng ví dụ: 0**
 
@@ -272,7 +311,8 @@ Phần "Tính đóng gói trong OOP" trong bài tập này nhằm giúp sinh vi�
 
 Phần "Tính kế thừa trong OOP" trong bài tập này nhằm giúp sinh viên nắm vững khái niệm và cách thực hiện tính kế thừa (inheritance) trong lập trình hướng đối tượng (OOP) bằng ngôn ngữ Java. Tính kế thừa cho phép bạn tạo lớp con dựa trên lớp cha, kế thừa tất cả các thuộc tính và phương thức của lớp cha và mở rộng chúng hoặc thay đổi chúng theo cách riêng.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Tính Kế Thừa:
 - Giới thiệu khái niệm tính kế thừa và tại sao nó quan trọng trong OOP.
@@ -285,6 +325,9 @@ Phần "Tính kế thừa trong OOP" trong bài tập này nhằm giúp sinh vi�
 3. Ghi Đè (Override):
 - Giới thiệu cách ghi đè phương thức của lớp cha trong lớp con để thay đổi hoặc mở rộng hành vi của phương thức.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 0**
 
 👀 Xem bài tập **[Tại đây](./oop-inheritance/)**
@@ -295,7 +338,8 @@ Phần "Tính kế thừa trong OOP" trong bài tập này nhằm giúp sinh vi�
 
 Phần "Tính đa hình trong OOP" trong bài tập này nhằm giúp sinh viên nắm vững khái niệm và cách thực hiện tính đa hình (polymorphism) trong lập trình hướng đối tượng (OOP) bằng ngôn ngữ Java. Tính đa hình cho phép sử dụng các phương thức và lớp con một cách đa dạng thông qua một giao diện thống nhất.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Tính Đa Hình:
 - Giới thiệu khái niệm tính đa hình và tại sao nó quan trọng trong OOP.
@@ -308,6 +352,9 @@ Phần "Tính đa hình trong OOP" trong bài tập này nhằm giúp sinh viên
 3. Gọi Phương Thức Đa Hình (Polymorphic Method Invocation):
 - Giới thiệu cách gọi phương thức đa hình để thực hiện các phương thức trên các đối tượng khác nhau, dựa trên quyết định tại thời điểm chạy.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 0**
 
 👀 Xem bài tập **[Tại đây](./oop-polymorphism/)**
@@ -318,7 +365,8 @@ Phần "Tính đa hình trong OOP" trong bài tập này nhằm giúp sinh viên
 
 Phần "Tính trừu tượng trong OOP" trong bài tập này nhằm giúp sinh viên nắm vững khái niệm và cách thực hiện tính trừu tượng (abstraction) trong lập trình hướng đối tượng (OOP) bằng ngôn ngữ Java. Tính trừu tượng là một khía cạnh quan trọng của OOP cho phép ẩn đi các chi tiết cụ thể và tập trung vào các khái niệm trừu tượng hơn.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Tính Trừu Tượng:
 - Giới thiệu khái niệm tính trừu tượng và tại sao nó quan trọng trong OOP.
@@ -336,6 +384,9 @@ Phần "Tính trừu tượng trong OOP" trong bài tập này nhằm giúp sinh
 - Giới thiệu khái niệm interface và tại sao nó quan trọng trong OOP.
 - Hiểu cách sử dụng interface để định nghĩa các hành vi trừu tượng mà các lớp khác nhau có thể triển khai.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 0**
 
 👀 Xem bài tập **[Tại đây](./oop-abstraction/)**
@@ -346,7 +397,8 @@ Phần "Tính trừu tượng trong OOP" trong bài tập này nhằm giúp sinh
 
 Phần "Kiểm tra giữa kỳ - bài tập mẫu" trong bài tập này nhằm kiểm tra kiến thức và khả năng thực hành về lập trình hướng đối tượng (OOP) trong Java. Các bài tập sẽ tập trung vào việc áp dụng các tính chất cơ bản của OOP như tính kế thừa, tính đa hình, tính trừu tượng và tính đóng gói. Ngoài ra, bài tập cũng yêu cầu quản lý danh sách các đối tượng.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Tính Chất Kế Thừa (Inheritance):
 - Bao gồm các bài tập liên quan đến tạo lớp cha và lớp con, kế thừa thuộc tính và phương thức từ lớp cha, và ghi đè phương thức trong lớp con.
@@ -363,6 +415,9 @@ Phần "Kiểm tra giữa kỳ - bài tập mẫu" trong bài tập này nhằm 
 5. Quản Lý Danh Sách Đối Tượng:
 - Bao gồm các bài tập về tạo và quản lý danh sách các đối tượng của các lớp khác nhau, thêm, xóa, và tìm kiếm đối tượng trong danh sách.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 0**
 
 👀 Xem bài tập **[Tại đây](./midterm-exam/)**
@@ -375,7 +430,8 @@ Phần "Kiểm tra giữa kỳ - bài tập mẫu" trong bài tập này nhằm 
 
 Phần "Thiết kế giao diện bằng Java Swing" trong bài tập này nhằm giúp sinh viên làm quen với việc thiết kế giao diện đồ họa trong Java sử dụng thư viện Swing. Sinh viên sẽ được hướng dẫn cách sử dụng các thành phần giao diện như JFrame, JPanel, JButton, JTextField, JTextArea, JList, JTable và cách tương tác với chúng.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Cơ Bản về Swing:
 - Giới thiệu về thư viện Swing trong Java và tại sao nó được sử dụng cho việc phát triển giao diện đồ họa.
@@ -392,6 +448,9 @@ Phần "Thiết kế giao diện bằng Java Swing" trong bài tập này nhằm
 4. Table:
 - Hướng dẫn cách tạo và sử dụng JTable để hiển thị dữ liệu dưới dạng bảng.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 0**
 
 👀 Xem bài tập **[Tại đây](./swing-ui/)**
@@ -402,7 +461,8 @@ Phần "Thiết kế giao diện bằng Java Swing" trong bài tập này nhằm
 
 Phần "Thao tác với cơ sở dữ liệu" trong bài tập này nhằm giúp sinh viên làm quen với cách kết nối và tương tác với cơ sở dữ liệu MySQL bằng Java. Sinh viên sẽ được hướng dẫn cách thực hiện các thao tác cơ bản như thêm, sửa, xoá và xem dữ liệu từ cơ sở dữ liệu bằng Java.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Kết Nối Cơ Sở Dữ Liệu:
 - Hướng dẫn cách thiết lập kết nối đến cơ sở dữ liệu MySQL từ ứng dụng Java bằng JDBC (Java Database Connectivity).
@@ -419,6 +479,9 @@ Phần "Thao tác với cơ sở dữ liệu" trong bài tập này nhằm giúp
 5. Thao Tác Xem Dữ Liệu:
 - Hướng dẫn cách truy vấn và lấy dữ liệu từ cơ sở dữ liệu MySQL bằng Java, sau đó hiển thị dữ liệu này trên giao diện ứng dụng.
 
+</details>
+<br>
+
 **🎯 Số lượng ví dụ: 0**
 
 👀 Xem bài tập **[Tại đây](./swing-sql/)**
@@ -429,7 +492,8 @@ Phần "Thao tác với cơ sở dữ liệu" trong bài tập này nhằm giúp
 
 Phần "Kết hợp Java Swing và thao tác với cơ sở dữ liệu" trong bài tập này nhằm giúp sinh viên kết hợp kiến thức về thiết kế giao diện đồ họa bằng Java Swing và tương tác với cơ sở dữ liệu MySQL. Sinh viên sẽ được hướng dẫn cách tạo các ứng dụng giao diện cho phép thao tác với cơ sở dữ liệu, bao gồm thêm, sửa, xoá và xem dữ liệu.
 
-**📚 Các nội dung chính**
+<details>
+<summary> <strong>📚 Các nội dung chính</strong></summary>
 
 1. Thiết Kế Giao Diện Java Swing:
 - Hướng dẫn cách thiết kế giao diện đồ họa sử dụng Java Swing với các thành phần như JFrame, JPanel, JButton, JTextField, JTable, và các thành phần khác.
@@ -439,6 +503,9 @@ Phần "Kết hợp Java Swing và thao tác với cơ sở dữ liệu" trong b
 
 3. Thao Tác Thêm, Sửa, Xoá và Xem Dữ Liệu:
 - Hướng dẫn cách sử dụng giao diện để thực hiện các thao tác thêm, sửa, xoá và xem dữ liệu từ cơ sở dữ liệu MySQL.
+
+</details>
+<br>
 
 **🎯 Số lượng ví dụ: 0**
 
