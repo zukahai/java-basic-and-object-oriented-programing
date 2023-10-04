@@ -26,6 +26,131 @@
       <div align="center">
 <h1>Tính đóng gói trong lập trình hướng đối tượng</h1>
 </div>
+<p>Tạo package <strong>pA</strong> chứa 2 class <strong>A</strong> và <strong>B</strong>, tạo  package <strong>pB</strong> chứa 1 class <strong>C</strong> kế thừa đối tượng <strong>A</strong></p>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-1">Ví dụ 1</h3>
+
+<p>Tạo một thuộc tính int a trong class <strong>A</strong> mà không cho phép truy cập trực tiếp tự bên ngoài class.</p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<p>Để giới hạn phạm vi sử dụng chỉ dùng trong một class chúng ta sẽ sử dụng <strong>private</strong></p>
+<ul>
+<li>A.java</li>
+</ul>
+<pre data-role="codeBlock" data-info="Java" class="language-java Java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">pA</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2">Ví dụ 2</h3>
+
+<p>Tiếp tục tạo thêm hàm <strong>inc()</strong> có thể tăng giá trị của <strong>a</strong> thêm 1 đơn vị trong class <strong>A</strong>, hàm này chỉ dùng được trong cùng một <strong>package</strong></p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<p>Để sử dụng được trong cùng một package chúng ta sẽ sử dụng <strong>default</strong></p>
+<p>Như thế thì hàm <strong>inc()</strong> chỉ được dùng trong các class của package <strong>pA</strong></p>
+<ul>
+<li>A.java</li>
+</ul>
+<pre data-role="codeBlock" data-info="Java" class="language-java Java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">pA</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> a<span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-void">void</span> <span class="token function">inc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>a<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-3">Ví dụ 3</h3>
+
+<p>Tiếp tục tạo thêm hàm <strong>sqr()</strong> có thể trả về giátrị của <strong>a^2</strong> class <strong>A</strong>, hàm này chỉ dùng được trong cùng một <strong>package</strong> và dùng trong các class <strong>C</strong> (supclass)</p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<p>Để sử dụng được trong cùng một package và dùng được trong các subclass chúng ta sẽ sử dụng <strong>protected</strong></p>
+<p>Như thế thì hàm <strong>sqr()</strong> chỉ được dùng trong các class của package <strong>pA</strong> và các lớp con của class <strong>A</strong></p>
+<ul>
+<li>A.java</li>
+</ul>
+<pre data-role="codeBlock" data-info="Java" class="language-java Java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">pA</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> a<span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-void">void</span> <span class="token function">inc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>a<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-protected">protected</span> <span class="token keyword keyword-int">int</span> <span class="token function">sqr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> a <span class="token operator">*</span> a<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><p>Lúc này hàm sqr() có thể được dùng cùng package và trong các lớp con của class <strong>A</strong>.</p>
+<ul>
+<li>B.java</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">pA</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">B</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">B</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">A</span> a <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		a<span class="token punctuation">.</span><span class="token function">sqr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><ul>
+<li>C.java</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">pB</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">pA<span class="token punctuation">.</span></span><span class="token class-name">A</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">C</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">C</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token function">sqr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></details>
+<br>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-4">Ví dụ 4</h3>
+
+<p>Tiếp tục tạo thêm hàm <strong>setA()</strong> và <strong>getA()</strong> có thể thảy đổi và trả về giá trị của <strong>a</strong> trong class <strong>A</strong>, hàm này chỉ dùng được trong cả project</p>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<p>Để giới hạn phạm vi sử dụng trong cả project chúng ta sẽ sử dụng <strong>public</strong></p>
+<ul>
+<li>A.java</li>
+</ul>
+<pre data-role="codeBlock" data-info="Java" class="language-java Java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">pA</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> a<span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-void">void</span> <span class="token function">inc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>a<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-protected">protected</span> <span class="token keyword keyword-int">int</span> <span class="token function">sqr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> a <span class="token operator">*</span> a<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">getA</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> a<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setA</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> a<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
+<br>
+
       </div>
       
       

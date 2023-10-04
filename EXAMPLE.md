@@ -301,7 +301,9 @@ Phần "Tính đóng gói trong OOP" trong bài tập này nhằm giúp sinh vi�
 </details>
 <br>
 
-**🎯 Số lượng ví dụ: 0**
+**🎯 Số lượng ví dụ: 4**
+
+☑️ Tất cả ví dụ đều đã có code mẫu
 
 👀 Xem bài tập **[Tại đây](./oop-encapsulation/)**
 
