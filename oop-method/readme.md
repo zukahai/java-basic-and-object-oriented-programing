@@ -394,8 +394,7 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 Từ class **Book** ở **Ví dụ 12** hãy nhập vào thông tin của **N** quyển sách, sau đó:
 - In ra thông tin của N cuốn sách vừa nhập
 - In ra thông tin những cuốn sách có giá cao nhất
-- Sắp xếp cách cuốn sách tăng dần theo **quantity**
-- Sắp xếp cách cuốn sách giảm dần theo **price**
+- In ra thông tin những cuốn sách có tên là "Java OOP"
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>

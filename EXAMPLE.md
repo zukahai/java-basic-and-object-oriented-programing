@@ -275,7 +275,7 @@ Phần "Viết các phương thức trong OOP" trong bài tập này nhằm giú
 </details>
 <br>
 
-**🎯 Số lượng ví dụ: 10**
+**🎯 Số lượng ví dụ: 13**
 
 👁️ Xem bài tập **[Tại đây](./oop-method/)**
 
