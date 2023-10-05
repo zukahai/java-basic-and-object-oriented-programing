@@ -611,7 +611,7 @@
 <p><strong>🎯 Số lượng ví dụ: 4</strong></p>
 <p>👁️ Xem bài tập <strong><a href="./advanced-exercises/">Tại đây</a></strong></p>
 
-<h1><img src="./assets/offsnow.png" id="image" alt="" srcset="" onclick="change()" ></h1>
+<h1><img src="./assets/offsnow.png" class="image" id="image" alt="" srcset="" onclick="change()" ></h1>
       </div>
       
       
@@ -661,6 +661,14 @@
 
                   .hidden{
                     display: none;
+                  }
+
+                  .image{
+                    transition: transform .2s
+                  }
+
+                  .image:hover {
+                    transform: scale(1.1);
                   }
 
                   @-webkit-keyframes snowflakes-fall {
