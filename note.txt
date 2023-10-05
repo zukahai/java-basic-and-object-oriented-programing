@@ -1,7 +1,11 @@
 <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
 
 
- <div class="snowflakes" aria-hidden="true">
+ <h1><img src="./assets/offsnow.png" id="image" alt="" srcset="" onclick="change()" ></h1>
+      </div>
+      
+      
+      <div class="snowflakes" id="snowflakes" aria-hidden="true">
             <div class="snowflake">
               <img class="snow2" src="./assets/java.png" alt srcset>
             </div>
@@ -44,6 +48,11 @@
                     height: 25px;
                     object-fit: cover;
                   }
+
+                  .hidden{
+                    display: none;
+                  }
+
                   @-webkit-keyframes snowflakes-fall {
                     0% {top:-10%}
                     100% {top:100%}
@@ -122,6 +131,20 @@
                   }
                   
                 </style>  
+                <script>
+
+                    function change(){
+                      if (document.getElementById("snowflakes").classList.contains("hidden")){
+                        document.getElementById("snowflakes").classList.remove("hidden");
+                        // change src image
+                        document.getElementById("image").src = "./assets/offsnow.png";
+                      }
+                      else {
+                        document.getElementById("snowflakes").classList.add("hidden");
+                        document.getElementById("image").src = "./assets/onsnow.png";
+                      }
+                    }
+                </script> 
 
 
 <details>
