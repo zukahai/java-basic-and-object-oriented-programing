@@ -7,6 +7,10 @@
 
 Viết phương thức in số lượng chữ số **0** cuối cùng của **n!** <br>*(1 ≤ n ≤ 10^18)*.
 
+**📖 Ví dụ**
+- Với **n = 5** thì kết quả là 1, vì 5! = 120 có 1 chữ số 0 cuối cùng
+- Với **n = 12** thì kết quả là 2, vì 12! = 479001600 có 2 chữ số 0 cuối cùng
+
 <details>
 <summary> <strong>📝Test case 🧪</strong></summary>
 
@@ -114,6 +118,16 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 ### Ví dụ 2: dịch số
 
 Cho một số nguyên **N** *(1 ≤ n ≤ 10^1000)*.<br> Hãy in ra cách đọc tiếng Việt của số tự nhiên đó.
+
+**📖 Ví dụ**
+- Với **n = 5** thì kết quả là "Năm"
+- Với **n = 12** thì kết quả là "Mười hai"
+- Với **n = 27** thì kết quả là "Hai mươi bảy"
+- Với **n = 123** thì kết quả là "Một trăm hai mươi ba"
+- Với **n = 9302** thì kết quả là "Chín ngàn ba trăm lẻ hai"
+- Với **n = 2938473** thì kết quả là "Hai triệu chín trăm ba mươi tám ngàn bốn trăm bảy mươi ba"
+- Với **n = 938473648** thì kết quả là "Chín trăm ba mươi tám triệu bốn trăm bảy mươi ba ngàn sáu trăm bốn mươi tám"
+
 
 <details>
 <summary> <strong>📝Test case 🧪</strong></summary>
@@ -314,6 +328,11 @@ public class TraslateNumber {
 Viết chương trình chuỗi đổi từ chuỗi như phần sang chuỗi hexa.<br>
 Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự
 
+**📖 Ví dụ**
+- Với **n = 10** thì kết quả là 2, vì 10(2) = 2(16)
+- Với **n = 1110** thì kết quả là E, vì 1110(16) = E(16)
+- Với **n = 0101011** thì kết quả là 2B, vì 0101011(16) = 2B(16)
+
 <details>
 <summary> <strong>📝Test case 🧪</strong></summary>
 
@@ -379,6 +398,94 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự
 
 </details>
 <br>
+
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>
+
+### Ví dụ 4: Xoá số để được số lớn nhất
+
+Nhập vào một số nguyên dương **N** (1 ≤ N ≤ 10^1000) và một số tự nhiên **k** (0 ≤ k ≤ độ dài N).
+Hãy xoá trong **N** đúng **k** ký tự để để kết quả sau khi xoá thu được số lớn nhất có thể.
+
+**📖 Ví dụ**
+- Với **n = 123** và **k = 1** thì kết quả là 23, vì trong tất cả các cách xoá đi 1 ký tự tỏng **123** thì cách tốt nhất là xoá số **1** để thu được số **23** lớn nhất.
+- Với **n = 8791** và **k = 2** thì kết quả là 91
+- Với **n = 938493** và **k = 3** thì kết quả là 993
+- Với **n = 939293234** và **k = 5** thì kết quả là 9994
+
+
+<details>
+<summary> <strong>📝Test case 🧪</strong></summary>
+
+#### Testcase 1:
+
+|Input| Output|
+|-----|:-----:|
+|123 1	| 23|
+
+#### Testcase 2:
+
+|Input| Output|
+|-----|:-----:|
+|8791 2| 91 |
+
+#### Testcase 3:
+
+|Input| Output|
+|-----|:-----:|
+|8791 1| 891 |
+
+#### Testcase 4:
+
+|Input| Output|
+|-----|:-----:|
+|938493 3| 993 |
+
+#### Testcase 5:
+
+|Input| Output|
+|-----|:-----:|
+|939293234 5| 9994 |
+
+#### Testcase 6:
+
+|Input| Output|
+|-----|:-----:|
+|8349247345 8| 97 |
+
+#### Testcase 7:
+
+|Input| Output|
+|-----|:-----:|
+|9392473482700434 10| 998744 |
+
+#### Testcase 8:
+
+|Input| Output|
+|-----|:-----:|
+|8394827364859684738495837238825345 23| 99988825345 |
+
+#### Testcase 9:
+
+|Input| Output|
+|-----|:-----:|
+|384757834698572369874521638947263985673249086573908723689746238794623897648297356827946589723648972365897236589726894756213879462387524353456364563847578346985723698745216389472639856732490865739087236897462387946238976482973568279465897236489723658972365897268947562138794623875243534563645638475783469857236987452163894726398567324908657390872368974623879462389764829735682794658972364897236589723658972689475621387946238752435345636456 150| 999999999999999999987689472639856732490865739087236897462387946238976482973568279465897236489723658972365897268947562138794623875243534563645638475783469857236987452163894726398567324908657390872368974623879462389764829735682794658972364897236589723658972689475621387946238752435345636456 |
+
+#### Testcase 10:
+
+|Input| Output|
+|-----|:-----:|
+|123456789 0| 123456789 |
+
+</details>
+<br>
+
+</details>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
