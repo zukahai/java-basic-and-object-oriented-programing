@@ -1,10 +1,3 @@
-<div style="float: left; margin-right: 10px;">
-  <img src="./assets/java.png" alt="Mô tả ảnh" style="width: 35px;">
-</div>
-
-Đây là văn bản nằm bên trái ảnh.
-
-
 <div align="center">
 
 # VKU | Lập trình hướng đối tượng - Ví dụ luyện tập
@@ -40,9 +33,9 @@ Phần "Biến và tính toán cơ bản" trong bài tập Java này nhằm giú
 
 ️**🎯 Số lượng ví dụ: 12**
 
-☑️ Tất cả ví dụ đều đã có code mẫu
+✅ Tất cả ví dụ đều đã có code mẫu
 
-👀 Xem bài tập **[Tại đây](./basic-variable-and-calculations/)**
+👁️ Xem bài tập **[Tại đây](./basic-variable-and-calculations/)**
 
 ## 2. Câu lệnh điều kiện
 
@@ -70,9 +63,9 @@ Phần "Câu lệnh điều kiện" trong bài tập Java này nhằm giúp sinh
 
 **🎯 Số lượng ví dụ: 15**
 
-☑️ Tất cả ví dụ đều đã có code mẫu
+✅ Tất cả ví dụ đều đã có code mẫu
 
-👀 Xem bài tập **[Tại đây](./basic-conditional-statement/)**
+👁️ Xem bài tập **[Tại đây](./basic-conditional-statement/)**
 
 ## 3. Lệnh Switch Case
 
@@ -101,9 +94,9 @@ Phần "Lệnh Switch Case" trong bài tập Java này nhằm giúp sinh viên n
 
 **🎯 Số lượng ví dụ: 5**
 
-☑️ Tất cả ví dụ đều đã có code mẫu
+✅ Tất cả ví dụ đều đã có code mẫu
 
-👀 Xem bài tập **[Tại đây](./basic-switchcase/)**
+👁️ Xem bài tập **[Tại đây](./basic-switchcase/)**
 
 ## 4. Vòng lặp
 
@@ -131,9 +124,9 @@ Phần "Vòng lặp" trong bài tập Java này nhằm giúp sinh viên nắm v�
 
 **🎯 Số lượng ví dụ: 15**
 
-☑️ Tất cả ví dụ đều đã có code mẫu
+✅ Tất cả ví dụ đều đã có code mẫu
 
-👀 Xem bài tập **[Tại đây](./basic-loop/)**
+👁️ Xem bài tập **[Tại đây](./basic-loop/)**
 
 ## 5. Cấu trúc mảng trong Java
 
@@ -164,9 +157,9 @@ Phần "Cấu trúc mảng trong Java" trong bài tập này nhằm giúp sinh v
 
 **🎯 Số lượng ví dụ: 13**
 
-☑️ Tất cả ví dụ đều đã có code mẫu
+✅ Tất cả ví dụ đều đã có code mẫu
 
-👀 Xem bài tập **[Tại đây](./basic-array/)**
+👁️ Xem bài tập **[Tại đây](./basic-array/)**
 
 ## 6. Chuỗi trong java
 
@@ -193,9 +186,9 @@ Phần "Chuỗi trong Java" trong bài tập này nhằm giúp sinh viên nắm 
 
 **🎯 Số lượng ví dụ: 9**
 
-☑️ Tất cả ví dụ đều đã có code mẫu
+✅ Tất cả ví dụ đều đã có code mẫu
 
-👀 Xem bài tập **[Tại đây](./basic-string/)**
+👁️ Xem bài tập **[Tại đây](./basic-string/)**
 
 ## 7. Lập trình phương thức
 
@@ -223,9 +216,9 @@ Phần "Lập trình phương thức" trong bài tập này nhằm giúp sinh vi
 
 **🎯 Số lượng ví dụ: 20**
 
-☑️ Tất cả ví dụ đều đã có code mẫu
+✅ Tất cả ví dụ đều đã có code mẫu
 
-👀 Xem bài tập **[Tại đây](./basic-method/)**
+👁️ Xem bài tập **[Tại đây](./basic-method/)**
 
 # Lập trình hướng đối tượng
 
@@ -257,7 +250,7 @@ Phần "Hàm khởi tạo trong OOP" trong bài tập này nhằm giúp sinh vi�
 
 **🎯 Số lượng ví dụ: 10**
 
-👀 Xem bài tập **[Tại đây](./oop-constructor/)**
+👁️ Xem bài tập **[Tại đây](./oop-constructor/)**
 
 ## 2. Viết các phương thức trong OOP
 
@@ -284,7 +277,7 @@ Phần "Viết các phương thức trong OOP" trong bài tập này nhằm giú
 
 **🎯 Số lượng ví dụ: 10**
 
-👀 Xem bài tập **[Tại đây](./oop-method/)**
+👁️ Xem bài tập **[Tại đây](./oop-method/)**
 
 ## 3. Tính đóng gói trong OOP
 
@@ -310,9 +303,9 @@ Phần "Tính đóng gói trong OOP" trong bài tập này nhằm giúp sinh vi�
 
 **🎯 Số lượng ví dụ: 4**
 
-☑️ Tất cả ví dụ đều đã có code mẫu
+✅ Tất cả ví dụ đều đã có code mẫu
 
-👀 Xem bài tập **[Tại đây](./oop-encapsulation/)**
+👁️ Xem bài tập **[Tại đây](./oop-encapsulation/)**
 
 ## 4. Tính kế thừa trong OOP
 
@@ -339,7 +332,7 @@ Phần "Tính kế thừa trong OOP" trong bài tập này nhằm giúp sinh vi�
 
 **🎯 Số lượng ví dụ: 0**
 
-👀 Xem bài tập **[Tại đây](./oop-inheritance/)**
+👁️ Xem bài tập **[Tại đây](./oop-inheritance/)**
 
 ## 5. Tính đa hình trong OOP
 
@@ -366,7 +359,7 @@ Phần "Tính đa hình trong OOP" trong bài tập này nhằm giúp sinh viên
 
 **🎯 Số lượng ví dụ: 0**
 
-👀 Xem bài tập **[Tại đây](./oop-polymorphism/)**
+👁️ Xem bài tập **[Tại đây](./oop-polymorphism/)**
 
 ## 6. Tính trừu tượng trong OOP
 
@@ -398,7 +391,7 @@ Phần "Tính trừu tượng trong OOP" trong bài tập này nhằm giúp sinh
 
 **🎯 Số lượng ví dụ: 0**
 
-👀 Xem bài tập **[Tại đây](./oop-abstraction/)**
+👁️ Xem bài tập **[Tại đây](./oop-abstraction/)**
 
 ## 7. Kiểm tra giữa kỳ - bài tập mẫu
 
@@ -429,7 +422,7 @@ Phần "Kiểm tra giữa kỳ - bài tập mẫu" trong bài tập này nhằm 
 
 **🎯 Số lượng ví dụ: 0**
 
-👀 Xem bài tập **[Tại đây](./midterm-exam/)**
+👁️ Xem bài tập **[Tại đây](./midterm-exam/)**
 
 # Lập trình java swing
 
@@ -462,7 +455,7 @@ Phần "Thiết kế giao diện bằng Java Swing" trong bài tập này nhằm
 
 **🎯 Số lượng ví dụ: 0**
 
-👀 Xem bài tập **[Tại đây](./swing-ui/)**
+👁️ Xem bài tập **[Tại đây](./swing-ui/)**
 
 ## 2. Thao tác với cơ sở dữ liệu
 
@@ -493,7 +486,7 @@ Phần "Thao tác với cơ sở dữ liệu" trong bài tập này nhằm giúp
 
 **🎯 Số lượng ví dụ: 0**
 
-👀 Xem bài tập **[Tại đây](./swing-sql/)**
+👁️ Xem bài tập **[Tại đây](./swing-sql/)**
 
 ## 3. Kết hợp Java Swing và thao tác với cơ sở dữ liệu
 
@@ -518,7 +511,7 @@ Phần "Kết hợp Java Swing và thao tác với cơ sở dữ liệu" trong b
 
 **🎯 Số lượng ví dụ: 0**
 
-👀 Xem bài tập **[Tại đây](./swing-project/)**
+👁️ Xem bài tập **[Tại đây](./swing-project/)**
 <hr>
 
 # Bài tập nâng cao 🚀
@@ -530,4 +523,4 @@ Gồm nhưng bài tập có độ khó nâng cao 🚀, dành cho những bạn m
 
 **🎯 Số lượng ví dụ: 3**
 
-👀 Xem bài tập **[Tại đây](./advanced-exercises/)**
+👁️ Xem bài tập **[Tại đây](./advanced-exercises/)**
