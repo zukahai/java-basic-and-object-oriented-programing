@@ -1,3 +1,10 @@
+<div style="float: left; margin-right: 10px;">
+  <img src="./assets/java.png" alt="Mô tả ảnh" style="width: 35px;">
+</div>
+
+Đây là văn bản nằm bên trái ảnh.
+
+
 <div align="center">
 
 # VKU | Lập trình hướng đối tượng - Ví dụ luyện tập
