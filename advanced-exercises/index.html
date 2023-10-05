@@ -26,13 +26,15 @@
       <div align="center">
 <h1>Bài tập nâng cao</h1>
 </div>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-1-s%E1%BB%91-l%C6%B0%C6%A1ng-s%E1%BB%91-kh%C3%B4ng-cu%E1%BB%91i-c%C3%B9ng">Ví dụ 1: Số lương số không cuối cùng</h3>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-1-chuy%E1%BB%83n-%C4%91%E1%BB%95i-chu%E1%BB%97i-nh%E1%BB%8B-ph%C3%A2n-sang-chu%E1%BB%97i-hexa">Ví dụ 1: Chuyển đổi chuỗi nhị phân sang chuỗi hexa</h3>
 
-<p>Viết phương thức in số lượng chữ số <strong>0</strong> cuối cùng của <strong>n!</strong> <br><em>(1 ≤ n ≤ 10^18)</em>.</p>
+<p>Viết chương trình chuỗi đổi từ chuỗi như phần sang chuỗi hexa.<br><br>
+Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 <p><strong>📖 Ví dụ</strong></p>
 <ul>
-<li>Với <strong>n = 5</strong> thì kết quả là 1, vì 5! = 120 có 1 chữ số 0 cuối cùng</li>
-<li>Với <strong>n = 12</strong> thì kết quả là 2, vì 12! = 479001600 có 2 chữ số 0 cuối cùng</li>
+<li>Với <strong>n = 10</strong> thì kết quả là 2, vì 10(2) = 2(16)</li>
+<li>Với <strong>n = 1110</strong> thì kết quả là E, vì 1110(16) = E(16)</li>
+<li>Với <strong>n = 0101011</strong> thì kết quả là 2B, vì 0101011(16) = 2B(16)</li>
 </ul>
 <details>
 <summary> <strong>📝Test case 🧪</strong></summary>
@@ -46,8 +48,8 @@
 </thead>
 <tbody>
 <tr>
-<td>5</td>
-<td style="text-align:center">1</td>
+<td>10</td>
+<td style="text-align:center">2</td>
 </tr>
 </tbody>
 </table>
@@ -61,8 +63,8 @@
 </thead>
 <tbody>
 <tr>
-<td>12</td>
-<td style="text-align:center">2</td>
+<td>1110</td>
+<td style="text-align:center">E</td>
 </tr>
 </tbody>
 </table>
@@ -76,8 +78,8 @@
 </thead>
 <tbody>
 <tr>
-<td>17</td>
-<td style="text-align:center">3</td>
+<td>0101011</td>
+<td style="text-align:center">2B</td>
 </tr>
 </tbody>
 </table>
@@ -91,8 +93,8 @@
 </thead>
 <tbody>
 <tr>
-<td>26</td>
-<td style="text-align:center">6</td>
+<td>10101010101111111</td>
+<td style="text-align:center">1557F</td>
 </tr>
 </tbody>
 </table>
@@ -106,8 +108,8 @@
 </thead>
 <tbody>
 <tr>
-<td>48</td>
-<td style="text-align:center">10</td>
+<td>0001010101011111111000000000</td>
+<td style="text-align:center">155FE00</td>
 </tr>
 </tbody>
 </table>
@@ -121,8 +123,8 @@
 </thead>
 <tbody>
 <tr>
-<td>236</td>
-<td style="text-align:center">57</td>
+<td>011001100101010101010101010101010101010101011111111111111</td>
+<td style="text-align:center">CCAAAAAAAABFFF</td>
 </tr>
 </tbody>
 </table>
@@ -136,8 +138,8 @@
 </thead>
 <tbody>
 <tr>
-<td>74823</td>
-<td style="text-align:center">18700</td>
+<td>1010101010101010101001101010101010101000000000001010100000111101001010101000</td>
+<td style="text-align:center">AAAAA6AAA800A83D2A8</td>
 </tr>
 </tbody>
 </table>
@@ -151,8 +153,8 @@
 </thead>
 <tbody>
 <tr>
-<td>736283948372635</td>
-<td style="text-align:center">184070987093150</td>
+<td>001010101010101010101011111111110101010000000110100111100101010100101000000111110010101010101010101010111111111101010100000001101001111001010101001010000001111100101010101010101010101111111111010101000000011010011110010101010010100000011111</td>
+<td style="text-align:center">2AAAABFF54069E55281F2AAAABFF54069E55281F2AAAABFF54069E55281F</td>
 </tr>
 </tbody>
 </table>
@@ -166,8 +168,8 @@
 </thead>
 <tbody>
 <tr>
-<td>19283746253648293</td>
-<td style="text-align:center">4820936563412061</td>
+<td>0</td>
+<td style="text-align:center">0</td>
 </tr>
 </tbody>
 </table>
@@ -181,83 +183,8 @@
 </thead>
 <tbody>
 <tr>
-<td>11111111111111111</td>
-<td style="text-align:center">2777777777777765</td>
-</tr>
-</tbody>
-</table>
-<h4>Testcase 11:</h4>
-<table>
-<thead>
-<tr>
-<th>Input</th>
-<th style="text-align:center">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>999999999999999999</td>
-<td style="text-align:center">249999999999999977</td>
-</tr>
-</tbody>
-</table>
-<h4>Testcase 12:</h4>
-<table>
-<thead>
-<tr>
-<th>Input</th>
-<th style="text-align:center">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>82739402938472634</td>
-<td style="text-align:center">20684850734618145</td>
-</tr>
-</tbody>
-</table>
-<h4>Testcase 13:</h4>
-<table>
-<thead>
-<tr>
-<th>Input</th>
-<th style="text-align:center">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>27122712271227129</td>
-<td style="text-align:center">6780678067806772</td>
-</tr>
-</tbody>
-</table>
-<h4>Testcase 14:</h4>
-<table>
-<thead>
-<tr>
-<th>Input</th>
-<th style="text-align:center">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>42763948273847263</td>
-<td style="text-align:center">10690987068461806</td>
-</tr>
-</tbody>
-</table>
-<h4>Testcase 15:</h4>
-<table>
-<thead>
-<tr>
-<th>Input</th>
-<th style="text-align:center">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
 <td>1</td>
-<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
 </tr>
 </tbody>
 </table>
@@ -268,7 +195,7 @@
 <p>Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook <a href="https://www.facebook.com/chiatayde">Phan Đức Hải</a></p>
 </details>
 <br>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2-d%E1%BB%8Bch-s%E1%BB%91">Ví dụ 2: dịch số</h3>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-2-%C4%91%E1%BB%8Dc-s%E1%BB%91-ti%E1%BA%BFng-vi%E1%BB%87t">Ví dụ 2: Đọc số tiếng Việt</h3>
 
 <p>Cho một số nguyên <strong>N</strong> <em>(1 ≤ n ≤ 10^1000)</em>.<br> Hãy in ra cách đọc tiếng Việt của số tự nhiên đó.</p>
 <p><strong>📖 Ví dụ</strong></p>
@@ -568,15 +495,13 @@ public class TraslateNumber {
 ``` -->
 </details>
 <br>
-<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-3-chuy%E1%BB%83n-%C4%91%E1%BB%95i-chuu%E1%BB%97i-nh%E1%BB%8B-ph%C3%A2n-sang-chu%E1%BB%97i-hexa">Ví dụ 3: Chuyển đổi chuuỗi nhị phân sang chuỗi hexa</h3>
+<h3 class="crossnote-header" id="v%C3%AD-d%E1%BB%A5-3-s%E1%BB%91-l%C6%B0%E1%BB%A3ng-s%E1%BB%91-kh%C3%B4ng-cu%E1%BB%91i-c%C3%B9ng">Ví dụ 3: Số lượng số không cuối cùng</h3>
 
-<p>Viết chương trình chuỗi đổi từ chuỗi như phần sang chuỗi hexa.<br><br>
-Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
+<p>Viết phương thức in số lượng chữ số <strong>0</strong> cuối cùng của <strong>n!</strong> <br><em>(1 ≤ n ≤ 10^18)</em>.</p>
 <p><strong>📖 Ví dụ</strong></p>
 <ul>
-<li>Với <strong>n = 10</strong> thì kết quả là 2, vì 10(2) = 2(16)</li>
-<li>Với <strong>n = 1110</strong> thì kết quả là E, vì 1110(16) = E(16)</li>
-<li>Với <strong>n = 0101011</strong> thì kết quả là 2B, vì 0101011(16) = 2B(16)</li>
+<li>Với <strong>n = 5</strong> thì kết quả là 1, vì 5! = 120 có 1 chữ số 0 cuối cùng</li>
+<li>Với <strong>n = 12</strong> thì kết quả là 2, vì 12! = 479001600 có 2 chữ số 0 cuối cùng</li>
 </ul>
 <details>
 <summary> <strong>📝Test case 🧪</strong></summary>
@@ -590,8 +515,8 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 </thead>
 <tbody>
 <tr>
-<td>10</td>
-<td style="text-align:center">2</td>
+<td>5</td>
+<td style="text-align:center">1</td>
 </tr>
 </tbody>
 </table>
@@ -605,8 +530,8 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 </thead>
 <tbody>
 <tr>
-<td>1110</td>
-<td style="text-align:center">E</td>
+<td>12</td>
+<td style="text-align:center">2</td>
 </tr>
 </tbody>
 </table>
@@ -620,8 +545,8 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 </thead>
 <tbody>
 <tr>
-<td>0101011</td>
-<td style="text-align:center">2B</td>
+<td>17</td>
+<td style="text-align:center">3</td>
 </tr>
 </tbody>
 </table>
@@ -635,8 +560,8 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 </thead>
 <tbody>
 <tr>
-<td>10101010101111111</td>
-<td style="text-align:center">1557F</td>
+<td>26</td>
+<td style="text-align:center">6</td>
 </tr>
 </tbody>
 </table>
@@ -650,8 +575,8 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 </thead>
 <tbody>
 <tr>
-<td>0001010101011111111000000000</td>
-<td style="text-align:center">155FE00</td>
+<td>48</td>
+<td style="text-align:center">10</td>
 </tr>
 </tbody>
 </table>
@@ -665,8 +590,8 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 </thead>
 <tbody>
 <tr>
-<td>011001100101010101010101010101010101010101011111111111111</td>
-<td style="text-align:center">CCAAAAAAAABFFF</td>
+<td>236</td>
+<td style="text-align:center">57</td>
 </tr>
 </tbody>
 </table>
@@ -680,8 +605,8 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 </thead>
 <tbody>
 <tr>
-<td>1010101010101010101001101010101010101000000000001010100000111101001010101000</td>
-<td style="text-align:center">AAAAA6AAA800A83D2A8</td>
+<td>74823</td>
+<td style="text-align:center">18700</td>
 </tr>
 </tbody>
 </table>
@@ -695,8 +620,8 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 </thead>
 <tbody>
 <tr>
-<td>001010101010101010101011111111110101010000000110100111100101010100101000000111110010101010101010101010111111111101010100000001101001111001010101001010000001111100101010101010101010101111111111010101000000011010011110010101010010100000011111</td>
-<td style="text-align:center">2AAAABFF54069E55281F2AAAABFF54069E55281F2AAAABFF54069E55281F</td>
+<td>736283948372635</td>
+<td style="text-align:center">184070987093150</td>
 </tr>
 </tbody>
 </table>
@@ -710,8 +635,8 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td style="text-align:center">0</td>
+<td>19283746253648293</td>
+<td style="text-align:center">4820936563412061</td>
 </tr>
 </tbody>
 </table>
@@ -725,8 +650,83 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 </thead>
 <tbody>
 <tr>
+<td>11111111111111111</td>
+<td style="text-align:center">2777777777777765</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 11:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>999999999999999999</td>
+<td style="text-align:center">249999999999999977</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 12:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>82739402938472634</td>
+<td style="text-align:center">20684850734618145</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 13:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>27122712271227129</td>
+<td style="text-align:center">6780678067806772</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 14:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>42763948273847263</td>
+<td style="text-align:center">10690987068461806</td>
+</tr>
+</tbody>
+</table>
+<h4>Testcase 15:</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th style="text-align:center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
 <td>1</td>
-<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
 </tr>
 </tbody>
 </table>
@@ -743,7 +743,7 @@ Chuỗi nhị phần có độ dài không viết quá 10^4 ký tự</p>
 Hãy xoá trong <strong>N</strong> đúng <strong>k</strong> ký tự để để kết quả sau khi xoá thu được số lớn nhất có thể.</p>
 <p><strong>📖 Ví dụ</strong></p>
 <ul>
-<li>Với <strong>n = 123</strong> và <strong>k = 1</strong> thì kết quả là 23, vì trong tất cả các cách xoá đi 1 ký tự tỏng <strong>123</strong> thì cách tốt nhất là xoá số <strong>1</strong> để thu được số <strong>23</strong> lớn nhất.</li>
+<li>Với <strong>n = 123</strong> và <strong>k = 1</strong> thì kết quả là 23, vì trong tất cả các cách xoá đi 1 ký tự trong <strong>123</strong> thì cách tốt nhất là xoá số <strong>1</strong> để thu được số <strong>23</strong> lớn nhất.</li>
 <li>Với <strong>n = 8791</strong> và <strong>k = 2</strong> thì kết quả là 91</li>
 <li>Với <strong>n = 938493</strong> và <strong>k = 3</strong> thì kết quả là 993</li>
 <li>Với <strong>n = 939293234</strong> và <strong>k = 5</strong> thì kết quả là 9994</li>
