@@ -1,7 +1,7 @@
 <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
 
 
- <h1><img src="./assets/offsnow.png" class="image" id="image" alt="" srcset="" onclick="change()" ></h1>
+<h1><img src="./assets/offsnow.png" class="image" id="image" alt="" srcset="" onclick="change()"></h1>
       </div>
       
       
@@ -141,19 +141,28 @@
                 </style>  
                 <script>
 
-                    function change(){
-                      if (document.getElementById("snowflakes").classList.contains("hidden")){
+                    function change(change){
+                      // get sow from local storage
+                      var snow = localStorage.getItem("snowflakes");
+                      if (!snow || (snow == 'onsnow')) {
                         document.getElementById("snowflakes").classList.remove("hidden");
                         // change src image
                         document.getElementById("image").src = "./assets/offsnow.png";
+                        // save snow
+                        localStorage.setItem("snowflakes", "offsnow");
                       }
                       else {
                         document.getElementById("snowflakes").classList.add("hidden");
                         document.getElementById("image").src = "./assets/onsnow.png";
+                        // save snow
+                        localStorage.setItem("snowflakes", "onsnow");
                       }
                     }
-                </script>
 
+                    // onload
+                    change();
+                    change();
+                </script>
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
