@@ -495,3 +495,115 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 </details>
 <br>
+
+### Ví dụ 5 Câu hỏi cuối cùng olympia 2023
+
+Cho một số nguyên **N** *(2 ≤ n ≤ 10^5)*.<br> Hãy tìm tổng của N số nguyên dương N phân biệt có tổng nhỏ nhất và thoã mãn tổng của **K** số bất kì trong **N** số đó đều chia hết cho **K**. Với mọi **K** từ **2** đến **N-1**. Hãy tìm và in ra tổng của **N** số nguyên đó, lấy phần dư cho ***10^9+7***
+
+**📖 Ví dụ**
+- Với **n = 3** thì kết quả là 9, vì 3 số thoã mãn bài toán là **1, 3, 5**, tổng là 9
+- Với **n = 4** thì kết quả là 40, vì 4 số thoã mãn bài toán là **1, 7, 13, 19**, tổng là 40
+
+<details>
+<summary> <strong>📝Test case 🧪</strong></summary>
+
+#### Testcase 1:
+
+|Input| Output|
+|-----|:-----:|
+|3	| 9|
+
+#### Testcase 2:
+
+|Input| Output|
+|-----|:-----:|
+|4	| 40|
+
+#### Testcase 3:
+
+|Input| Output|
+|-----|:-----:|
+|5	| 125|
+
+#### Testcase 4:
+
+|Input| Output|
+|-----|:-----:|
+|10	| 113410|
+
+#### Testcase 5:
+
+|Input| Output|
+|-----|:-----:|
+|20	| 230586112|
+
+#### Testcase 6:
+
+|Input| Output|
+|-----|:-----:|
+|57	| 569797435|
+
+#### Testcase 7:
+
+|Input| Output|
+|-----|:-----:|
+|123	| 167067530|
+
+#### Testcase 8:
+
+|Input| Output|
+|-----|:-----:|
+|983	| 670379627|
+
+#### Testcase 9:
+
+|Input| Output|
+|-----|:-----:|
+|7382	| 72146642|
+
+#### Testcase 10:
+
+|Input| Output|
+|-----|:-----:|
+|27162	| 573418403|
+
+#### Testcase 11:
+
+|Input| Output|
+|-----|:-----:|
+|42845	| 287455086|
+
+#### Testcase 12:
+
+|Input| Output|
+|-----|:-----:|
+|64723	| 950484816|
+
+#### Testcase 13:
+
+|Input| Output|
+|-----|:-----:|
+|7382	| 72146642|
+
+#### Testcase 14:
+
+|Input| Output|
+|-----|:-----:|
+|100000	| 203929061|
+
+#### Testcase 15:
+
+|Input| Output|
+|-----|:-----:|
+|2	| 3|
+
+</details>
+<br>
+
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+
+</details>
+<br>

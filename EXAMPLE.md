@@ -521,6 +521,6 @@ Gồm nhưng bài tập có độ khó nâng cao 🚀, dành cho những bạn m
 > **Lưu ý:** Chương trình học tập gồm những bài tập có độ khó nâng cao hơn, vì vậy hãy hoàn thành tất cả các bài tập ở mức độ cơ bản trước khi bắt đầu làm các bài tập nâng cao. 🚀
 
 
-**🎯 Số lượng ví dụ: 4**
+**🎯 Số lượng ví dụ: 5**
 
 👁️ Xem bài tập **[Tại đây](./advanced-exercises/)**
