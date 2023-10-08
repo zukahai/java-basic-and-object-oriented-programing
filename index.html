@@ -774,12 +774,18 @@
                       if (!snow || (snow == 'offsnow')) {
                         document.getElementById("snowflakes").classList.remove("hidden");
                         document.getElementById("image").src = "./assets/offsnow.png";
+                        // save snow
+                        localStorage.setItem("snowflakes", "offsnow");
                       }
                       else {
                         document.getElementById("snowflakes").classList.add("hidden");
                         document.getElementById("image").src = "./assets/onsnow.png";
-                        console.log("Load off");
+                        // save snow
+                        localStorage.setItem("snowflakes", "onsnow");
                       }
+                      // // xoá dữ liệu
+                      // localStorage.clear();
+
                     }
                     load();
                 </script>
