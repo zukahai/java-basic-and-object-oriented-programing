@@ -751,7 +751,7 @@
                 </style>  
                 <script>
 
-                    function change(change){
+                    function change(){
                       // get sow from local storage
                       var snow = localStorage.getItem("snowflakes");
                       if (!snow || (snow == 'onsnow')) {
@@ -769,9 +769,19 @@
                       }
                     }
 
-                    // onload
-                    change();
-                    change();
+                    function load() {
+                      var snow = localStorage.getItem("snowflakes");
+                      if (!snow || (snow == 'offsnow')) {
+                        document.getElementById("snowflakes").classList.remove("hidden");
+                        document.getElementById("image").src = "./assets/offsnow.png";
+                      }
+                      else {
+                        document.getElementById("snowflakes").classList.add("hidden");
+                        document.getElementById("image").src = "./assets/onsnow.png";
+                        console.log("Load off");
+                      }
+                    }
+                    load();
                 </script>
     
     

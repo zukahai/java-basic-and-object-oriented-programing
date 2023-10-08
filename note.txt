@@ -1,6 +1,5 @@
 <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
 
-
 <h1><img src="./assets/offsnow.png" class="image" id="image" alt="" srcset="" onclick="change()"></h1>
       </div>
       
@@ -141,7 +140,7 @@
                 </style>  
                 <script>
 
-                    function change(change){
+                    function change(){
                       // get sow from local storage
                       var snow = localStorage.getItem("snowflakes");
                       if (!snow || (snow == 'onsnow')) {
@@ -159,10 +158,21 @@
                       }
                     }
 
-                    // onload
-                    change();
-                    change();
+                    function load() {
+                      var snow = localStorage.getItem("snowflakes");
+                      if (!snow || (snow == 'offsnow')) {
+                        document.getElementById("snowflakes").classList.remove("hidden");
+                        document.getElementById("image").src = "./assets/offsnow.png";
+                      }
+                      else {
+                        document.getElementById("snowflakes").classList.add("hidden");
+                        document.getElementById("image").src = "./assets/onsnow.png";
+                        console.log("Load off");
+                      }
+                    }
+                    load();
                 </script>
+
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
