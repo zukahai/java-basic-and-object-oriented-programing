@@ -930,7 +930,7 @@ Viết các phương thức bao gồm phương thức khởi tạo mặc định
 Viết thêm các phương thức:
 - **input()** cho phép nhập các thuộc tính của Student từ bàn phím
 
-<!-- <details> -->
+<details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```java
@@ -1022,7 +1022,77 @@ Viết thêm các phương thức:
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
-Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+```java
+package model;
+
+import java.util.Scanner;
+
+public class Book {
+	private String name;
+	private double price;
+	private int quantity;
+
+	public Book() {
+		this.name = "";
+		this.price = 0;
+		this.quantity = 0;
+	}
+
+	public Book(String name, double price, int quantity) {
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+	}
+	
+	public void input() {
+		System.out.println("Nhập thông tin");
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Name: ");
+		this.name = sc.nextLine();
+		System.out.print("Price: ");
+		this.price = sc.nextDouble();
+		System.out.print("Quantity: ");
+		this.quantity = sc.nextInt();
+	}
+
+	@Override
+	public String toString() {
+		return "Book [name=" + name + ", price=" + price + ", quantity=" + quantity + "]";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Book book = new Book();
+		book.input();
+		System.out.println(book);
+	}
+
+}
+```
 
 </details>
 <br>
@@ -1039,7 +1109,89 @@ Từ class **Book** ở **Ví dụ 12** hãy nhập vào thông tin của **N** 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
-Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
+```java
+package model;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class BookManagement {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.print("N = ");
+		int n = sc.nextInt();
+		Book books[] = new Book[n];
+
+		// Nhập thông tin N cuốn sách
+		for (int i = 0; i < n; i++) {
+			books[i] = new Book();
+			books[i].input();
+		}
+
+		// Thông tin của N cuốn sách
+		System.out.println("\nThông tin của N cuốn sách");
+		for (int i = 0; i < n; i++)
+			System.out.println(books[i]);
+
+		// Tìm những books có giá cao nhất
+		Book max = books[0];
+		for (int i = 1; i < n; i++)
+			if (max.getPrice() < books[i].getPrice())
+				max = books[i];
+		System.out.println("\nGiá của cuốn sách lớn nhất là: " + max.getPrice());
+		System.out.println("Những cuốn sách có giá lớn nhất là");
+		for (int i = 0; i < n; i++)
+			if (max.getPrice() == books[i].getPrice())
+				System.out.println(books[i]);
+
+		// In ra những cuốn sách có tên là "Java OOP"
+		boolean flag = false;
+		for (int i = 0; i < n; i++)
+			if (books[i].getName().equals("Java OOP")) {
+				flag = true;
+				break;
+			}
+		if (flag) {
+			System.out.println("\nNhững cuốn sách có tên \"Java OOP\" là:");
+			for (int i = 0; i < n; i++)
+				if (books[i].getName().equals("Java OOP")) {
+					System.out.println(books[i]);
+				}
+		} else {
+			System.out.println("\nKhông có cuốn sách nào tên là \"Java OOP\"");
+		}
+
+		// Sắp xếp tăng dần theo quantity
+		Arrays.sort(books, 0, n, new Comparator<Book>() { // Với Arraylist thì dùng Collections.sort()
+			@Override
+			public int compare(Book o1, Book o2) {
+				// TODO Auto-generated method stub
+				return o1.getQuantity() - o2.getQuantity();
+			}
+		});
+		System.out.println("\nSau khi đã sắp xếp tăng dần theo Quantity:");
+		for (int i = 0; i < n; i++)
+			System.out.println(books[i]);
+		
+		
+		// Sắp xếp giảm dần theo price
+				Arrays.sort(books, 0, n, new Comparator<Book>() { 
+					@Override
+					public int compare(Book o1, Book o2) {
+						// TODO Auto-generated method stub
+						return (o2.getPrice() > o1.getPrice()) ? 1 : -1;
+					}
+				});
+				System.out.println("\nSau khi đã sắp xếp giảm dần theo Price:");
+				for (int i = 0; i < n; i++)
+					System.out.println(books[i]);
+	}
+
+}
+
+```
 
 </details>
 <br>

@@ -250,6 +250,8 @@ Phần "Hàm khởi tạo trong OOP" trong bài tập này nhằm giúp sinh vi�
 
 **🎯 Số lượng ví dụ: 10**
 
+✅ Tất cả ví dụ đều đã có code mẫu
+
 👁️ Xem bài tập **[Tại đây](./oop-constructor/)**
 
 ## 2. Viết các phương thức trong OOP
@@ -276,6 +278,8 @@ Phần "Viết các phương thức trong OOP" trong bài tập này nhằm giú
 <br>
 
 **🎯 Số lượng ví dụ: 13**
+
+✅ Tất cả ví dụ đều đã có code mẫu
 
 👁️ Xem bài tập **[Tại đây](./oop-method/)**
 
