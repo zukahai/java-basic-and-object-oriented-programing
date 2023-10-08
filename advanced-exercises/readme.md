@@ -498,7 +498,7 @@ Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Ph
 
 ### Ví dụ 5 Câu hỏi cuối cùng olympia 2023
 
-Cho một số nguyên **N** *(2 ≤ n ≤ 10^5)*.<br> Hãy tìm tổng của N số nguyên dương N phân biệt có tổng nhỏ nhất và thoã mãn tổng của **K** số bất kì trong **N** số đó đều chia hết cho **K**. Với mọi **K** từ **2** đến **N-1**. Hãy tìm và in ra tổng của **N** số nguyên đó, lấy phần dư cho ***10^9+7***
+Nhập vào một số nguyên **N** *(2 ≤ n ≤ 10^5)*.<br> Hãy tìm N số nguyên dương phân biệt có tổng nhỏ nhất và thoã mãn tổng của **K** số bất kì trong **N** số đó đều chia hết cho **K**. Với mọi **K** từ **2** đến **N-1**. Hãy tìm và in ra tổng của **N** số nguyên đó, lấy phần dư cho ***10^9+7***
 
 **📖 Ví dụ**
 - Với **n = 3** thì kết quả là 9, vì 3 số thoã mãn bài toán là **1, 3, 5**, tổng là 9
