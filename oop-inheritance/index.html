@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///c:\Users\HAIZUKA\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.1\crossnote\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:///c:\Users\HAIZUKA\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.3\crossnote\dependencies\katex\katex.min.css">
       
       
       
@@ -23,223 +23,326 @@
     
     
       <div class="crossnote markdown-preview  ">
-      <div align="center">
-<h1 id="tính-kế-thừa-trong-lập-trình-hướng-đối-tượng" data-source-line="3">Tính kế thừa trong lập trình hướng đối tượng </h1>
+      
+<div align="center">
+<h1 id="tính-kế-thừa-trong-lập-trình-hướng-đối-tượng">Tính kế thừa trong lập trình hướng đối tượng </h1>
 </div>
-<h3 id="ví-dụ-1" data-source-line="6">Ví dụ 1 </h3>
-<p data-source-line="8">Tạo class <strong>ElectronicDevice</strong> đùng để biểu diễn cho các thiết bị điện tử. <br>Bao gồm:</p>
-<ul data-source-line="9">
-<li data-source-line="9">Các thuộc tính:<br>
+<h3 id="ví-dụ-1">Ví dụ 1 </h3>
+<p>Tạo class <strong>ElectronicDevice</strong> đùng để biểu diễn cho các thiết bị điện tử. <br>Bao gồm:</p>
+<ul>
+<li>Các thuộc tính:<br>
 <strong>manufacturer</strong>: String, dùng để đại diện cho nhà sản xuất của thiết bị điện tử.<br>
 <strong>price</strong>: long, dùng để đại diện cho giá của thiết bị điện tử.</li>
-<li data-source-line="12">Các phương thức:
-<ul data-source-line="13">
-<li data-source-line="13">Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
-<li data-source-line="14">Các phương thức <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></li>
-<li data-source-line="15">Phương thức <strong>input()</strong> cho phép nhập thông tin của động vật đó.</li>
+<li>Các phương thức:
+<ul>
+<li>Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
+<li>Các phương thức <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></li>
+<li>Phương thức <strong>input()</strong> cho phép nhập thông tin của thiết bị điện tử đó.</li>
 </ul>
 </li>
 </ul>
-<p data-source-line="17">Tạo class <strong>Laptop</strong> dùng để biểu diễn các máy tính xách tay. Kế thừa class <strong>ElectronicDevice</strong><br>Bao gồm:</p>
-<ul data-source-line="18">
-<li data-source-line="18">Các thuộc tính:
-<ul data-source-line="19">
-<li data-source-line="19"><strong>screenSize</strong>: String, dùng để đại diện cho kích thước màn hình của máy tính xách tay đó.</li>
+<p>Tạo class <strong>Laptop</strong> dùng để biểu diễn các máy tính xách tay. Kế thừa class <strong>ElectronicDevice</strong><br>Bao gồm:</p>
+<ul>
+<li>Các thuộc tính:
+<ul>
+<li><strong>screenSize</strong>: String, dùng để đại diện cho kích thước màn hình của máy tính xách tay đó.</li>
 </ul>
 </li>
-<li data-source-line="20">Các phương thức:
-<ul data-source-line="21">
-<li data-source-line="21">Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
-<li data-source-line="22">Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>color</strong> va <strong>breed</strong></li>
-<li data-source-line="23">Ghi đè lại phương thức <strong>toString()</strong> và <strong>input()</strong></li>
-</ul>
-</li>
-</ul>
-<h3 id="ví-dụ-2" data-source-line="25">Ví dụ 2 </h3>
-<p data-source-line="27">Tạo class <strong>Animal</strong> để biểu diễn tập hợp các động vật.<br> Bao gồm:</p>
-<ul data-source-line="28">
-<li data-source-line="28">Các thuộc tính
-<ul data-source-line="29">
-<li data-source-line="29"><strong>name</strong>: String, dùng để đại diện cho tên của động vật đó</li>
-<li data-source-line="30"><strong>age</strong>: int, dùng để đại diện cho tuổi của động vật đóđộng vật đó</li>
-</ul>
-</li>
-<li data-source-line="31">Các phương thức
-<ul data-source-line="32">
-<li data-source-line="32">Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
-<li data-source-line="33">Các phương thức <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></li>
-<li data-source-line="34">Phương thức <strong>input()</strong> cho phép nhập thông tin của động vật đó.</li>
-<li data-source-line="35"><strong>getYearOfBirth()</strong>: Lấy năm sinh của động vật đó.</li>
+<li>Các phương thức:
+<ul>
+<li>Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
+<li>Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>color</strong> va <strong>breed</strong></li>
+<li>Ghi đè lại phương thức <strong>toString()</strong> và <strong>input()</strong></li>
 </ul>
 </li>
 </ul>
-<p data-source-line="37">Tạo class <strong>Cat</strong> để biểu diễn cho tập hợp mèo. Kế thừa class <strong>Animal</strong>.<br> Bao gồm:</p>
-<ul data-source-line="38">
-<li data-source-line="38">Các thuộc tính
-<ul data-source-line="39">
-<li data-source-line="39"><strong>color</strong>: String, dùng để đại diện cho màu lông của con mèo</li>
-<li data-source-line="40"><strong>breed</strong>: String, dùng để đại diện cho giới tính của mèo</li>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<p><strong>ElectronicDevice.java</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">model</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">ElectronicDevice</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> manufacturer<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token keyword keyword-long">long</span> price<span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">ElectronicDevice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>manufacturer <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">ElectronicDevice</span><span class="token punctuation">(</span><span class="token class-name">String</span> manufacturer<span class="token punctuation">,</span> <span class="token keyword keyword-long">long</span> price<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>manufacturer <span class="token operator">=</span> manufacturer<span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Manufacturer: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>manufacturer <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Price: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLong</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> <span class="token string">"ElectronicDevice [manufacturer = "</span> <span class="token operator">+</span> manufacturer <span class="token operator">+</span> <span class="token string">", price = "</span> <span class="token operator">+</span> price <span class="token operator">+</span> <span class="token string">"]"</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getManufacturer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> manufacturer<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setManufacturer</span><span class="token punctuation">(</span><span class="token class-name">String</span> manufacturer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>manufacturer <span class="token operator">=</span> manufacturer<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-long">long</span> <span class="token function">getPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> price<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token keyword keyword-long">long</span> price<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Laptop.java</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">model</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Laptop</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">ElectronicDevice</span><span class="token punctuation">{</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> screenSize<span class="token punctuation">;</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Laptop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-super">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>screenSize <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Laptop</span><span class="token punctuation">(</span><span class="token class-name">String</span> manufacturer<span class="token punctuation">,</span> <span class="token keyword keyword-long">long</span> price<span class="token punctuation">,</span> <span class="token class-name">String</span> screenSize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>manufacturer<span class="token punctuation">,</span> price<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>screenSize <span class="token operator">=</span> screenSize<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> <span class="token string">"Laptop [manufacturer = "</span> <span class="token operator">+</span> <span class="token keyword keyword-super">super</span><span class="token punctuation">.</span><span class="token function">getManufacturer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">", price = "</span> <span class="token operator">+</span> <span class="token keyword keyword-super">super</span><span class="token punctuation">.</span><span class="token function">getPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">", screenSize = "</span> <span class="token operator">+</span> screenSize <span class="token operator">+</span> <span class="token string">"]"</span><span class="token punctuation">;</span> 
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-super">super</span><span class="token punctuation">.</span><span class="token function">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Screen Size: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>screenSize <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getScreenSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> screenSize<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setScreenSize</span><span class="token punctuation">(</span><span class="token class-name">String</span> screenSize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>screenSize <span class="token operator">=</span> screenSize<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Test.java</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">model</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// TODO Auto-generated method stub</span>
+		<span class="token class-name">ElectronicDevice</span> laptop <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Laptop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		laptop<span class="token punctuation">.</span><span class="token function">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>laptop<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></details>
+<br>
+<h3 id="ví-dụ-2">Ví dụ 2 </h3>
+<p>Tạo class <strong>Animal</strong> để biểu diễn tập hợp các động vật.<br> Bao gồm:</p>
+<ul>
+<li>Các thuộc tính
+<ul>
+<li><strong>name</strong>: String, dùng để đại diện cho tên của động vật đó</li>
+<li><strong>age</strong>: int, dùng để đại diện cho tuổi của động vật đóđộng vật đó</li>
 </ul>
 </li>
-<li data-source-line="41">Các phương thức:
-<ul data-source-line="42">
-<li data-source-line="42">Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
-<li data-source-line="43">Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>color</strong> va <strong>breed</strong></li>
-<li data-source-line="44">Ghi đè lại phương thức <strong>toString()</strong></li>
-<li data-source-line="45">Phương thức <strong>equalBreed(Cat c)</strong> kiểm tra xem 2 con mèo các cùng giới tính không?</li>
-</ul>
-</li>
-</ul>
-<p data-source-line="47"><strong>Thực hiện các hành động sau:</strong></p>
-<ul data-source-line="48">
-<li data-source-line="48">Nhập vào thông tin 2 con mèo</li>
-<li data-source-line="49">In ra thông tin 2 con mèo đó</li>
-<li data-source-line="50">In ra năm sinh của con mèo thứ 2</li>
-<li data-source-line="51">Kiểm tra xem 2 con mèo có cùng giới tính không</li>
-</ul>
-<h3 id="ví-dụ-3" data-source-line="54">Ví dụ 3 </h3>
-<p data-source-line="56">Tạo class <strong>Person</strong> để biểu diễn tập hơn nhiều đối tượng người.<br> Bao gồm:</p>
-<ul data-source-line="57">
-<li data-source-line="57">
-<p data-source-line="57">Các thuộc tính</p>
-<ul data-source-line="58">
-<li data-source-line="58"><strong>name</strong>: String, dùng để đại diện cho tên của người đó</li>
-<li data-source-line="59"><strong>age</strong>: int, dùng để đại diện cho tuổi của người đó</li>
-<li data-source-line="60"><strong>address</strong> : String, dùng để đại diện cho địa chỉ của người đó.</li>
-</ul>
-</li>
-<li data-source-line="62">
-<p data-source-line="62">Các phương thức</p>
-<ul data-source-line="63">
-<li data-source-line="63">Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
-<li data-source-line="64">Các phương thức <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></li>
-<li data-source-line="65">Phương thức <strong>input()</strong> cho phép nhập thông tin của sinh viên đó.</li>
-<li data-source-line="66"><strong>getYearOfBirth()</strong>: Lấy năm sinh của người đó.</li>
-<li data-source-line="67"><strong>getUpperName()</strong>: Lấy tên in hoa của người đó.</li>
-<li data-source-line="68"><strong>checkAge(int n)</strong>: Kiểm tra xem người đó đã đủ <strong>n</strong> tuổi chưa.</li>
-</ul>
-</li>
-</ul>
-<p data-source-line="70">Tạo class <strong>Student</strong> để biểu diễn tập hơn nhiều đối tượng người. Kế thừa lớp <strong>Person</strong><br> Bao gồm thêm:</p>
-<ul data-source-line="71">
-<li data-source-line="71">Các thuộc tính
-<ul data-source-line="72">
-<li data-source-line="72"><strong>studentId</strong>: String, dùng để đại diện cho mã sinh viên của người đó</li>
-<li data-source-line="73"><strong>nameSchool</strong>: String, dùng để đại diện cho tên trường học của sinh viên đó.</li>
-</ul>
-</li>
-<li data-source-line="74">Các phương thức
-<ul data-source-line="75">
-<li data-source-line="75">Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
-<li data-source-line="76">Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>studentId</strong> và <strong>nameSchool</strong></li>
-<li data-source-line="77">Ghi đè lại phương thức <strong>toString()</strong> và <strong>input()</strong></li>
-<li data-source-line="78">Phương thức <strong>checkStudentId()</strong> kiểm tra xem sinh viên đó có mã sinh viên bắt đầu bằng <strong>23IT</strong> không?</li>
-</ul>
-</li>
-</ul>
-<p data-source-line="80"><strong>Thực hiện các hoạt động sau:</strong></p>
-<ul data-source-line="81">
-<li data-source-line="81">Cho phéo nhập vào một đối tương sinh viên.</li>
-<li data-source-line="82">In ra thông tính của sinh viên đó.</li>
-<li data-source-line="83">Kiểm tra xem sinh viên đó có đủ <strong>18</strong> tuổi không?</li>
-<li data-source-line="84">In ra tên viên hoa của sinh viên đó.</li>
-<li data-source-line="85">Kiểm tra sinh viên đó có phải có mã sinh viên bắt đầu bằng <strong>23IT</strong> không?</li>
-</ul>
-<h3 id="ví-dụ-4" data-source-line="87">Ví dụ 4 </h3>
-<p data-source-line="89">Tạo class <strong>Rectangle</strong> dùng để biểu diễn cho các hình chữ nhật. <br> Bao gồm:</p>
-<ul data-source-line="90">
-<li data-source-line="90">Các thuộc tính:
-<ul data-source-line="91">
-<li data-source-line="91"><strong>width</strong>: float, đại diện co chiều rộng của hình chữ nhật.</li>
-<li data-source-line="92"><strong>height</strong>: float, đại diện cho chiều dài cho hình chữ nhật</li>
-</ul>
-</li>
-<li data-source-line="93">Các phương thức:
-<ul data-source-line="94">
-<li data-source-line="94">Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
-<li data-source-line="95">Các phương thức <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></li>
-<li data-source-line="96">Phương thức <strong>input()</strong> cho phép nhập thông tin của hình chữ nhật.</li>
-<li data-source-line="97">Phương thức <strong>getArea()</strong> để lấy diện tích của hình chữ nhật</li>
-<li data-source-line="98">Phương thức <strong>getPerimeter()</strong> để lấy chu vi của hình chữ nhật</li>
-</ul>
-</li>
-</ul>
-<p data-source-line="100">Tạo class <strong>Square</strong> dùng để biểu diễn các hình vuông, kế thừa lớp <strong>Rectangle</strong>.<br> Bao gồm:</p>
-<ul data-source-line="101">
-<li data-source-line="101">Các thuộc tính
-<ul data-source-line="102">
-<li data-source-line="102"><strong>side</strong>: float, đại diện cho cạnh của hình vuông.</li>
-</ul>
-</li>
-<li data-source-line="103">Các phương thức:
-<ul data-source-line="104">
-<li data-source-line="104">Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
-<li data-source-line="105">Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>studentId</strong> và <strong>nameSchool</strong></li>
-<li data-source-line="106">Ghi đè lại phương thức <strong>toString()</strong> và <strong>input()</strong></li>
-</ul>
-</li>
-</ul>
-<p data-source-line="108"><strong>Thực hiện các thao tác sau::</strong></p>
-<ul data-source-line="109">
-<li data-source-line="109">Khởi tạo một hình vuông có kích thước là 10</li>
-<li data-source-line="110">In ra thông tin của hình vuông.</li>
-<li data-source-line="111">In ra chu vi của hình vuông.</li>
-<li data-source-line="112">In ra diện tích của hình vuông.</li>
-</ul>
-<h3 id="ví-dụ-5" data-source-line="114">Ví dụ 5 </h3>
-<p data-source-line="116">Tạo class <strong>User</strong> dùng để biểu diễn các người dùng trong hệ thống. <br> Bao gồm:</p>
-<ul data-source-line="117">
-<li data-source-line="117">Các thuộc tính:
-<ul data-source-line="118">
-<li data-source-line="118"><strong>userId</strong>: String, dùng của diện id của người dùng.</li>
-<li data-source-line="119"><strong>username</strong>: String, dùng đại diện cho tên đăng nhập của người dùng.</li>
-<li data-source-line="120"><strong>password</strong>: String, dùng đại diện cho mật khẩu của người dùng.</li>
-<li data-source-line="121"><strong>email</strong>: String, dùng đại diện cho email của người dùng.</li>
-</ul>
-</li>
-<li data-source-line="122">Các phương thức:
-<ul data-source-line="123">
-<li data-source-line="123">Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
-<li data-source-line="124">Các phương thức <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></li>
-<li data-source-line="125">Phương thức <strong>input()</strong> cho phép nhập thông tin của người dùng.</li>
+<li>Các phương thức
+<ul>
+<li>Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
+<li>Các phương thức <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></li>
+<li>Phương thức <strong>input()</strong> cho phép nhập thông tin của động vật đó.</li>
+<li><strong>getYearOfBirth()</strong>: Lấy năm sinh của động vật đó.</li>
 </ul>
 </li>
 </ul>
-<p data-source-line="127">Tạo class <strong>Customer</strong> dùng để biểu diễn các khách hành, kế thừa class <strong>User</strong>.<br> Bao gồm:</p>
-<ul data-source-line="128">
-<li data-source-line="128">Các thuộc tính
-<ul data-source-line="129">
-<li data-source-line="129"><strong>shippingAddress</strong>: String, dùng đại diện cho địa chỉ nhân hàng.</li>
+<p>Tạo class <strong>Cat</strong> để biểu diễn cho tập hợp mèo. Kế thừa class <strong>Animal</strong>.<br> Bao gồm:</p>
+<ul>
+<li>Các thuộc tính
+<ul>
+<li><strong>color</strong>: String, dùng để đại diện cho màu lông của con mèo</li>
+<li><strong>breed</strong>: String, dùng để đại diện cho giới tính của mèo</li>
 </ul>
 </li>
-<li data-source-line="130">Các phương thức:
-<ul data-source-line="131">
-<li data-source-line="131">Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
-<li data-source-line="132">Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>shippingAddress</strong></li>
-<li data-source-line="133">Ghi đè lại phương thức <strong>toString()</strong> và <strong>input()</strong></li>
+<li>Các phương thức:
+<ul>
+<li>Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
+<li>Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>color</strong> va <strong>breed</strong></li>
+<li>Ghi đè lại phương thức <strong>toString()</strong></li>
+<li>Phương thức <strong>equalBreed(Cat c)</strong> kiểm tra xem 2 con mèo các cùng giới tính không?</li>
 </ul>
 </li>
 </ul>
-<p data-source-line="135">Tạo class <strong>Admin</strong> dùng để biểu diễn các người quản lí, kế thừa class <strong>User</strong>.<br> Bao gồm:</p>
-<ul data-source-line="137">
-<li data-source-line="137">Các thuộc tính:<br>
+<p><strong>Thực hiện các hành động sau:</strong></p>
+<ul>
+<li>Nhập vào thông tin 2 con mèo</li>
+<li>In ra thông tin 2 con mèo đó</li>
+<li>In ra năm sinh của con mèo thứ 2</li>
+<li>Kiểm tra xem 2 con mèo có cùng giới tính không</li>
+</ul>
+<h3 id="ví-dụ-3">Ví dụ 3 </h3>
+<p>Tạo class <strong>Person</strong> để biểu diễn tập hơn nhiều đối tượng người.<br> Bao gồm:</p>
+<ul>
+<li>
+<p>Các thuộc tính</p>
+<ul>
+<li><strong>name</strong>: String, dùng để đại diện cho tên của người đó</li>
+<li><strong>age</strong>: int, dùng để đại diện cho tuổi của người đó</li>
+<li><strong>address</strong> : String, dùng để đại diện cho địa chỉ của người đó.</li>
+</ul>
+</li>
+<li>
+<p>Các phương thức</p>
+<ul>
+<li>Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
+<li>Các phương thức <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></li>
+<li>Phương thức <strong>input()</strong> cho phép nhập thông tin của người đó.</li>
+<li><strong>getYearOfBirth()</strong>: Lấy năm sinh của người đó.</li>
+<li><strong>getUpperName()</strong>: Lấy tên in hoa của người đó.</li>
+<li><strong>checkAge(int n)</strong>: Kiểm tra xem người đó đã đủ <strong>n</strong> tuổi chưa.</li>
+</ul>
+</li>
+</ul>
+<p>Tạo class <strong>Student</strong> để biểu diễn tập hơn nhiều đối tượng người. Kế thừa lớp <strong>Person</strong><br> Bao gồm thêm:</p>
+<ul>
+<li>Các thuộc tính
+<ul>
+<li><strong>studentId</strong>: String, dùng để đại diện cho mã sinh viên của người đó</li>
+<li><strong>nameSchool</strong>: String, dùng để đại diện cho tên trường học của sinh viên đó.</li>
+</ul>
+</li>
+<li>Các phương thức
+<ul>
+<li>Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
+<li>Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>studentId</strong> và <strong>nameSchool</strong></li>
+<li>Ghi đè lại phương thức <strong>toString()</strong> và <strong>input()</strong></li>
+<li>Phương thức <strong>checkStudentId()</strong> kiểm tra xem sinh viên đó có mã sinh viên bắt đầu bằng <strong>23IT</strong> không?</li>
+</ul>
+</li>
+</ul>
+<p><strong>Thực hiện các hoạt động sau:</strong></p>
+<ul>
+<li>Cho phéo nhập vào một đối tương sinh viên.</li>
+<li>In ra thông tính của sinh viên đó.</li>
+<li>Kiểm tra xem sinh viên đó có đủ <strong>18</strong> tuổi không?</li>
+<li>In ra tên viên hoa của sinh viên đó.</li>
+<li>Kiểm tra sinh viên đó có phải có mã sinh viên bắt đầu bằng <strong>23IT</strong> không?</li>
+</ul>
+<h3 id="ví-dụ-4">Ví dụ 4 </h3>
+<p>Tạo class <strong>Rectangle</strong> dùng để biểu diễn cho các hình chữ nhật. <br> Bao gồm:</p>
+<ul>
+<li>Các thuộc tính:
+<ul>
+<li><strong>width</strong>: float, đại diện co chiều rộng của hình chữ nhật.</li>
+<li><strong>height</strong>: float, đại diện cho chiều dài cho hình chữ nhật</li>
+</ul>
+</li>
+<li>Các phương thức:
+<ul>
+<li>Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
+<li>Các phương thức <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></li>
+<li>Phương thức <strong>input()</strong> cho phép nhập thông tin của hình chữ nhật.</li>
+<li>Phương thức <strong>getArea()</strong> để lấy diện tích của hình chữ nhật</li>
+<li>Phương thức <strong>getPerimeter()</strong> để lấy chu vi của hình chữ nhật</li>
+</ul>
+</li>
+</ul>
+<p>Tạo class <strong>Square</strong> dùng để biểu diễn các hình vuông, kế thừa lớp <strong>Rectangle</strong>.<br> Bao gồm:</p>
+<ul>
+<li>Các thuộc tính
+<ul>
+<li><strong>side</strong>: float, đại diện cho cạnh của hình vuông.</li>
+</ul>
+</li>
+<li>Các phương thức:
+<ul>
+<li>Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
+<li>Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>studentId</strong> và <strong>nameSchool</strong></li>
+<li>Ghi đè lại phương thức <strong>toString()</strong> và <strong>input()</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>Thực hiện các thao tác sau::</strong></p>
+<ul>
+<li>Khởi tạo một hình vuông có kích thước là 10</li>
+<li>In ra thông tin của hình vuông.</li>
+<li>In ra chu vi của hình vuông.</li>
+<li>In ra diện tích của hình vuông.</li>
+</ul>
+<h3 id="ví-dụ-5">Ví dụ 5 </h3>
+<p>Tạo class <strong>User</strong> dùng để biểu diễn các người dùng trong hệ thống. <br> Bao gồm:</p>
+<ul>
+<li>Các thuộc tính:
+<ul>
+<li><strong>userId</strong>: String, dùng của diện id của người dùng.</li>
+<li><strong>username</strong>: String, dùng đại diện cho tên đăng nhập của người dùng.</li>
+<li><strong>password</strong>: String, dùng đại diện cho mật khẩu của người dùng.</li>
+<li><strong>email</strong>: String, dùng đại diện cho email của người dùng.</li>
+</ul>
+</li>
+<li>Các phương thức:
+<ul>
+<li>Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
+<li>Các phương thức <strong>getter</strong>, <strong>setter</strong> và <strong>toString()</strong></li>
+<li>Phương thức <strong>input()</strong> cho phép nhập thông tin của người dùng.</li>
+</ul>
+</li>
+</ul>
+<p>Tạo class <strong>Customer</strong> dùng để biểu diễn các khách hành, kế thừa class <strong>User</strong>.<br> Bao gồm:</p>
+<ul>
+<li>Các thuộc tính
+<ul>
+<li><strong>shippingAddress</strong>: String, dùng đại diện cho địa chỉ nhân hàng.</li>
+</ul>
+</li>
+<li>Các phương thức:
+<ul>
+<li>Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
+<li>Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>shippingAddress</strong></li>
+<li>Ghi đè lại phương thức <strong>toString()</strong> và <strong>input()</strong></li>
+</ul>
+</li>
+</ul>
+<p>Tạo class <strong>Admin</strong> dùng để biểu diễn các người quản lí, kế thừa class <strong>User</strong>.<br> Bao gồm:</p>
+<ul>
+<li>Các thuộc tính:<br>
 <strong>permissions</strong>: ArrayList<string>, danh sách các quyền của người quản lí đó.</string></li>
-<li data-source-line="139">Các phương thức:
-<ul data-source-line="140">
-<li data-source-line="140">Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
-<li data-source-line="141">Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>permissions</strong></li>
-<li data-source-line="142">Ghi đè lại phương thức <strong>toString()</strong> và <strong>input()</strong></li>
+<li>Các phương thức:
+<ul>
+<li>Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.</li>
+<li>Các <strong>getter</strong> và <strong>setter</strong> cho các thuộc tính <strong>permissions</strong></li>
+<li>Ghi đè lại phương thức <strong>toString()</strong> và <strong>input()</strong></li>
 </ul>
 </li>
 </ul>
-<p data-source-line="144"><strong>Tạo một Menu và chương trình có các tính năng như sau</strong></p>
-<ol data-source-line="145">
-<li data-source-line="145">Thêm 1 <strong>User</strong><br>
+<p><strong>Tạo một Menu và chương trình có các tính năng như sau</strong></p>
+<ol>
+<li>Thêm 1 <strong>User</strong><br>
 1.1. Thêm 1 <strong>Customer</strong><br>
 1.2. Thêm 1 <strong>Admin</strong></li>
-<li data-source-line="148">In ra danh sách tất cả <strong>User</strong></li>
-<li data-source-line="149">Sắp xếp các <strong>User</strong> sao cho các <strong>Admin</strong> ở trên các <strong>Customer</strong></li>
-<li data-source-line="150">Đăng nhập (Nhập và <strong>username</strong> và <strong>password</strong>, kiểm tra xem tài khoản này có thể đăng nhập không, nếu có thể in ra User đang đăng nhập).</li>
+<li>In ra danh sách tất cả <strong>User</strong></li>
+<li>Sắp xếp các <strong>User</strong> sao cho các <strong>Admin</strong> ở trên các <strong>Customer</strong></li>
+<li>Đăng nhập (Nhập và <strong>username</strong> và <strong>password</strong>, kiểm tra xem tài khoản này có thể đăng nhập không, nếu có thể in ra User đang đăng nhập).</li>
 </ol>
 
       </div>

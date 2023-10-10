@@ -12,7 +12,7 @@ Tạo class **ElectronicDevice** đùng để biểu diễn cho các thiết b�
 - Các phương thức:
     - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
     - Các phương thức **getter**, **setter** và **toString()**
-    - Phương thức **input()** cho phép nhập thông tin của động vật đó.
+    - Phương thức **input()** cho phép nhập thông tin của thiết bị điện tử đó.
 
 Tạo class **Laptop** dùng để biểu diễn các máy tính xách tay. Kế thừa class **ElectronicDevice**<br>Bao gồm:
 - Các thuộc tính:
@@ -21,6 +21,124 @@ Tạo class **Laptop** dùng để biểu diễn các máy tính xách tay. Kế
      - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
     - Các **getter** và **setter** cho các thuộc tính **color** va **breed**
     - Ghi đè lại phương thức **toString()** và **input()**
+
+
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+**ElectronicDevice.java**
+
+```java
+package model;
+
+import java.util.Scanner;
+
+public class ElectronicDevice {
+	private String manufacturer;
+	private long price;
+	
+	public ElectronicDevice() {
+		this.manufacturer = "";
+		this.price = 0;
+	}
+	
+	public ElectronicDevice(String manufacturer, long price) {
+		this.manufacturer = manufacturer;
+		this.price = price;
+	}
+	
+	public void input() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Manufacturer: ");
+		this.manufacturer = sc.nextLine();
+		System.out.print("Price: ");
+		this.price = sc.nextLong();
+	}
+	
+	public String toString() {
+		return "ElectronicDevice [manufacturer = " + manufacturer + ", price = " + price + "]";
+	}
+
+	public String getManufacturer() {
+		return manufacturer;
+	}
+
+	public void setManufacturer(String manufacturer) {
+		this.manufacturer = manufacturer;
+	}
+
+	public long getPrice() {
+		return price;
+	}
+
+	public void setPrice(long price) {
+		this.price = price;
+	}
+}
+```
+
+**Laptop.java**
+
+```java
+package model;
+
+import java.util.Scanner;
+
+public class Laptop extends ElectronicDevice{
+	private String screenSize;
+	
+	public Laptop() {
+		super();
+		this.screenSize = "";
+	}
+	
+	public Laptop(String manufacturer, long price, String screenSize) {
+		super(manufacturer, price);
+		this.screenSize = screenSize;
+	}
+	
+	public String toString() {
+		return "Laptop [manufacturer = " + super.getManufacturer() + ", price = " + super.getPrice() + ", screenSize = " + screenSize + "]"; 
+	}
+	
+	public void input() {
+		Scanner sc = new Scanner(System.in);
+		super.input();
+		System.out.print("Screen Size: ");
+		this.screenSize = sc.nextLine();
+		
+	}
+
+	public String getScreenSize() {
+		return screenSize;
+	}
+
+	public void setScreenSize(String screenSize) {
+		this.screenSize = screenSize;
+	}
+}
+```
+
+**Test.java**
+
+```java
+package model;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ElectronicDevice laptop = new Laptop();
+		laptop.input();
+		System.out.println(laptop);
+	}
+}
+
+```
+
+</details>
+<br>
+      
 
 ### Ví dụ 2
 
@@ -62,7 +180,7 @@ Tạo class **Person** để biểu diễn tập hơn nhiều đối tượng ng
 - Các phương thức
     - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
     - Các phương thức **getter**, **setter** và **toString()**
-    - Phương thức **input()** cho phép nhập thông tin của sinh viên đó.
+    - Phương thức **input()** cho phép nhập thông tin của người đó.
     - **getYearOfBirth()**: Lấy năm sinh của người đó.
     - **getUpperName()**: Lấy tên in hoa của người đó.
     - **checkAge(int n)**: Kiểm tra xem người đó đã đủ **n** tuổi chưa.
