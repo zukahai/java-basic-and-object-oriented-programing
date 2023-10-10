@@ -14,7 +14,7 @@ Tạo class **ElectronicDevice** đùng để biểu diễn cho các thiết b�
     - Các phương thức **getter**, **setter** và **toString()**
     - Phương thức **input()** cho phép nhập thông tin của động vật đó.
 
-Tạo class **Laptop** dùng để biểu diễn các máy tính xách tay.<br>Bao gồm:
+Tạo class **Laptop** dùng để biểu diễn các máy tính xách tay. Kế thừa class **ElectronicDevice**<br>Bao gồm:
 - Các thuộc tính:
     - **screenSize**: String, dùng để đại diện cho kích thước màn hình của máy tính xách tay đó.
 - Các phương thức:
