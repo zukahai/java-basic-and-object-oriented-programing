@@ -220,7 +220,7 @@ Tạo class **Square** dùng để biểu diễn các hình vuông, kế thừa 
     - **side**: float, đại diện cho cạnh của hình vuông.
 - Các phương thức:
     - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
-    - Các **getter** và **setter** cho các thuộc tính **studentId** và **nameSchool**
+    - Các **getter** và **setter** cho các thuộc tính **side**
     - Ghi đè lại phương thức **toString()** và **input()**
 
 **Thực hiện các thao tác sau::**
