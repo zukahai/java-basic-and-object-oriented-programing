@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hướng dẫn nôp bài tập Java
+# Hướng dẫn nộp bài tập Java
 
 </div>
 
