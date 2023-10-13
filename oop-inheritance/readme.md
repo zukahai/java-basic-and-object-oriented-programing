@@ -145,7 +145,7 @@ public class Test {
 Tạo class **Animal** để biểu diễn tập hợp các động vật.<br> Bao gồm:
 - Các thuộc tính
     - **name**: String, dùng để đại diện cho tên của động vật đó
-    - **age**: int, dùng để đại diện cho tuổi của động vật đóđộng vật đó
+    - **age**: int, dùng để đại diện cho tuổi của động vật đó.
 - Các phương thức
     - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
     - Các phương thức **getter**, **setter** và **toString()**
