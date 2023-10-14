@@ -5,6 +5,8 @@
 </div>
 
 ### Ví dụ 1: Quản lí sách
+> Nộp bài **[Tại đây](https://docs.google.com/forms/d/e/1FAIpQLSctrFfru_LKqf8PF8SeZZQaV30gR64wPu05_Q6a0pfXAb-uIg/viewform?usp=sharing)**, chỉ nhận bài tập đến **0h00 ngày 16 tháng 10 năm 2023**
+
 Tạo class **Book** để biểu diễn cho tập hợp sách. <br>Bao gồm:
 - Cách thuộc tính:
     - **bookID**: int, dùng để đại diện cho mã sách.
@@ -67,4 +69,4 @@ Tạo một Menu cho phép  người dùng thực hiện cách chức năng sác
 7. Tính tổng kích thước sách
 ```
 
-Nộp bài **[Tại đây](https://docs.google.com/forms/d/e/1FAIpQLSctrFfru_LKqf8PF8SeZZQaV30gR64wPu05_Q6a0pfXAb-uIg/viewform?usp=sharing)**, chỉ nhận bài tập đến **0h00 ngày 16 tháng 10 năm 2023**
+> Nộp bài **[Tại đây](https://docs.google.com/forms/d/e/1FAIpQLSctrFfru_LKqf8PF8SeZZQaV30gR64wPu05_Q6a0pfXAb-uIg/viewform?usp=sharing)**, chỉ nhận bài tập đến **0h00 ngày 16 tháng 10 năm 2023**
