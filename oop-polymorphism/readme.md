@@ -18,18 +18,30 @@ Tạo class **Student** dùng để biểu diễn tập hợp những sinh viên
     - Phương thức **equals()** dùng để kiểm tra 2 sinh viên có giống nhau hay không
     - Phương thức **incAge()** dùng để tăng tuổi của sinh viên thêm **1**.
     - Phương thức **decAge()** dùng để trả lại tuổi của sinh viên thêm **1**.
-    - Phương thức **ideAge(int n)** dùng để tăng tuổi của sinh viên thêm **n**.
+    - Phương thức **incAge(int n)** dùng để tăng tuổi của sinh viên thêm **n**.
     - Phương thức **decAge()** dùng để trả lại tuổi của sinh viên thêm **n**.
+
+*Lưu ý: Không có 2 sinh viên nào có mã sinh viên giống*
+
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+```java
+
+```
+
+</details>
+<br>
 
 ### Ví dụ 2
 Tạo class **StudentIT** kế thừa class **Student** dùng để biểu diễn tập hợp những sinh viên công nghệ thông tin.<br>Bao gồm thêm:
 - Các thuộc tính:
-    - **socreCPP**: float, dùng để đại diện cho điểm học phần "Lập trình C++" của sinh viên
-    - **socreJava**: float, d­ùng để đại diện cho điểm học phần "Lập trình Java" của sinh viên.
+    - **scoreCPP**: float, dùng để đại diện cho điểm học phần "Lập trình C++" của sinh viên
+    - **scoreJava**: float, d­ùng để đại diện cho điểm học phần "Lập trình Java" của sinh viên.
 - Các phương thức:
     - Các phương thức khởi tạo măc định và khởi tạo có thuộc tính
-    - Các phương thức **getter**, **setter** cho các thuộc tính **socreCPP** và **socreJava**.
-    - Ghi đề phương thức **toString()**, **input()** và **equals()**
+    - Các phương thức **getter**, **setter** cho các thuộc tính **scoreCPP** và **scoreJava**.
+    - Ghi đề phương thức **toString()** và **input()**
     - Phương thức **calculateAverage()** dùng để tính điểm trung bình của sinh viên
 
 *Lưu ý: Điểm của sinh viên luôn trong khoảng 0 đến 10, nếu điểm sinh viên khác với khoảng đó thì mặc định điểm đó bằng 0*
@@ -42,7 +54,7 @@ Tạo class **StudentBA** kế thừa class **Student** dùng để biểu diễ
 - Các phương thức:
     - Các phương thức khởi tạo măc định và khởi tạo có thuộc tính
     - Các phương thức **getter**, **setter** cho các thuộc tính **socrePM** và **socreBA**.
-    - Ghi đề phương thức **toString()**, **input()** và **equals()**
+    - Ghi đề phương thức **toString()** và **input()**
     - Phương thức **calculateAverage()** dùng để tính điểm trung bình của sinh viên
 
 *Lưu ý: Điểm của sinh viên luôn trong khoảng 0 đến 10, nếu điểm sinh viên khác với khoảng đó thì mặc định điểm đó bằng 0*
@@ -56,6 +68,7 @@ Tao class **StudentManager** đại diễn cho tập hợp các hệ thống qu�
     - Các phương thức **getter**, **setter** cho các thuộc tính **students**.
     - Phương thức **addStudent(Student s)** dùng để thêm sinh viên **s** vào danh sách.
     - Phương thức **addStudent(ArrayList\<Student> s)** dùng để thêm danh sách sinh viên **s** vào danh sách.
+    - Phương thức **showStudents()** dùng để xem danh sách sinh viên.
     - Phương thức **deleteStudent(Student s)** dùng để xóa sinh viên **s** trong danh sách.
     - Phương thức **deleteStudent(String studentID)** dùng để xóa sinh viên có mã sinh viên là **studentID** trong danh sách.
     - Phương thức **updateStudent(Student s)** dùng để update sinh viên **s** trong danh sách.

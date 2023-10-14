@@ -177,6 +177,17 @@
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
+```java
+
+```
+
+</details>
+<br>
+
+
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
 Chưa có bài giải.<br> Nếu cần thiết có thể liên hệ facebook [Phan Đức Hải](https://www.facebook.com/chiatayde)
 
 </details>
