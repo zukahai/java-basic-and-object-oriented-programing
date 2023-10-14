@@ -38,6 +38,7 @@ Tạo class **EBook** kết từa class **Book** để dại diện cho tập h�
 Tạo class **BookManager** dùng để quản lí sách.<br>Bao gồm:
 - Cách thuộc tính:
     - **books**: ArrayList\<Book\>, dùng để lưu danh sách các cuốn sách.
+- Các phương thức:
     - Phương thức **addBook(Book b)** dùng để thêm một sách (sách cứng hoặc sách điện tử) vào danh sách sách.
     - Phương thức **searchBook(String title)** dùng để tìm kiếm những cuốn sách có tên là **title**.
     - Phương thức **searchBook(int bookID)** dùng để tìm kiếm những cuốn sách có tên là **bookID**.
