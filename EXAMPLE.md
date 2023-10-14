@@ -361,7 +361,9 @@ Phần "Tính đa hình trong OOP" trong bài tập này nhằm giúp sinh viên
 </details>
 <br>
 
-**🎯 Số lượng ví dụ: 0**
+**🎯 Số lượng ví dụ: 5**
+
+✅ Tất cả ví dụ đều đã có code mẫu
 
 👁️ Xem bài tập **[Tại đây](./oop-polymorphism/)**
 
