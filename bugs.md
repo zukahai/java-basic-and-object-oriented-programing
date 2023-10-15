@@ -67,3 +67,31 @@ Nhập chuỗi: HaiZuka
 Số vừa nhập: 2023
 Chuỗi vừa nhập: HaiZuka
 ```
+
+## 2. Không gọi được phương thức
+
+Trong ví dụ 2 phần [Tính kế thừa trong OOP](./oop-inheritance/) có định nghĩa một lớp **Cat** kế thừa lớp **Animal**, trong lớp **Cat** có đinh nghĩa một hàm **equalBreed** nhưng khi chạy chương trình bên dưới lại lôi:
+
+```java
+public static void main(String[] args) {
+    Animal cat1 = new Cat("Cat 1", 1, "black", "male");
+    Animal cat2 = new Cat("Cat 2", 2, "white", "female");
+    boolean equals = cat1.equalBreed(cat2);
+}
+```
+
+Lỗi ở hàm **equalBreed** cho dù mình đã định nghĩa nó.
+Sai ở chỗ bạn gọi phương thức **equalBreed** trên đối tượng **cat1** và **cat2**, mặc dù **cat1** và **cat2** là kiểu **Animal**, nhưng phương thức **equalBreed** được định nghĩa trong lớp con **Cat**.
+
+Để gọi phương thức equalBreed, bạn cần ép kiểu đối tượng **cat1** và **cat2** thành kiểu **Cat**, vì chỉ lớp **Cat** mới có phương thức **equalBreed**. Dưới đây là cách bạn có thể sửa lỗi:
+
+```java
+public static void main(String[] args) {
+    Animal cat1 = new Cat("Cat 1", 1, "black", "male");
+    Animal cat2 = new Cat("Cat 2", 2, "white", "female");
+    
+    boolean equals = ((Cat)cat1).equalBreed((Cat)cat2);
+}
+```
+
+
