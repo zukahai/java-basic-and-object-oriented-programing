@@ -94,4 +94,56 @@ public static void main(String[] args) {
 }
 ```
 
+## 3. Lỗi so sánh chuỗi
+
+Khi bạn so sánh 2 chuỗi hoàn toàn giống nhau nhưng kết quả 2 chuỗi đó vẫn khác nhau.
+Ví dụ:
+```java
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập chuỗi 1: ");
+		String s = sc.nextLine();
+		System.out.print("Nhập chuỗi 2: ");
+		String p = sc.nextLine();
+		
+		System.out.println(s == p);
+	}
+}
+```
+Màn hình console
+```text
+Nhập chuỗi 1: HaiZuka
+Nhập chuỗi 2: HaiZuka
+false
+```
+
+Rõ ràng chuỗi 1 và chuỗi 2 có cùng nội dùng nhưng khi so sánh thì kết quả s == p vẫn là sai
+
+Lí do là vì **String** trong Java là kiểu dữ liệu tham chiếu, nên khi so sánh dùng **==** thì chỉ đúng khi hai **String** cùng tham chiếu đến địa chỉ bộ nhớ.
+
+**Cách giải quyết**
+Bạn hãy sử dụng **equals()** để so sánh 2 String trong java. Hàm **equals()** sẽ so sánh nội dung của hai chuỗi.
+
+```java
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập chuỗi 1: ");
+		String s = sc.nextLine();
+		System.out.print("Nhập chuỗi 2: ");
+		String p = sc.nextLine();
+		
+		System.out.println(s.equals(p));
+	}
+}
+```
+
+```text
+Nhập chuỗi 1: HaiZuka
+Nhập chuỗi 2: HaiZuka
+true
+
+```
+
 
