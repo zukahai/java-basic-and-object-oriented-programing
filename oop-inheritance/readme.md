@@ -849,7 +849,7 @@ public class Customer extends User {
 
 	@Override
 	public String toString() {
-		return "Customer [ userId=" + super.getUserId() + ", username=" + super.getUsername() + ", password="
+		return "Customer [userId=" + super.getUserId() + ", username=" + super.getUsername() + ", password="
 				+ super.getPassword() + ", email=" + super.getEmail() + ", shippingAddress=" + shippingAddress + "]";
 	}
 
@@ -887,7 +887,7 @@ public class Admin extends User {
 	
 	@Override
 	public String toString() {
-		return "Admin [ userId=" + super.getUserId() + ", username=" + super.getUsername() + ", password="
+		return "Admin [userId=" + super.getUserId() + ", username=" + super.getUsername() + ", password="
 				+ super.getPassword() + ", email=" + super.getEmail() + ", permissions=" + permissions + "]";
 	}
 	
@@ -961,6 +961,18 @@ public class UserManager {
 			}
 		});
 	}
+	
+	public User login(String username, String password) {
+		for (int i = 0; i < users.size(); i++) {
+			User user = users.get(i);
+			String u = user.getUsername();
+			String p = user.getPassword();
+			if (u.equals(username) && p.equals(password))
+				return user;
+		}
+		return null;
+			
+	}
 
 	@Override
 	public String toString() {
@@ -998,7 +1010,8 @@ public class Menu {
 		System.out.println("| 1. Thêm User              |");
 		System.out.println("| 2. In ra danh sách User   |");
 		System.out.println("| 3. Sắp xếp danh sách User |");
-		System.out.println("| 4. Thoát                  |");
+		System.out.println("| 4. Đăng nhập              |");
+		System.out.println("| 5. Thoát                  |");
 		System.out.println("+---------------------------+");
 		System.out.print("Nhập lựa chọn: ");
 		Scanner sc = new Scanner(System.in);
@@ -1046,10 +1059,25 @@ public class Menu {
 					manager.sortUsers();
 					System.out.println("Đã sắp xếp danh sách");
 					break;
+				case 4:
+					System.out.print("Nhập Username: ");
+					String username = sc.nextLine();
+					System.out.print("Nhập Password: ");
+					String password = sc.nextLine();
+					User user = manager.login(username, password);
+					if (user != null) {
+						System.out.println("Đăng nhập thành công!");
+						System.out.println(user);
+					} else {
+						System.out.println("Tài khoản hoặc mật khẩu không đúng.");
+					}
+					break;
 			}
-		} while(c1 != 4);
+		} while(c1 != 5);
+		System.out.println("Kết thúc");
 	}
 }
+
 ```
 
 <br>
