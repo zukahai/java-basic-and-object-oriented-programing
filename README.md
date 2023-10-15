@@ -336,6 +336,8 @@ Phần "Tính kế thừa trong OOP" trong bài tập này nhằm giúp sinh vi�
 
 **🎯 Số lượng ví dụ: 5**
 
+✅ Tất cả ví dụ đều đã có code mẫu
+
 👁️ Xem bài tập **[Tại đây](./oop-inheritance/)**
 
 ## 5. Tính đa hình trong OOP
