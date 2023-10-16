@@ -238,7 +238,7 @@ public void searchBook(int BookID) {
 - Cách chức năng xử lí khá tốt.
 
 **🔧 Cần cải thiện**
-- Cần xem lại cách nén file [Tại đây](../submit.md)
+- Cần xem lại cách nén file [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 - Nên viết các hàm khởi tạo mặc định, trong hàm đó gán tất cả thuộc tính của nó là mặc định.
 - Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
 - 2 phương thức **searchBook()** nên có kiểu trả về. Xong mới in ra ở menu.
@@ -273,7 +273,7 @@ public void searchBook(int BookID) {
 - Chú ý chính tả ở class **BôkManager**
 - Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
 - In thông tin của sách nên in trên 1 dòng bằng hàm **toString()**
-- Còn bị lỗi bộ nhớ đệm, không nhập được **title**. Xem các giải quyết ở mục 1 [Tại đây](../bugs.md)
+- Còn bị lỗi bộ nhớ đệm, không nhập được **title**. Xem các giải quyết ở mục 1 [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/bugs.md)
 - Mỗi lần thực hiện xong một chức năng cần hiển thị lại Menu cho người dùng xem.
 </details>
 
@@ -339,7 +339,7 @@ if (!continueChoice.equals("y")) {
 - Bài làm có vẻ rất tốt nhưng lại không chạy được.
 
 **🔧 Cần cải thiện**
-- Nén file chưa đúng cách, các nén cả cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Nén file chưa đúng cách, các nén cả cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 - Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
 
 </details>
@@ -354,7 +354,7 @@ if (!continueChoice.equals("y")) {
 - Các hàm viết tốt, nhất là hàm tìm kiếm
 
 **🔧 Cần cải thiện**
-- Nén file chưa đúng cách, các nén cả cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Nén file chưa đúng cách, các nén cả cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 - Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
 - Bài làm có vẻ chạy rất tốt, chỉ tiếc là nén code sau cách.
 </details>
@@ -395,7 +395,7 @@ Book{bookID=1, title='1', author='1', price=1}
 - Tạo các class tốt.
 
 **🔧 Cần cải thiện**
-- Nén file chưa đúng cách, các nén cả cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Nén file chưa đúng cách, các nén cả cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 - Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
 - Nên đọc kỹ đề, chỉ có lớn hơn thôi
 ```java
@@ -424,7 +424,7 @@ if (b instanceof Book) // chỉ kiểm tra được b có phải class Book hay 
     System.out.println("Thêm sách thất bại. Mã sách đã tồn tại");
 ```
 - Hàm tìm kiếm theo **title** nên trả về một danh sách vì có thể có nhiều sách cùng **title**
-- Để so sánh chuỗi nên dùng hàm **equals()** thay vì dùng **==**, xem mục 3 [Tại đây](../bugs.md)
+- Để so sánh chuỗi nên dùng hàm **equals()** thay vì dùng **==**, xem mục 3 [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/bugs.md)
 </details>
 
 <details>
@@ -525,7 +525,7 @@ else {
 - Chưa tận dùng được các hàm trong class đã tạo.
 
 **🔧 Cần cải thiện**
-- Cần nén code đúng quy định, nên cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Cần nén code đúng quy định, nên cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 - Nên gọi hàm **input()** đã viết để nhập thông tin sách
 - Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
 - Cần kiểm tra file trước khi nộp, tránh nộp bài nhiều lần.
@@ -542,7 +542,7 @@ else {
 - Có kiểm tra được id trùng lặp khi thêm, rất tốt.
 
 **🔧 Cần cải thiện**
-- Cần nén code đúng quy định, nên cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Cần nén code đúng quy định, nên cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 - Các hàm kiểm tra nên sử dung **boolean** làm kiểu trả về, áp dụng cho hàm **isBigBook()**.
 </details>
 
@@ -571,7 +571,7 @@ else {
 - Menu dễ sử dụng.
 
 **🔧 Cần cải thiện**
-- Cần nén code đúng quy định, nên cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Cần nén code đúng quy định, nên cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 - Hàm tìm kiếm theo **title** nên cho nó trả về 1 danh sách, vì đôi khi sẽ nhiều sách có cùng **title**, cần đưa ra hết.
 - Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
 </details>
@@ -584,7 +584,7 @@ else {
 - Code chưa chạy được *(Nên file sai cách)*, File em gửi chỉ gồm những file **.class** thôi chứ chưa phải là file **.java**
 
 **🔧 Cần cải thiện**
-- Cần nén code đúng quy định, xem cách nén code [Tại đây](../submit.md)
+- Cần nén code đúng quy định, xem cách nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 
 
 </details>
@@ -613,7 +613,7 @@ else {
 - Code chạy chạy được *(Nên file sai cách)*, các file là **.class** chứa không phải là file **.java**.
 
 **🔧 Cần cải thiện**
-- Cần nén code đúng quy định, xem cách nén code [Tại đây](../submit.md)
+- Cần nén code đúng quy định, xem cách nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 </details>
 
 
@@ -645,7 +645,7 @@ else {
 - Tạo các class tốt.
 - Menu có vẻ dễ nhìn, dễ sử dụng.
 **🔧 Cần cải thiện**
-- Cần nén code đúng quy định, cần nén cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Cần nén code đúng quy định, cần nén cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 - Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
 - Các hàm tìm kiếm sách nên cho nó có kiểu trả về, sau đó ở Menu mới in kết quả ra.
 
@@ -691,7 +691,7 @@ else {
 - Tạo các class tốt.
 
 **🔧 Cần cải thiện**
-- Thay vì gửi file doc thì nên nén file theo hướng dẫn [Tại đây](../submit.md)
+- Thay vì gửi file doc thì nên nén file theo hướng dẫn [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 </details>
 
 <details>
@@ -703,7 +703,7 @@ else {
 - Chỉ có class **Book**
 
 **🔧 Cần cải thiện**
-- Thay vì gửi file doc thì nên nén file theo hướng dẫn [Tại đây](../submit.md)
+- Thay vì gửi file doc thì nên nén file theo hướng dẫn [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 </details>
 
 <details>
@@ -714,7 +714,7 @@ else {
 - Code chưa chay được *(Gửi file sai định dạng)*
 - Tạo các class tốt.
 **🔧 Cần cải thiện**
-- Thay vì gửi file doc thì nên nén file theo hướng dẫn [Tại đây](../submit.md)
+- Thay vì gửi file doc thì nên nén file theo hướng dẫn [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 - Các hàm searchBook nên có kiểu dữ liệu trả về, sau đó trong Menu mới in ra.
 </details>
 
