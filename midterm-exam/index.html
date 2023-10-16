@@ -1,9 +1,9 @@
 <!DOCTYPE html><html><head>
-  <title>Luyện tập cho kiểm tra giữa kỳ</title>
+    <title>Luyện tập cho kiểm tra giữa kỳ</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///c:\Users\HAIZUKA\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.6\crossnote\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:///c:\Users\HAIZUKA\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.7\crossnote\dependencies\katex\katex.min.css">
       
       
       
@@ -35,7 +35,7 @@
 <ul>
 <li>Cách thuộc tính:
 <ul>
-<li><strong>bookID</strong>: int, dùng để đại diện cho mã sách.</li>
+<li><strong>bookID</strong>: int, dùng để đại diện cho mã sách, nó là duy nhất.</li>
 <li><strong>title</strong>: String, dùng để dại diện cho tiêu đề của sách.</li>
 <li><strong>author</strong>: String, dùng để đại diện cho tác giả của sách.</li>
 <li><strong>price</strong>: long, dùng để đại diện cho giá của sách.</li>
@@ -117,9 +117,668 @@ Phương thức <strong>sortByType()</strong> dùng để sắp xếp danh sách
     5.2. Sắp theo theo loại
 6. Tính tổng giá sách
 7. Tính tổng kích thước sách
-</code></pre><blockquote>
-<p>Nộp bài <strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSctrFfru_LKqf8PF8SeZZQaV30gR64wPu05_Q6a0pfXAb-uIg/viewform?usp=sharing">Tại đây</a></strong>, chỉ nhận bài tập đến <strong>0h00 ngày 16 tháng 10 năm 2023</strong></p>
-</blockquote>
+</code></pre><details>
+<summary> <strong>🎒 Nhận xét bài làm  📝</strong></summary>
+<details>
+<summary> <strong>👩‍🎓 23IT179 - Phan Thị Thanh Ngân </strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>File <strong>rar</strong> rỗng, không có nội dung</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT321 - Đào Thanh Vương</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Bài làm rất tốt.</li>
+<li>Tất cả chức năng đều chạy được và chạy đúng.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Phần views Book nên cho nó in thông tin mỗi BOOK trên 1 dòng luôn, tốt nhất là in là hàm toString() của book đó.</li>
+<li>Nên tách từng class thành từng file để dễ quản lí.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT032 - Ngô Khắc Cường</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Bài làm rất tốt.</li>
+<li>Tất cả các chức năng đều chạy được và chạy đúng</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>bookID là duy nhất, nên không thể thêm được được book có bookId đã tồn tại.</li>
+<li>Nên viết có Menu thành 1 đối tượng luôn. xong gọi đối tượng đối ra sử dùng</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">Menu</span> menu <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Menu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></details>
+<details>
+<summary> <strong>👨‍🎓 23IT268 - Nguyễn Đức Thuận</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Tạo các class rất tốt, các chức năng hoàn chỉnh.</li>
+<li>Code chạy được nhưng chưa được như mong muốn.</li>
+<li>Cần luyện tập cách gọi phương thức.</li>
+<li>Cần kiểm thử chương trình kỹ hơn.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Phần case 2 chưa có break nên khi thêm sách là nó thực hiện luôn case 3:</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-case">case</span> <span class="token number">2</span><span class="token operator">:</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"2.1. Thêm sách cứng"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"2.2. Thêm sách điện tử"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"-----------------------------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Chọn số : "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-double">double</span> choice1 <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextDouble</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>choice1 <span class="token operator">==</span> <span class="token number">2.1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        bookManager<span class="token punctuation">.</span><span class="token function">addHardcoverBook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>choice1 <span class="token operator">==</span> <span class="token number">2.2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        bookManager<span class="token punctuation">.</span><span class="token function">addEBook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// cần thêm break ở đây</span>
+<span class="token keyword keyword-case">case</span> <span class="token number">3</span><span class="token operator">:</span>
+    bookManager<span class="token punctuation">.</span><span class="token function">searchBook</span><span class="token punctuation">(</span>so<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>In ra thông tin của sách nên in trên 1 dòng để dễ xem hơn, tất nhất cứ in ra cái <strong>toString()</strong></li>
+<li><strong>bookId</strong> không trùng được, nên lần sau làm thêm cái không cho thêm 1 sách với <strong>bookId</strong> đã trùng với sách trong danh sách.</li>
+<li>Cái thêm sách và xoá sách nên cho phép người dùng nhập vào một bookId cần thêm hoặc xoá. Chứ em đang mặc định xoá theo cái bookId bằng 3 rồi.</li>
+<li>Phương thức <strong>totalPrice()</strong> và <strong>getTotalfileSize()</strong> là hai phương thức trả về giá trị, nên cần phải dùng <strong>sysout</strong> để in giá trị 2 phương thức đó ra</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT142 - Hùng Vũ Long</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Nén file chưa đúng qui định.</li>
+<li>Các class tạo rất tốt, code dễ nhìn dễ hiểu.</li>
+<li>Các chức năng đều rất tốt. (Nhưng chưa chạy được do nén file sai cách, anh phải sửa lại mới chạy được)</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Cần nén file chuẩn hơn, cần nén cả <strong>project</strong> chứ không phải một <strong>package</strong>.</li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Nên in thông tin mỗi sách trên 1 dòng để dễ đọc.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT082 - Chu Ngọc Hoàng</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được</li>
+<li>Các chức năng trong các tốt, trừ chức năng tìm kiếm</li>
+<li>Tạo menu tốt, cần chú ý khi dùng switch case</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>case 3, 4, 5, 6 thiếu break:</li>
+<li>Ở hàm <strong>searchBook()</strong> các hàm <strong>toString()</strong> phải dùng <strong>sysout</strong> để in ra. Các hàm tìm kiếm nên trả về goá trị, sau đó mới in ra sau.</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">searchBook</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> <span class="token class-name">BookID</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token class-name">Book</span> bk <span class="token operator">:</span> books<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>bk<span class="token punctuation">.</span><span class="token function">getBookID</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token class-name">BookID</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            bk<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// phải in ra</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
+<details>
+<summary> <strong>👨‍🎓 23IT154 - Bùi Đoàn Duy Lưu</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được, tất cả chức năng hoạt động rất tốt</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+</ul>
+</details>
+<details>
+<summary> <strong>👩‍🎓 23IT117 - Từ Thị Thanh Hương</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Tất cả các file đều là file <strong>*.class</strong>, không thể chạy được.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Cần xem lại cách nén file và nộp bài.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT259 - Phạm Văn Thiện</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Tạo các class tốt, chức năng tốt.</li>
+<li>Chưa tạo được menu</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Cần xem cách tạo Menu, cũng như cách sử dụng các hàm đã viết.</li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT285 - Nguyễn Thanh Triều</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code không chạy được do nén file sai cách.</li>
+<li>Hàm khởi tạo mặc định viết chủ quan.</li>
+<li>Cách chức năng xử lí khá tốt.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Cần xem lại cách nén file <a href="../submit.md">Tại đây</a></li>
+<li>Nên viết các hàm khởi tạo mặc định, trong hàm đó gán tất cả thuộc tính của nó là mặc định.</li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>2 phương thức <strong>searchBook()</strong> nên có kiểu trả về. Xong mới in ra ở menu.</li>
+<li>Code nhìn khá ổn, tiếc là không chạy được, cần nén cả <strong>project</strong> thay vì nén mỗi <strong>package</strong>.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👩‍🎓 23IT001 - Đặng Ngọc Thúy An</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Các class, các hàm xử lí viết rất tốt</li>
+<li>Viết Menu rất tốt, dễ sử dụng</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Hàm tìm kiếm theo <strong>title</strong> nên cho nó trả về 1 danh sách, vì đôi khi sẽ nhiều sách có cùng title, cần đưa ra hết</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT274 - Nguyễn Tiến</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Tạo các class tốt.</li>
+<li>Còn một số lỗi cần cải thiện.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Chú ý chính tả ở class <strong>BôkManager</strong></li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>In thông tin của sách nên in trên 1 dòng bằng hàm <strong>toString()</strong></li>
+<li>Còn bị lỗi bộ nhớ đệm, không nhập được <strong>title</strong>. Xem các giải quyết ở mục 1 <a href="../bugs.md">Tại đây</a></li>
+<li>Mỗi lần thực hiện xong một chức năng cần hiển thị lại Menu cho người dùng xem.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT239 - Trần Như Sum</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Tạo các class tốt</li>
+<li>6 chức năng đầu chạy tốt.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Không nên dùng <strong>new Scanner(<a href="http://System.in">System.in</a>)</strong> quả nhiều như vậy, sẽ tốn bộ nhớ, có thể đúng khi học nhưng lại chưa tốt ưu khi đi làm.</li>
+<li>Sai chính tả ở <em>filseSizeMB</em></li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token class-name">EBook</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> bookID<span class="token punctuation">,</span> <span class="token class-name">String</span> title<span class="token punctuation">,</span> <span class="token class-name">String</span> author<span class="token punctuation">,</span> <span class="token keyword keyword-long">long</span> price<span class="token punctuation">,</span> <span class="token class-name">String</span> format<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> filseSizeMB<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-super">super</span><span class="token punctuation">(</span>bookID<span class="token punctuation">,</span>title<span class="token punctuation">,</span>author<span class="token punctuation">,</span>price<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>format<span class="token operator">=</span>format<span class="token punctuation">;</span>
+    <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>fileSizeMB<span class="token operator">=</span>fileSizeMB<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>Không nên dùng <strong>static</strong> ở bên dưới, như thế này định nghĩa biến <strong>books</strong> là của class chứ không phải của đối tượng.</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-private">private</span> <span class="token keyword keyword-static">static</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Book</span><span class="token punctuation">&gt;</span></span> books<span class="token punctuation">;</span>
+</code></pre><ul>
+<li>Các chức năng tìm kiểm nên có kiểu trả về.</li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Cần làm thêm chức năng số 7</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT015 - Nguyễn Hoàng Nhật Bảo</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Các class tạo tốt.</li>
+<li>Menu còn khó sử dụng.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Hỏi người ta chọn yes / no xong bắt nhật y. Hơi khó sử dụng đoạn này.</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Tiếp tục? (Yes/No): "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> continueChoice <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>continueChoice<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"y"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Các hàm tìm kiếm nên có kiểu tra về.</li>
+<li>Cần kiêm tra file trước khi nộp, tránh nộp bài nhiều lần.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT048 - Lê Duy Đạt</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code không chạy được. <em>(Nén code sai)</em></li>
+<li>Tạo các class và chức năng tốt.</li>
+<li>Tạo các chức năng tốt.</li>
+<li>Bài làm có vẻ rất tốt nhưng lại không chạy được.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Nén file chưa đúng cách, các nén cả cả <strong>project</strong> chứ không phải mỗi <strong>package</strong>, xem cách nén code <a href="../submit.md">Tại đây</a></li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+</ul>
+</details>
+<details>
+<summary> <strong>👩‍🎓 23IT156 - Phan Khánh Ly</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chưa chạy được <em>(Nén code sai cách)</em></li>
+<li>Tạo các class tốt</li>
+<li>Các hàm viết tốt, nhất là hàm tìm kiếm</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Nén file chưa đúng cách, các nén cả cả <strong>project</strong> chứ không phải mỗi <strong>package</strong>, xem cách nén code <a href="../submit.md">Tại đây</a></li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Bài làm có vẻ chạy rất tốt, chỉ tiếc là nén code sau cách.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT036 - Hoàng Công Dũng</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được</li>
+<li>Các hàm viết rất tốt</li>
+<li>Vẫn chưa đủ các yêu cầu của đề.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>
+<p>Nên xoá các file <strong>.class</strong> đi trước khi nộp bài, tránh rối.</p>
+</li>
+<li>
+<p>Các chức năng sắp xếp có vẻ chưa hoạt động</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="text" class="language-text text"><code>Nhap lua chon cua ban: 5.1
+Book{bookID=0, title='0', author='0', price=0}
+Book{bookID=1, title='1', author='1', price=1}
+Book{bookID=1, title='1', author='1', price=1}
+Book{bookID=2, title='2', author='2', price=100}
+Book{bookID=1, title='1', author='1', price=1}
+</code></pre><ul>
+<li>Chưa ghi đè lại phương thức <strong>toString()</strong></li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Cần hiển thị lại menu sao mỗi lần thực hiện xong chức năng.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT148 - Võ Đình Lộc</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code không chạy được (<em>Nén code sai cách và lỗi chương trình)</em></li>
+<li>Tạo các class tốt.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Nén file chưa đúng cách, các nén cả cả <strong>project</strong> chứ không phải mỗi <strong>package</strong>, xem cách nén code <a href="../submit.md">Tại đây</a></li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Nên đọc kỹ đề, chỉ có lớn hơn thôi</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-boolean">boolean</span> isBigBook <span class="token punctuation">(</span>eBook c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> c<span class="token punctuation">.</span><span class="token function">getFileSizeMB</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token number">200</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><ul>
+<li>Nên dùng hàm <strong>size()</strong> để lấy kích thước của <strong>List</strong> chứ không cần biến phụ.</li>
+<li>Hàm <strong>displayBooks()</strong> kiểu void nên không thể in ra được.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT166 - Trần Châu Minh</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Tạo các class rất tốt.</li>
+<li>Viết menu rất tốt.</li>
+<li>Còn một sô lỗi chức năng</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Kiểm tra id đã tồn tại sai cách, từ khoá <strong>instanceof</strong> để kiếm tra 1 đối tượng của thuộc class đó hay không thôi.</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>b <span class="token keyword keyword-instanceof">instanceof</span> <span class="token class-name">Book</span><span class="token punctuation">)</span> <span class="token comment">// chỉ kiểm tra được b có phải class Book hay không, không thể biết được id đã tồn tại chưa</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Thêm sách thất bại. Mã sách đã tồn tại"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><ul>
+<li>Hàm tìm kiếm theo <strong>title</strong> nên trả về một danh sách vì có thể có nhiều sách cùng <strong>title</strong></li>
+<li>Để so sánh chuỗi nên dùng hàm <strong>equals()</strong> thay vì dùng <strong>==</strong>, xem mục 3 <a href="../bugs.md">Tại đây</a></li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT256 - Trần Mạnh Thắng</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Tạo các class tốt.</li>
+<li>Các chức năng chạy tốt.</li>
+<li>Menu dễ dùng.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Đọc kỹ để phần hàm <strong>isBigBook()</strong>. Chỉ lớn hơn 200MB thôi.</li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Nên xoá cái file <strong>.class</strong> trước khi nộp bài tránh loạn.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT301 - Nguyễn Thanh Tùng</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Tạo các class tốt.</li>
+<li>Các chức năng 1, 3, 4, 5, 6 và 7 hoạt động tốt.</li>
+<li>Menu dễ sử dụng.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Hàm <strong>isBigFile()</strong> còn sai chỗ &gt;= 200, chỉ &gt; 200 thôi, cần đọc kĩ đề.</li>
+<li>Kiểm tra Id đã tồn tại bị sai, trong khi <strong>c</strong> là lựa chọn phía trên chứ không phải là <strong>bookId</strong> em nhập vào, phải thay <strong>c</strong> thành <strong>bookID.getBookId()</strong></li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token class-name">Book</span> tmp <span class="token operator">=</span> bmanager<span class="token punctuation">.</span><span class="token function">searchBook</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>tmp <span class="token operator">!=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">)</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Them sach that bai.Sach da ton tai"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+    bmanager<span class="token punctuation">.</span><span class="token function">addBook</span><span class="token punctuation">(</span>bookID<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Them sach thanh cong"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
+<details>
+<summary> <strong>👨‍🎓 23IT088 - Nguyễn Văn Hoàng</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Tạo class tốt</li>
+<li>Các chức năng hoạt động tốt, trừ chức năng thêm chưa kiểm tra được trùng <strong>id</strong>.</li>
+<li>Menu rất dễ sử dụng<br>
+<strong>🔧 Cần cải thiện</strong></li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Phần nhập dữ liệu nên dùng <strong>System.out.print</strong> trước của dòng in ra nhập gì đó, cho dễ nhập, ví dụ <strong>System.out.print("Nhập ID: ")</strong></li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT198 - Huỳnh Đức Nhật</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Các class tạo tốt.</li>
+<li>Menu rõ ràng</li>
+<li>Các chức năng hoạt động tốt, trừ chức năng thêm.</li>
+<li>Cấu trúc file rõ ràng</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Thông tin sách nên in trên 1 dòng cho dễ xem, vì khi in ra danh sách nhiều cuôn sách sẽ rất khó xem.</li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Sau khi thực hiện xong một chức năng nên hiển thị lại menu cho người dùng dễ sử dụng.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT255 - Phạm Quốc Thắng</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Tạo các class tốt, nhưng vẫn còn hàm lỗi</li>
+<li>Các chức năng rõ ràng</li>
+<li>Menu thực sự dễ dùng</li>
+<li>Bài làm rất tốt</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Hàm <strong>isBigFile()</strong> còn sai chỗ &gt;= 200, chỉ &gt; 200 thôi, cần đọc kĩ đề.</li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT296 - Nguyễn Thanh Tú</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chưa chạy được <em>(Nén file sai cách và còn lỗi khi biên dịch)</em></li>
+<li>Các class tạo rất tốt</li>
+<li>Chưa tận dùng được các hàm trong class đã tạo.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Cần nén code đúng quy định, nên cả <strong>project</strong> chứ không phải mỗi <strong>package</strong>, xem cách nén code <a href="../submit.md">Tại đây</a></li>
+<li>Nên gọi hàm <strong>input()</strong> đã viết để nhập thông tin sách</li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Cần kiểm tra file trước khi nộp, tránh nộp bài nhiều lần.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT106 - Nguyễn Trọng Minh Huy</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chưa chạy được <em>(Nén file sai cách)</em></li>
+<li>Tạo các class tương đối ổn, những còn nhiều hàm chưa hợp lí.</li>
+<li>Menu dễ hiểu, dễ dùng</li>
+<li>Có kiểm tra được id trùng lặp khi thêm, rất tốt.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Cần nén code đúng quy định, nên cả <strong>project</strong> chứ không phải mỗi <strong>package</strong>, xem cách nén code <a href="../submit.md">Tại đây</a></li>
+<li>Các hàm kiểm tra nên sử dung <strong>boolean</strong> làm kiểu trả về, áp dụng cho hàm <strong>isBigBook()</strong>.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT283 - Lê Quốc Trí</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chưa chạy được <strong>(Biên dịch lỗi)</strong></li>
+<li>Có kiểm tra ID bị trùng khi thêm sách, rất tốt</li>
+<li>Một số hàm viết sai và cách gọi chưa đúng.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Nên tạo package chứa các class đẻ sau này dễ phát triển</li>
+<li>Các hàm <strong>searchBook()</strong> có kiểu trả về nên cần phải in nó ra mới các thể thấy được.</li>
+<li>Các hàm <strong>getTitle, getBookID</strong> không tồn tại bên <strong>BookManager</strong> nên không gọi được</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT248 - Nguyễn Đình Thái</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chưa chạy được, <em>(Nên file sai cách)</em></li>
+<li>Các class tạo tương đổi ổn, vẫn còn một số hàm chưa hợp lí.</li>
+<li>Menu dễ sử dụng.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Cần nén code đúng quy định, nên cả <strong>project</strong> chứ không phải mỗi <strong>package</strong>, xem cách nén code <a href="../submit.md">Tại đây</a></li>
+<li>Hàm tìm kiếm theo <strong>title</strong> nên cho nó trả về 1 danh sách, vì đôi khi sẽ nhiều sách có cùng <strong>title</strong>, cần đưa ra hết.</li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT018 - Phạm Quốc Bảo</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chưa chạy được <em>(Nên file sai cách)</em>, File em gửi chỉ gồm những file <strong>.class</strong> thôi chứ chưa phải là file <strong>.java</strong></li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Cần nén code đúng quy định, xem cách nén code <a href="../submit.md">Tại đây</a></li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT191 - Nguyễn Quang Nhân</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Các class tạo tốt</li>
+<li>Menu dễ sử dụng</li>
+<li>Bài làm tốt</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Hàm tìm kiếm theo <strong>title</strong> nên cho nó trả về 1 danh sách, vì đôi khi sẽ nhiều sách có cùng <strong>title</strong>, cần đưa ra hết.</li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Phàn tìm sách nếu không tìm thấy cũng nên đưa ra 1 thông báo là không tìm thấy.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👩‍🎓 23IT245 - Phan Thanh Tâm</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy chạy được <em>(Nên file sai cách)</em>, các file là <strong>.class</strong> chứa không phải là file <strong>.java</strong>.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Cần nén code đúng quy định, xem cách nén code <a href="../submit.md">Tại đây</a></li>
+</ul>
+</details>
+<details>
+<summary> <strong>👩‍🎓 23IT252 - Trịnh Thị Thanh Thảo</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Tạo 3 class tốt.</li>
+<li>Các phương thức chưa thực sự tốt.</li>
+<li>Menu dễ dùng.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Các hàm tìm kiếm sách nên cho nó có kiểu trả về, sau đó ở Menu mới in kết quả ra.</li>
+<li>Khi chưa có sách, mà người dùng muốn xem sách nên hiển thị cho người dùng một thông báo.</li>
+<li>Hàm <strong>input()</strong> ở 2 class con chưa gọi hàm <strong>input()</strong> ở class cha nên nó chưa cho phép nhập những thông tin như bookID, title, author</li>
+<li>Chức năng 6, 7 chưa hoạt động.</li>
+<li>Phương thức <strong>sortBooksByType</strong> chưa hợp lí.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT069 - Trần Thành Hậu</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chưa chạy được <em>(Nén code chưa hợp lí)</em></li>
+<li>Tạo các class tốt.</li>
+<li>Menu có vẻ dễ nhìn, dễ sử dụng.<br>
+<strong>🔧 Cần cải thiện</strong></li>
+<li>Cần nén code đúng quy định, cần nén cả <strong>project</strong> chứ không phải mỗi <strong>package</strong>, xem cách nén code <a href="../submit.md">Tại đây</a></li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Các hàm tìm kiếm sách nên cho nó có kiểu trả về, sau đó ở Menu mới in kết quả ra.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT160 - Văn Công Mạnh</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Menu dễ sử dụng, tuy nhiên chưa kết thúc menu được.</li>
+<li>Tạo các class tốt.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Các hàm tìm kiếm sách nên cho nó có kiểu trả về, sau đó ở Menu mới in kết quả ra.</li>
+<li>Khi thêm sách, cần kiểm tra xem <strong>bookId</strong> của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng <strong>bookId</strong></li>
+<li>Chức năm 0. Exit chưa hoạt đông, em có thể dùng lệnh <strong>break</strong> ở case 0.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👩‍🎓 23IT169 - Văn Thị Phước My</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chạy được.</li>
+<li>Các class Book tạo rất tốt.</li>
+<li>Các chức năng ở <strong>BookManager</strong> chưa hoàn thiện.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Thiếu hàm <strong>isBigFile()</strong></li>
+<li>Hàm tìm kiếm theo <strong>title</strong> nên cho nó trả về 1 danh sách, vì đôi khi sẽ nhiều sách có cùng title, cần đưa ra hết.</li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT125 - Nguyễn Đức Khánh</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chưa chay được <em>(Gửi file sai định dạng)</em></li>
+<li>Tạo các class tốt.</li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Thay vì gửi file doc thì nên nén file theo hướng dẫn <a href="../submit.md">Tại đây</a></li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT113 - Lê Minh Hưng</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chưa chay được <em>(Gửi file sai định dạng)</em></li>
+<li>Chỉ có class <strong>Book</strong></li>
+</ul>
+<p><strong>🔧 Cần cải thiện</strong></p>
+<ul>
+<li>Thay vì gửi file doc thì nên nén file theo hướng dẫn <a href="../submit.md">Tại đây</a></li>
+</ul>
+</details>
+<details>
+<summary> <strong>👨‍🎓 23IT162 - Đinh Trần Tiến Minh</strong></summary>
+<br>
+<p><strong>💬 Nhận xét chung</strong></p>
+<ul>
+<li>Code chưa chay được <em>(Gửi file sai định dạng)</em></li>
+<li>Tạo các class tốt.<br>
+<strong>🔧 Cần cải thiện</strong></li>
+<li>Thay vì gửi file doc thì nên nén file theo hướng dẫn <a href="../submit.md">Tại đây</a></li>
+<li>Các hàm searchBook nên có kiểu dữ liệu trả về, sau đó trong Menu mới in ra.</li>
+</ul>
+</details>
+</details>
+<br>
 
       </div>
       

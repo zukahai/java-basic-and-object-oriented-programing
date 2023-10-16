@@ -9,7 +9,7 @@
 
 Tạo class **Book** để biểu diễn cho tập hợp sách. <br>Bao gồm:
 - Cách thuộc tính:
-    - **bookID**: int, dùng để đại diện cho mã sách.
+    - **bookID**: int, dùng để đại diện cho mã sách, nó là duy nhất.
     - **title**: String, dùng để dại diện cho tiêu đề của sách.
     - **author**: String, dùng để đại diện cho tác giả của sách.
     - **price**: long, dùng để đại diện cho giá của sách.
@@ -71,10 +71,10 @@ Tạo một Menu cho phép  người dùng thực hiện cách chức năng sác
 
 
 <details>
-<summary> <strong>📝 Nhận xét bài làm </strong></summary>
+<summary> <strong>🎒 Nhận xét bài làm  📝</strong></summary>
 
 <details>
-<summary> <strong>💡 23IT179 - Phan Thị Thanh Ngân </strong></summary>
+<summary> <strong>👩‍🎓 23IT179 - Phan Thị Thanh Ngân </strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -84,7 +84,7 @@ Tạo một Menu cho phép  người dùng thực hiện cách chức năng sác
 
 <details>
 
-<summary> <strong>💡 23IT321 - Đào Thanh Vương</strong></summary>
+<summary> <strong>👨‍🎓 23IT321 - Đào Thanh Vương</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -97,7 +97,7 @@ Tạo một Menu cho phép  người dùng thực hiện cách chức năng sác
 </details>
 
 <details>
-<summary> <strong>💡 23IT032 - Ngô Khắc Cường</strong></summary>
+<summary> <strong>👨‍🎓 23IT032 - Ngô Khắc Cường</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -114,7 +114,7 @@ Menu menu = new Menu();
 </details>
 
 <details>
-<summary> <strong>💡 23IT268 - Nguyễn Đức Thuận</strong></summary>
+<summary> <strong>👨‍🎓 23IT268 - Nguyễn Đức Thuận</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -151,7 +151,7 @@ case 3:
 
 
 <details>
-<summary> <strong>💡 23IT142 - Hùng Vũ Long</strong></summary>
+<summary> <strong>👨‍🎓 23IT142 - Hùng Vũ Long</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -167,7 +167,7 @@ case 3:
 </details>
 
 <details>
-<summary> <strong>💡 23IT082 - Chu Ngọc Hoàng</strong></summary>
+<summary> <strong>👨‍🎓 23IT082 - Chu Ngọc Hoàng</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -192,7 +192,7 @@ public void searchBook(int BookID) {
 
 
 <details>
-<summary> <strong>💡 23IT154 - Bùi Đoàn Duy Lưu</strong></summary>
+<summary> <strong>👨‍🎓 23IT154 - Bùi Đoàn Duy Lưu</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -204,7 +204,7 @@ public void searchBook(int BookID) {
 
 
 <details>
-<summary> <strong>💡 23IT117 - Từ Thị Thanh Hương</strong></summary>
+<summary> <strong>👩‍🎓 23IT117 - Từ Thị Thanh Hương</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -215,7 +215,7 @@ public void searchBook(int BookID) {
 </details>
 
 <details>
-<summary> <strong>💡 23IT259 - Phạm Văn Thiện</strong></summary>
+<summary> <strong>👨‍🎓 23IT259 - Phạm Văn Thiện</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -229,7 +229,7 @@ public void searchBook(int BookID) {
 </details>
 
 <details>
-<summary> <strong>💡 23IT285 - Nguyễn Thanh Triều</strong></summary>
+<summary> <strong>👨‍🎓 23IT285 - Nguyễn Thanh Triều</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -246,7 +246,7 @@ public void searchBook(int BookID) {
 </details>
 
 <details>
-<summary> <strong>💡 23IT001 - Đặng Ngọc Thúy An</strong></summary>
+<summary> <strong>👩‍🎓 23IT001 - Đặng Ngọc Thúy An</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -261,7 +261,7 @@ public void searchBook(int BookID) {
 </details>
 
 <details>
-<summary> <strong>💡 23IT274 - Nguyễn Tiến</strong></summary>
+<summary> <strong>👨‍🎓 23IT274 - Nguyễn Tiến</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -278,7 +278,7 @@ public void searchBook(int BookID) {
 </details>
 
 <details>
-<summary> <strong>💡 23IT239 - Trần Như Sum</strong></summary>
+<summary> <strong>👨‍🎓 23IT239 - Trần Như Sum</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -306,7 +306,7 @@ private static ArrayList<Book> books;
 </details>
 
 <details>
-<summary> <strong>💡 23IT015 - Nguyễn Hoàng Nhật Bảo</strong></summary>
+<summary> <strong>👨‍🎓 23IT015 - Nguyễn Hoàng Nhật Bảo</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -322,32 +322,402 @@ String continueChoice = sc.nextLine().toLowerCase();
 if (!continueChoice.equals("y")) {
     break;
 }
+```
 - Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
 - Các hàm tìm kiếm nên có kiểu tra về.
+- Cần kiêm tra file trước khi nộp, tránh nộp bài nhiều lần.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT048 - Lê Duy Đạt</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code không chạy được. *(Nén code sai)*
+- Tạo các class và chức năng tốt.
+- Tạo các chức năng tốt.
+- Bài làm có vẻ rất tốt nhưng lại không chạy được.
+
+**🔧 Cần cải thiện**
+- Nén file chưa đúng cách, các nén cả cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+
+</details>
+
+<details>
+<summary> <strong>👩‍🎓 23IT156 - Phan Khánh Ly</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được *(Nén code sai cách)*
+- Tạo các class tốt
+- Các hàm viết tốt, nhất là hàm tìm kiếm
+
+**🔧 Cần cải thiện**
+- Nén file chưa đúng cách, các nén cả cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+- Bài làm có vẻ chạy rất tốt, chỉ tiếc là nén code sau cách.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT036 - Hoàng Công Dũng</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Các hàm viết rất tốt
+- Vẫn chưa đủ các yêu cầu của đề.
+
+
+**🔧 Cần cải thiện**
+- Nên xoá các file **.class** đi trước khi nộp bài, tránh rối.
+
+- Các chức năng sắp xếp có vẻ chưa hoạt động
+```text
+Nhap lua chon cua ban: 5.1
+Book{bookID=0, title='0', author='0', price=0}
+Book{bookID=1, title='1', author='1', price=1}
+Book{bookID=1, title='1', author='1', price=1}
+Book{bookID=2, title='2', author='2', price=100}
+Book{bookID=1, title='1', author='1', price=1}
+```
+- Chưa ghi đè lại phương thức **toString()**
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+- Cần hiển thị lại menu sao mỗi lần thực hiện xong chức năng.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT148 - Võ Đình Lộc</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code không chạy được (*Nén code sai cách và lỗi chương trình)*
+- Tạo các class tốt.
+
+**🔧 Cần cải thiện**
+- Nén file chưa đúng cách, các nén cả cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+- Nên đọc kỹ đề, chỉ có lớn hơn thôi
+```java
+public boolean isBigBook (eBook c) {
+    return c.getFileSizeMB() >= 200;
+}
+```
+- Nên dùng hàm **size()** để lấy kích thước của **List** chứ không cần biến phụ.
+- Hàm **displayBooks()** kiểu void nên không thể in ra được.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT166 - Trần Châu Minh</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Tạo các class rất tốt.
+- Viết menu rất tốt.
+- Còn một sô lỗi chức năng
+
+**🔧 Cần cải thiện**
+- Kiểm tra id đã tồn tại sai cách, từ khoá **instanceof** để kiếm tra 1 đối tượng của thuộc class đó hay không thôi.
+```java
+if (b instanceof Book) // chỉ kiểm tra được b có phải class Book hay không, không thể biết được id đã tồn tại chưa
+    System.out.println("Thêm sách thất bại. Mã sách đã tồn tại");
+```
+- Hàm tìm kiếm theo **title** nên trả về một danh sách vì có thể có nhiều sách cùng **title**
+- Để so sánh chuỗi nên dùng hàm **equals()** thay vì dùng **==**, xem mục 3 [Tại đây](../bugs.md)
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT256 - Trần Mạnh Thắng</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Tạo các class tốt.
+- Các chức năng chạy tốt.
+- Menu dễ dùng.
+
+**🔧 Cần cải thiện**
+- Đọc kỹ để phần hàm **isBigBook()**. Chỉ lớn hơn 200MB thôi.
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+- Nên xoá cái file **.class** trước khi nộp bài tránh loạn.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT301 - Nguyễn Thanh Tùng</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Tạo các class tốt.
+- Các chức năng 1, 3, 4, 5, 6 và 7 hoạt động tốt.
+- Menu dễ sử dụng.
+
+**🔧 Cần cải thiện**
+- Hàm **isBigFile()** còn sai chỗ >= 200, chỉ > 200 thôi, cần đọc kĩ đề.
+- Kiểm tra Id đã tồn tại bị sai, trong khi **c** là lựa chọn phía trên chứ không phải là **bookId** em nhập vào, phải thay **c** thành **bookID.getBookId()**
+```java
+Book tmp = bmanager.searchBook(c);
+if (tmp != null)
+    System.out.println("Them sach that bai.Sach da ton tai");
+else {
+    bmanager.addBook(bookID);
+    System.out.println("Them sach thanh cong");
+}
 ```
 </details>
 
 <details>
-<summary> <strong>💡 23IT032 - </strong></summary>
+<summary> <strong>👨‍🎓 23IT088 - Nguyễn Văn Hoàng</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
+- Code chạy được.
+- Tạo class tốt
+- Các chức năng hoạt động tốt, trừ chức năng thêm chưa kiểm tra được trùng **id**.
+- Menu rất dễ sử dụng
+**🔧 Cần cải thiện**
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+- Phần nhập dữ liệu nên dùng **System.out.print** trước của dòng in ra nhập gì đó, cho dễ nhập, ví dụ **System.out.print("Nhập ID: ")**
+</details>
 
+
+<details>
+<summary> <strong>👨‍🎓 23IT198 - Huỳnh Đức Nhật</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Các class tạo tốt.
+- Menu rõ ràng
+- Các chức năng hoạt động tốt, trừ chức năng thêm.
+- Cấu trúc file rõ ràng
 
 **🔧 Cần cải thiện**
+- Thông tin sách nên in trên 1 dòng cho dễ xem, vì khi in ra danh sách nhiều cuôn sách sẽ rất khó xem.
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+- Sau khi thực hiện xong một chức năng nên hiển thị lại menu cho người dùng dễ sử dụng.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT255 - Phạm Quốc Thắng</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Tạo các class tốt, nhưng vẫn còn hàm lỗi
+- Các chức năng rõ ràng
+- Menu thực sự dễ dùng
+- Bài làm rất tốt
+
+**🔧 Cần cải thiện**
+- Hàm **isBigFile()** còn sai chỗ >= 200, chỉ > 200 thôi, cần đọc kĩ đề.
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT296 - Nguyễn Thanh Tú</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được *(Nén file sai cách và còn lỗi khi biên dịch)*
+- Các class tạo rất tốt
+- Chưa tận dùng được các hàm trong class đã tạo.
+
+**🔧 Cần cải thiện**
+- Cần nén code đúng quy định, nên cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Nên gọi hàm **input()** đã viết để nhập thông tin sách
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+- Cần kiểm tra file trước khi nộp, tránh nộp bài nhiều lần.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT106 - Nguyễn Trọng Minh Huy</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được *(Nén file sai cách)*
+- Tạo các class tương đối ổn, những còn nhiều hàm chưa hợp lí.
+- Menu dễ hiểu, dễ dùng
+- Có kiểm tra được id trùng lặp khi thêm, rất tốt.
+
+**🔧 Cần cải thiện**
+- Cần nén code đúng quy định, nên cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Các hàm kiểm tra nên sử dung **boolean** làm kiểu trả về, áp dụng cho hàm **isBigBook()**.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT283 - Lê Quốc Trí</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được **(Biên dịch lỗi)**
+- Có kiểm tra ID bị trùng khi thêm sách, rất tốt
+- Một số hàm viết sai và cách gọi chưa đúng.
+
+**🔧 Cần cải thiện**
+- Nên tạo package chứa các class đẻ sau này dễ phát triển
+- Các hàm **searchBook()** có kiểu trả về nên cần phải in nó ra mới các thể thấy được.
+- Các hàm **getTitle, getBookID** không tồn tại bên **BookManager** nên không gọi được
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT248 - Nguyễn Đình Thái</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được, *(Nên file sai cách)*
+- Các class tạo tương đổi ổn, vẫn còn một số hàm chưa hợp lí.
+- Menu dễ sử dụng.
+
+**🔧 Cần cải thiện**
+- Cần nén code đúng quy định, nên cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Hàm tìm kiếm theo **title** nên cho nó trả về 1 danh sách, vì đôi khi sẽ nhiều sách có cùng **title**, cần đưa ra hết.
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT018 - Phạm Quốc Bảo</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được *(Nên file sai cách)*, File em gửi chỉ gồm những file **.class** thôi chứ chưa phải là file **.java**
+
+**🔧 Cần cải thiện**
+- Cần nén code đúng quy định, xem cách nén code [Tại đây](../submit.md)
+
 
 </details>
 
 <details>
-<summary> <strong>💡 23IT032 - </strong></summary>
+<summary> <strong>👨‍🎓 23IT191 - Nguyễn Quang Nhân</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
-
+- Code chạy được.
+- Các class tạo tốt
+- Menu dễ sử dụng
+- Bài làm tốt
 
 **🔧 Cần cải thiện**
+- Hàm tìm kiếm theo **title** nên cho nó trả về 1 danh sách, vì đôi khi sẽ nhiều sách có cùng **title**, cần đưa ra hết.
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+- Phàn tìm sách nếu không tìm thấy cũng nên đưa ra 1 thông báo là không tìm thấy.
+</details>
+
+<details>
+<summary> <strong>👩‍🎓 23IT245 - Phan Thanh Tâm</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy chạy được *(Nên file sai cách)*, các file là **.class** chứa không phải là file **.java**.
+
+**🔧 Cần cải thiện**
+- Cần nén code đúng quy định, xem cách nén code [Tại đây](../submit.md)
+</details>
+
+
+<details>
+<summary> <strong>👩‍🎓 23IT252 - Trịnh Thị Thanh Thảo</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Tạo 3 class tốt.
+- Các phương thức chưa thực sự tốt.
+- Menu dễ dùng.
+
+**🔧 Cần cải thiện**
+- Các hàm tìm kiếm sách nên cho nó có kiểu trả về, sau đó ở Menu mới in kết quả ra.
+- Khi chưa có sách, mà người dùng muốn xem sách nên hiển thị cho người dùng một thông báo.
+- Hàm **input()** ở 2 class con chưa gọi hàm **input()** ở class cha nên nó chưa cho phép nhập những thông tin như bookID, title, author
+- Chức năng 6, 7 chưa hoạt động.
+- Phương thức **sortBooksByType** chưa hợp lí.
+</details>
+
+
+<details>
+<summary> <strong>👨‍🎓 23IT069 - Trần Thành Hậu</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được *(Nén code chưa hợp lí)*
+- Tạo các class tốt.
+- Menu có vẻ dễ nhìn, dễ sử dụng.
+**🔧 Cần cải thiện**
+- Cần nén code đúng quy định, cần nén cả **project** chứ không phải mỗi **package**, xem cách nén code [Tại đây](../submit.md)
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+- Các hàm tìm kiếm sách nên cho nó có kiểu trả về, sau đó ở Menu mới in kết quả ra.
 
 </details>
+
+
+<details>
+<summary> <strong>👨‍🎓 23IT160 - Văn Công Mạnh</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Menu dễ sử dụng, tuy nhiên chưa kết thúc menu được.
+- Tạo các class tốt.
+
+**🔧 Cần cải thiện**
+- Các hàm tìm kiếm sách nên cho nó có kiểu trả về, sau đó ở Menu mới in kết quả ra.
+- Khi thêm sách, cần kiểm tra xem **bookId** của sách mới đã tồn tại chưa, vì không thể cả 2 sách của cùng **bookId**
+- Chức năm 0. Exit chưa hoạt đông, em có thể dùng lệnh **break** ở case 0.
+</details>
+
+
+<details>
+<summary> <strong>👩‍🎓 23IT169 - Văn Thị Phước My</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Các class Book tạo rất tốt.
+- Các chức năng ở **BookManager** chưa hoàn thiện.
+
+**🔧 Cần cải thiện**
+- Thiếu hàm **isBigFile()**
+- Hàm tìm kiếm theo **title** nên cho nó trả về 1 danh sách, vì đôi khi sẽ nhiều sách có cùng title, cần đưa ra hết.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT125 - Nguyễn Đức Khánh</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chay được *(Gửi file sai định dạng)*
+- Tạo các class tốt.
+
+**🔧 Cần cải thiện**
+- Thay vì gửi file doc thì nên nén file theo hướng dẫn [Tại đây](../submit.md)
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT113 - Lê Minh Hưng</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chay được *(Gửi file sai định dạng)*
+- Chỉ có class **Book**
+
+**🔧 Cần cải thiện**
+- Thay vì gửi file doc thì nên nén file theo hướng dẫn [Tại đây](../submit.md)
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT162 - Đinh Trần Tiến Minh</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chay được *(Gửi file sai định dạng)*
+- Tạo các class tốt.
+**🔧 Cần cải thiện**
+- Thay vì gửi file doc thì nên nén file theo hướng dẫn [Tại đây](../submit.md)
+- Các hàm searchBook nên có kiểu dữ liệu trả về, sau đó trong Menu mới in ra.
+</details>
+
 
 </details>
 <br>
