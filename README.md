@@ -397,7 +397,7 @@ Phần "Tính trừu tượng trong OOP" trong bài tập này nhằm giúp sinh
 </details>
 <br>
 
-**🎯 Số lượng ví dụ: 0**
+**🎯 Số lượng ví dụ: 5**
 
 👁️ Xem bài tập **[Tại đây](./oop-abstraction/)**
 
