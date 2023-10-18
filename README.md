@@ -428,7 +428,7 @@ Phần "Kiểm tra giữa kỳ - bài tập mẫu" trong bài tập này nhằm 
 </details>
 <br>
 
-**🎯 Số lượng ví dụ: 1**
+**🎯 Số lượng ví dụ: 2**
 
 👁️ Xem bài tập **[Tại đây](./midterm-exam/)**
 
