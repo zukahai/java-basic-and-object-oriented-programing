@@ -5,7 +5,7 @@
 </div>
 
 ### Ví dụ 1
-Tạo lớp trừu tưởng **Shape** định nghĩa trừu tưởng cho các hình dạng.<br>Bao gồm
+Tạo lớp trừu tượng **Shape** định nghĩa trừu tượng cho các hình dạng.<br>Bao gồm
 - Các thuộc tính:
     - **color**: String, đại diện cho màu sắc của hình dạng.
 - Các phương thức:
@@ -36,7 +36,7 @@ Tạo class **Rectangel** kế thừa class **Shape**<br> Bao gồm:
     - Ghi đè tất cả những phương thức trừu tượng của **Shape**
 
 ### Ví dụ 2
-Tạo lớp trừu tưởng **Student** định nghĩa trừu tưởng cho các hình dạng.<br>Bao gồm:
+Tạo lớp trừu tượng **Student** định nghĩa trừu tượng cho các hình dạng.<br>Bao gồm:
 - Các thuộc tính:
     - **masv**: String, dùng dể đại diện cho mã sinh viên
     - **name**: String, dùng dể đại diện cho tên của sinh viên
