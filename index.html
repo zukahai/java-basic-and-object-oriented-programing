@@ -765,6 +765,17 @@
                 }
               }
               load();
+
+            window.addEventListener("scroll", function() {
+              localStorage.setItem("scrollPosition", window.scrollY);
+            });
+
+            var savedScrollPosition = localStorage.getItem("scrollPosition");
+            if (savedScrollPosition) {
+              window.scrollTo(0, savedScrollPosition);
+            }
+
+
           </script>
       
       
