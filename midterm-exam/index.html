@@ -779,7 +779,45 @@ Book{bookID=1, title='1', author='1', price=1}
 </details>
 </details>
 <br>
-
+<h3 id="ví-dụ-2-quản-lí-trái-cây">Ví dụ 2: Quản lí trái cây </h3>
+<p>Siêu thị trái cây quản lý trái cây với các thông tin như mã, tên, giá và số lượng như sau:</p>
+<ul>
+<li><strong>Fruit</strong> (<strong>id</strong>:int, <strong>name</strong>:String, <strong>price</strong>:double)</li>
+<li><strong>FruitIn</strong> là mô tả trái cây trong nước, quản lý thêm phí nội bộ <strong>extraIn</strong>: double</li>
+<li><strong>FruitOut</strong> là mô tả trái cây nhập khẩu, quản lý thêm xuất xứ <strong>orgin</strong>: String và phí nhập khẩu <strong>extraOut</strong>: double</li>
+</ul>
+<p><strong>Thực hiện các yêu cầu sau:</strong></p>
+<ul>
+<li>
+<p>Định nghĩa interface <strong>IFruit</strong> với các phương thức định giá bán tới người dùng <strong>priceForSale()</strong></p>
+</li>
+<li>
+<p>Định nghĩa lớp <strong>Fruit</strong> cài đặt (implement) giao diện <strong>IFruit</strong>, với các thuộc tính và phương thức<br>
+theo yêu cầu.</p>
+</li>
+<li>
+<p>Định nghĩa lớp <strong>FruitIn</strong> kế thừa lớp <strong>Fruit</strong>.</p>
+</li>
+<li>
+<p>Định nghĩa lớp <strong>FruitOut</strong> kế thừa lớp <strong>Fruit</strong>.</p>
+</li>
+<li>
+<p>Yêu cầu tính giá bán của trái cây <strong>priceForSale</strong>, biết rằng</p>
+<ul>
+<li>Giá bán <strong>FruitIn</strong> bằng giá <strong>price</strong> cộng với phí nội bộ <strong>extraIn</strong> .</li>
+<li>Giá bán <strong>FruitOut</strong> bằng giá <strong>price</strong> cộng với phí nhập khẩu <strong>extraOut</strong> và 10% của <strong>extraOut</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Câu 5</strong>. Định nghĩa lớp FruitList với thuộc tính và các phương thức sau:</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="text" class="language-text text"><code>- 1. Thêm Fruit vào danh sách gồm FruitIn và FruitOut
+- 2. In ra danh sách Fruit
+- 3. In danh sách FruitIn và FruitOut có priceForSale lớn hơn 20
+- 4. Tính tổng số Fruit có trong danh sách
+- 5. Viết chương trình theo dạng Menu Driven Program
+</code></pre>
       </div>
       
       
