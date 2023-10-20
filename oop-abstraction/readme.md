@@ -10,7 +10,7 @@ Tạo lớp trừu tượng **Shape** định nghĩa trừu tượng cho các h�
     - **color**: String, đại diện cho màu sắc của hình dạng.
 - Các phương thức:
     - Gồm các phương thức getter và setter cho **color**
-- Các phương thức trừa tượng
+- Các phương thức trừu tượng
     - **getArea():** Float, dùng để tính diện tích
     - **getPerimeter()**: Float, dùng để tính chu vu
     - **input()**: void, dùng để nhập thông tin.
@@ -43,25 +43,26 @@ Tạo lớp trừu tượng **Student** định nghĩa trừu tượng cho các 
     - **age**: int, dùng dể lưu đại diện cho tuổi của sinh viên
 - Các phương thức:
     - Gồm các phương thức getter và setter cho **masv**, **name** và **age**
-- Các phương thức trừa tượng
     - **input()**: void, dùng để nhập thông tin.
+- Các phương thức trừa tượng
     - **toString()**: String, dùng để in ra các thông tin của sinh viên
     - **calculateAverage()**: float, dùng làm trung bình tất cả các môn của sinh viên
 
-Tạo lớp **StudentIT** kế thừa lớp trừu tặng **Student**.<br>Bao gồm:
+Tạo lớp **StudentIT** kế thừa lớp trừu tượng **Student**.<br>Bao gồm:
 - Các thuộc tính:
     - **scoreCpp**: float, dùng để đại diện cho điểm C++
     - **scoreJava**: float, dùng để đại diện cho điểm Java
-- Các pphuowng thức:
+- Các phương thức:
     - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính
     - Các phương thức **getter()** và **setter()**
+    - Ghi đè phương thưc **input()**
     - Ghi đè tất cả những phương thức trừu tượng của **Student**
 
-Tạo lớp **StudentBA** kế thừa lớp trừu tặng **Student**.<br>Bao gồm:
+Tạo lớp **StudentBA** kế thừa lớp trừu tượng **Student**.<br>Bao gồm:
 - Các thuộc tính:
     - **scorePm**: float, dùng để đại diện cho điểm học phần quản lí dự án
     - **scoreBA**: float, dùng để đại diện cho điểm học phần quản trị kinh doanh
-- Các pphuowng thức:
+- Các phương thức:
     - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính
     - Các phương thức **getter()** và **setter()**
     - Ghi đè tất cả những phương thức trừu tượng của **Student**
