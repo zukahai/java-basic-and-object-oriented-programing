@@ -69,6 +69,14 @@ Tạo một Menu cho phép  người dùng thực hiện cách chức năng sác
 7. Tính tổng kích thước sách
 ```
 
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Hãy tải xuống **[BookManagement.zip](./BookManagement.zip)**
+
+</details>
+<br>
+
 
 <details>
 <summary> <strong>🎒 Nhận xét bài làm  📝</strong></summary>
