@@ -86,8 +86,14 @@ Hãy tải xuống **[BookManagement.zip](./BookManagement.zip)**
 <br>
 
 **💬 Nhận xét chung**
-- File **rar** rỗng, không có nội dung
+- Có cố gắng sửa lại bài nén flle lỗi
+- Các class tạo tốt, tuy nhiên vẫn có chức năng bị sai.
+- Menu dễ dùng.
 
+**🔧 Cần cải thiện**
+- Hàm **isBigBook** còn bị sai yêu cầu, yêu cầu chưa cần > 200 trong khi của em là >= 200
+- **bookID** là duy nhất, nên không thể thêm được được book có **bookId** đã tồn tại.
+- Còn bị lỗi bộ nhớ đệm, không nhập được **title**. Xem các giải quyết ở mục 1 [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/bugs.md)
 </details>
 
 <details>
@@ -724,6 +730,20 @@ else {
 **🔧 Cần cải thiện**
 - Thay vì gửi file doc thì nên nén file theo hướng dẫn [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
 - Các hàm searchBook nên có kiểu dữ liệu trả về, sau đó trong Menu mới in ra.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT058 - Lê Công Đức</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chay được.
+- Tạo các class tốt.
+- Có kiểm tra được trùng ID trong lúc thêm.
+- Menu dễ hiểu dễ dùng.
+**🔧 Cần cải thiện**
+- Các hàm searchBook nên có kiểu dữ liệu trả về, sau đó trong Menu mới in ra.
+- Nên nộp bài đúng hạn.
 </details>
 
 </details>
