@@ -730,6 +730,10 @@ else {
 <br>
 
 ### Ví dụ 2: Quản lí trái cây
+
+> Nộp bài **[Tại đây](https://forms.gle/rFwUbV2DZCGu5YZY7)**, chỉ nhận bài tập đến **0h00 ngày 31 tháng 10 năm 2023**
+> Chỉ được nộp bài 1 lần nên cần kiểm tra kĩ trước khi nộp
+
 Siêu thị trái cây quản lý trái cây với các thông tin như mã, tên, giá và số lượng như sau:
 - **Fruit** (**id**:int, **name**:String, **price**:double)
 - **FruitIn** là mô tả trái cây trong nước, quản lý thêm phí nội bộ **extraIn**: double
