@@ -42,6 +42,7 @@ Tạo lớp trừu tượng **Student** định nghĩa trừu tượng cho các 
     - **name**: String, dùng dể đại diện cho tên của sinh viên
     - **age**: int, dùng dể lưu đại diện cho tuổi của sinh viên
 - Các phương thức:
+    - Các phương thức khởi tạo
     - Gồm các phương thức getter và setter cho **masv**, **name** và **age**
     - **input()**: void, dùng để nhập thông tin.
 - Các phương thức trừa tượng
@@ -97,10 +98,10 @@ Tạo Menu thực hiện được các chức năng sau:
     - 2.2. Thêm sinh viên BA
 - 3. Tìm kiếm sinh viên
     - 3.1. Tìm theo mã sinh viên
-    - 3.2. Tìm theo tuooir
+    - 3.2. Tìm theo tuổi
 - 4. Xoá sinh viên
 - 5. Sắp xếp sinh viên
-    - 5.1. Sắp xếp theo tuoi
+    - 5.1. Sắp xếp theo tuổi
     - 5.2. Sắp xếp theo điểm trung bình
 - 6. Thoát chương trình
 ```
