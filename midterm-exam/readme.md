@@ -780,3 +780,114 @@ theo yêu cầu.
 - 4. Tính tổng số Fruit có trong danh sách
 - 5. Viết chương trình theo dạng Menu Driven Program
 ```
+
+### Ví dụ 3: Quản lí sản phẩm
+
+Tạo Interface **IManager\<T>** bao gồm:
+- Các phương thức trừa tượng:
+    - void **add(T t)**, đùng dể thêm
+    - T **search(int id)**, đùng dể tìm kiếm theo id
+    - ArrayList\<T> **search(String name)**, tìm kiếm theo tên
+    - ArrayList\<T> **getAll()**, đùng để lấy tất cả danh sách
+    - void **displayAll()**, đùng để in danh sách
+
+Tạo Interface **ISort** bao gồm:
+- Các phương thức trừa tượng:
+    - void **sortById()**, dùng để sắp xếp tăng dần theo **id**
+    - void **sortById(boolean reverse)**, nếu **reverse** bằng true thì sắp xếp giảm dần ngược lại sắp xếp tăng dần theo **id**
+
+Tạo Interface **ISortPrice**
+- Các phương thức trừa tượng:
+    - void **sortByPrice()**, dùng có sắp xếp tên theo **priceForSale**
+    - void **sortByPrice(boolean reverse)**, nếu **reverse** bằng true thì sắp xếp giảm dần, ngược lại sắp xếp tăng giảm theo **priceForSale**
+
+Tạo class **TypeProduct** dùng để biểu diễn tập hợp những loại sản phẩm.<br>Bao gồm:
+- Các thuộc tính:
+    - **id**: int, dùng để đại diện cho mã loại sản phẩm.
+    - **name**: String, dùng để đại diện cho tên loại sản phẩm.
+    - **description**: String, dùng có dùng cho mô tả của loại sản phẩm.
+- Các phương thức:
+    - Các phương thức khởi tạo mặc định, khởi tạo có tham số.
+    - Các phương thức **getter**, **setter** cho các thuộc tính
+    - Phương thức **input()** cho phép nhập thông tin các thuộc tính từ bàn phím.
+    - Phương thức **toString()**, cho phép trả về 1 chuỗi chứa đầy đủ thông tin.
+
+Tạo abstract class **Product** dùng để đại diện cho tập hợp những sản phẩm.<br>Bao gồm:
+- Các thuộc tính:
+    - **id**: int, d­ùng để đại diện cho mã sản phẩm
+    - **name**: String, dùng đại diện cho tên sản phẩm.
+    - **type**: TypeProdut, dùng đại diện cho loại sản phẩm.
+    - **price**: long, dùng để đại diện cho giá của sản phẩm.
+- Các phương thức:
+    - Các phương thức khởi tạo mặc định, khởi tạo có tham số.
+    - Các phương thức **getter**, **setter** cho các thuộc tính
+    - Phương thức **input()** cho phép nhập thông tin các thuộc tính từ bàn phím.
+    - Phương thức trừa tượng **priceForSale()**: long
+
+Tạo class **ProductIn** kế thừa class **Product** dùng để đại diện cho tập hợp những sản phẩm nội địa.<br>Bao gồm:
+- Các thuộc tính thêm:
+    - **extraIn**: long dùng để đại diện cho phí nội bộ của sản phẩm.
+- Các phương thức:
+    - Các phương thức khởi tạo mặc định, khởi tạo có tham số.
+    - Các phương thức **getter**, **setter** cho các thuộc tính
+    - Ghi đè phương thức **input()** và **toString()**
+    - Định nghĩa phương thức **priceForSale()** tính bằng chi phí **price** cộng thêm phí nội bộ **extraIn**
+
+Tạo class **ProductOut** kế thừa class **Product** dùng để đại diện cho tập hợp những sản phẩm nhập khẩu.<br>Bao gồm:
+- Các thuộc tính thêm:
+    - **extraOut**: long dùng để đại diện cho phí nhập khẩu của sản phẩm.
+- Các phương thức:
+    - Các phương thức khởi tạo mặc định, khởi tạo có tham số.
+    - Các phương thức **getter**, **setter** cho các thuộc tính
+    - Ghi đè phương thức **input()** và **toString()**
+    - Định nghĩa phương thức **priceForSale()** tính bằng chi phí **price** cộng thêm phí nhập khẩu **extraOut**, cộng thêm với 10% **extraOut**
+
+Tạo class **TypeProductManager** thực hiện interface **IManager\<TypeProduct>** và interface **ISort**.<br>Bao gồm:
+- Các thuộc tính:
+    - **typeProducts**: ArrayList\<TypeProduct>, đại diện cho danh sách loại sản phẩm.
+- Các phương thức:
+    - Các phương thức khởi tạo mặc định, khởi tạo có tham số.
+    - Các phương thức **getter**, **setter** cho các thuộc tính.
+    - Định nghĩa các phương thức trong interface **IManager\<TypeProduct>**.
+
+Tạo class **ProductManager** thực hiện interface **IManager\<Product>**, interface **ISort** và interface **ISortPrice**.<br>Bao gồm:
+- Các thuộc tính:
+    - **products**: ArrayList\<Product>, đại diện cho danh sách loại sản phẩm.
+- Các phương thức:
+    - Các phương thức khởi tạo mặc định, khởi tạo có tham số.
+    - Các phương thức **getter**, **setter** cho các thuộc tính.
+    - Định nghĩa các phương thức trong interface **IManager\<Product>**.
+
+Tạo class **Menu** gồm các chức năng như sau:
+```text
+1. Quản lí loại sản phẩm
+    1.1. Xem thông tin loại sản phẩm
+    1.2. Tạo loại sản phẩm
+    1.3. Tìm kiếm sản phẩm
+        1.3.1. Tìm kiếm theo id
+        1.3.2. Tìm kiếm theo tên loại sản phẩm
+    1.4. Sắp xếp sản phẩm
+        1.4.1. Sắp xếp tăng dần theo id
+        1.4.2. Sắp xếp giảm dần theo idle
+    1.5. Thoát quản lí sản phẩm
+2. Quản lí sản phẩm
+    2.1. Xem thông tin sản phẩm
+        2.1.1. Xem danh sách tất cả sản phẩm
+        2.1.2. Xem danh sách sản phẩm nội địa
+        2.1.3. Xem danh sách sản phẩm nhập khẩu
+        2.1.4. Xem những sản phẩm có giá bán ra lớn hơn 100000
+    2.2. Tạo sản phẩm
+        2.2.1. Tạo sản phẩm nội địa
+        2.2.2. Tạo sản phẩm nhập khẩu
+    2.3. Tìm kiếm sản phẩm
+        2.3.1. Tìm kiếm theo id
+        2.3.2. Tìm kiếm theo tên
+    2.4. Sắp xếp sản phẩm
+        2.4.1. Sắp xếp tăng dần theo id
+        2.4.2. Sắp xếp giảm dần theo id
+        2.4.3. Sắp xếp tăng dần theo giá bán ra
+        2.4.4. Sắp xếp giảm dần theo giá bán ra
+    2.5. Thoát quản lí sản phẩm
+3. Thoát chương trình
+```
+

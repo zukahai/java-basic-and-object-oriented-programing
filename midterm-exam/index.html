@@ -848,6 +848,166 @@ theo yêu cầu.</p>
 - 3. In danh sách FruitIn và FruitOut có priceForSale lớn hơn 20
 - 4. Tính tổng số Fruit có trong danh sách
 - 5. Viết chương trình theo dạng Menu Driven Program
+</code></pre><h3 id="ví-dụ-3-quản-lí-sản-phẩm">Ví dụ 3: Quản lí sản phẩm </h3>
+<p>Tạo Interface <strong>IManager&lt;T&gt;</strong> bao gồm:</p>
+<ul>
+<li>Các phương thức trừa tượng:
+<ul>
+<li>void <strong>add(T t)</strong>, đùng dể thêm</li>
+<li>T <strong>search(int id)</strong>, đùng dể tìm kiếm theo id</li>
+<li>ArrayList&lt;T&gt; <strong>search(String name)</strong>, tìm kiếm theo tên</li>
+<li>ArrayList&lt;T&gt; <strong>getAll()</strong>, đùng để lấy tất cả danh sách</li>
+<li>void <strong>displayAll()</strong>, đùng để in danh sách</li>
+</ul>
+</li>
+</ul>
+<p>Tạo Interface <strong>ISort</strong> bao gồm:</p>
+<ul>
+<li>Các phương thức trừa tượng:
+<ul>
+<li>void <strong>sortById()</strong>, dùng để sắp xếp tăng dần theo <strong>id</strong></li>
+<li>void <strong>sortById(boolean reverse)</strong>, nếu <strong>reverse</strong> bằng true thì sắp xếp giảm dần ngược lại sắp xếp tăng dần theo <strong>id</strong></li>
+</ul>
+</li>
+</ul>
+<p>Tạo Interface <strong>ISortPrice</strong></p>
+<ul>
+<li>Các phương thức trừa tượng:
+<ul>
+<li>void <strong>sortByPrice()</strong>, dùng có sắp xếp tên theo <strong>priceForSale</strong></li>
+<li>void <strong>sortByPrice(boolean reverse)</strong>, nếu <strong>reverse</strong> bằng true thì sắp xếp giảm dần, ngược lại sắp xếp tăng giảm theo <strong>priceForSale</strong></li>
+</ul>
+</li>
+</ul>
+<p>Tạo class <strong>TypeProduct</strong> dùng để biểu diễn tập hợp những loại sản phẩm.<br>Bao gồm:</p>
+<ul>
+<li>Các thuộc tính:
+<ul>
+<li><strong>id</strong>: int, dùng để đại diện cho mã loại sản phẩm.</li>
+<li><strong>name</strong>: String, dùng để đại diện cho tên loại sản phẩm.</li>
+<li><strong>description</strong>: String, dùng có dùng cho mô tả của loại sản phẩm.</li>
+</ul>
+</li>
+<li>Các phương thức:
+<ul>
+<li>Các phương thức khởi tạo mặc định, khởi tạo có tham số.</li>
+<li>Các phương thức <strong>getter</strong>, <strong>setter</strong> cho các thuộc tính</li>
+<li>Phương thức <strong>input()</strong> cho phép nhập thông tin các thuộc tính từ bàn phím.</li>
+<li>Phương thức <strong>toString()</strong>, cho phép trả về 1 chuỗi chứa đầy đủ thông tin.</li>
+</ul>
+</li>
+</ul>
+<p>Tạo abstract class <strong>Product</strong> dùng để đại diện cho tập hợp những sản phẩm.<br>Bao gồm:</p>
+<ul>
+<li>Các thuộc tính:
+<ul>
+<li><strong>id</strong>: int, d­ùng để đại diện cho mã sản phẩm</li>
+<li><strong>name</strong>: String, dùng đại diện cho tên sản phẩm.</li>
+<li><strong>type</strong>: TypeProdut, dùng đại diện cho loại sản phẩm.</li>
+<li><strong>price</strong>: long, dùng để đại diện cho giá của sản phẩm.</li>
+</ul>
+</li>
+<li>Các phương thức:
+<ul>
+<li>Các phương thức khởi tạo mặc định, khởi tạo có tham số.</li>
+<li>Các phương thức <strong>getter</strong>, <strong>setter</strong> cho các thuộc tính</li>
+<li>Phương thức <strong>input()</strong> cho phép nhập thông tin các thuộc tính từ bàn phím.</li>
+<li>Phương thức trừa tượng <strong>priceForSale()</strong>: long</li>
+</ul>
+</li>
+</ul>
+<p>Tạo class <strong>ProductIn</strong> kế thừa class <strong>Product</strong> dùng để đại diện cho tập hợp những sản phẩm nội địa.<br>Bao gồm:</p>
+<ul>
+<li>Các thuộc tính thêm:
+<ul>
+<li><strong>extraIn</strong>: long dùng để đại diện cho phí nội bộ của sản phẩm.</li>
+</ul>
+</li>
+<li>Các phương thức:
+<ul>
+<li>Các phương thức khởi tạo mặc định, khởi tạo có tham số.</li>
+<li>Các phương thức <strong>getter</strong>, <strong>setter</strong> cho các thuộc tính</li>
+<li>Ghi đè phương thức <strong>input()</strong> và <strong>toString()</strong></li>
+<li>Định nghĩa phương thức <strong>priceForSale()</strong> tính bằng chi phí <strong>price</strong> cộng thêm phí nội bộ <strong>extraIn</strong></li>
+</ul>
+</li>
+</ul>
+<p>Tạo class <strong>ProductOut</strong> kế thừa class <strong>Product</strong> dùng để đại diện cho tập hợp những sản phẩm nhập khẩu.<br>Bao gồm:</p>
+<ul>
+<li>Các thuộc tính thêm:
+<ul>
+<li><strong>extraOut</strong>: long dùng để đại diện cho phí nhập khẩu của sản phẩm.</li>
+</ul>
+</li>
+<li>Các phương thức:
+<ul>
+<li>Các phương thức khởi tạo mặc định, khởi tạo có tham số.</li>
+<li>Các phương thức <strong>getter</strong>, <strong>setter</strong> cho các thuộc tính</li>
+<li>Ghi đè phương thức <strong>input()</strong> và <strong>toString()</strong></li>
+<li>Định nghĩa phương thức <strong>priceForSale()</strong> tính bằng chi phí <strong>price</strong> cộng thêm phí nhập khẩu <strong>extraOut</strong>, cộng thêm với 10% <strong>extraOut</strong></li>
+</ul>
+</li>
+</ul>
+<p>Tạo class <strong>TypeProductManager</strong> thực hiện interface <strong>IManager&lt;TypeProduct&gt;</strong> và interface <strong>ISort</strong>.<br>Bao gồm:</p>
+<ul>
+<li>Các thuộc tính:
+<ul>
+<li><strong>typeProducts</strong>: ArrayList&lt;TypeProduct&gt;, đại diện cho danh sách loại sản phẩm.</li>
+</ul>
+</li>
+<li>Các phương thức:
+<ul>
+<li>Các phương thức khởi tạo mặc định, khởi tạo có tham số.</li>
+<li>Các phương thức <strong>getter</strong>, <strong>setter</strong> cho các thuộc tính.</li>
+<li>Định nghĩa các phương thức trong interface <strong>IManager&lt;TypeProduct&gt;</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>Tạo class <strong>ProductManager</strong> thực hiện interface <strong>IManager&lt;Product&gt;</strong>, interface <strong>ISort</strong> và interface <strong>ISortPrice</strong>.<br>Bao gồm:</p>
+<ul>
+<li>Các thuộc tính:
+<ul>
+<li><strong>products</strong>: ArrayList&lt;Product&gt;, đại diện cho danh sách loại sản phẩm.</li>
+</ul>
+</li>
+<li>Các phương thức:
+<ul>
+<li>Các phương thức khởi tạo mặc định, khởi tạo có tham số.</li>
+<li>Các phương thức <strong>getter</strong>, <strong>setter</strong> cho các thuộc tính.</li>
+<li>Định nghĩa các phương thức trong interface <strong>IManager&lt;Product&gt;</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>Tạo class <strong>Menu</strong> gồm các chức năng như sau:</p>
+<pre data-role="codeBlock" data-info="text" class="language-text text"><code>1. Quản lí loại sản phẩm
+    1.1. Xem thông tin loại sản phẩm
+    1.2. Tạo loại sản phẩm
+    1.3. Tìm kiếm sản phẩm
+        1.3.1. Tìm kiếm theo id
+        1.3.2. Tìm kiếm theo tên loại sản phẩm
+    1.4. Sắp xếp sản phẩm
+        1.4.1. Sắp xếp tăng dần theo id
+        1.4.2. Sắp xếp giảm dần theo idle
+    1.5. Thoát quản lí sản phẩm
+2. Quản lí sản phẩm
+    2.1. Xem thông tin sản phẩm
+        2.1.1. Xem danh sách tất cả sản phẩm
+        2.1.2. Xem danh sách sản phẩm nội địa
+        2.1.3. Xem danh sách sản phẩm nhập khẩu
+        2.1.4. Xem những sản phẩm có giá bán ra lớn hơn 100000
+    2.2. Tạo sản phẩm
+        2.2.1. Tạo sản phẩm nội địa
+        2.2.2. Tạo sản phẩm nhập khẩu
+    2.3. Tìm kiếm sản phẩm
+        2.3.1. Tìm kiếm theo id
+        2.3.2. Tìm kiếm theo tên
+    2.4. Sắp xếp sản phẩm
+        2.4.1. Sắp xếp tăng dần theo id
+        2.4.2. Sắp xếp giảm dần theo id
+        2.4.3. Sắp xếp tăng dần theo giá bán ra
+        2.4.4. Sắp xếp giảm dần theo giá bán ra
+    2.5. Thoát quản lí sản phẩm
+3. Thoát chương trình
 </code></pre>
       </div>
       
