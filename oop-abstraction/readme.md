@@ -70,7 +70,7 @@ Tạo lớp **StudentBA** kế thừa lớp trừu tượng **Student**.<br>Bao 
 
 ### Ví dụ 3
 Tiếp nối ví dụ 2.
-Tạo interface IManager gồm các phương thức:
+Tạo interface **IManager** gồm các phương thức:
     - void **addStudent(Student student)**: Thêm một học sinh vào danh sách.
     - void **editStudent(String masv, Student student)**: Sửa thông tin của một học sinh.
     - void **removeStudent(String masv)**: Xóa một học sinh dựa trên mã sinh viên
@@ -81,7 +81,7 @@ Tạo interface IManager gồm các phương thức:
     - void **displayAllStudents()**: Hiển thị thông tin của tất cả học sinh trong danh sách.
 
 ### Ví dụ 4
-Tạo class **StudentManager** sử dụng interface IManager.<br>
+Tạo class **StudentManager** sử dụng interface **IManager**.<br>
 - Các thuộc tính:
     - **students**: ArrayList\<Student\>, dùng để lưu danh sách sinh viên
 - Các phương thức:
@@ -103,8 +103,17 @@ Tạo Menu thực hiện được các chức năng sau:
 - 5. Sắp xếp sinh viên
     - 5.1. Sắp xếp theo tuổi
     - 5.2. Sắp xếp theo điểm trung bình
-- 6. Thoát chương trình
+- 6. Chỉnh sửa thông tin sinh viên
+- 7. Thoát chương trình
 ```
+
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Hãy tải xuống **[oop_abstraction.zip](./oop_abstraction.zip)**
+
+</details>
+<br>
 
 
 
