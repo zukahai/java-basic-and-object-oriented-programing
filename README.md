@@ -399,6 +399,8 @@ Phần "Tính trừu tượng trong OOP" trong bài tập này nhằm giúp sinh
 
 **🎯 Số lượng ví dụ: 5**
 
+✅ Tất cả ví dụ đều đã có code mẫu
+
 👁️ Xem bài tập **[Tại đây](./oop-abstraction/)**
 
 ## 7. Kiểm tra giữa kỳ - bài tập mẫu
