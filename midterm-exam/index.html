@@ -855,6 +855,7 @@ theo yêu cầu.</p>
 <ul>
 <li>void <strong>add(T t)</strong>, đùng dể thêm</li>
 <li>T <strong>search(int id)</strong>, đùng dể tìm kiếm theo id</li>
+<li>void <strong>remove(int id)</strong>, dùng để xoá</li>
 <li>ArrayList&lt;T&gt; <strong>search(String name)</strong>, tìm kiếm theo tên</li>
 <li>ArrayList&lt;T&gt; <strong>getAll()</strong>, đùng để lấy tất cả danh sách</li>
 <li>void <strong>displayAll()</strong>, đùng để in danh sách</li>
@@ -991,7 +992,10 @@ theo yêu cầu.</p>
     1.4. Sắp xếp sản phẩm
         1.4.1. Sắp xếp tăng dần theo id
         1.4.2. Sắp xếp giảm dần theo id
-    1.5. Thoát quản lí sản phẩm
+        1.4.3. Sắp xếp giảm dần theo số lượng sản phẩm có loại sản phẩm đó.
+    1.5. Đưa ra danh sách sản phẩm dựa vào TypeProduct
+    1.6. Xoá loại sản phẩm
+    1.7. Thoát quản lí sản phẩm
 2. Quản lí sản phẩm
     2.1. Xem thông tin sản phẩm
         2.1.1. Xem danh sách tất cả sản phẩm
@@ -1009,9 +1013,22 @@ theo yêu cầu.</p>
         2.4.2. Sắp xếp giảm dần theo id
         2.4.3. Sắp xếp tăng dần theo giá bán ra
         2.4.4. Sắp xếp giảm dần theo giá bán ra
-    2.5. Thoát quản lí sản phẩm
+    2.5. Xoá sản phẩm
+    2.6. Thoát quản lí sản phẩm
 3. Thoát chương trình
-</code></pre>
+</code></pre><ul>
+<li><strong>Chú ý</strong>:
+<ul>
+<li>Trong các loại sản phẩm và sản phẩm thì <strong>id</strong> là duy nhất, không thể có 2 sản phẩm hay loại sản phẩm cùng <strong>id</strong>.</li>
+<li>Ở chức năng <strong>1.4.3. Sắp xếp giảm dần theo số lượng sản phẩm có loại sản phẩm đó</strong>. Có nghĩa là loại sản phẩm nào có nhiều sản phẩm hơn sẽ ưu tiên lên trước khi sắp xếp.</li>
+<li>Ở chức năng <strong>2.2 Tạo sản phẩm</strong>. Lúc thao tác đến phần nhập TypeProduct. Bạn cần đưa ra danh sách TypeProduct. và cho phép người dùng chọn 1 trong số đó.</li>
+<li>Ở chức năng <strong>1.5. Đưa ra danh sách sản phẩm dựa vào TypeProduct</strong>. Cũng cần phải đưa ra danh sách loại sản phẩm cho người dùng chọn.</li>
+<li>Ở chức năng <strong>1.6. Xoá loại sản phẩm</strong>. Cần phải xoá luôn những sản phẩm mang loại sản phẩm đó.</li>
+<li>Ở 2 menu lớn là <strong>Quản lí loại sản phẩm</strong> và <strong>Quản lí sản phẩm</strong> chỉ thoát ra khi người dùng chọn thoát chương trình quản lí đó.</li>
+</ul>
+</li>
+</ul>
+
       </div>
       
       

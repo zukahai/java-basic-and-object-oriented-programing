@@ -787,6 +787,7 @@ Tạo Interface **IManager\<T>** bao gồm:
 - Các phương thức trừa tượng:
     - void **add(T t)**, đùng dể thêm
     - T **search(int id)**, đùng dể tìm kiếm theo id
+    - void **remove(int id)**, dùng để xoá
     - ArrayList\<T> **search(String name)**, tìm kiếm theo tên
     - ArrayList\<T> **getAll()**, đùng để lấy tất cả danh sách
     - void **displayAll()**, đùng để in danh sách
@@ -872,7 +873,10 @@ Tạo class **Menu** gồm các chức năng như sau:
     1.4. Sắp xếp sản phẩm
         1.4.1. Sắp xếp tăng dần theo id
         1.4.2. Sắp xếp giảm dần theo id
-    1.5. Thoát quản lí sản phẩm
+        1.4.3. Sắp xếp giảm dần theo số lượng sản phẩm có loại sản phẩm đó.
+    1.5. Đưa ra danh sách sản phẩm dựa vào TypeProduct
+    1.6. Xoá loại sản phẩm
+    1.7. Thoát quản lí sản phẩm
 2. Quản lí sản phẩm
     2.1. Xem thông tin sản phẩm
         2.1.1. Xem danh sách tất cả sản phẩm
@@ -890,7 +894,16 @@ Tạo class **Menu** gồm các chức năng như sau:
         2.4.2. Sắp xếp giảm dần theo id
         2.4.3. Sắp xếp tăng dần theo giá bán ra
         2.4.4. Sắp xếp giảm dần theo giá bán ra
-    2.5. Thoát quản lí sản phẩm
+    2.5. Xoá sản phẩm
+    2.6. Thoát quản lí sản phẩm
 3. Thoát chương trình
 ```
+
+- **Chú ý**:
+    - Trong các loại sản phẩm và sản phẩm thì **id** là duy nhất, không thể có 2 sản phẩm hay loại sản phẩm cùng **id**.
+    - Ở chức năng **1.4.3. Sắp xếp giảm dần theo số lượng sản phẩm có loại sản phẩm đó**. Có nghĩa là loại sản phẩm nào có nhiều sản phẩm hơn sẽ ưu tiên lên trước khi sắp xếp.
+    - Ở chức năng **2.2 Tạo sản phẩm**. Lúc thao tác đến phần nhập TypeProduct. Bạn cần đưa ra danh sách TypeProduct. và cho phép người dùng chọn 1 trong số đó.
+    - Ở chức năng **1.5. Đưa ra danh sách sản phẩm dựa vào TypeProduct**. Cũng cần phải đưa ra danh sách loại sản phẩm cho người dùng chọn.
+    - Ở chức năng **1.6. Xoá loại sản phẩm**. Cần phải xoá luôn những sản phẩm mang loại sản phẩm đó.
+    - Ở 2 menu lớn là **Quản lí loại sản phẩm** và **Quản lí sản phẩm** chỉ thoát ra khi người dùng chọn thoát chương trình quản lí đó.
 
