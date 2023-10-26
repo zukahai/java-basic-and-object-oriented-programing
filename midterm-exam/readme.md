@@ -817,7 +817,7 @@ Tạo abstract class **Product** dùng để đại diện cho tập hợp nhữ
 - Các thuộc tính:
     - **id**: int, d­ùng để đại diện cho mã sản phẩm
     - **name**: String, dùng đại diện cho tên sản phẩm.
-    - **type**: TypeProdut, dùng đại diện cho loại sản phẩm.
+    - **type**: TypeProduct, dùng đại diện cho loại sản phẩm.
     - **price**: long, dùng để đại diện cho giá của sản phẩm.
 - Các phương thức:
     - Các phương thức khởi tạo mặc định, khởi tạo có tham số.
