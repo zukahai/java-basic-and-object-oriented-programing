@@ -849,6 +849,7 @@ Tạo class **TypeProductManager** thực hiện interface **IManager\<TypeProdu
     - Các phương thức khởi tạo mặc định, khởi tạo có tham số.
     - Các phương thức **getter**, **setter** cho các thuộc tính.
     - Định nghĩa các phương thức trong interface **IManager\<TypeProduct>**.
+    - Định nghĩa các phương thức trong interface **ISort**
 
 Tạo class **ProductManager** thực hiện interface **IManager\<Product>**, interface **ISort** và interface **ISortPrice**.<br>Bao gồm:
 - Các thuộc tính:
@@ -857,6 +858,8 @@ Tạo class **ProductManager** thực hiện interface **IManager\<Product>**, i
     - Các phương thức khởi tạo mặc định, khởi tạo có tham số.
     - Các phương thức **getter**, **setter** cho các thuộc tính.
     - Định nghĩa các phương thức trong interface **IManager\<Product>**.
+    - Định nghĩa các phương thức trong interface **ISort**.
+    - Định nghĩa các phương thức trong interface **ISortPrice**
 
 Tạo class **Menu** gồm các chức năng như sau:
 ```text
@@ -868,7 +871,7 @@ Tạo class **Menu** gồm các chức năng như sau:
         1.3.2. Tìm kiếm theo tên loại sản phẩm
     1.4. Sắp xếp sản phẩm
         1.4.1. Sắp xếp tăng dần theo id
-        1.4.2. Sắp xếp giảm dần theo idle
+        1.4.2. Sắp xếp giảm dần theo id
     1.5. Thoát quản lí sản phẩm
 2. Quản lí sản phẩm
     2.1. Xem thông tin sản phẩm
