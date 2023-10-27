@@ -867,10 +867,10 @@ Tạo class **Menu** gồm các chức năng như sau:
 1. Quản lí loại sản phẩm
     1.1. Xem thông tin loại sản phẩm
     1.2. Tạo loại sản phẩm
-    1.3. Tìm kiếm sản phẩm
+    1.3. Tìm kiếm loại sản phẩm
         1.3.1. Tìm kiếm theo id
         1.3.2. Tìm kiếm theo tên loại sản phẩm
-    1.4. Sắp xếp sản phẩm
+    1.4. Sắp xếp loại sản phẩm
         1.4.1. Sắp xếp tăng dần theo id
         1.4.2. Sắp xếp giảm dần theo id
         1.4.3. Sắp xếp giảm dần theo số lượng sản phẩm có loại sản phẩm đó.
