@@ -52,3 +52,4 @@ Nếu giao diện xuất hiện như bên dưới thì bạn đã cài đặt th
 
 # Gặp lỗi
 
+Nếu gặp lỗi các bạn có thể xem các lỗi thường gặp [Tại đây](./bugs.md#4-lỗi-khi-cài-đặt-window-builder)
