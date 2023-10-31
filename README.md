@@ -463,7 +463,7 @@ Phần "Thiết kế giao diện bằng Java Swing" trong bài tập này nhằm
 </details>
 <br>
 
-**🎯 Số lượng ví dụ: 0**
+**🎯 Số lượng ví dụ: 7**
 
 👁️ Xem bài tập **[Tại đây](./swing-ui/)**
 
