@@ -26,6 +26,29 @@ Bước 5: Chờ cài đặt WindowBuilder
 
 <div align="center"><img src="./assets/WindowBuilder/WindowBuilder5.png"></div>
 
-Bước 6: Sau khi cài đặt xong thì restar
+Bước 6: Sau khi cài đặt xong thì restart.
 <div align="center"><img src="./assets/WindowBuilder/WindowBuilder6.png"></div>
+
+# Kiểm tra đã cài đặt
+
+Để kiểm tra xem bạn đã cài đặt thành công và Window Builder đã hoạt động chưa các bạn làm như sau:
+
+Tạo **Java Project** và **package** như trước đây các bạn vẫn hay tạo.
+
+Chuột phải vào package của bạn, chọn **new** -> **Other...**
+Nhập **JFrame** vào chọn JFrame
+
+<div align="center"><img src="./assets/WindowBuilder/WindowBuilder10.png"></div>
+
+Tiếp theo đặt tên cho class và tiến hành hoàn tất tạo class.
+
+Tại giao diện class, hãy chọn vào tag **design** ở phía dưới bên trái.
+
+<div align="center"><img src="./assets/WindowBuilder/WindowBuilder12.png"></div>
+
+Nếu giao diện xuất hiện như bên dưới thì bạn đã cài đặt thành công:
+
+<div align="center"><img src="./assets/WindowBuilder/WindowBuilder13.png"></div>
+
+# Gặp lỗi
 

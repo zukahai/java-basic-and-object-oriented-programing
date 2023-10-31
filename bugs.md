@@ -143,7 +143,25 @@ public class Main {
 Nhập chuỗi 1: HaiZuka
 Nhập chuỗi 2: HaiZuka
 true
-
 ```
 
+# 4. Lỗi khi cài đặt Window Builder
+
+## 4.1 Không mở được tag design
+
+Nếu bạn mở tag design mà màn hình hiện thị như bên dưới chứng tỏ bạn đang gặp lỗi.
+
+<div align="center"><img src="./assets/WindowBuilder/WindowBuilder7.png"></div>
+
+Để sửa lỗi các bạn làm theo các bước sau:
+Chọn **Help** -> **Eclipse Makerplace**
+
+<div align="center"><img src="./assets/WindowBuilder/WindowBuilder8.png"></div>
+
+
+Tại giao diện hiện thị chọn tag **Installed**, kéo xuống 2 phần **Window Builder** và đổi thành **update** và chọn **Finish** để tiến hành cập nhật **WindowBuilder**
+
+<div align="center"><img src="./assets/WindowBuilder/WindowBuilder9.png"></div>
+
+Cần chờ một xíu để cập nhật, sau khi cập nhập xong thì **Eclipse** sẽ yêu cầu **restart**
 
