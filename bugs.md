@@ -147,7 +147,14 @@ true
 
 # 4. Lỗi khi cài đặt Window Builder
 
-## 4.1 Không mở được tag design
+## 4.1 lỗi file
+Nếu bạn tạo JFrame mà lỗi như bên dưới:
+
+<div align="center"><img src="./assets/WindowBuilder/WindowBuilder14.png"></div>
+
+Bạn hãy xoá file **module-info.java** trong **src**
+
+## 4.2 Không mở được tag design
 
 Nếu bạn mở tag design mà màn hình hiện thị như bên dưới chứng tỏ bạn đang gặp lỗi.
 
