@@ -82,7 +82,7 @@ Hãy tải xuống **[BookManagement.zip](./BookManagement.zip)**
 <summary> <strong>🎒 Nhận xét bài làm  📝</strong></summary>
 
 <details>
-<summary> <strong>👩‍🎓 23IT179 - Phan Thị Thanh Ngân </strong></summary>
+<summary> <strong>👨‍🎓 23IT179 - Phan Thị Thanh Ngân </strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -218,7 +218,7 @@ public void searchBook(int BookID) {
 
 
 <details>
-<summary> <strong>👩‍🎓 23IT117 - Từ Thị Thanh Hương</strong></summary>
+<summary> <strong>👨‍🎓 23IT117 - Từ Thị Thanh Hương</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -260,7 +260,7 @@ public void searchBook(int BookID) {
 </details>
 
 <details>
-<summary> <strong>👩‍🎓 23IT001 - Đặng Ngọc Thúy An</strong></summary>
+<summary> <strong>👨‍🎓 23IT001 - Đặng Ngọc Thúy An</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -359,7 +359,7 @@ if (!continueChoice.equals("y")) {
 </details>
 
 <details>
-<summary> <strong>👩‍🎓 23IT156 - Phan Khánh Ly</strong></summary>
+<summary> <strong>👨‍🎓 23IT156 - Phan Khánh Ly</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -620,7 +620,7 @@ else {
 </details>
 
 <details>
-<summary> <strong>👩‍🎓 23IT245 - Phan Thanh Tâm</strong></summary>
+<summary> <strong>👨‍🎓 23IT245 - Phan Thanh Tâm</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -632,7 +632,7 @@ else {
 
 
 <details>
-<summary> <strong>👩‍🎓 23IT252 - Trịnh Thị Thanh Thảo</strong></summary>
+<summary> <strong>👨‍🎓 23IT252 - Trịnh Thị Thanh Thảo</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -683,7 +683,7 @@ else {
 
 
 <details>
-<summary> <strong>👩‍🎓 23IT169 - Văn Thị Phước My</strong></summary>
+<summary> <strong>👨‍🎓 23IT169 - Văn Thị Phước My</strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -780,6 +780,405 @@ theo yêu cầu.
 - 4. Tính tổng số Fruit có trong danh sách
 - 5. Viết chương trình theo dạng Menu Driven Program
 ```
+
+<details>
+<summary> <strong>🎒 Nhận xét bài làm  📝</strong></summary>
+
+<details>
+<summary> <strong>👨‍🎓 23IT297 - Nguyễn Anh Tuấn </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Hiểu sai đề phần tính giá priceForSale
+- Menu gọn gàng, dễ dùng
+
+**🔧 Cần cải thiện**
+- Hàm **priceForSale** cần trả về giá trị nên không nên để kiểu **void**
+- Chức năng số 3 do hiểu sai đề nên làm sai
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- Ở Main.java Dòng 23 nên di chuyển xuống sau dòng 25, phải cho người ta chọn ở case 1 đã mới cho nhập tiếp đẻ chọn nhập FruitIn hay FruiOut
+
+</details>
+
+<details>
+<summary> <strong>👩‍🎓 23IT178 - Lê Thị Thúy Nga </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được
+- Tạo FruitList khá tốt
+- Menu dễ dùng
+
+**🔧 Cần cải thiện**
+- Cần nén cả project chứ không phải tạo 1 fordel xong bỏ các file code vào. Xem lại cách nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+- Nên tách interface ra một file riêng.
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+-Nên viết hàm toString và input ở các class để dễ sử dụng
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT088 - Nguyễn Văn Hoàng </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được
+- Về cơ bản code rất tốt, tuyệt vời.
+- Menu dễ sử dụng
+- Đã kiểm tra được thêm trùng **id**
+
+**🔧 Cần cải thiện**
+- Cần nén cả project có đầy đủ các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT208 - Bùi Hoàng Phong </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Tất cả các class rất tốt
+- Menu dễ sử dụng
+- Bài làm rất tốt chỉ chưa đủ ở chức năng thêm Fruit.
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT213 - Võ Đình Phú </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Rất nguy hiểm khi không tạo package (Folder con trong src)
+- Về cơ bản các class tốt
+- Cần cải thiện một số thứ.
+**🔧 Cần cải thiện**
+- Cần tạo project đầy đủ các thành phần.
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT082 - Chu Ngọc Hoàng</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Menu dễ dùng, đẹp
+- Cần cải thiện một số thứ.
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- cnn-ttth
+
+</details>
+
+<details>
+<summary> <strong>👩‍🎓 23IT252 - Trịnh Thị Thanh Thảo </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Tạo các class chưa thực sự tốt.
+- Cần cải thiện một số thứ.
+**🔧 Cần cải thiện**
+- Còn bị trôi lệnh chỗ nhập **orgin**
+- Các nhập chưa tốt, nên cho chọn loại Fruit trước khi cho nhập thông tin, tốt nhất là có hàm input.
+- Cách kiểm tra **priceForSale** > 20 chưa tốt. Chỉ cần duyệt tất cả Fruit, không cần duyệt riêng từng loại
+- In ra thông tin 1 Fruit nên in ra toString()
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT142 - Hùng Vũ Long </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Không có file main để chạy
+- Chưa tạo đủ yêu cầu của đề
+- Cần cải thiện một số thứ.
+
+**🔧 Cần cải thiện**
+- Cần tạo thêm menu
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- In ra danh sách là in ra tất cả các thông tin, không phải in ra priceForSale
+
+</details>
+
+<details>
+<summary> <strong>👩‍🎓 23IT244 - Lê Thị Diệu Tâm </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được do nén file sai cách,
+- Cần cải thiện một số chỗ.
+
+**🔧 Cần cải thiện**
+- Tất cả các file code để là file *.class. Xem lại các nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- Nên viết đầy đủ các thành phần trong class như các hàm getter, setter, toString
+- Tên biến không đặt viết hàm chữ đầu ở FruitList
+- Nhập vào nên dùng hàm input ở tất cả class để dễ tái sử dụng
+- ltdt@mbv
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT248 - Nguyễn Đình Thái </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Nén file sai cách
+- Cần cải thiện một số chỗ.
+
+**🔧 Cần cải thiện**
+- Phải nên cả project bằng gồm các folder .settings, bin, src,... Xem lại các nén code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+- Nên tách interface ra thành file riêng
+- Chưa có menu
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT306 - Nguyễn Quốc Viễn </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Bài làm rất tốt
+
+**🔧 Cần cải thiện**
+- Nên sử dụng vòng lặp chỗ Menu chưa không nên làm kiểu đệ quy như thế.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT305 - Mai Bách Vĩ </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Tạo class class còn thiếu nhiều thành phần
+- Cần cải thiện một số chỗ.
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- Nên viết đầy đủ các thành phần trong class như các hàm getter, setter, toString
+- Tên biến không đặt viết hàm chữ đầu ở FruitList
+- Nhập vào nên dùng hàm input ở tất cả class để dễ tái sử dụng
+- ltdt@mbv
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT222 - Vũ Nhật Quang </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được do nén file sai cách.
+- Tạo class tương đối ổn, có kiểm tra trùng id khi nhập.
+
+**🔧 Cần cải thiện**
+- Cần nén cả project bằng gồm các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT042 - Trần Đức Dương </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Bài làm khá tốt.
+- Cần cải thiện một số chỗ.
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- Nên viết đầy đủ các thành phần trong class như các hàm getter, setter, toString
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT094 - Lê Ngọc Hùng </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Tạo các class và menu tốt
+- Cần cải thiện một số chỗ.
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- Phần in ra danh sách, chỉ số không thể chạy đển size() được. Điều kiện nên là i < fruits.size()
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT130 - Lê Công Tuấn Khôi </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được do nên file sai cách.
+- Cần cải thiện một số chỗ.
+
+**🔧 Cần cải thiện**
+- Cần nên cả project bao gồm các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- Phần menu nên tách ra 1 class khác.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT015 - Nguyễn Hoàng Nhật Bảo </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Bài làm tốt, cần cải thiện một số chỗ.
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- Hàm toString ở 2 class con nên viết lại để in ra đầy đủ thông tin
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT058 - Lê Công Đức </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Có kiểm tra được id trùng khi nhập.
+- Bài làm tuyệt vời
+
+**🔧 Cần cải thiện**
+- Hàm setID ở Fruit bị sai 1 tý, do tham số truyền và là **iD** nhưng lại sử dụng là **ID**
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT112 - Đặng Nguyễn Hưng </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được do nén file sai cách.
+- Tạo các class rất tốt
+- Có kiểm tra trùng id khi nhập
+
+**🔧 Cần cải thiện**
+- Cần nén cả project bao gồm các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT036 - Hoàng Công Dũng </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Sáng tạo khi cho **id** tự động tăng
+- Menu dễ dùng
+
+**🔧 Cần cải thiện**
+- Nếu đã cho id tự tăng thì không cần nhập **id** vào nữa.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT256 - Trần Mạnh Thắng </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Tạo các class tốt.
+- Cần cải thiện một số chỗ
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- In ra thông tin nên in ra hàm toString cho dễ quan sát.
+- Hàm sizeOfFruitList có thể in ra luôn fruitList.size()
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT269 - Nguyễn Văn Thuận </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Tạo các class tốt
+- Menu dễ dùng
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- Đưa ra các Fruit của priceForSale > 20 nên đưa ra hàm toString của Fruit đó
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT137 - Nguyễn Quang Kính </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được.
+- Menu dễ dùng.
+- Tạo các class rất tốt.
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- Danh sách Ftuit nên in ra mỗi cái một dòng
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23CE??? - Bùi Trần Bảo Phúc </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Bài làm rất tốt
+- Không thuộc lớp trợ giảng nhưng vẫn làm bài tập, tính thần rất tốt
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT178 - Lê Thị Thúy Nga </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- a
+
+**🔧 Cần cải thiện**
+- a
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT178 - Lê Thị Thúy Nga </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- a
+
+**🔧 Cần cải thiện**
+- a
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT178 - Lê Thị Thúy Nga </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- a
+
+**🔧 Cần cải thiện**
+- a
+
+</details>
+
+</details>
 
 ### Ví dụ 3: Quản lí sản phẩm
 
