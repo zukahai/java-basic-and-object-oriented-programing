@@ -782,6 +782,14 @@ theo yêu cầu.
 ```
 
 <details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+
+Hãy tải xuống **[FruitManagement.zip](./FruitMamagement.zip)**
+
+</details>
+<br>
+
+<details>
 <summary> <strong>🎒 Nhận xét bài làm  📝</strong></summary>
 
 <details>
@@ -872,7 +880,7 @@ theo yêu cầu.
 
 **🔧 Cần cải thiện**
 - **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
-- cnn-ttth
+- cnn@ttth
 
 </details>
 
@@ -1133,7 +1141,7 @@ theo yêu cầu.
 </details>
 
 <details>
-<summary> <strong>👨‍🎓 23CE??? - Bùi Trần Bảo Phúc </strong></summary>
+<summary> <strong>👨‍🎓 23CE?? - Bùi Trần Bảo Phúc </strong></summary>
 <br>
 
 **💬 Nhận xét chung**
@@ -1143,38 +1151,329 @@ theo yêu cầu.
 </details>
 
 <details>
-<summary> <strong>👨‍🎓 23IT178 - Lê Thị Thúy Nga </strong></summary>
+<summary> <strong>👩‍🎓 23IT001 - Đặng Ngọc Thúy An </strong></summary>
 <br>
 
 **💬 Nhận xét chung**
-- a
+- Bài làm tốt tuy nhiên có 1 chỗ chưa đúng yêu cầu của đề
+- Đã kiểm tra được trùng id khi thêm Fruit.
 
 **🔧 Cần cải thiện**
-- a
+- Fruit phải implement interface **IFruit** nha.
+- Sau dấu ":" nên có 1 dấu cách để dễ thấy thông tin cần nhập hơn
 
 </details>
 
 <details>
-<summary> <strong>👨‍🎓 23IT178 - Lê Thị Thúy Nga </strong></summary>
+<summary> <strong>👨‍🎓 23IT321 - Đào Thanh Vương </strong></summary>
 <br>
 
 **💬 Nhận xét chung**
-- a
+- Code chạy được
+- Triển khai project chưa tốt
+- Một chức năng chưa đúng
 
 **🔧 Cần cải thiện**
-- a
+- Nên chia thành các file riêng biệt
+- Ở chức năng số 1, có 2 loại Fruit nên khi nhập cho nhập từng loại
+- Các class nên có đầy đủ getter, setter
 
 </details>
 
 <details>
-<summary> <strong>👨‍🎓 23IT178 - Lê Thị Thúy Nga </strong></summary>
+<summary> <strong>👩‍🎓 23IT070 - Dương Thị Thúy Hiền </strong></summary>
 <br>
 
 **💬 Nhận xét chung**
-- a
+- Code chạy được
+- Tạo các class tốt
+- Menu dễ dùng
+- Vẫn còn một số chỗ cần cài thiện
 
 **🔧 Cần cải thiện**
-- a
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+- Hàm **toString** ở 2 class con cần viết lại đầy đủ thông tin.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT283 - Lê Quốc Trí </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Tạo các class còn thiếu các thành phần
+- Các chức năng chưa sử dụng được
+
+**🔧 Cần cải thiện**
+- Các chức năng chưa sử dụng được bởi vì ngay chức năng thêm đã không sử dụng đươc
+- Cần có hàm toString ở các class
+- Nên tác interface ra một file khác.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT136 - Nguyễn Gia Kiệt </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Một số chỗ chưa đúng yêu cầu đề bài
+
+**🔧 Cần cải thiện**
+- Chưa ghi đề lại phương thức **priceForSale** ở 2 class con
+- Các hàm khởi tạo mặc định phải gán các giá trị mặc định cho các thuộc tính.
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT033 - Nguyễn Mạnh Cường </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Tạo các class tương đối tốt
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+- Phần menu nên tách ra các hàm, tránh xử lý ở trong hàm main() quá nhiều
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT301 - Nguyễn Thanh Tùng </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được do nén file sai cách
+- Các class tạo chưa đầy đủ thông tin
+- Menu tương đối tốt
+**🔧 Cần cải thiện**
+- Cần nén cả project bao gồm các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+- Các class cần có đầy đủ getter, setter
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+- Menu nên tách ra thành 1 class khác
+- ntt@pqt
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT018 - Phạm Quốc Bảo </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được do nén file sai cách
+- Menu dễ dùng
+- Các hàm xử lí viết tốt
+
+**🔧 Cần cải thiện**
+- Cần nén cả project bao gồm các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+- 2 class con chưa có hàm **toString**
+- Tên biến không nên viết hoa chữ cái đầu
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT310 - Phạm Quốc Việt </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được do nén file sai cách
+- Các class còn thiếu thành phần
+- Menu khá dễ dùng
+
+**🔧 Cần cải thiện**
+- Cần nén cả project bao gồm các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+- 2 class con chưa có hàm **toString**
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+- In ra danh sách nên in ra toString, để dễ dang quan sát hơn.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT166 - Trần Châu Minh </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Triển khai code, các folder tốt
+- Menu dễ dùng
+- Bài làm tương đối tốt, tuy nhiên chức năng thêm chưa bắt được lỗi trùng id
+
+**🔧 Cần cải thiện**
+- - **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT069 - Trần Thành Hậu </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Tạo các class tốt
+- Có kiểm tra được **id** đã tồn tại trước đó.
+- Menu dễ dùng
+- Bài làm tốt
+
+**🔧 Cần cải thiện**
+- Ở FruitList, hàm khởi tạo sẽ không có **void** nữa
+
+</details>
+
+<details>
+<summary> <strong>👩‍🎓 23IT117 - Từ Thị Thanh Hương</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Menu dễ dùng, đẹp
+- Cần cải thiện một số thứ.
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+- cnn@ttth
+
+</details>
+
+<details>
+<summary> <strong>👩‍🎓 23IT044 - Võ Thùy Dương </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được, do nén file sai cách
+- Menu khá dễ dùng
+- Còn một số yếu tố cần cải thiện
+
+**🔧 Cần cải thiện**
+- Cần nén cả project bao gồm các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+- Các hàm toString ở các class con nên có đầy đủ thông tin của lớp cha.
+- **id** là duy nhất, nên không thể thêm được được Fruit có **id** đã tồn tại.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT255 - Phạm Quốc Thắng </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được do nén file sai cách
+- Các class tạo chưa đầy đủ thông tin
+- Menu tương đối tốt
+**🔧 Cần cải thiện**
+- Cần nén cả project bao gồm các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+- Các class cần có đầy đủ getter, setter
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+- Menu nên tách ra thành 1 class khác
+- ntt@pqt
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT226 - Huỳnh Hiến Anh Quý </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được do nén file sai cách
+- Tạo các class tương đối tốt
+- Menu dễ hiểu
+- Các chức năng khá ổn trừ chức năng thêm
+
+**🔧 Cần cải thiện**
+- Cần nén cả project bao gồm các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT154 - Bùi Đoàn Duy Lưu</strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được do nén file sai cách
+- Chưa tạo interface
+- Có kiểm tra được trùng id khi thêm
+- Menu tốt, đẹp, dễ dùng
+- Bài làm rất tuyệt, cơ mà nén file sai cách mất rồi
+
+**🔧 Cần cải thiện**
+- Cần nén cả project bao gồm các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+
+</details>
+
+<details>
+<summary> <strong>👩‍🎓 23IT229 - Nguyễn Thị Tú Quyên </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Các class còn thiếu thành phần
+- Menu dễ dùng
+
+**🔧 Cần cải thiện**
+- Nên tách interface ra một file riêng
+- 2 class con phải có hàm **toString**
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT026 - Nguyễn Thanh Châu </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chưa chạy được do nén file sai cách
+- Tạo các class tốt
+
+**🔧 Cần cải thiện**
+- Cần nén cả project bao gồm các folder .settings, bin, src,... Xem lại cách nên code [Tại đây](https://github.com/zukahai/java-basic-and-object-oriented-programing/blob/main/submit.md)
+- Nên có hàm input để sau nó dễ tái sử dụng
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT077 - Nguyễn Trung Hiếu </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Tạo các class tốt
+- Menu dễ dùng
+
+**🔧 Cần cải thiện**
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+- Nên in hàm toString để in ra thông tin, không nên in ra từng thuộc tính như vậy sẽ rất khó đẻ quan sát
+
+</details>
+
+<details>
+<summary> <strong>👨‍🎓 23IT160 - Văn Công Mạnh </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Triển khai code không tốt
+- Các class tạo tốt
+
+**🔧 Cần cải thiện**
+- Tác các file ra rõ ràng từng file một
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
+- Nên tạo hàm input để nhập thông tin, sau này dễ tái sử dụng
+
+</details>
+
+<details>
+<summary> <strong>👩‍🎓 23IT169 - Văn Thị Phước My </strong></summary>
+<br>
+
+**💬 Nhận xét chung**
+- Code chạy được
+- Tạo các class còn thiếu thành phần
+- Chia hàm ra rất tốt
+
+**🔧 Cần cải thiện**
+- Tên class cũng nên trùng với tên interfacer là IFruit.java
+- Nên có đầy đủ hàm khởi tạo mặc định ở các class
+- Nên có hàm toString ở tất cả các class FruitIn, FruitOut
+- **id** là duy nhất, nên không thể thêm Fruit có **id** đã tồn tại trước đó.
 
 </details>
 
