@@ -494,7 +494,7 @@ Phần "Thao tác với cơ sở dữ liệu" trong bài tập này nhằm giúp
 </details>
 <br>
 
-**🎯 Số lượng ví dụ: 0**
+**🎯 Số lượng ví dụ: 1**
 
 👁️ Xem bài tập **[Tại đây](./swing-sql/)**
 

@@ -40,12 +40,12 @@ Lúc này project sẽ có cấu trúc như thế này:
 ### Kiểm tra kết nối
 Tạo 1 class có nội dung như sau:
 ```java
-package test;
+package model;
 
 import java.sql.*;
 
-public class Connect {
-	public Connection getConnection() {
+public class ConnectJDBC {
+	public static Connection getConnection() {
 		Connection conn = null;
 		try{ 
 			   String userName = "root";
@@ -63,9 +63,10 @@ public class Connect {
 	}
 	
 	public static void main(String[] args) {
-		new Connect().getConnection();
+		ConnectJDBC.getConnection();
 	}
 }
+
 ```
 
 Nếu màn hình console chỉ hiện chữ "OK" thì bạn đã hoàn tất mọi thứ. Lưu ý là cần start Apache và MySql của xampp trước khi chạy code.
