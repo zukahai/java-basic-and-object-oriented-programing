@@ -30,22 +30,481 @@
 <h3 id="ví-dụ-1">Ví dụ 1 </h3>
 <p>Thiết kế giao diện cho một <strong>JButton</strong> click, khi bấm vào thì sẽ in ra chữ "Hello World" ở màn hình console.</p>
 <div align="center"><img src="./images/ui.png"></div>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">test</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span></span><span class="token class-name">EventQueue</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JFrame</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JPanel</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span>border<span class="token punctuation">.</span></span><span class="token class-name">EmptyBorder</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JButton</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionListener</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionEvent</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Test</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">JFrame</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JPanel</span> contentPane<span class="token punctuation">;</span>
+
+	<span class="token doc-comment comment">/**
+	 * Launch the application.
+	 */</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">EventQueue</span><span class="token punctuation">.</span><span class="token function">invokeLater</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+					<span class="token class-name">Test</span> frame <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					frame<span class="token punctuation">.</span><span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token doc-comment comment">/**
+	 * Create the frame.
+	 */</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">setDefaultCloseOperation</span><span class="token punctuation">(</span><span class="token class-name">JFrame</span><span class="token punctuation">.</span><span class="token constant">EXIT_ON_CLOSE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">450</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JPanel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">setBorder</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">EmptyBorder</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token function">setContentPane</span><span class="token punctuation">(</span>contentPane<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token keyword keyword-null">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">JButton</span> btnNewButton <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"Click"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		btnNewButton<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		btnNewButton<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">,</span> <span class="token number">256</span><span class="token punctuation">,</span> <span class="token number">67</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnNewButton<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></details>
+<br>
 <h3 id="ví-dụ-2">Ví dụ 2 </h3>
 <p>Thiết kế giao diện cho một <strong>JButton</strong> click và một <strong>JLabel</strong> label, khi bấm vào button thì giá trị ở lable tăng lên 1 đơn vị</p>
 <div align="center"><img src="./images/ui2.png"></div>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code></code></pre></details>
+<br>
 <h3 id="ví-dụ-3">Ví dụ 3 </h3>
 <p>Thiết kế giao diện cho một <strong>JButton</strong> click và một <strong>JtextField</strong> text, khi bấm vào button thì in ra giá trị đã nhập ở text</p>
 <div align="center"><img src="./images/ui3.png"></div>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">test</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span></span><span class="token class-name">EventQueue</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JFrame</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JPanel</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span>border<span class="token punctuation">.</span></span><span class="token class-name">EmptyBorder</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JButton</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionListener</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionEvent</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JLabel</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JTextField</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Test</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">JFrame</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JPanel</span> contentPane<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JTextField</span> textField<span class="token punctuation">;</span>
+
+	<span class="token doc-comment comment">/**
+	 * Launch the application.
+	 */</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">EventQueue</span><span class="token punctuation">.</span><span class="token function">invokeLater</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+					<span class="token class-name">Test</span> frame <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					frame<span class="token punctuation">.</span><span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token doc-comment comment">/**
+	 * Create the frame.
+	 */</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">setDefaultCloseOperation</span><span class="token punctuation">(</span><span class="token class-name">JFrame</span><span class="token punctuation">.</span><span class="token constant">EXIT_ON_CLOSE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">450</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JPanel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">setBorder</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">EmptyBorder</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token function">setContentPane</span><span class="token punctuation">(</span>contentPane<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token keyword keyword-null">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		textField <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JTextField</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		textField<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">69</span><span class="token punctuation">,</span> <span class="token number">37</span><span class="token punctuation">,</span> <span class="token number">291</span><span class="token punctuation">,</span> <span class="token number">67</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">JButton</span> btnNewButton <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"Click"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		btnNewButton<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token class-name">String</span> text <span class="token operator">=</span> textField<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Content: "</span> <span class="token operator">+</span> text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		btnNewButton<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">140</span><span class="token punctuation">,</span> <span class="token number">256</span><span class="token punctuation">,</span> <span class="token number">67</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnNewButton<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>textField<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		textField<span class="token punctuation">.</span><span class="token function">setColumns</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></details>
+<br>
 <h3 id="ví-dụ-4">Ví dụ 4 </h3>
 <p>Thiết kế giao diện như hình bên dưới, cho phép nhập vào 2 số nguyên và tính kết quả của từng phép tính tương ứng khi bấm nút +, -, *, /</p>
 <div align="center"><img src="./images/ui5.png"></div>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">test</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span></span><span class="token class-name">EventQueue</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JFrame</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JPanel</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span>border<span class="token punctuation">.</span></span><span class="token class-name">EmptyBorder</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JButton</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionListener</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionEvent</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JLabel</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JOptionPane</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JTextField</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Test</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">JFrame</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JPanel</span> contentPane<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JLabel</span> lblNewLabel<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JButton</span> nutton1<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JTextField</span> text1<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JTextField</span> text2<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JLabel</span> lblNumber<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JTextField</span> text3<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JLabel</span> lblResult<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JButton</span> button2<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JButton</span> button3<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JButton</span> button4<span class="token punctuation">;</span>
+
+	<span class="token doc-comment comment">/**
+	 * Launch the application.
+	 */</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">EventQueue</span><span class="token punctuation">.</span><span class="token function">invokeLater</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+					<span class="token class-name">Test</span> frame <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					frame<span class="token punctuation">.</span><span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token doc-comment comment">/**
+	 * Create the frame.
+	 */</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">setDefaultCloseOperation</span><span class="token punctuation">(</span><span class="token class-name">JFrame</span><span class="token punctuation">.</span><span class="token constant">EXIT_ON_CLOSE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">450</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JPanel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">setBorder</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">EmptyBorder</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token function">setContentPane</span><span class="token punctuation">(</span>contentPane<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token keyword keyword-null">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		lblNewLabel <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JLabel</span><span class="token punctuation">(</span><span class="token string">"Number 1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		lblNewLabel<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">38</span><span class="token punctuation">,</span> <span class="token number">78</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>lblNewLabel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		nutton1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"+"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		nutton1<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+					<span class="token class-name">String</span> text_1 <span class="token operator">=</span> text1<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token class-name">String</span> text_2 <span class="token operator">=</span> text2<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-int">int</span> number1 <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>text_1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-int">int</span> number2 <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>text_2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-int">int</span> result <span class="token operator">=</span> number1 <span class="token operator">+</span> number2<span class="token punctuation">;</span>
+					text3<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>result <span class="token operator">+</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					<span class="token comment">// TODO: handle exception</span>
+					<span class="token class-name">JOptionPane</span><span class="token punctuation">.</span><span class="token function">showMessageDialog</span><span class="token punctuation">(</span><span class="token keyword keyword-null">null</span><span class="token punctuation">,</span> <span class="token string">"Error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		nutton1<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">182</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>nutton1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		text1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JTextField</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		text1<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">159</span><span class="token punctuation">,</span> <span class="token number">29</span><span class="token punctuation">,</span> <span class="token number">221</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>text1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		text1<span class="token punctuation">.</span><span class="token function">setColumns</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		text2 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JTextField</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		text2<span class="token punctuation">.</span><span class="token function">setColumns</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		text2<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">159</span><span class="token punctuation">,</span> <span class="token number">72</span><span class="token punctuation">,</span> <span class="token number">221</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>text2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		lblNumber <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JLabel</span><span class="token punctuation">(</span><span class="token string">"Number 2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		lblNumber<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">78</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>lblNumber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		text3 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JTextField</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		text3<span class="token punctuation">.</span><span class="token function">setColumns</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		text3<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">159</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">,</span> <span class="token number">221</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>text3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		lblResult <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JLabel</span><span class="token punctuation">(</span><span class="token string">"Result"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		lblResult<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">129</span><span class="token punctuation">,</span> <span class="token number">78</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>lblResult<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		button2 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"-"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		button2<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+					<span class="token class-name">String</span> text_1 <span class="token operator">=</span> text1<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token class-name">String</span> text_2 <span class="token operator">=</span> text2<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-int">int</span> number1 <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>text_1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-int">int</span> number2 <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>text_2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-int">int</span> result <span class="token operator">=</span> number1 <span class="token operator">-</span> number2<span class="token punctuation">;</span>
+					text3<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>result <span class="token operator">+</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					<span class="token comment">// TODO: handle exception</span>
+					<span class="token class-name">JOptionPane</span><span class="token punctuation">.</span><span class="token function">showMessageDialog</span><span class="token punctuation">(</span><span class="token keyword keyword-null">null</span><span class="token punctuation">,</span> <span class="token string">"Error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		button2<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">142</span><span class="token punctuation">,</span> <span class="token number">182</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>button2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		button3 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"x"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		button3<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+					<span class="token class-name">String</span> text_1 <span class="token operator">=</span> text1<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token class-name">String</span> text_2 <span class="token operator">=</span> text2<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-int">int</span> number1 <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>text_1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-int">int</span> number2 <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>text_2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-int">int</span> result <span class="token operator">=</span> number1 <span class="token operator">*</span> number2<span class="token punctuation">;</span>
+					text3<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>result <span class="token operator">+</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					<span class="token comment">// TODO: handle exception</span>
+					<span class="token class-name">JOptionPane</span><span class="token punctuation">.</span><span class="token function">showMessageDialog</span><span class="token punctuation">(</span><span class="token keyword keyword-null">null</span><span class="token punctuation">,</span> <span class="token string">"Error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		button3<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">239</span><span class="token punctuation">,</span> <span class="token number">182</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>button3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		button4 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		button4<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+					<span class="token class-name">String</span> text_1 <span class="token operator">=</span> text1<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token class-name">String</span> text_2 <span class="token operator">=</span> text2<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-int">int</span> number1 <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>text_1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-int">int</span> number2 <span class="token operator">=</span> <span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>text_2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-float">float</span> result <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-float">float</span><span class="token punctuation">)</span>number1 <span class="token operator">/</span> number2<span class="token punctuation">;</span>
+					text3<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>result <span class="token operator">+</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					<span class="token comment">// TODO: handle exception</span>
+					<span class="token class-name">JOptionPane</span><span class="token punctuation">.</span><span class="token function">showMessageDialog</span><span class="token punctuation">(</span><span class="token keyword keyword-null">null</span><span class="token punctuation">,</span> <span class="token string">"Error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		button4<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">336</span><span class="token punctuation">,</span> <span class="token number">182</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>button4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></details>
+<br>
 <h3 id="ví-dụ-5">Ví dụ 5 </h3>
 <p>Thiết kế giao diện như hình bên dưới cho phép được chọn. Mặc định ban đầu chọn 'Nữ', chỉ cho phép chọn 1 trong 3 lựa chọn. Bấm submit sẽ hiện giới tính đã chọn ở màn hình console.</p>
 <p>Gợi ý: Dùng <strong>JRadioButton</strong> để tạo các lựa chọn và dùng <strong>ButtonGroup</strong> để nhóm 3 radio thành 1 nhóm, lúc này chỉ cho phép chọn 1 trong 3 radio.</p>
-<h3 id="ví-dụ-6">Ví dụ 6 </h3>
 <div align="center"><img src="./images/ui7.png"></div>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">test</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span></span><span class="token class-name">EventQueue</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JFrame</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JPanel</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span>border<span class="token punctuation">.</span></span><span class="token class-name">EmptyBorder</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JRadioButton</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">ButtonGroup</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JButton</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionListener</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionEvent</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Ex5</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">JFrame</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JPanel</span> contentPane<span class="token punctuation">;</span>
+
+	<span class="token doc-comment comment">/**
+	 * Launch the application.
+	 */</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">EventQueue</span><span class="token punctuation">.</span><span class="token function">invokeLater</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+					<span class="token class-name">Ex5</span> frame <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Ex5</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					frame<span class="token punctuation">.</span><span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token doc-comment comment">/**
+	 * Create the frame.
+	 */</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Ex5</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">setDefaultCloseOperation</span><span class="token punctuation">(</span><span class="token class-name">JFrame</span><span class="token punctuation">.</span><span class="token constant">EXIT_ON_CLOSE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">450</span><span class="token punctuation">,</span> <span class="token number">238</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JPanel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">setBorder</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">EmptyBorder</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token function">setContentPane</span><span class="token punctuation">(</span>contentPane<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token keyword keyword-null">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">JRadioButton</span> rd1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JRadioButton</span><span class="token punctuation">(</span><span class="token string">"Nam"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		rd1<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">,</span> <span class="token number">109</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>rd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">JRadioButton</span> rd2 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JRadioButton</span><span class="token punctuation">(</span><span class="token string">"Nữ"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		rd2<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">161</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">,</span> <span class="token number">109</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>rd2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">JRadioButton</span> rd3 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JRadioButton</span><span class="token punctuation">(</span><span class="token string">"Khác"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		rd3<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">296</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">,</span> <span class="token number">109</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>rd3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">ButtonGroup</span> buttonGroup <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ButtonGroup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		buttonGroup<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>rd1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		buttonGroup<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>rd2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		buttonGroup<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>rd3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		rd2<span class="token punctuation">.</span><span class="token function">setSelected</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">JButton</span> btnNewButton <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"submit"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		btnNewButton<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>rd1<span class="token punctuation">.</span><span class="token function">isSelected</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+					<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>rd1<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>rd2<span class="token punctuation">.</span><span class="token function">isSelected</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+					<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>rd2<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>rd3<span class="token punctuation">.</span><span class="token function">isSelected</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+					<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>rd3<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		btnNewButton<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">164</span><span class="token punctuation">,</span> <span class="token number">129</span><span class="token punctuation">,</span> <span class="token number">89</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnNewButton<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
+<br>
+<h3 id="ví-dụ-6">Ví dụ 6 </h3>
 <p>Thiết kế giao diện như hình bên dưới, Chú ý password nên để là <strong>JPasswordField</strong>. Khi login thì in ra thông tin đăng nhập ra màn hình console.</p>
 <div align="center"><img src="./images/ui4.png"></div>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">test</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span></span><span class="token class-name">EventQueue</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JFrame</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JPanel</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span>border<span class="token punctuation">.</span></span><span class="token class-name">EmptyBorder</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JLabel</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JTextField</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JPasswordField</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token class-name">JButton</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionListener</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionEvent</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Ex6</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">JFrame</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JPanel</span> contentPane<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JTextField</span> username<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">JPasswordField</span> password<span class="token punctuation">;</span>
+
+	<span class="token doc-comment comment">/**
+	 * Launch the application.
+	 */</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">EventQueue</span><span class="token punctuation">.</span><span class="token function">invokeLater</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+					<span class="token class-name">Ex6</span> frame <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Ex6</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					frame<span class="token punctuation">.</span><span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token doc-comment comment">/**
+	 * Create the frame.
+	 */</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Ex6</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token function">setDefaultCloseOperation</span><span class="token punctuation">(</span><span class="token class-name">JFrame</span><span class="token punctuation">.</span><span class="token constant">EXIT_ON_CLOSE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">517</span><span class="token punctuation">,</span> <span class="token number">301</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JPanel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">setBorder</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">EmptyBorder</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token function">setContentPane</span><span class="token punctuation">(</span>contentPane<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">setLayout</span><span class="token punctuation">(</span><span class="token keyword keyword-null">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">JLabel</span> lblNewLabel <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JLabel</span><span class="token punctuation">(</span><span class="token string">"Username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		lblNewLabel<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">58</span><span class="token punctuation">,</span> <span class="token number">98</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>lblNewLabel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">JLabel</span> lblNewLabel_1 <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JLabel</span><span class="token punctuation">(</span><span class="token string">"Password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		lblNewLabel_1<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">,</span> <span class="token number">79</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>lblNewLabel_1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		username <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JTextField</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		username<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">157</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">,</span> <span class="token number">283</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		username<span class="token punctuation">.</span><span class="token function">setColumns</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		password <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JPasswordField</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		password<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">157</span><span class="token punctuation">,</span> <span class="token number">118</span><span class="token punctuation">,</span> <span class="token number">283</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token class-name">JButton</span> btnNewButton <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"Login"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		btnNewButton<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Username:\t"</span> <span class="token operator">+</span> username<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Password:\t"</span> <span class="token operator">+</span> password<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		btnNewButton<span class="token punctuation">.</span><span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token number">167</span><span class="token punctuation">,</span> <span class="token number">188</span><span class="token punctuation">,</span> <span class="token number">174</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		contentPane<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btnNewButton<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></details>
+<br>
 <h3 id="ví-dụ-7">Ví dụ 7 </h3>
 <p>Tạo class <strong>Student</strong> dùng để biểu diễn những sinh viên.<br>Bao gồm:</p>
 <ul>
@@ -54,6 +513,7 @@
 <li><strong>masv</strong>: String, đại diện cho mã sinh viên, nó là duy nhất.</li>
 <li><strong>name</strong>: String, đại diện cho tên của sinh viên.</li>
 <li><strong>age</strong>: int, đại diện cho tuổi của sinh viên.</li>
+<li><strong>gender</strong>: String, đại diện cho giới tính</li>
 </ul>
 </li>
 <li>Các phương thức:
@@ -71,6 +531,11 @@
 <p>Tạo class <strong>StudentManager</strong> implement interface <strong>IManager</strong> dùng để quản li sinh viên</p>
 <p>Thiết kế giao diện như hình bên dưới, cho phép nhập dữ liệu và hiện thị tất cả dữ liệu đã nhập bên table (Dùng JTable để thiết kế)</p>
 <div align="center"><img src="./images/ui6.png"></div>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<p>Tải code ví dụ 7 <a href="./UI_StudentManager.zip">Tại đây</a></p>
+</details>
+<br>
 
       </div>
       
