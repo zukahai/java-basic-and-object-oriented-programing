@@ -84,6 +84,69 @@ Thiết kế giao diện cho một **JButton** click và một **JLabel** label,
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
 
 ```java
+package test;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class App extends JFrame {
+
+	private JPanel contentPane;
+	private int count = 0;
+	private JLabel label;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					App frame = new App();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public App() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnNewButton = new JButton("Click");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				count ++;
+				label.setText(count + "");
+			}
+		});
+		btnNewButton.setBounds(92, 152, 256, 67);
+		contentPane.add(btnNewButton);
+		
+		label = new JLabel("0");
+		label.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		label.setBounds(195, 54, 74, 43);
+		contentPane.add(label);
+	}
+}
 
 ```
 
