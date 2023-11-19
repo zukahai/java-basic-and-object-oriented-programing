@@ -172,3 +172,71 @@ Tại giao diện hiện thị chọn tag **Installed**, kéo xuống 2 phần *
 
 Cần chờ một xíu để cập nhật, sau khi cập nhập xong thì **Eclipse** sẽ yêu cầu **restart**
 
+# 5. Lỗi khi cài đặt XamPP
+
+## 5.1 Lỗi trùng port
+
+<div align="center"><img src="./assets/xampp/xampp1.png"></div>
+
+Nếu bạn bị lỗi như trên hãy xử lí như sau:
+
+**Bước 1**: Chọn vào config ở phần Apache, **chọn Apache(httpd.conf)**
+<div align="center"><img src="./assets/xampp/xampp2.png"></div>
+
+**Tìm phần nôi dung:**
+
+```text
+Listen 80
+```
+và đổi thành
+
+```text
+Listen 8090
+```
+
+**Tìm phần nội dung:**
+
+```text
+ServerName localhost:80
+```
+
+và đổi thành
+
+```text
+ServerName localhost:8080
+```
+
+Tiến hành lưu lại file **httpd-ssl.conf**
+
+**Bước 2**: Chọn vào cofig ở phần Apache chọn **Apache (httpd-ssl.conf)**
+
+**Tìm phần nội dung:**
+
+```text
+Listen 443
+```
+
+và đổi thành
+
+```text
+Listen 4433
+```
+
+**Tìm phần nội dung:**
+
+```text
+<VirtualHost _default_:443>
+
+ServerName localhost:443
+```
+
+và đổi thành
+
+```text
+<VirtualHost _default_:4433>
+
+ServerName localhost:4433
+```
+Tiến hành lưu file **httpd-ssl.conf**
+
+Khởi động lại **Xampp**
