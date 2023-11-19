@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>Thao tác với cơ sở dữ liệu</title>
+	<title>Thao tác với cơ sở dữ liệu</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -95,6 +95,487 @@ Trong SQL tạo database studentmamangement, tạo table student gồm các cộ
 </ul>
 </li>
 </ul>
+<details>
+<summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
+<br>
+<p><strong>Tải File <a href="./StudentManagement.zip">StudentManager.zip</a></strong><br>
+<br></p>
+<p>Class <strong>ConnectJDBC</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">models</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">ConnectJDBC</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token class-name">Connection</span> <span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Connection</span> conn <span class="token operator">=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span><span class="token punctuation">{</span> 
+			   <span class="token class-name">String</span> userName <span class="token operator">=</span> <span class="token string">"root"</span><span class="token punctuation">;</span>
+			   <span class="token class-name">String</span> password <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+			   <span class="token class-name">String</span> <span class="token class-name">DatabaseName</span> <span class="token operator">=</span> <span class="token string">"student_manager"</span><span class="token punctuation">;</span>
+			   <span class="token class-name">String</span> url <span class="token operator">=</span> <span class="token string">"jdbc:mysql://localhost/"</span> <span class="token operator">+</span> <span class="token class-name">DatabaseName</span><span class="token punctuation">;</span>
+			   <span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.cj.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			   conn <span class="token operator">=</span> <span class="token class-name">DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> userName<span class="token punctuation">,</span> password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			   <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Ok"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token comment">// TODO: handle exception</span>
+			e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword keyword-return">return</span> conn<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">ConnectJDBC</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><br>
+<p>Interface <strong>IManager</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">interfaces</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">models<span class="token punctuation">.</span></span><span class="token class-name">Student</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">IManager</span> <span class="token punctuation">{</span>
+	<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> <span class="token function">getAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-boolean">boolean</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">Student</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-boolean">boolean</span> <span class="token function">edit</span><span class="token punctuation">(</span><span class="token class-name">String</span> masv<span class="token punctuation">,</span> <span class="token class-name">Student</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword keyword-boolean">boolean</span> <span class="token function">delete</span><span class="token punctuation">(</span><span class="token class-name">String</span> masv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> <span class="token function">findByName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> <span class="token function">findByAddress</span><span class="token punctuation">(</span><span class="token class-name">String</span> address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token class-name">Student</span> <span class="token function">findByMasv</span><span class="token punctuation">(</span><span class="token class-name">String</span> masv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre><br>
+<p>Class <strong>Student</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">models</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> id<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> masv<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">String</span> address<span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>masv <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>address <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> id<span class="token punctuation">,</span> <span class="token class-name">String</span> masv<span class="token punctuation">,</span> <span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> address<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>masv <span class="token operator">=</span> masv<span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>address <span class="token operator">=</span> address<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> <span class="token string">"Student [id="</span> <span class="token operator">+</span> id <span class="token operator">+</span> <span class="token string">", masv="</span> <span class="token operator">+</span> masv <span class="token operator">+</span> <span class="token string">", name="</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">", address="</span> <span class="token operator">+</span> address <span class="token operator">+</span> <span class="token string">"]"</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập mã sinh viên: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>masv <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập tên: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập địa chỉ: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>address <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token comment">// TODO: handle exception</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> id<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setId</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getMasv</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> masv<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setMasv</span><span class="token punctuation">(</span><span class="token class-name">String</span> masv<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>masv <span class="token operator">=</span> masv<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> name<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-return">return</span> address<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">setAddress</span><span class="token punctuation">(</span><span class="token class-name">String</span> address<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>address <span class="token operator">=</span> address<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre><br>
+<p>Class <strong>StudentManager</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">models</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token class-name">Connection</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span><span class="token operator">*</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">interfaces<span class="token punctuation">.</span></span><span class="token class-name">IManager</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">StudentManager</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">IManager</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">Connection</span> connection<span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">StudentManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		connection <span class="token operator">=</span> <span class="token class-name">ConnectJDBC</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> <span class="token function">getAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// TODO Auto-generated method stub</span>
+		<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> ans <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+			<span class="token class-name">Statement</span> statement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">createStatement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"SELECT * FROM student"</span><span class="token punctuation">;</span>
+			<span class="token class-name">ResultSet</span> resultSet <span class="token operator">=</span> statement<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>resultSet<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-int">int</span> id <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">String</span> masv <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"masv"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">String</span> name <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">String</span> address <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"address"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">Student</span> student <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> masv<span class="token punctuation">,</span> name<span class="token punctuation">,</span> address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				ans<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-return">return</span> ans<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword keyword-return">return</span> ans<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-boolean">boolean</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">Student</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+			<span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"INSERT INTO student (masv, name, address) VALUES (?, ?, ?)"</span><span class="token punctuation">;</span>
+			<span class="token class-name">PreparedStatement</span> preparedStatement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			preparedStatement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span><span class="token function">getMasv</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			preparedStatement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			preparedStatement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span><span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			<span class="token keyword keyword-int">int</span> rowsAffected <span class="token operator">=</span> preparedStatement<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>rowsAffected <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-return">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">SQLException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-return">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword keyword-return">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-boolean">boolean</span> <span class="token function">edit</span><span class="token punctuation">(</span><span class="token class-name">String</span> masv<span class="token punctuation">,</span> <span class="token class-name">Student</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+			<span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"UPDATE student SET masv=?, name=?, address=? WHERE masv=?"</span><span class="token punctuation">;</span>
+			<span class="token class-name">PreparedStatement</span> preparedStatement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			preparedStatement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span><span class="token function">getMasv</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			preparedStatement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			preparedStatement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span><span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			preparedStatement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> masv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			<span class="token keyword keyword-int">int</span> rowsAffected <span class="token operator">=</span> preparedStatement<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>rowsAffected <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-return">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">SQLException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-return">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword keyword-return">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-boolean">boolean</span> <span class="token function">delete</span><span class="token punctuation">(</span><span class="token class-name">String</span> masv<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+			<span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"DELETE FROM student WHERE masv=?"</span><span class="token punctuation">;</span>
+			<span class="token class-name">PreparedStatement</span> preparedStatement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			preparedStatement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> masv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-int">int</span> rowsAffected <span class="token operator">=</span> preparedStatement<span class="token punctuation">.</span><span class="token function">executeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>rowsAffected <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-return">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">SQLException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-return">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword keyword-return">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> <span class="token function">findByName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> result <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+			<span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"SELECT * FROM student WHERE name LIKE ?"</span><span class="token punctuation">;</span>
+			<span class="token class-name">PreparedStatement</span> preparedStatement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			preparedStatement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"%"</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">ResultSet</span> resultSet <span class="token operator">=</span> preparedStatement<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>resultSet<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-int">int</span> id <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">String</span> masv <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"masv"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">String</span> studentName <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">String</span> address <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"address"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">Student</span> student <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> masv<span class="token punctuation">,</span> studentName<span class="token punctuation">,</span> address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				result<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">SQLException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-return">return</span> result<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword keyword-return">return</span> result<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> <span class="token function">findByAddress</span><span class="token punctuation">(</span><span class="token class-name">String</span> address<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> result <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+			<span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"SELECT * FROM student WHERE address LIKE ?"</span><span class="token punctuation">;</span>
+			<span class="token class-name">PreparedStatement</span> preparedStatement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			preparedStatement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"%"</span> <span class="token operator">+</span> address <span class="token operator">+</span> <span class="token string">"%"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">ResultSet</span> resultSet <span class="token operator">=</span> preparedStatement<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>resultSet<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-int">int</span> id <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">String</span> masv <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"masv"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">String</span> name <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">Student</span> student <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> masv<span class="token punctuation">,</span> name<span class="token punctuation">,</span> address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+				result<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">SQLException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-return">return</span> result<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword keyword-return">return</span> result<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token annotation punctuation">@Override</span>
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Student</span> <span class="token function">findByMasv</span><span class="token punctuation">(</span><span class="token class-name">String</span> masv<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Student</span> result <span class="token operator">=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+			<span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"SELECT * FROM student WHERE masv=?"</span><span class="token punctuation">;</span>
+			<span class="token class-name">PreparedStatement</span> preparedStatement <span class="token operator">=</span> connection<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			preparedStatement<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> masv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">ResultSet</span> resultSet <span class="token operator">=</span> preparedStatement<span class="token punctuation">.</span><span class="token function">executeQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>resultSet<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-int">int</span> id <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">"id"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">String</span> name <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">String</span> address <span class="token operator">=</span> resultSet<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"address"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				result <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> masv<span class="token punctuation">,</span> name<span class="token punctuation">,</span> address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">SQLException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-return">return</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword keyword-return">return</span> result<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre><br>
+<p>Class <strong>Menu</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">models</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">ArrayList</span></span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Menu</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-private">private</span> <span class="token class-name">StudentManager</span> manager<span class="token punctuation">;</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Menu</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>manager <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">StudentManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword keyword-public">public</span> <span class="token class-name">Menu</span><span class="token punctuation">(</span><span class="token class-name">StudentManager</span> manager<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>manager <span class="token operator">=</span> manager<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> <span class="token function">choice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"+----------- Menu -----------+"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"| 1. Xem danh sách sinh viên |"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"| 2. Thêm sinh viên          |"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"| 3. Sửa thông tin sinh viên |"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"| 4. Xoá sinh viên           |"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"| 5. Tìm kiếm sinh viên      |"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"| 6. Thoát                   |"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"+----------------------------+"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập lựa chọn của bạn: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-return">return</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-private">private</span> <span class="token keyword keyword-int">int</span> <span class="token function">choice</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> subChoice<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>subChoice <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"+------ Tìm kiếm ------+"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"| 1. Theo mã sinh viên |"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"| 2. Theo tên          |"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"| 3. Theo địa chỉ      |"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"+----------------------+"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập lựa chọn của bạn: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-return">return</span> sc<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">displayAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> students <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">getAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">displayArrayList</span><span class="token punctuation">(</span>students<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">addStudent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Student</span> student <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		student<span class="token punctuation">.</span><span class="token function">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-boolean">boolean</span> success <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Thêm thành công"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Thêm thất bại"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">editStudent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập mã sinh viên của sinh viên cần sửa: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">String</span> masv <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">Student</span> student <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">findByMasv</span><span class="token punctuation">(</span>masv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>student <span class="token operator">==</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Mã sinh viên không đúng!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token class-name">Student</span> newStudent <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		newStudent<span class="token punctuation">.</span><span class="token function">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword keyword-boolean">boolean</span> success <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">edit</span><span class="token punctuation">(</span>masv<span class="token punctuation">,</span> newStudent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Sửa thành công"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-else">else</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Sửa thất bại"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">deleteStudent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập mã sinh viên của sinh viên cần xoá: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">String</span> masv <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">Student</span> student <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">findByMasv</span><span class="token punctuation">(</span>masv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>student <span class="token operator">==</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Mã sinh viên không đúng!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-return">return</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token keyword keyword-boolean">boolean</span> success <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>masv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Xoá thành công"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-else">else</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Xoá thất bại"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">searchStudent</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> choice<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token class-name">Scanner</span> sc <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword keyword-boolean">boolean</span> success<span class="token punctuation">;</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>choice <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập mã sinh viên của sinh viên cần tìm kiếm: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">String</span> masv <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">Student</span> student <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">findByMasv</span><span class="token punctuation">(</span>masv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>student <span class="token operator">!=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Tìm kiếm thành công"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Không tìm thấy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>choice <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập tên của sinh viên cần tìm kiếm: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">String</span> name <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> students <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">findByName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token function">displayArrayList</span><span class="token punctuation">(</span>students<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>choice <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Nhập địa chỉ của sinh viên cần tìm kiếm: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">String</span> address <span class="token operator">=</span> sc<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> students <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">findByAddress</span><span class="token punctuation">(</span>address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token function">displayArrayList</span><span class="token punctuation">(</span>students<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">displayArrayList</span><span class="token punctuation">(</span><span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> students<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>students<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Danh sách rỗng"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Danh sách sinh viên"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token class-name">Student</span> student<span class="token operator">:</span> students<span class="token punctuation">)</span>
+				<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword keyword-int">int</span> c<span class="token punctuation">,</span> c2<span class="token punctuation">;</span>
+		<span class="token keyword keyword-do">do</span> <span class="token punctuation">{</span>
+			c <span class="token operator">=</span> <span class="token function">choice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword keyword-switch">switch</span> <span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword keyword-case">case</span> <span class="token number">1</span><span class="token operator">:</span> 
+					<span class="token function">displayAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-case">case</span> <span class="token number">2</span><span class="token operator">:</span>
+					<span class="token function">addStudent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-case">case</span> <span class="token number">3</span><span class="token operator">:</span>
+					<span class="token function">editStudent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-case">case</span> <span class="token number">4</span><span class="token operator">:</span>
+					<span class="token function">deleteStudent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+				<span class="token keyword keyword-case">case</span> <span class="token number">5</span><span class="token operator">:</span>
+					c2 <span class="token operator">=</span> <span class="token function">choice</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token function">searchStudent</span><span class="token punctuation">(</span>c2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span> <span class="token keyword keyword-while">while</span><span class="token punctuation">(</span>c <span class="token operator">!=</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Kết thúc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	
+	
+<span class="token punctuation">}</span>
+</code></pre><br>
+<p>Class <strong>Main</strong></p>
+<pre data-role="codeBlock" data-info="java" class="language-java java"><code><span class="token keyword keyword-package">package</span> <span class="token namespace">main</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token import"><span class="token namespace">models<span class="token punctuation">.</span></span><span class="token class-name">Menu</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+	<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// TODO Auto-generated method stub</span>
+		<span class="token class-name">Menu</span> menu <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Menu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		menu<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Tải File <a href="./StudentManagement.zip">StudentManager.zip</a></strong></p>
+</details>
+<br>    
 
       </div>
       

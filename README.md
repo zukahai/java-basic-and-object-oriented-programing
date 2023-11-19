@@ -498,6 +498,8 @@ Phần "Thao tác với cơ sở dữ liệu" trong bài tập này nhằm giúp
 
 **🎯 Số lượng ví dụ: 1**
 
+✅ Tất cả ví dụ đều đã có code mẫu
+
 👁️ Xem bài tập **[Tại đây](./swing-sql/)**
 
 ## 3. Kết hợp Java Swing và thao tác với cơ sở dữ liệu
