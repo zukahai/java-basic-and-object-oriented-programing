@@ -16,7 +16,7 @@ Nếu xampp hiện như bên dưới, không có lỗi đỏ thì bạn đã cà
 
 <div align="center"><img src="./assets/jdbc/jdbc1.png"></div>
 
-Nếu gặp lỗi, hãy xem qua mội số lỗi thường gặp [Tại đây](./bugs.md)
+Nếu gặp lỗi, hãy xem qua một số lỗi thường gặp **[Tại đây](./bugs.md/#5-lỗi-khi-cài-đặt-xampp)**
 
 ## Cài đặt JDBC và kết nối đến Ecipse
 ### Cài đặt JDBC
