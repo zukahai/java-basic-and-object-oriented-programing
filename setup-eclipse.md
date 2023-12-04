@@ -7,7 +7,7 @@
 
 ## Mục lục
 
-[1. Cài đặt JDK](#1-cài-đặt-jdk)
+[1. Cài đặt JDK](#1-cài-đặt-jdk) 
 
 [2. Cài đặt Eclipse](#2-cài-đặt-eclipse)
 
