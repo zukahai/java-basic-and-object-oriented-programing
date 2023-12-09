@@ -4,7 +4,7 @@
 
 </div>
 
-## 1. Lỗi bộ nhớ đệm, không có nhập chuỗi
+## 1. Lỗi bộ nhớ đệm, không có nhập chuỗi 
 
 Lỗi này thường xảy ra khi bạn nhập số, sau đó lại nhập chuỗi.
 Ví dụ:
