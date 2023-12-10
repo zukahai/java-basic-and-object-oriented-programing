@@ -8,7 +8,7 @@
 
 Lỗi này thường xảy ra khi bạn nhập số, sau đó lại nhập chuỗi.
 Ví dụ:
-
+ 
 ```java
 public static void main(String[] args) {
     // TODO Auto-generated method stub
