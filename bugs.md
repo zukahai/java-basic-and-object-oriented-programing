@@ -2,7 +2,7 @@
 
 # Một số lỗi thường gặp
 
-</div>
+</div> 
 
 ## 1. Lỗi bộ nhớ đệm, không có nhập chuỗi 
 
