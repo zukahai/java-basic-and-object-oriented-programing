@@ -5,7 +5,7 @@
 
 # Lập trình java cơ bản 
 
-## 1. Biến và tính toán cơ bản 
+## 1. Biến và tính toán cơ bản
 
 **🏆 Mục tiêu của phần học này**
 
