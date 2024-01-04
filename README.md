@@ -7,7 +7,7 @@
 
 ## 1. Biến và tính toán cơ bản
 
-**🏆 Mục tiêu của phần học này**
+**🏆 Mục tiêu của phần học này** 
 
 Phần "Biến và tính toán cơ bản" trong bài tập Java này nhằm giúp sinh viên hiểu và làm quen với các khái niệm cơ bản liên quan đến biến, nhập xuất dữ liệu và tính toán trong ngôn ngữ lập trình Java. Các kỹ thuật này là nền tảng quan trọng cho việc phát triển các ứng dụng Java
 
