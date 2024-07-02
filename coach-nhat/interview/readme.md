@@ -293,4 +293,75 @@ System.out.println(b.toString()); // 10
 
 </details>
 
+### 2.11. This và Super
 
+📚 Câu hỏi: Sự khác biệt giữa `this` và `super` trong Java?
+
+<details>
+
+<summary> <strong>Gợi ý trả lời </strong></summary>
+
+**Trả lời ngắn**:
+
+- `this` là một biến đai diện đến đối tượng hiện tại.
+
+- `super` là một biến đai diện đến lớp cha của lớp hiện tại.
+
+**Trả lời mở rộng**:
+
+- `this` được sử dụng để truy cập các biến và phương thức của lớp hiện tại.
+
+- `super` được sử dụng để truy cập các biến và phương thức của lớp cha.
+
+```java
+
+public class A {
+    int a = 10;
+}
+
+public class B extends A {
+    int a = 20;
+
+    public void display() {
+        System.out.println(a); // 20
+        System.out.println(this.a); // 20
+        System.out.println(super.a); // 10
+    }
+}
+
+```
+
+</details>
+
+
+### 2.12. Lỗi bộ nhớ đệm
+
+📚 Câu hỏi: Lỗi bộ nhớ đệm là gì? Tại sao chúng ta cần phải tránh lỗi bộ nhớ đệm trong Java?
+
+<details>
+
+<summary> <strong>Gợi ý trả lời </strong></summary>
+
+**Trả lời ngắn**:
+
+- Lỗi bộ nhớ đệm xảy ra khi nhập dữ liệu số xong nhập dữ liệu chuỗi.
+
+**Trả lời mở rộng**:
+
+- Khi nhập số thì ký tự xuống dòng không được đọc, nếu nhập chuỗi thì ký tự xuống dòng sẽ được đọc.
+
+```java
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        String b = sc.nextLine(); // Lỗi bộ nhớ đệm, không được nhập
+    }
+}
+
+```
+
+</details>
