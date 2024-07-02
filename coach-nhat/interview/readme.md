@@ -264,6 +264,33 @@ B
 ```
 </details>
 
+### 2.10. Interger và int
 
+📚 Câu hỏi: Sự khác biệt giữa `Integer` và `int` trong Java?
+
+<details>
+
+<summary> <strong>Gợi ý trả lời </strong></summary>
+
+**Trả lời ngắn**:
+
+- `int` là kiểu dữ liệu nguyên thủy trong Java.
+- `Integer` là một lớp bọc (Wrapper Class) của kiểu dữ liệu nguyên thủy `int`.
+- `Integer` là một đối tượng, chứa các phương thức hữu ích để thao tác với kiểu dữ liệu nguyên thủy `int`.
+
+**Trả lời mở rộng**:
+
+- `Integer` có thể sử dụng các phương thức như `parseInt()`, `valueOf()`, `toString()`, `equals()`, `compareTo()`,...
+
+```java
+int a = 10;
+Integer b = new Integer(10);
+Integer c = Integer.valueOf(10);
+
+System.out.println(a); // 10
+System.out.println(b.toString()); // 10
+```
+
+</details>
 
 
