@@ -153,8 +153,9 @@ Tính đa hình (Polymorphism) là một trong bốn nguyên tắc của lập t
 - Abstract Class:
     - Không thể tạo đối tượng từ một Abstract Class.
     - Có thể chứa phương thức abstract và non-abstract (phương thức thường).
+</details>
 
-### static
+### 2.7 static
 
 📚 Câu hỏi: `static` là gì? Khi nào sử dụng `static`?
 
@@ -183,7 +184,7 @@ public class Main {
 
 </details>
 
-### 2.7 Phương thức khởi tạo (Constructor)
+### 2.8 Phương thức khởi tạo (Constructor)
 
 📚 Câu hỏi: Phương thức khởi tạo (Constructor) là gì? Tại sao chúng ta cần phương thức khởi tạo trong Java?
 
@@ -223,7 +224,7 @@ public class Main {
 
 </details>
 
-### 2.8. Các hoạt động của hàm constructor
+### 2.9. Các hoạt động của hàm constructor
 
 📚 Câu hỏi: Các hoạt động của hàm constructor?
 
