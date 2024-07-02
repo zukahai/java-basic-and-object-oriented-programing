@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		B b = new B(2);
+		A a = new A(3);
 	}
 
 }
@@ -15,7 +15,8 @@ public class Main {
  * default: trong package
  * private: trong class
  * 
- * 
+ * Đa hình
+ * - Nạp chồng phương thức
+ * - Ghi đè phương thức
  * 
  **/
- */
