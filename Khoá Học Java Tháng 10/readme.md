@@ -1,4 +1,4 @@
-# Các link tổng hợp
+# Các link tổng hợp trong khóa học Java cơ bản đến Java hương đối tượng tháng 10/2024
 
 - Link video buổi học: https://drive.google.com/drive/folders/1bhoSCE960ECznOSWSRoqBjrvYyoXC82A?usp=drive_link
 
