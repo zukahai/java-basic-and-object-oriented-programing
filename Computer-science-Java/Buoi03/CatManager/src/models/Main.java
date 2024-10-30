@@ -1,16 +1,31 @@
 package models;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Main {
 	public static void main(String[] args) {
-//		Cat a[] = new Cat [100];
-//		a[0] = new Cat();
-//		a[1] = new Cat("Meo meo", 4, "Trawngs");
-//		
-//		for (int i = 0; i <= 1; i++) 
-//			System.out.println(a[i]);
+		Cat a[] = new Cat [2];
+		a[0] = new Cat("Doraemon", 6, "Trawngs");
+		a[1] = new Cat("Meo meo", 10, "Trawngs");
 		
-		Cat meo = new Cat();
-		System.out.println(meo);
+		for (int i = 0; i <= 1; i++) 
+			System.out.println(a[i]);
+		
+		System.out.println("Sau khi sắp xếp");
+		// o1 ... o2: 
+		Arrays.sort(a, new Comparator<Cat>() {
+			public int compare(Cat o1, Cat o2) { // trả về x > 0 nếu muốn đổi chỗ
+				if (o1.getSoChan() < o1.getSoChan())
+					return 1;
+				return -1;
+			}
+		});
+		
+		for (int i = 0; i <= 1; i++)
+			System.out.println(a[i]);
+		
+		
 		
 	}
 }
