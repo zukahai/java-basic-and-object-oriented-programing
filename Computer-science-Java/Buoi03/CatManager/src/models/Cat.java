@@ -27,7 +27,6 @@ public class Cat {
 		this.doTuoi = 0;
 	}
 
-	@Override
 	public String toString() {
 		return "Cat [ten=" + ten + ", soChan=" + soChan + ", mauLong=" + mauLong + ", doTuoi=" + doTuoi + "]";
 	}
@@ -43,13 +42,13 @@ public class Cat {
 	public void tam() {
 		System.out.println(ten + " đang tắm");
 	}
-	
-	public void setTen(String ten) {
-		this.ten = ten;
-	}
-	
+
 	public String getTen() {
 		return ten;
+	}
+
+	public void setTen(String ten) {
+		this.ten = ten;
 	}
 
 	public int getSoChan() {
@@ -57,8 +56,6 @@ public class Cat {
 	}
 
 	public void setSoChan(int soChan) {
-		if (soChan < 0)
-				return;
 		this.soChan = soChan;
 	}
 
@@ -77,4 +74,5 @@ public class Cat {
 	public void setDoTuoi(int doTuoi) {
 		this.doTuoi = doTuoi;
 	}
+
 }

@@ -176,3 +176,20 @@ Từ class **Book** ở **Ví dụ 12** hãy nhập vào thông tin của **N** 
 - In ra thông tin những cuốn sách có tên là "Java OOP"
 - Sắp xếp danh sách tăng dần thêm **quantity**
 - Sắp xếp danh sách giảm dần theo **price**
+
+
+## Ví dụ 14
+
+Tao một **Class** để biểu diễn các đối tượng **Time** gồm các thuộc tính:
+- **hour: int**, dùng dể đại diện cho giờ
+- **minute: int**, dùng dể đại diện cho phút
+- **second: int**, dùng dể đại diện cho giây
+
+Viết các phương thức bao gồm phương thức khởi tạo mặc định, phương thức khởi tạo có thuộc tính và các phương thức **getter**, **setter** và **toString()**
+
+Viết thêm các phương thức:
+
+- Time add(Time t): trả về thời gian sau khi cộng thêm thời gian t
+- Time distance(Time t): trả về khoảng cách giữa 2 thời gian ngắn nhất để đến thời gian t
+
+
