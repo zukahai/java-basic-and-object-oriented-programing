@@ -1,111 +1,162 @@
 <div align="center">
 
-# Tính trừu tượng trong lập trình hướng đối tượng
-
+# Tính kế thừa trong lập trình hướng đối tượng
 </div>
 
 ### Ví dụ 1
-Tạo lớp trừu tượng **Shape** định nghĩa trừu tượng cho các hình dạng.<br>Bao gồm
-- Các thuộc tính:
-    - **color**: String, đại diện cho màu sắc của hình dạng.
-- Các phương thức:
-    - Gồm các phương thức getter và setter cho **color**
-- Các phương thức trừu tượng
-    - **getArea():** Float, dùng để tính diện tích
-    - **getPerimeter()**: Float, dùng để tính chu vu
-    - **input()**: void, dùng để nhập thông tin.
-    - **toString()**: String, dùng để in ra các thông tin của hình dạng.
 
-Tạo class **Triangle** kế thừa abstract class **Shape**<br> Bao gồm:
+Tạo class **ElectronicDevice** đùng để biểu diễn cho các thiết bị điện tử. <br>Bao gồm:
 - Các thuộc tính:
-    - **sideA**: float, dùng để đại diện cho cạnh thứ nhất của hình tam giác
-    - **sideB**: float, dùng để đại diện cho cạnh thứ hai của hình tam giác
-    - **sideC**: float, dùng để đại diện cho cạnh thứ ba của hình tam giác
-- Các phương thức:
-    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính
-    - Các phương thức **getter()** và **setter()**
-    - Ghi đè tất cả những phương thức trừu tượng của **Shape**
-
-Tạo class **Rectangel** kế thừa class **Shape**<br> Bao gồm:
-- Các thuộc tính:
-    - **width**: float, dùng để đại diện cho chiều rộng.
-    - **height**: float, dùng để đại diện cho chiều dài.
-- Các phương thức:
-    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính
-    - Các phương thức **getter()** và **setter()**
-    - Ghi đè tất cả những phương thức trừu tượng của **Shape**
-
-### Ví dụ 2
-Tạo lớp trừu tượng **Student** định nghĩa trừu tượng cho các hình dạng.<br>Bao gồm:
-- Các thuộc tính:
-    - **masv**: String, dùng dể đại diện cho mã sinh viên
-    - **name**: String, dùng dể đại diện cho tên của sinh viên
-    - **age**: int, dùng dể lưu đại diện cho tuổi của sinh viên
-- Các phương thức:
-    - Các phương thức khởi tạo
-    - Gồm các phương thức getter và setter cho **masv**, **name** và **age**
-    - **input()**: void, dùng để nhập thông tin.
-- Các phương thức trừa tượng
-    - **toString()**: String, dùng để in ra các thông tin của sinh viên
-    - **calculateAverage()**: float, dùng làm trung bình tất cả các môn của sinh viên
-
-Tạo lớp **StudentIT** kế thừa lớp trừu tượng **Student**.<br>Bao gồm:
-- Các thuộc tính:
-    - **scoreCpp**: float, dùng để đại diện cho điểm C++
-    - **scoreJava**: float, dùng để đại diện cho điểm Java
-- Các phương thức:
-    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính
-    - Các phương thức **getter()** và **setter()**
-    - Ghi đè phương thưc **input()**
-    - Ghi đè tất cả những phương thức trừu tượng của **Student**
-
-Tạo lớp **StudentBA** kế thừa lớp trừu tượng **Student**.<br>Bao gồm:
-- Các thuộc tính:
-    - **scorePm**: float, dùng để đại diện cho điểm học phần quản lí dự án
-    - **scoreBA**: float, dùng để đại diện cho điểm học phần quản trị kinh doanh
-- Các phương thức:
-    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính
-    - Các phương thức **getter()** và **setter()**
-    - Ghi đè tất cả những phương thức trừu tượng của **Student**
-
-### Ví dụ 3
-Tiếp nối ví dụ 2.
-Tạo interface **IManager** gồm các phương thức:
-    - void **addStudent(Student student)**: Thêm một học sinh vào danh sách.
-    - void **editStudent(String masv, Student student)**: Sửa thông tin của một học sinh.
-    - void **removeStudent(String masv)**: Xóa một học sinh dựa trên mã sinh viên
-    - Student **findStudent(String masv)**: Tìm kế học sinh theo masv
-    - void **sortByAge()**: Sắp xếp danh sách sinh viên không giảm theo tuổi
-    - void **sortByScore()**: Sắp xếp danh sách sinh viên không giảm theo điểm trung bình.
-    - ArrayList\<Student> **findStudent(int age)**: Tìm kế học sinh theo age
-    - void **displayAllStudents()**: Hiển thị thông tin của tất cả học sinh trong danh sách.
-
-### Ví dụ 4
-Tạo class **StudentManager** sử dụng interface **IManager**.<br>
-- Các thuộc tính:
-    - **students**: ArrayList\<Student\>, dùng để lưu danh sách sinh viên
+    **manufacturer**: String, dùng để đại diện cho nhà sản xuất của thiết bị điện tử.
+    **price**: long, dùng để đại diện cho giá của thiết bị điện tử.
 - Các phương thức:
     - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
-    - Các phương thức **getter** và **setter** cho **students**
-    - Định nghĩa lại tất cả phương thức của interface **IManager**.
+    - Các phương thức **getter**, **setter** và **toString()**
+    - Phương thức **input()** cho phép nhập thông tin của thiết bị điện tử đó.
+
+Tạo class **Laptop** dùng để biểu diễn các máy tính xách tay. Kế thừa class **ElectronicDevice**<br>Bao gồm:
+- Các thuộc tính:
+    - **screenSize**: String, dùng để đại diện cho kích thước màn hình của máy tính xách tay đó.
+- Các phương thức:
+     - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
+    - Các **getter** và **setter** cho các thuộc tính **color** va **breed**
+    - Ghi đè lại phương thức **toString()** và **input()**
+
+
+### Ví dụ 2
+
+Tạo class **Animal** để biểu diễn tập hợp các động vật.<br> Bao gồm:
+- Các thuộc tính
+    - **name**: String, dùng để đại diện cho tên của động vật đó
+    - **age**: int, dùng để đại diện cho tuổi của động vật đó.
+- Các phương thức
+    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
+    - Các phương thức **getter**, **setter** và **toString()**
+    - Phương thức **input()** cho phép nhập thông tin của động vật đó.
+    - **getYearOfBirth()**: Lấy năm sinh của động vật đó.
+
+Tạo class **Cat** để biểu diễn cho tập hợp mèo. Kế thừa class **Animal**.<br> Bao gồm:
+- Các thuộc tính
+    - **color**: String, dùng để đại diện cho màu lông của con mèo
+    - **breed**: String, dùng để đại diện cho giới tính của mèo
+- Các phương thức:
+    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
+    - Các **getter** và **setter** cho các thuộc tính **color** va **breed**
+    - Ghi đè lại phương thức **toString()**
+    - Phương thức **equalBreed(Cat c)** kiểm tra xem 2 con mèo các cùng giới tính không?
+
+**Thực hiện các hành động sau:**
+- Khởi tạo thông tin 2 con mèo
+- In ra thông tin 2 con mèo đó
+- In ra năm sinh của con mèo thứ 2
+- Kiểm tra xem 2 con mèo có cùng giới tính không
+
+
+
+</details>
+<br>
+
+### Ví dụ 3
+
+Tạo class **Person** để biểu diễn tập hơn nhiều đối tượng người.<br> Bao gồm:
+- Các thuộc tính
+    - **name**: String, dùng để đại diện cho tên của người đó
+    - **age**: int, dùng để đại diện cho tuổi của người đó
+    - **address** : String, dùng để đại diện cho địa chỉ của người đó.
+
+- Các phương thức
+    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
+    - Các phương thức **getter**, **setter** và **toString()**
+    - Phương thức **input()** cho phép nhập thông tin của người đó.
+    - **getYearOfBirth()**: Lấy năm sinh của người đó.
+    - **getUpperName()**: Lấy tên in hoa của người đó.
+    - **checkAge(int n)**: Kiểm tra xem người đó đã đủ **n** tuổi chưa.
+
+Tạo class **Student** để biểu diễn tập hơn nhiều đối tượng người. Kế thừa lớp **Person**<br> Bao gồm thêm:
+- Các thuộc tính
+    - **studentId**: String, dùng để đại diện cho mã sinh viên của người đó
+    - **nameSchool**: String, dùng để đại diện cho tên trường học của sinh viên đó.
+- Các phương thức
+    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
+    - Các **getter** và **setter** cho các thuộc tính **studentId** và **nameSchool**
+    - Ghi đè lại phương thức **toString()** và **input()**
+    - Phương thức **checkStudentId()** kiểm tra xem sinh viên đó có mã sinh viên bắt đầu bằng **23IT** không?
+
+**Thực hiện các hoạt động sau:**
+- Cho phéo nhập vào một đối tương sinh viên.
+- In ra thông tính của sinh viên đó.
+- Kiểm tra xem sinh viên đó có đủ **18** tuổi không?
+- In ra tên viên hoa của sinh viên đó.
+- Kiểm tra sinh viên đó có phải có mã sinh viên bắt đầu bằng **23IT** không?
+
+
+### Ví dụ 4
+
+Tạo class **Rectangle** dùng để biểu diễn cho các hình chữ nhật. <br> Bao gồm:
+- Các thuộc tính:
+    - **width**: float, đại diện co chiều rộng của hình chữ nhật.
+    - **height**: float, đại diện cho chiều dài cho hình chữ nhật
+- Các phương thức:
+     - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
+    - Các phương thức **getter**, **setter** và **toString()**
+    - Phương thức **input()** cho phép nhập thông tin của hình chữ nhật.
+    - Phương thức **getArea()** để lấy diện tích của hình chữ nhật
+    - Phương thức **getPerimeter()** để lấy chu vi của hình chữ nhật
+
+Tạo class **Square** dùng để biểu diễn các hình vuông, kế thừa lớp **Rectangle**.<br> Bao gồm:
+- Các phương thức:
+    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
+    - Các **getter** và **setter** cho các thuộc tính **side**
+    - Ghi đè lại phương thức **toString()** và **input()**
+
+**Thực hiện các thao tác sau từ trên xuông dưới:**
+- Khởi tạo một hình vuông có kích thước là 10
+- In ra thông tin của hình vuông.
+- In ra chu vi của hình vuông.
+- In ra diện tích của hình vuông.
+- Sửa lại kích thước hinh vuông là 20
+- In ra thông tin của hình vuông.
+- In ra chu vi của hình vuông.
+- In ra diện tích của hình vuông.
+- Nhập vào thông tin một hình vuông
+- In ra chu vi của hình vuông.
+- In ra diện tích của hình vuông.
+
 
 ### Ví dụ 5
-Tạo Menu thực hiện được các chức năng sau:
-```text
-- 1. Hiện thị danh sách sinh viên
-- 2. Thêm sinh viên
-    - 2.1. Thêm sinh viên IT
-    - 2.2. Thêm sinh viên BA
-- 3. Tìm kiếm sinh viên
-    - 3.1. Tìm theo mã sinh viên
-    - 3.2. Tìm theo tuổi
-- 4. Xoá sinh viên
-- 5. Sắp xếp sinh viên
-    - 5.1. Sắp xếp theo tuổi
-    - 5.2. Sắp xếp theo điểm trung bình
-- 6. Chỉnh sửa thông tin sinh viên
-- 7. Thoát chương trình
-```
 
+Tạo class **User** dùng để biểu diễn các người dùng trong hệ thống. <br> Bao gồm:
+- Các thuộc tính:
+    - **userId**: String, dùng của diện id của người dùng.
+    - **username**: String, dùng đại diện cho tên đăng nhập của người dùng.
+    - **password**: String, dùng đại diện cho mật khẩu của người dùng.
+    - **email**: String, dùng đại diện cho email của người dùng.
+- Các phương thức:
+    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
+    - Các phương thức **getter**, **setter** và **toString()**
+    - Phương thức **input()** cho phép nhập thông tin của người dùng.
 
+Tạo class **Customer** dùng để biểu diễn các khách hành, kế thừa class **User**.<br> Bao gồm:
+- Các thuộc tính
+    - **shippingAddress**: String, dùng đại diện cho địa chỉ nhân hàng.
+- Các phương thức:
+    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
+    - Các **getter** và **setter** cho các thuộc tính **shippingAddress**
+    - Ghi đè lại phương thức **toString()** và **input()**
 
+Tạo class **Admin** dùng để biểu diễn các người quản lí, kế thừa class **User**.<br> Bao gồm:
+
+- Các thuộc tính:
+    **permissions**: ArrayList<String>, danh sách các quyền của người quản lí đó.
+- Các phương thức:
+    - Phương thức khởi tạo mặc định và phương thức khởi tạo có thuộc tính.
+    - Các **getter** và **setter** cho các thuộc tính **permissions**
+    - Ghi đè lại phương thức **toString()** và **input()**
+
+**Tạo một Menu và chương trình có các tính năng như sau**
+1. Thêm 1 **User**
+    1.1. Thêm 1 **Customer**
+    1.2. Thêm 1 **Admin**
+2. In ra danh sách tất cả **User**
+3. Sắp xếp các **User** sao cho các **Admin** ở trên các **Customer**
+4. Đăng nhập (Nhập và **username** và **password**, kiểm tra xem tài khoản này có thể đăng nhập không, nếu có thể in ra User đang đăng nhập).
