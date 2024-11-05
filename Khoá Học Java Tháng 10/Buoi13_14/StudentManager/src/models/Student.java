@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Scanner;
+
 public class Student {
 	private String maSv;
 	private String ten;
@@ -23,6 +25,19 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [maSv=" + maSv + ", ten=" + ten + ", ngaySinh=" + ngaySinh + ", lop=" + lop + "]";
+	}
+	
+	public void input() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Nhập mã sinh viên: ");
+		maSv = sc.nextLine();
+		System.out.print("Nhập tên: ");
+		ten = sc.nextLine();
+		System.out.print("Nhập ngày sinh: ");
+		ngaySinh = sc.nextLine();
+		System.out.print("Nhập lớp: ");
+		lop = sc.nextLine();
 	}
 
 	public String getMaSv() {
@@ -57,15 +72,7 @@ public class Student {
 		this.lop = lop;
 	}
 	
-	public void haha() {
-		System.out.println("Haha");
-	}
-	
-	public void haha(int n) {
-		System.out.println("Haha dài");
-	}
-	
-	public void haha(String s) {
-		System.out.println("Haha abc");
+	public void abc() {
+		System.out.println("Đây là Student");
 	}
 }

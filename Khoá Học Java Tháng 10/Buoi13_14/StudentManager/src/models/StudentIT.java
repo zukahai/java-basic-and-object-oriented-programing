@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Scanner;
+
 public class StudentIT extends Student {
 	private double scoreCPP;
 	private double scoreJava;
@@ -16,13 +18,14 @@ public class StudentIT extends Student {
 		this.scoreCPP = scoreCPP;
 		this.scoreJava = scoreJava;	
 	}
-
-	public double getScoreCPP() {
-		return scoreCPP;
-	}
-
-	public void setScoreCPP(double scoreCPP) {
-		this.scoreCPP = scoreCPP;
+	
+	public void input() {
+		super.input();
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập điểm C++: ");
+		scoreCPP = sc.nextDouble();
+		System.out.print("Nhập điểm Java: ");
+		scoreJava = sc.nextDouble();
 	}
 	
 	@Override
@@ -38,5 +41,15 @@ public class StudentIT extends Student {
 	public void setScoreJava(double scoreJava) {
 		this.scoreJava = scoreJava;
 	}
+	
+
+	public double getScoreCPP() {
+		return scoreCPP;
+	}
+
+	public void setScoreCPP(double scoreCPP) {
+		this.scoreCPP = scoreCPP;
+	}
+	
 	
 }
