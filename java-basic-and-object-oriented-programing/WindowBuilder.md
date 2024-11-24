@@ -4,7 +4,7 @@
 
 </div>
 
-Bước 1: Tải **Window Builder** tại https://eclipse.dev/windowbuilder/download.php
+Bước 1: Tải **Window Builder** tại https://eclipse.dev/windowbuilder/downloads/
 
 <div align="center"><img src="./assets/WindowBuilder/WindowBuilder11.png"></div>
 
