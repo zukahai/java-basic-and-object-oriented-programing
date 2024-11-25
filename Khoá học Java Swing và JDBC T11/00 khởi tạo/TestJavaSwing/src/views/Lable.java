@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JSplitPane;
+import javax.swing.JToolBar;
 
 public class Lable extends JFrame {
 
@@ -39,8 +41,8 @@ public class Lable extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(101, 74, 150, 51);
-		contentPane.add(lblNewLabel);
+		JToolBar toolBar = new JToolBar();
+		toolBar.setBounds(132, 106, 153, 43);
+		contentPane.add(toolBar);
 	}
 }
