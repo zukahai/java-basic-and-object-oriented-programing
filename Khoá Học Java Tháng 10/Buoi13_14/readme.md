@@ -160,3 +160,17 @@ Tạo class **Admin** dùng để biểu diễn các người quản lí, kế t
 2. In ra danh sách tất cả **User**
 3. Sắp xếp các **User** sao cho các **Admin** ở trên các **Customer**
 4. Đăng nhập (Nhập và **username** và **password**, kiểm tra xem tài khoản này có thể đăng nhập không, nếu có thể in ra User đang đăng nhập).
+
+
+### Ví dụ 6
+
+Tao một **Class** để biểu diễn các đối tượng **Time** gồm các thuộc tính:
+- **hour: int**, dùng dể đại diện cho giờ
+- **minute: int**, dùng dể đại diện cho phút
+- **second: int**, dùng dể đại diện cho giây
+
+Viết các phương thức bao gồm phương thức khởi tạo mặc định, phương thức khởi tạo có thuộc tính và các phương thức **getter**, **setter** và **toString()**.
+
+- Viết hàm nextSecond() để tăng thời gian hiện tại lên 1 giây.
+- Viết hàm nextMinute() để tăng thời gian hiện tại lên 1 phút.
+- Viết hàm nextHour() để tăng thời gian hiện tại lên 1 giờ.
