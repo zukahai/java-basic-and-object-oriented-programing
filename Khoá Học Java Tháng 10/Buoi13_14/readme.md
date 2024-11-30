@@ -174,3 +174,20 @@ Viết các phương thức bao gồm phương thức khởi tạo mặc định
 - Viết hàm nextSecond() để tăng thời gian hiện tại lên 1 giây.
 - Viết hàm nextMinute() để tăng thời gian hiện tại lên 1 phút.
 - Viết hàm nextHour() để tăng thời gian hiện tại lên 1 giờ.
+
+Tạo class DateTime để biểu diễn thời gian hiện tại, kế thừa lớp **Time**. 
+
+Có thêm các thuộc tính:
+- **day: int**, dùng để đại diện cho ngày
+- **month: int**, dùng để đại diện cho tháng
+- **year: int**, dùng để đại diện cho năm
+
+Viết các phương thức bao gồm phương thức khởi tạo mặc định, phương thức khởi tạo có thuộc tính và các phương thức **getter**, **setter** và **toString()**.
+
+- Viết hàm nextDay() để tăng thời gian hiện tại lên 1 ngày.
+- Viết hàm nextMonth() để tăng thời gian hiện tại lên 1 tháng.
+- Viết hàm nextYear() để tăng thời gian hiện tại lên 1 năm.
+
+Ghi đè phương thức nextHour(), nếu giờ hiện tại là 23 thì giờ sẽ trở về 0 và tăng ngày lên 1.
+
+**Lưu ý**: Các hàm next() sẽ tăng thêm 1 nếu giá trị hiện tại nhỏ hơn giá trị lớn nhất, nếu giá trị hiện tại lớn hơn giá trị lớn nhất thì giá trị hiện tại sẽ trở về 0 và tăng giá trị tiếp theo lên 1.
