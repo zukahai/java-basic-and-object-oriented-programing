@@ -1,31 +1,32 @@
 package models;
 
 public class Student {
+	private int id;
 	public String masv;
 	private String name;
 	private int age;
 	private String gender;
 	
-	public static String university = "VKU";
 	
 	public Student() {
+		this.id = 0;
 		this.masv = "";
 		this.name = "";
 		this.age = 0;
 		this.gender = "Nam";
 	}
 	
-	public Student(String masv, String name, int age, String gender) {
+	public Student(int id, String masv, String name, int age, String gender) {
+		this.id = id;
 		this.masv = masv;
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Student [masv=" + masv + ", name=" + name + ", age=" + age + ", gender=" + gender + ", university=" + university + "]";
+		return "Student [id=" + id + ", masv=" + masv + ", name=" + name + ", age=" + age + ", gender=" + gender + "]";
 	}
 
 	public String getMasv() {
@@ -58,5 +59,13 @@ public class Student {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }
