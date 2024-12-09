@@ -2,9 +2,9 @@ package models;
 
 import java.sql.Connection;
 
-public class ConnectSQL {
+public final class ConnectSQL {
 	private Connection conn = null;
-	public static ConnectSQL instance = null;
+	private static ConnectSQL instance = null;
 	
 	private ConnectSQL() {
 		// kết nối
@@ -28,7 +28,4 @@ public class ConnectSQL {
 		return conn;
 	}
 
-	public void setConn(Connection conn) {
-		this.conn = conn;
-	}
 }
