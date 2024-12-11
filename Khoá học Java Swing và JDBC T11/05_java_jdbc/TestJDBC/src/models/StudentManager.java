@@ -5,9 +5,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Vector;
 
 public class StudentManager {
-	public static ArrayList<Student> getAll() {
+	
+	private ArrayList<Student> students;
+	
+	public StudentManager() {
+		this.students = this.getAll();
+	}
+	
+	// Lấy dữ liệu từ bảng sinh viên
+	public ArrayList<Student> getAll() {
+		
 		ArrayList<Student> students = new ArrayList<>();
 		try {
 			Connection conn = ConnectSQL.getConnected();
@@ -33,7 +43,8 @@ public class StudentManager {
 		return students;
 	}
 	
-	public static void create(Student s) {
+	// Thêm dữ liệu vào từ bảng sinh viên
+	public void create(Student s) {
 		
 		try {
 			Connection conn = ConnectSQL.getConnected();
@@ -47,6 +58,7 @@ public class StudentManager {
 			int row = ptsm.executeUpdate();
 			if (row > 0) {
 				System.out.println("Thêm thành công " + s);
+				students.add(s);
 			} else {
 				System.out.println("Thêm lỗi");
 			}
@@ -55,5 +67,80 @@ public class StudentManager {
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
+	}
+
+	// Sửa dữ liệu
+	public void update(int id, Student s) {
+		try {
+			Connection conn = ConnectSQL.getConnected();
+			String query = "UPDATE students SET masv=?, name=?, age=?, gender=? WHERE id=?";
+			PreparedStatement ptsm = conn.prepareStatement(query);
+			ptsm.setString(1, s.getMasv());
+			ptsm.setString(2, s.getName());
+			ptsm.setInt(3, s.getAge());
+			ptsm.setString(4, s.getGender());
+			ptsm.setInt(5, id);
+			
+			int row = ptsm.executeUpdate();
+			if (row > 0) {
+				System.out.println("Sửa thành công " + s);
+			} else {
+				System.out.println("Sửa bị lỗi");
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+		
+	}
+	
+	// Xoá sinh viên
+	public void  delete(int id) {
+		try {
+			Connection conn = ConnectSQL.getConnected();
+			String query = "DELETE FROM students WHERE id=?";
+			PreparedStatement ptsm = conn.prepareStatement(query);
+			ptsm.setInt(1, id);
+			
+			int row = ptsm.executeUpdate();
+			if (row > 0) {
+				System.out.println("Xoá thành công ");
+			} else {
+				System.out.println("Xoá bị lỗi");
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+//			e.printStackTrace();
+		}
+	}
+
+	// Tìm sinh viên dựa vào id
+	public Student find(int id) {
+		this.students = getAll();
+		for (Student s: students)
+			if (s.getId() == id) {
+				return s;
+			}
+		return null;
+	}
+	
+	
+	// Hiển thị danh sách sinh viên
+	public void display() {
+		this.students = getAll();
+		for (Student s: students) {
+			System.out.println(s);
+		}
+	}
+	
+	public Vector convertToVector() {
+		this.students = getAll();
+		Vector vData = new Vector<>();
+		for (Student s: students)
+			vData.add(s.convertVector());
+		return vData;
 	}
 }

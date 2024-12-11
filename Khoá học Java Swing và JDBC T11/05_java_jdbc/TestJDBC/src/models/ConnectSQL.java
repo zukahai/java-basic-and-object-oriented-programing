@@ -18,7 +18,8 @@ public final class ConnectSQL {
 			   System.out.println("Đã kết nối tới SQL");
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println(e.getMessage());
+//			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 	

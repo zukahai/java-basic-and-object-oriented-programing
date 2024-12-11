@@ -1,5 +1,8 @@
 package models;
 
+import java.util.Scanner;
+import java.util.Vector;
+
 public class Student {
 	private int id;
 	public String masv;
@@ -27,6 +30,30 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", masv=" + masv + ", name=" + name + ", age=" + age + ", gender=" + gender + "]";
+	}
+	
+	public void input() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Nhập Mã SV: ");
+		this.masv = sc.nextLine();
+		System.out.println("Nhập Tên: ");
+		this.name = sc.nextLine();
+		System.out.println("Nhập Age: ");
+		this.age = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Nhập Gender: ");
+		this.gender = sc.nextLine();
+		
+	}
+	
+	public Vector convertVector() {
+		Vector v = new Vector<>();
+		v.add(this.id);
+		v.add(this.masv);
+		v.add(this.name);
+		v.add(this.getAge());
+		v.add(this.gender);
+		return v;
 	}
 
 	public String getMasv() {
