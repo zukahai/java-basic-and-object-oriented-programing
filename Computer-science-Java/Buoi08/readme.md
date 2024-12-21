@@ -11,7 +11,7 @@ Ràng buộc:
 - Tên của student không được để trống, nếu người dùng tạo tên trống thì gán tên mặc định là "Unknown"
 - Điểm các môn học của student phải nằm trong khoảng từ 0 đến 10, nếu người dùng nhập điểm không hợp lệ thì bỏ qua, không thêm vào danh sách điểm
 - name, age, scores là các thuộc tính private
-- university là biến static
+- university là biến public và static
 
 - Class Student có các phương thức sau:
     - Constructor không tham số
@@ -36,9 +36,13 @@ Ràng buộc:
 Ràng buộc:
 - major không được để trống, nếu người dùng tạo major trống thì gán major mặc định là "Unknown"
 - projectScore phải nằm trong khoảng từ 0 đến 10, nếu người dùng nhập điểm không hợp lệ thì gán projectScore mặc định là 0
+- major, projectScore là các thuộc tính private
+
 
 - Class StudentIT có các phương thức sau:
     - Constructor không tham số
     - Constructor có tất cả tham số
     - Phương thức `getAverageScore()`: trả về điểm trung bình của student, được tính bằng trọng số 0.7 điểm trung bình các môn học và 0.3 điểm project
     - Phương thức `toString()`: trả về thông tin của student dưới dạng chuỗi
+    - Các phương thức getter và setter cho các thuộc tính
+    - Phương thức `getRank()`: trả về xếp loại của student dựa trên điểm trung bình
