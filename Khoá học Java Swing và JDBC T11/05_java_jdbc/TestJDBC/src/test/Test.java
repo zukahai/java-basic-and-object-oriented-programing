@@ -12,6 +12,10 @@ public class Test {
 		// TODO Auto-generated method stub
 
 		StudentController studentController = new StudentController();
+//		StudentManager studentManager = new StudentManager();
+//		ArrayList<Student> students = studentManager.search("18");
+//		for (Student s: students)
+//			System.out.println(s);
 	}
 
 }

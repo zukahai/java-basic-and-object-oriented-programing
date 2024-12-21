@@ -9,8 +9,12 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 
+import models.Student;
+
 import java.awt.Color;
 import javax.swing.JTextField;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.JRadioButton;
 import javax.swing.JSpinner;
 import javax.swing.JLabel;
@@ -20,6 +24,10 @@ import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class StudentUI extends JFrame {
 
@@ -31,8 +39,9 @@ public class StudentUI extends JFrame {
 	private JRadioButton nuRadio;
 	private JSpinner tuoiSpinner;
 	private JButton addButton;
-	private JButton eidtButton;
+	private JButton editButton;
 	private JButton deleteButton;
+	private JButton searchButton;
 	private JScrollPane scrollPane;
 	private DefaultTableModel model;
 	public Vector vTittle;
@@ -59,6 +68,15 @@ public class StudentUI extends JFrame {
 		panel.add(maSvTextField);
 		maSvTextField.setColumns(10);
 		
+		maSvTextField.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				if (e.getKeyChar() == 'q') {
+					System.out.println("Đã bấm phím Q");
+				}
+			}
+		});
+		
 		nameTextField = new JTextField();
 		nameTextField.setColumns(10);
 		nameTextField.setBounds(109, 74, 163, 31);
@@ -77,7 +95,8 @@ public class StudentUI extends JFrame {
 		group.add(namRdio);
 		namRdio.setSelected(true);
 		
-		tuoiSpinner = new JSpinner();
+		SpinnerNumberModel modelSpinner = new SpinnerNumberModel(18, 1, 120, 1);
+		tuoiSpinner = new JSpinner(modelSpinner);
 		tuoiSpinner.setBounds(112, 177, 160, 31);
 		panel.add(tuoiSpinner);
 		
@@ -127,19 +146,39 @@ public class StudentUI extends JFrame {
 		panel_2.setLayout(null);
 		
 		addButton = new JButton("Thêm");
-		addButton.setBounds(10, 11, 130, 23);
+		addButton.setBounds(43, 17, 130, 23);
 		panel_2.add(addButton);
 		
-		eidtButton = new JButton("Sửa");
-		eidtButton.setBounds(172, 11, 130, 23);
-		panel_2.add(eidtButton);
+		editButton = new JButton("Sửa");
+		editButton.setBounds(216, 17, 130, 23);
+		panel_2.add(editButton);
 		
 		deleteButton = new JButton("Xoá");
-		deleteButton.setBounds(339, 11, 130, 23);
+		deleteButton.setBounds(389, 17, 130, 23);
 		panel_2.add(deleteButton);
+		
+		searchButton = new JButton("Tìm kiếm");
+		searchButton.setBounds(562, 17, 130, 23);
+		panel_2.add(searchButton);
 		setVisible(true);
 		setLocationRelativeTo(null);
 		setResizable(false);
+	}
+	
+	public void clearFormData() {
+		maSvTextField.setText("");
+		nameTextField.setText("");
+		tuoiSpinner.setValue(0);
+		namRdio.setSelected(true);
+	}
+	
+	public void loadFormData(Student s) {
+		maSvTextField.setText(s.getMasv());
+		nameTextField.setText(s.getName());
+		tuoiSpinner.setValue(s.getAge());
+		namRdio.setSelected(true);
+		if (s.getGender().equals("Nữ"))
+			nuRadio.setSelected(true);
 	}
 	
 	public void setDataModelTable(Vector data) {
@@ -203,11 +242,11 @@ public class StudentUI extends JFrame {
 	}
 
 	public JButton getEidtButton() {
-		return eidtButton;
+		return editButton;
 	}
 
 	public void setEidtButton(JButton eidtButton) {
-		this.eidtButton = eidtButton;
+		this.editButton = eidtButton;
 	}
 
 	public JButton getDeleteButton() {
@@ -235,6 +274,14 @@ public class StudentUI extends JFrame {
 
 	public void setvTittle(Vector vTittle) {
 		this.vTittle = vTittle;
+	}
+
+	public JButton getSearchButton() {
+		return searchButton;
+	}
+
+	public void setSearchButton(JButton searchButton) {
+		this.searchButton = searchButton;
 	}
 	
 	

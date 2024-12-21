@@ -116,6 +116,39 @@ public class StudentManager {
 //			e.printStackTrace();
 		}
 	}
+	
+	public ArrayList<Student> search(String text) {
+		ArrayList<Student> students = new ArrayList<>();
+		Connection conn = ConnectSQL.getConnected();
+		String query = "SELECT * FROM students WHERE id LIKE ? OR masv LIKE ? OR name LIKE ? OR gender LIKE ? OR age LIKE ?";
+		PreparedStatement ptsm;
+		try {
+			ptsm = conn.prepareStatement(query);
+			text = "%" + text + "%";
+			ptsm.setString(1, text);
+			ptsm.setString(2, text);
+			ptsm.setString(3, text);
+			ptsm.setString(4, text);
+			ptsm.setString(5, text);
+			ResultSet rs = ptsm.executeQuery();
+			
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				String masv = rs.getString("masv");
+				String name = rs.getString("name");
+				int age = rs.getInt("age");
+				String gender = rs.getString("gender");
+				
+				Student student = new Student(id, masv, name, age, gender);
+				students.add(student);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return students;
+		
+	}
 
 	// Tìm sinh viên dựa vào id
 	public Student find(int id) {
@@ -143,4 +176,11 @@ public class StudentManager {
 			vData.add(s.convertVector());
 		return vData;
 	}
+	
+	public Vector convertToVector(ArrayList<Student> students) {
+		Vector vData = new Vector<>();
+		for (Student s: students)
+			vData.add(s.convertVector());
+		return vData;
+	} 
 }
