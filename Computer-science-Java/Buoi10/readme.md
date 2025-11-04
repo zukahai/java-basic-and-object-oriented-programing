@@ -13,7 +13,7 @@
   ```java
     Time t = new Time(10, 10, 10);
     Time t2 = new Time(10, 10, 11);
-    sout(t.compareTime(t2)); // -1
+    System.out.print(t.compareTime(t2)); // -1
   ```
 
 - Tạo class CClass với các
