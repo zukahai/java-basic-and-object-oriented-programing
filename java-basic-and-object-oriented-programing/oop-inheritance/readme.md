@@ -737,11 +737,14 @@ Tạo class **Admin** dùng để biểu diễn các người quản lí, kế t
 
 **Tạo một Menu và chương trình có các tính năng như sau**
 1. Thêm 1 **User**
+
     1.1. Thêm 1 **Customer**
+   
     1.2. Thêm 1 **Admin**
-2. In ra danh sách tất cả **User**
-3. Sắp xếp các **User** sao cho các **Admin** ở trên các **Customer**
-4. Đăng nhập (Nhập và **username** và **password**, kiểm tra xem tài khoản này có thể đăng nhập không, nếu có thể in ra User đang đăng nhập).
+   
+3. In ra danh sách tất cả **User**
+4. Sắp xếp các **User** sao cho các **Admin** ở trên các **Customer**
+5. Đăng nhập (Nhập và **username** và **password**, kiểm tra xem tài khoản này có thể đăng nhập không, nếu có thể in ra User đang đăng nhập).
 
 <details>
 <summary> <strong>🟢 Bài giải mẫu 📚</strong></summary>
