@@ -71,6 +71,7 @@ Tạo lớp **StudentBA** kế thừa lớp trừu tượng **Student**.<br>Bao 
 ### Ví dụ 3
 Tiếp nối ví dụ 2.
 Tạo interface **IManager** gồm các phương thức:
+
     - void **addStudent(Student student)**: Thêm một học sinh vào danh sách.
     - void **editStudent(String masv, Student student)**: Sửa thông tin của một học sinh.
     - void **removeStudent(String masv)**: Xóa một học sinh dựa trên mã sinh viên
